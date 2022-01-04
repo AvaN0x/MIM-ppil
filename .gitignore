@@ -39,5 +39,4 @@ desktop.ini
 *.app
 
 # Class objects
-server/target/
-*.class
+server/target
