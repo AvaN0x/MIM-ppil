@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         cout << FONT_DEFAULT "Tapez le n° de port du serveur : " FONT_CYAN;
         cin >> port;
 
-        cout << FONT_DEFAULT "Trying to connector to " FONT_CYAN << address << FONT_DEFAULT ":" FONT_CYAN << port << FONT_DEFAULT << endl;
+        cout << FONT_DEFAULT "Trying to connect to " FONT_CYAN << address << FONT_DEFAULT ":" FONT_CYAN << port << FONT_DEFAULT << endl;
 
         ConnectionHandler connection = ConnectionHandler(address, port);
         cout << FONT_YELLOW "Connexion au serveur de majuscule réussie" FONT_DEFAULT << endl;
