@@ -1,0 +1,20 @@
+[01/05/22 00:09:46] org.avanox.Serveur main 
+[INFO] Serveur de majuscule pret au port : 9111
+[01/05/22 00:09:56] org.avanox.Serveur main 
+[INFO] Connexion [0] reussie
+[01/05/22 00:09:58] org.avanox.Interlocuteur run 
+[INFO] Client [0] A envoye : test
+[01/05/22 00:10:01] org.avanox.Interlocuteur run 
+[INFO] Client [0] A envoye : blabla
+[01/05/22 00:10:02] org.avanox.Interlocuteur run 
+[INFO] Client [0] A envoye : oiqznfod
+[01/05/22 00:10:04] org.avanox.Interlocuteur run 
+[INFO] Client [0] A envoye : 5464
+[01/05/22 00:10:05] org.avanox.Interlocuteur run 
+[INFO] Client [0] A envoye : ‚…a
+[01/05/22 00:10:06] org.avanox.Interlocuteur run 
+[INFO] Client [0] La connexion a ete interrompue
+[01/05/22 00:10:14] org.avanox.Serveur main 
+[INFO] Connexion [1] reussie
+[01/05/22 00:10:15] org.avanox.Interlocuteur run 
+[INFO] Client [1] La connexion a ete interrompue

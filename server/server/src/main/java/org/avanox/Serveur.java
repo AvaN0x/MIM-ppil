@@ -1,4 +1,4 @@
-package server;
+package org.avanox;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,9 +9,9 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-import server.exceptions.InterlocuteurException;
+import org.avanox.exceptions.InterlocuteurException;
 
-public class TestServeurMajuscule {
+public class Serveur {
     private static final LogManager logManager = LogManager.getLogManager();
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 

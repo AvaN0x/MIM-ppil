@@ -1,4 +1,4 @@
-package server.exceptions;
+package org.avanox.exceptions;
 
 public class InterlocuteurException extends Exception {
 

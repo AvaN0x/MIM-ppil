@@ -1,4 +1,4 @@
-package server;
+package org.avanox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Logger;
 
-import server.exceptions.InterlocuteurException;
+import org.avanox.exceptions.InterlocuteurException;
 
 public class Interlocuteur extends Thread {
     private BufferedReader _fluxEntrant = null;
@@ -41,8 +41,10 @@ public class Interlocuteur extends Thread {
         try {
             while (!this.isInterrupted()) {
                 String requete = _fluxEntrant.readLine();
-                LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
+                if (requete == null)
+                    throw new SocketException();
 
+                LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
                 _fluxSortant.println(requete.toUpperCase());
             }
         } catch (SocketException e) {
@@ -55,6 +57,8 @@ public class Interlocuteur extends Thread {
             } catch (IOException e1) {
                 LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la fermeture d'un flux");
                 System.err.println(e1);
+            } finally {
+                this.interrupt();
             }
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la lecture de la requete");
