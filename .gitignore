@@ -1,3 +1,10 @@
+# Folder icon
+desktop.ini
+
+# VSCode folder
+.vscode
+.vs
+
 # Prerequisites
 *.d
 
