@@ -37,3 +37,7 @@ desktop.ini
 *.exe
 *.out
 *.app
+
+# Class objects
+server/target/
+*.class

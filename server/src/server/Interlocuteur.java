@@ -5,31 +5,60 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.net.SocketException;
+import java.util.logging.Logger;
+
+import server.exceptions.InterlocuteurException;
 
 public class Interlocuteur extends Thread {
-    private BufferedReader fluxEntrant;
-    private PrintStream fluxSortant;
+    private BufferedReader _fluxEntrant = null;
+    private PrintStream _fluxSortant = null;
+    private static final Logger LOGGER = Logger.getLogger("Serveur");
 
-    int noClient;
+    int _noClient;
 
-    public Interlocuteur(Socket socket, int noClient) throws IOException {
-        this.fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        this.fluxSortant = new PrintStream(socket.getOutputStream());
-        this.noClient = noClient;
-
+    public Interlocuteur(Socket socket, int _noClient) throws InterlocuteurException {
+        try {
+            this._fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this._fluxSortant = new PrintStream(socket.getOutputStream());
+            this._noClient = _noClient;
+        } catch (IOException e) {
+            try {
+                if (_fluxEntrant != null)
+                    _fluxEntrant.close();
+                if (_fluxSortant != null)
+                    _fluxSortant.close();
+            } catch (IOException e1) {
+                LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la fermeture d'un flux");
+                System.err.println(e1);
+            }
+            throw new InterlocuteurException(e.getMessage(), e.getCause(), 12);
+        }
     }
 
     @Override
     public void run() {
         try {
             while (!this.isInterrupted()) {
-                String requete = fluxEntrant.readLine();
-                System.out.println("[" + noClient + "] A envoyé : " + requete);
+                String requete = _fluxEntrant.readLine();
+                LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
 
-                fluxSortant.println(requete.toUpperCase());
+                _fluxSortant.println(requete.toUpperCase());
+            }
+        } catch (SocketException e) {
+            LOGGER.info("Client [" + _noClient + "] La connexion a ete interrompue");
+            try {
+                if (_fluxEntrant != null)
+                    _fluxEntrant.close();
+                if (_fluxSortant != null)
+                    _fluxSortant.close();
+            } catch (IOException e1) {
+                LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la fermeture d'un flux");
+                System.err.println(e1);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la lecture de la requete");
+            System.err.println(e);
         }
     }
 
