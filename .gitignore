@@ -39,10 +39,10 @@ desktop.ini
 *.app
 
 # Class objects
-server/server/target
+server/target
 
 # Logs
-server/server/log
+server/log
 
 # Environment file
 .env
