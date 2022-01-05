@@ -40,3 +40,9 @@ desktop.ini
 
 # Class objects
 server/server/target
+
+# Logs
+server/server/log
+
+# Environment file
+.env
