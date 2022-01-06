@@ -46,14 +46,12 @@ public class App extends Application {
 
         // Interrupt server's thread when closing application
         stage.setOnCloseRequest(e -> {
-            Platform.exit();
             server.closeServer();
-            server.interrupt();
-            System.out.println("finish");
-            Platform.exit();
+            Platform.exit(); // JavaVM will not exit because non-daemon threads are still running
             System.exit(0);
         });
 
+        System.out.println("----- SERVEUR -----");
         server.start();
     }
 
