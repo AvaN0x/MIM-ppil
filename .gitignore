@@ -42,7 +42,7 @@ desktop.ini
 server/target
 
 # Logs
-server/log
+server/log/*.log
 
 # Environment file
 .env

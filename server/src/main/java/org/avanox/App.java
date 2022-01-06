@@ -59,7 +59,7 @@ public class App extends Application {
         stage.getIcons().add(new Image(App.class.getResourceAsStream("img/title-ico.png")));
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

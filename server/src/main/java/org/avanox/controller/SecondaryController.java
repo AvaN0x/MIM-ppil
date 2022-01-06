@@ -1,7 +1,9 @@
-package org.avanox;
+package org.avanox.controller;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+
+import org.avanox.App;
 
 public class SecondaryController {
 
