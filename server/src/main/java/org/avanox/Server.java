@@ -18,12 +18,9 @@ import javafx.stage.Stage;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class Server extends Application {
-    private static Server instance = null;
-
     private static final LogManager logManager = LogManager.getLogManager();
     private static final Logger _LOGGER = Logger.getLogger("Serveur");
-
-    private static Scene scene;
+    private ServerSocket _serverSocket;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -48,6 +45,22 @@ public class Server extends Application {
         }
 
         final int fport = port;
+
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(200);
+                    System.out.println("Shutdown hook ran!");
+                    closeServer();
+                    // some cleaning up code...
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    e.printStackTrace();
+                }
+            }
+        });
+
         Thread t = new Thread(() -> {
             startServer(fport);
         });
@@ -55,17 +68,16 @@ public class Server extends Application {
     }
 
     private void startServer(int port) {
-        ServerSocket serverSocket = null;
         try {
             // Start server on port indicated in .env file
-            serverSocket = new ServerSocket(port);
-            _LOGGER.info("Serveur de majuscule pret au port : " + serverSocket.getLocalPort());
+            _serverSocket = new ServerSocket(port);
+            _LOGGER.info("Serveur de majuscule pret au port : " + _serverSocket.getLocalPort());
 
             int noClient = 0;
             Socket socket = null;
             try {
                 while (true) {
-                    socket = serverSocket.accept();
+                    socket = _serverSocket.accept();
                     Interlocuteur interlocuteur = new Interlocuteur(socket, noClient++);
                     _LOGGER.info("Connexion [" + noClient + "] reussie");
                     interlocuteur.start();
@@ -75,7 +87,7 @@ public class Server extends Application {
             } catch (SocketException e) {
                 e.printStackTrace();
                 /*
-                 * When server is blocked in `accept()` and methode `serverSocket.close()` has
+                 * When server is blocked in `accept()` and methode `_serverSocket.close()` has
                  * been called
                  * Ignore it because we are going to close server
                  */
@@ -93,7 +105,7 @@ public class Server extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            closeServer(serverSocket);
+            closeServer();
         }
     }
 
@@ -104,16 +116,19 @@ public class Server extends Application {
     /**
      * Close the socket of the server
      */
-    private void closeServer(ServerSocket serverSocket) {
-        if (serverSocket != null) {
+    private void closeServer() {
+        if (_serverSocket != null) {
             try {
-                serverSocket.close();
-                serverSocket = null;
+                _LOGGER.info("Fermeture du serveur ...");
+                _serverSocket.close();
+                _serverSocket = null;
                 _LOGGER.info("Le serveur a ete interrompu.");
             } catch (IOException e) {
                 _LOGGER.severe("Une erreur s'est produite lors de la fermeture du serveur.");
                 System.err.println(e);
             }
         }
+        Platform.exit();
+        System.exit(0);
     }
 }

@@ -8,15 +8,12 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Logger;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import org.avanox.Server;
 
 public class Interlocuteur extends Thread {
     private BufferedReader _fluxEntrant = null;
@@ -46,11 +43,17 @@ public class Interlocuteur extends Thread {
     @Override
     public void run() {
         Platform.runLater(() -> {
-            System.out.println("Hello");
+            System.out.println("Hello i'm in runLater client");
             Stage stage = new Stage();
             stage.setTitle("Client " + _noClient);
             setIcon(stage);
             stage.setScene(_scene);
+
+            stage.setOnCloseRequest(value -> {
+                stage.close();
+                closeStreamAndSocket();
+            });
+
             stage.show();
         });
         execution();
@@ -67,7 +70,7 @@ public class Interlocuteur extends Thread {
                 _fluxSortant.println(requete.toUpperCase());
             }
         } catch (SocketException e) {
-            LOGGER.info("Client [" + _noClient + "] La connexion a ete interrompue");
+            // Connection interrupted
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la lecture de la requete");
             System.err.println(e);
@@ -77,19 +80,23 @@ public class Interlocuteur extends Thread {
     }
 
     private void closeStreamAndSocket() {
-        LOGGER.info("Fermeture des flux et de la socket du client [" + _noClient + "]...");
         try {
+            LOGGER.info("Client [" + _noClient + "] La connexion a ete interrompue");
+            LOGGER.info("Fermeture des flux du client [" + _noClient + "]...");
             if (_fluxEntrant != null)
                 _fluxEntrant.close();
             if (_fluxSortant != null)
                 _fluxSortant.close();
+            LOGGER.info("Les flux du client [" + _noClient + "] ont ete fermes avec succes.");
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la fermeture d'un flux");
             System.err.println(e);
         } finally {
             if (_socket != null) {
                 try {
+                    LOGGER.info("Fermeture de la socket du client [" + _noClient + "]...");
                     _socket.close();
+                    LOGGER.info("La socket du client [" + _noClient + "] a ete fermee avec succes.");
                 } catch (IOException e) {
                     LOGGER.severe(
                             "Client [" + _noClient + "] Une erreur est survenue lors de la fermeture de la socket");
