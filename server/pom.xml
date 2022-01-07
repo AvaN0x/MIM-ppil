@@ -52,10 +52,10 @@
                         <compress>2</compress>
                         <noHeaderFiles>true</noHeaderFiles>
                         <noManPages>true</noManPages>
-                        <launcher>Serveur</launcher>
-                        <jlinkImageName>serveur</jlinkImageName>
-                        <jlinkZipName>PasswordManager</jlinkZipName>
-                        <mainClass>org.avanox.App</mainClass>
+                        <launcher>test</launcher>
+                        <jlinkImageName>test-image</jlinkImageName>
+                        <jlinkZipName>testzipname</jlinkZipName>
+                        <mainClass>org.avanox.Server</mainClass>
                     </configuration>
                 </plugin>
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -68,9 +68,21 @@
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.0.2</version>
                 </plugin>
-                <plugin>
+                    <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.6.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <mainClass>org.avanox.Server</mainClass>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>

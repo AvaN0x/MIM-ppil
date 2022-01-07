@@ -8,13 +8,25 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Logger;
 
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+import org.avanox.Server;
+
 public class Interlocuteur extends Thread {
     private BufferedReader _fluxEntrant = null;
     private PrintStream _fluxSortant = null;
-    private static final Logger LOGGER = Logger.getLogger("Serveur");
     private Socket _socket = null;
 
-    int _noClient;
+    private static final Logger LOGGER = Logger.getLogger("Serveur");
+    private static Scene _scene;
+
+    private int _noClient;
 
     public Interlocuteur(Socket socket, int noClient) {
         try {
@@ -22,6 +34,8 @@ public class Interlocuteur extends Thread {
             this._fluxSortant = new PrintStream(socket.getOutputStream());
             this._noClient = noClient;
             this._socket = socket;
+            _scene = new Scene(loadFXML("window"), 900, 514);
+            System.out.println("Interlocuteur created");
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la creation de l'interlocuteur.");
             System.err.println(e);
@@ -31,6 +45,18 @@ public class Interlocuteur extends Thread {
 
     @Override
     public void run() {
+        Platform.runLater(() -> {
+            System.out.println("Hello");
+            Stage stage = new Stage();
+            stage.setTitle("Client " + _noClient);
+            setIcon(stage);
+            stage.setScene(_scene);
+            stage.show();
+        });
+        execution();
+    }
+
+    private void execution() {
         try {
             while (!this.isInterrupted()) {
                 String requete = _fluxEntrant.readLine();
@@ -70,7 +96,21 @@ public class Interlocuteur extends Thread {
                     System.err.println(e);
                 }
             }
-            this.interrupt();
+            if (this.isAlive())
+                this.interrupt();
         }
+    }
+
+    private void setIcon(Stage stage) {
+        stage.getIcons().add(new Image(Server.class.getResourceAsStream("img/title-ico.png")));
+    }
+
+    private void setRoot(String fxml) throws IOException {
+        _scene.setRoot(loadFXML(fxml));
+    }
+
+    private Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Server.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
     }
 }
