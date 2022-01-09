@@ -48,14 +48,7 @@
                     <artifactId>javafx-maven-plugin</artifactId>
                     <version>0.0.8</version>
                     <configuration>
-                        <stripDebug>true</stripDebug>
-                        <compress>2</compress>
-                        <noHeaderFiles>true</noHeaderFiles>
-                        <noManPages>true</noManPages>
-                        <launcher>test</launcher>
-                        <jlinkImageName>test-image</jlinkImageName>
-                        <jlinkZipName>testzipname</jlinkZipName>
-                        <mainClass>org.avanox.Server</mainClass>
+                        <mainClass>org.avanox.App</mainClass>
                     </configuration>
                 </plugin>
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -81,7 +74,7 @@
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>3.0.0</version>
                     <configuration>
-                        <mainClass>org.avanox.Server</mainClass>
+                        <mainClass>org.avanox.App</mainClass>
                     </configuration>
                 </plugin>
                 <plugin>

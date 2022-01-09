@@ -1,89 +1,38 @@
 package org.avanox;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
+import java.util.logging.Logger;
 
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.stage.Stage;
-
-import io.github.cdimascio.dotenv.Dotenv;
-
-public class Server extends Application {
-    private static final LogManager logManager = LogManager.getLogManager();
-    private static final Logger _LOGGER = Logger.getLogger("Serveur");
+public class Server implements Runnable {
+    private static final Logger LOGGER = Logger.getLogger("Serveur");
     private ServerSocket _serverSocket;
 
-    @Override
-    public void start(Stage primaryStage) throws IOException {
-        // Load environment variables
-        Dotenv dotenv = Dotenv.load();
-
-        // Load configuration file for LOGGER
-        try {
-            logManager.readConfiguration(new FileInputStream(dotenv.get("LOGGER_PROPERTIES_FILE")));
-        } catch (Exception exception) {
-            _LOGGER.log(Level.WARNING,
-                    "Le fichier de configuration de log n'a pas pu etre ouvert, la configuration par defaut va etre utilisee.");
-        }
-
-        System.out.println("----- SERVEUR -----");
-        int port = 9111;
-        try {
-            port = Integer.parseInt(dotenv.get("SERVER_PORT"));
-        } catch (NumberFormatException e) {
-            _LOGGER.warning(
-                    "Le port specifie dans le fichier de configuration n'est pas un nombre valide. Utilisation du port par default 9111.");
-        }
-
-        final int fport = port;
-
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(200);
-                    System.out.println("Shutdown hook ran!");
-                    closeServer();
-                    // some cleaning up code...
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        Thread t = new Thread(() -> {
-            startServer(fport);
-        });
-        t.start();
+    public Server(int port) throws IOException {
+        _serverSocket = new ServerSocket(port);
+        LOGGER.info("Serveur de majuscule pret au port : " + _serverSocket.getLocalPort());
     }
 
-    private void startServer(int port) {
+    @Override
+    public void run() {
         try {
-            // Start server on port indicated in .env file
-            _serverSocket = new ServerSocket(port);
-            _LOGGER.info("Serveur de majuscule pret au port : " + _serverSocket.getLocalPort());
+            ThreadGroup clientThreads = new ThreadGroup("clients");
 
             int noClient = 0;
             Socket socket = null;
             try {
-                while (true) {
+                while (!Thread.currentThread().isInterrupted()) {
                     socket = _serverSocket.accept();
-                    Interlocuteur interlocuteur = new Interlocuteur(socket, noClient++);
-                    _LOGGER.info("Connexion [" + noClient + "] reussie");
+                    Interlocuteur interlocuteur = new Interlocuteur(clientThreads, socket, noClient++);
+                    LOGGER.info("Connexion [" + noClient + "] reussie");
                     interlocuteur.start();
                 }
+                System.out.println("ned");
             } catch (SocketTimeoutException e) {
-                _LOGGER.severe("Le delai d'attente de la socket est depasse.");
+                LOGGER.severe("Le delai d'attente de la socket est depasse.");
             } catch (SocketException e) {
                 e.printStackTrace();
                 /*
@@ -92,16 +41,13 @@ public class Server extends Application {
                  * Ignore it because we are going to close server
                  */
             } catch (IOException e) {
-                _LOGGER.severe("Une erreur est survenue lors de l'attente d'une connexion à la socket.");
+                LOGGER.severe("Une erreur est survenue lors de l'attente d'une connexion à la socket.");
                 System.err.println(e);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } catch (IOException e) {
-            _LOGGER.severe("Une erreur est survenue lors de l'ouverture du serveur.");
-            System.err.println(e);
         } catch (IllegalArgumentException e) {
-            _LOGGER.severe("Le port specifie n'est pas un port valide.");
+            LOGGER.severe("Le port specifie n'est pas un port valide.");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -109,26 +55,20 @@ public class Server extends Application {
         }
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
-
     /**
      * Close the socket of the server
      */
-    private void closeServer() {
+    public void closeServer() {
         if (_serverSocket != null) {
             try {
-                _LOGGER.info("Fermeture du serveur ...");
+                LOGGER.info("Fermeture du serveur ...");
                 _serverSocket.close();
                 _serverSocket = null;
-                _LOGGER.info("Le serveur a ete interrompu.");
+                LOGGER.info("Le serveur a ete interrompu.");
             } catch (IOException e) {
-                _LOGGER.severe("Une erreur s'est produite lors de la fermeture du serveur.");
+                LOGGER.severe("Une erreur s'est produite lors de la fermeture du serveur.");
                 System.err.println(e);
             }
         }
-        Platform.exit();
-        System.exit(0);
     }
 }

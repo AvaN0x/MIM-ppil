@@ -15,24 +15,28 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.lang.ThreadGroup;
+
 public class Interlocuteur extends Thread {
     private BufferedReader _fluxEntrant = null;
     private PrintStream _fluxSortant = null;
     private Socket _socket = null;
 
     private static final Logger LOGGER = Logger.getLogger("Serveur");
-    private static Scene _scene;
+    private static Scene _scene = null;
 
     private int _noClient;
 
-    public Interlocuteur(Socket socket, int noClient) {
+    public Interlocuteur(ThreadGroup group, Socket socket, int noClient) {
+        super(group, "client" + socket);
         try {
             this._fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this._fluxSortant = new PrintStream(socket.getOutputStream());
             this._noClient = noClient;
             this._socket = socket;
-            _scene = new Scene(loadFXML("window"), 900, 514);
-            System.out.println("Interlocuteur created");
+
+            if (_scene == null)
+                _scene = new Scene(loadFXML("window"), 900, 514);
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la creation de l'interlocuteur.");
             System.err.println(e);
@@ -43,7 +47,6 @@ public class Interlocuteur extends Thread {
     @Override
     public void run() {
         Platform.runLater(() -> {
-            System.out.println("Hello i'm in runLater client");
             Stage stage = new Stage();
             stage.setTitle("Client " + _noClient);
             setIcon(stage);
@@ -51,7 +54,7 @@ public class Interlocuteur extends Thread {
 
             stage.setOnCloseRequest(value -> {
                 stage.close();
-                closeStreamAndSocket();
+                this.interrupt();
             });
 
             stage.show();
@@ -103,7 +106,7 @@ public class Interlocuteur extends Thread {
                     System.err.println(e);
                 }
             }
-            if (this.isAlive())
+            if (!this.isInterrupted())
                 this.interrupt();
         }
     }
@@ -112,9 +115,9 @@ public class Interlocuteur extends Thread {
         stage.getIcons().add(new Image(Server.class.getResourceAsStream("img/title-ico.png")));
     }
 
-    private void setRoot(String fxml) throws IOException {
-        _scene.setRoot(loadFXML(fxml));
-    }
+    // private void setRoot(String fxml) throws IOException {
+    // _scene.setRoot(loadFXML(fxml));
+    // }
 
     private Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Server.class.getResource(fxml + ".fxml"));
