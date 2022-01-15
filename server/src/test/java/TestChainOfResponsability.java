@@ -10,19 +10,10 @@ import org.avanox.Shapes.Point;
 import org.avanox.Shapes.Segment;
 import org.avanox.Shapes.Shape;
 import org.avanox.Shapes.Triangle;
-import org.avanox.expert.ExpertAnyPolygon;
-import org.avanox.expert.ExpertCOR;
-import org.avanox.expert.ExpertCircle;
-import org.avanox.expert.ExpertSegment;
-import org.avanox.expert.ExpertTriangle;
+import org.avanox.chainOfResponsability.shapes.*;
 import org.junit.Test;
 
 public class TestChainOfResponsability {
-
-    @Test
-    public void simpleTest() {
-        assertEquals("hello world", "hello world");
-    }
 
     @Test
     public void testCircle() {
