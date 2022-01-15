@@ -2,7 +2,7 @@ package org.avanox.visitor;
 
 import org.avanox.Shapes.*;
 
-public class DrawFX implements Draw {
+public class DrawFX extends Draw {
     @Override
     public void visit(Triangle triangle) {
         System.out.println("Je vais dessiner un triangle en FX");

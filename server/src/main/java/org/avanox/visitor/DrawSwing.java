@@ -2,7 +2,7 @@ package org.avanox.visitor;
 
 import org.avanox.Shapes.*;
 
-public class DrawSwing implements Draw {
+public class DrawSwing extends Draw {
     @Override
     public void visit(Triangle triangle) {
         System.out.println("Je vais dessiner un triangle en Swing");

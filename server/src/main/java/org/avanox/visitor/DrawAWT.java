@@ -2,7 +2,7 @@ package org.avanox.visitor;
 
 import org.avanox.Shapes.*;
 
-public class DrawAWT implements Draw {
+public class DrawAWT extends Draw {
 
     @Override
     public void visit(Triangle triangle) {

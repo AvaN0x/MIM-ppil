@@ -1,4 +1,4 @@
 package org.avanox.visitor;
 
-public interface Draw extends ShapeVisitor {
+public abstract class Draw implements ShapeVisitor {
 }
