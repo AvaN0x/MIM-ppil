@@ -22,7 +22,7 @@ public class DrawSwing implements Draw {
     }
 
     @Override
-    public void visit(Other other) {
+    public void visit(AnyPolygon other) {
         System.out.println("Je vais dessiner un polygone quelconque fermé en Swing");
 
     }

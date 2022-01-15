@@ -9,5 +9,5 @@ public interface ShapeVisitor {
 
     void visit(Segment segment);
 
-    void visit(Other other);
+    void visit(AnyPolygon other);
 }

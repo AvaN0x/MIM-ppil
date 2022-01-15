@@ -4,14 +4,14 @@ import java.util.LinkedList;
 
 import org.avanox.visitor.ShapeVisitor;
 
-public class Other extends Shape {
-    private LinkedList<Segment> _segments;
+public class AnyPolygon extends Shape {
+    private LinkedList<Point> _segments;
 
-    public Other(LinkedList<Segment> segments) {
+    public AnyPolygon(LinkedList<Point> segments) {
         this._segments = segments;
     }
 
-    public LinkedList<Segment> getSegments() {
+    public LinkedList<Point> getSegments() {
         return _segments;
     }
 
@@ -24,7 +24,7 @@ public class Other extends Shape {
     public boolean equals(Object obj) {
         if (this.getClass() != obj.getClass())
             return false;
-        if (!this._segments.containsAll(((Other) obj)._segments))
+        if (!this._segments.containsAll(((AnyPolygon) obj)._segments))
             return false;
 
         return true;
