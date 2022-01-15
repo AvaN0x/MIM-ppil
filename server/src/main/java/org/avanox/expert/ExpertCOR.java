@@ -6,7 +6,7 @@ public abstract class ExpertCOR implements Expert {
     protected ExpertCOR _next;
 
     public ExpertCOR(ExpertCOR next) {
-        this._next = next;
+        _next = next;
     }
 
     protected abstract Shape resolve1(String str);
@@ -15,7 +15,12 @@ public abstract class ExpertCOR implements Expert {
     public Shape resolve(String str) {
         Shape shape = resolve1(str);
 
-        return (shape != null ? shape : this._next.resolve1(str));
+        if (shape != null)
+            return shape;
+        else if (_next != null)
+            return _next.resolve(str);
+
+        return null;
     }
 
     public void getSuivant() {
