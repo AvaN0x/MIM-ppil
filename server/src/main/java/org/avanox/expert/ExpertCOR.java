@@ -22,9 +22,4 @@ public abstract class ExpertCOR implements Expert {
 
         return null;
     }
-
-    public void getSuivant() {
-        System.out.println("Suivant est : " + _next);
-    }
-
 }
