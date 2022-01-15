@@ -30,4 +30,17 @@ public class Triangle extends Shape {
         visitor.visit(this);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        if (!this.a.equals(((Triangle) obj).a))
+            return false;
+        if (!this.b.equals(((Triangle) obj).b))
+            return false;
+        if (!this.c.equals(((Triangle) obj).c))
+            return false;
+        return true;
+    }
+
 }

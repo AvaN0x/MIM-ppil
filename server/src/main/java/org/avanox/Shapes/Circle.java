@@ -24,4 +24,16 @@ public class Circle extends Shape {
         visitor.visit(this);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        if (!this._center.equals(((Circle) obj)._center))
+            return false;
+        if (this._radius != ((Circle) obj)._radius)
+            return false;
+
+        return true;
+    }
+
 }

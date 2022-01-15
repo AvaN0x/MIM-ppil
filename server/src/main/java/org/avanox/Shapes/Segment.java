@@ -25,4 +25,16 @@ public class Segment extends Shape {
         visitor.visit(this);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        if (!this.a.equals(((Segment) obj).a))
+            return false;
+        if (!this.b.equals(((Segment) obj).b))
+            return false;
+
+        return true;
+    }
+
 }

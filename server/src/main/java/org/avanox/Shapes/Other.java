@@ -20,4 +20,14 @@ public class Other extends Shape {
         visitor.visit(this);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        if (!this._segments.containsAll(((Other) obj)._segments))
+            return false;
+
+        return true;
+    }
+
 }

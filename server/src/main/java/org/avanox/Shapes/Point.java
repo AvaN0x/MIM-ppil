@@ -16,4 +16,16 @@ public class Point {
     public double getY() {
         return y;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        if (this.x != ((Point) obj).x)
+            return false;
+        if (this.y != ((Point) obj).y)
+            return false;
+
+        return true;
+    }
 }
