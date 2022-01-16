@@ -1,7 +1,7 @@
 package org.avanox.chainOfResponsability.shapes;
 
-import org.avanox.Shapes.Shape;
+import org.avanox.visitor.Draw;
 
 public interface Expert {
-    public Shape resolve(String str);
+    public boolean resolve(String str, Draw graphicLibrairy);
 }

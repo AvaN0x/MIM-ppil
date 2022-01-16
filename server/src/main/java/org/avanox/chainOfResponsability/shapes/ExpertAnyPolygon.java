@@ -4,19 +4,19 @@ import java.util.LinkedList;
 
 import org.avanox.Shapes.AnyPolygon;
 import org.avanox.Shapes.Point;
-import org.avanox.Shapes.Shape;
+import org.avanox.visitor.Draw;
 
-public class ExpertAnyPolygon extends ExpertCOR {
+public class ExpertAnyPolygon extends ExpertShapes {
 
-    public ExpertAnyPolygon(ExpertCOR next) {
+    public ExpertAnyPolygon(ExpertShapes next) {
         super(next);
     }
 
     @Override
-    protected Shape resolve1(String str) {
+    protected boolean resolve1(String str, Draw graphicLibrairy) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
-            return null;
+            return false;
 
         String subStr = str.substring(1, idx);
 
@@ -25,7 +25,7 @@ public class ExpertAnyPolygon extends ExpertCOR {
         if (matches[0].equalsIgnoreCase("anypolygon")) {
             int length = matches.length;
             if (length < 7 || length % 2 == 0)
-                return null;
+                return false;
 
             LinkedList<Point> points = new LinkedList<>();
             for (int i = 1; i < length; i += 2) {
@@ -36,10 +36,11 @@ public class ExpertAnyPolygon extends ExpertCOR {
                     points.addFirst(point);
                 }
             }
-            return new AnyPolygon(points);
+            graphicLibrairy.visit(new AnyPolygon(points));
+            return true;
         }
 
-        return null;
+        return false;
     }
 
 }

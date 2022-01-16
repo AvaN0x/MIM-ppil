@@ -2,34 +2,36 @@ package org.avanox.chainOfResponsability.shapes;
 
 import org.avanox.Shapes.Point;
 import org.avanox.Shapes.Segment;
-import org.avanox.Shapes.Shape;
+import org.avanox.visitor.Draw;
 
-public class ExpertSegment extends ExpertCOR {
+public class ExpertSegment extends ExpertShapes {
 
-    public ExpertSegment(ExpertCOR next) {
+    public ExpertSegment(ExpertShapes next) {
         super(next);
     }
 
     @Override
-    protected Shape resolve1(String str) {
+    protected boolean resolve1(String str, Draw graphicLibrairy) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
-            return null;
+            return false;
 
         String subStr = str.substring(1, idx);
-        // System.out.println("subStr is : " + subStr);
 
         String[] matches = subStr.split(",");
         if (matches.length != 5)
-            return null;
+            return false;
 
         if (matches[0].equalsIgnoreCase("segment")) {
-            return new Segment(
+            Segment segment = new Segment(
                     new Point(Double.parseDouble(matches[1]), Double.parseDouble(matches[2])),
                     new Point(Double.parseDouble(matches[3]), Double.parseDouble(matches[4])));
+
+            graphicLibrairy.visit(segment);
+            return true;
         }
 
-        return null;
+        return false;
     }
 
 }
