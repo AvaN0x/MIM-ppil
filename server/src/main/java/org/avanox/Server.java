@@ -7,34 +7,30 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.util.logging.Logger;
 
-public class Server implements Runnable {
+public class Server extends ServerSocket implements Runnable {
     private static final Logger LOGGER = Logger.getLogger("Serveur");
-    private ServerSocket _serverSocket;
+    private ThreadGroup clientThreads = new ThreadGroup("clients");
 
     public Server(int port) throws IOException {
-        _serverSocket = new ServerSocket(port);
-        LOGGER.info("Serveur de majuscule pret au port : " + _serverSocket.getLocalPort());
+        super(port);
+        LOGGER.info("Serveur de majuscule pret au port : " + this.getLocalPort());
     }
 
     @Override
     public void run() {
         try {
-            ThreadGroup clientThreads = new ThreadGroup("clients");
-
             int noClient = 0;
             Socket socket = null;
             try {
                 while (!Thread.currentThread().isInterrupted()) {
-                    socket = _serverSocket.accept();
-                    Interlocuteur interlocuteur = new Interlocuteur(clientThreads, socket, noClient++);
-                    LOGGER.info("Connexion [" + noClient + "] reussie");
+                    socket = this.accept();
+                    Interlocuteur interlocuteur = new Interlocuteur(clientThreads, socket, noClient);
+                    LOGGER.info("Connexion [" + noClient++ + "] reussie");
                     interlocuteur.start();
                 }
-                System.out.println("ned");
             } catch (SocketTimeoutException e) {
                 LOGGER.severe("Le delai d'attente de la socket est depasse.");
             } catch (SocketException e) {
-                e.printStackTrace();
                 /*
                  * When server is blocked in `accept()` and methode `_serverSocket.close()` has
                  * been called
@@ -59,12 +55,10 @@ public class Server implements Runnable {
      * Close the socket of the server
      */
     public void closeServer() {
-        if (_serverSocket != null) {
+        if (!Thread.currentThread().isInterrupted()) {
             try {
-                LOGGER.info("Fermeture du serveur ...");
-                _serverSocket.close();
-                _serverSocket = null;
-                LOGGER.info("Le serveur a ete interrompu.");
+                this.close();
+                Thread.currentThread().interrupt();
             } catch (IOException e) {
                 LOGGER.severe("Une erreur s'est produite lors de la fermeture du serveur.");
                 System.err.println(e);
