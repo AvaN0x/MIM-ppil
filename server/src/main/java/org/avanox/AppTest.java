@@ -6,14 +6,21 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-import io.github.cdimascio.dotenv.Dotenv;
+import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.stage.Stage;
 
-public class App {
+import io.github.cdimascio.dotenv.Dotenv;
+
+public class AppTest extends Application {
     private static final LogManager logManager = LogManager.getLogManager();
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 
-    public static void main(String[] args) {
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.show();
+        primaryStage.close();
+
         // Load environment variables
         Dotenv dotenv = Dotenv.load();
 
@@ -35,27 +42,30 @@ public class App {
         }
 
         final int fport = port;
+        Runnable server = null;
         try {
-            Server server = new Server(fport);
-            Thread server_t = new Thread(server);
-
-            Runtime.getRuntime().addShutdownHook(new Thread() {
-                @Override
-                public void run() {
-                    Platform.exit();
-                    LOGGER.info("Fermeture du serveur ...");
-                    server.closeServer();
-                    LOGGER.info("Le serveur a ete interrompu.");
-                }
-            });
-
-            // server_t.setDaemon(true);
-            server_t.start();
-
+            server = new Server(fport);
         } catch (IOException e) {
             LOGGER.severe("Une erreur est survenue lors de l'ouverture du serveur.");
             System.err.println(e);
+            Platform.exit();
             System.exit(0);
         }
+
+        Thread server_t = new Thread(server);
+
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                System.out.println("got it");
+                // server_t.interrupt();
+            }
+        });
+        // server_t.setDaemon(true);
+        server_t.start();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }
