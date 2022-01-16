@@ -3,9 +3,9 @@ package org.avanox.chainOfResponsability.graphicLibrairy;
 import org.avanox.visitor.Draw;
 import org.avanox.visitor.DrawFX;
 
-public class ExpertFX extends ExpertCOR {
+public class ExpertFX extends ExpertGL {
 
-    public ExpertFX(ExpertCOR next) {
+    public ExpertFX(ExpertGL next) {
         super(next);
     }
 
@@ -17,7 +17,7 @@ public class ExpertFX extends ExpertCOR {
 
         String subStr = str.substring(1, idx);
         if (subStr.equalsIgnoreCase("javafx"))
-            return new DrawFX();
+            return DrawFX.getInstance();
         return null;
     }
 

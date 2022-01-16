@@ -3,9 +3,9 @@ package org.avanox.chainOfResponsability.graphicLibrairy;
 import org.avanox.visitor.Draw;
 import org.avanox.visitor.DrawAWT;
 
-public class ExpertAWT extends ExpertCOR {
+public class ExpertAWT extends ExpertGL {
 
-    public ExpertAWT(ExpertCOR next) {
+    public ExpertAWT(ExpertGL next) {
         super(next);
     }
 
@@ -17,7 +17,7 @@ public class ExpertAWT extends ExpertCOR {
 
         String subStr = str.substring(1, idx);
         if (subStr.equalsIgnoreCase("awt"))
-            return new DrawAWT();
+            return DrawAWT.getInstance();
         return null;
     }
 

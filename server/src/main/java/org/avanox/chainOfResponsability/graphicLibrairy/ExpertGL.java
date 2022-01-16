@@ -2,10 +2,10 @@ package org.avanox.chainOfResponsability.graphicLibrairy;
 
 import org.avanox.visitor.Draw;
 
-public abstract class ExpertCOR implements Expert {
-    protected ExpertCOR _next;
+public abstract class ExpertGL implements Expert {
+    protected ExpertGL _next;
 
-    public ExpertCOR(ExpertCOR next) {
+    public ExpertGL(ExpertGL next) {
         this._next = next;
     }
 
