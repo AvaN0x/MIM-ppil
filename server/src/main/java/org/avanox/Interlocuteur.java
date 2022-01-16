@@ -8,12 +8,9 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Logger;
 
-import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
+import org.avanox.chainOfResponsability.shapes.*;
+import org.avanox.visitor.Draw;
+import org.avanox.chainOfResponsability.graphicLibrairy.*;
 
 import java.lang.ThreadGroup;
 
@@ -23,20 +20,17 @@ public class Interlocuteur extends Thread {
     private Socket _socket = null;
 
     private static final Logger LOGGER = Logger.getLogger("Serveur");
-    private static Scene _scene = null;
 
     private int _noClient;
 
     public Interlocuteur(ThreadGroup group, Socket socket, int noClient) {
-        super(group, "client" + socket);
+        super(group, "client" + noClient);
         try {
             this._fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this._fluxSortant = new PrintStream(socket.getOutputStream());
             this._noClient = noClient;
             this._socket = socket;
 
-            if (_scene == null)
-                _scene = new Scene(loadFXML("window"), 900, 514);
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la creation de l'interlocuteur.");
             System.err.println(e);
@@ -46,23 +40,19 @@ public class Interlocuteur extends Thread {
 
     @Override
     public void run() {
-        Platform.runLater(() -> {
-            Stage stage = new Stage();
-            stage.setTitle("Client " + _noClient);
-            setIcon(stage);
-            stage.setScene(_scene);
+        ExpertShapes expertShapes = null;
+        expertShapes = new ExpertCircle(expertShapes);
+        expertShapes = new ExpertSegment(expertShapes);
+        expertShapes = new ExpertTriangle(expertShapes);
+        expertShapes = new ExpertAnyPolygon(expertShapes);
 
-            stage.setOnCloseRequest(value -> {
-                stage.close();
-                this.interrupt();
-            });
+        ExpertGL expertGL = null;
+        expertGL = new ExpertAWT(expertGL);
+        expertGL = new ExpertFX(expertGL);
+        expertGL = new ExpertSwing(expertGL);
 
-            stage.show();
-        });
-        execution();
-    }
+        Draw graphicLibrairy = null;
 
-    private void execution() {
         try {
             while (!this.isInterrupted()) {
                 String requete = _fluxEntrant.readLine();
@@ -70,9 +60,17 @@ public class Interlocuteur extends Thread {
                     throw new SocketException();
 
                 LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
+
+                if (graphicLibrairy == null) {
+                    graphicLibrairy = expertGL.resolve(requete);
+                } else {
+                    expertShapes.resolve(requete, graphicLibrairy);
+                }
+
                 _fluxSortant.println(requete.toUpperCase());
             }
         } catch (SocketException e) {
+            e.printStackTrace();
             // Connection interrupted
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la lecture de la requete");
@@ -109,18 +107,5 @@ public class Interlocuteur extends Thread {
             if (!this.isInterrupted())
                 this.interrupt();
         }
-    }
-
-    private void setIcon(Stage stage) {
-        stage.getIcons().add(new Image(Server.class.getResourceAsStream("img/title-ico.png")));
-    }
-
-    // private void setRoot(String fxml) throws IOException {
-    // _scene.setRoot(loadFXML(fxml));
-    // }
-
-    private Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Server.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
     }
 }
