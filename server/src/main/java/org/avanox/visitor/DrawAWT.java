@@ -1,15 +1,13 @@
 package org.avanox.visitor;
 
 import org.avanox.Shapes.*;
+
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 import java.awt.image.BufferStrategy;
-import java.awt.Window;
-import java.awt.Canvas;
 import java.awt.Frame;
 import java.awt.Graphics;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 
 public class DrawAWT extends Draw {
     private static DrawAWT instance;
@@ -27,17 +25,21 @@ public class DrawAWT extends Draw {
         System.out.println("Je vais dessiner un triangle en AWT");
         BufferStrategy strategie = frame.getBufferStrategy();
         Graphics graphics = strategie.getDrawGraphics();
-        // le graphics sert à dessiner sur le tampon
 
-        // graphics.drawPolygon(xPoints, yPoints, 3);
+        int[] xPoints = {
+                triangle.getA().getX(),
+                triangle.getB().getX(),
+                triangle.getC().getX()
+        };
+        int[] yPoints = {
+                triangle.getA().getY(),
+                triangle.getB().getY(),
+                triangle.getC().getY()
+        };
 
-        // triangle.getA().getX(),
-        // triangle.getA().getY(),
-        // triangle.getB().getX(),
-        // triangle.getB().getY()
+        graphics.drawPolygon(xPoints, yPoints, 3);
 
-        strategie.show(); // place le tampon sur l'écran : la technique utilisée dépend du type de
-                          // stratégie utilisé : blitting, pointeur vidéo, etc.
+        strategie.show();
 
         graphics.dispose();
     }
@@ -46,17 +48,60 @@ public class DrawAWT extends Draw {
     public void visit(Circle circle) {
         System.out.println("Je vais dessiner un cercle en AWT");
 
+        BufferStrategy strategie = frame.getBufferStrategy();
+        Graphics graphics = strategie.getDrawGraphics();
+
+        graphics.fillOval(
+                circle.getCenter().getX(),
+                circle.getCenter().getY(),
+                circle.getRadius(),
+                circle.getRadius());
+
+        strategie.show();
+
+        graphics.dispose();
     }
 
     @Override
     public void visit(Segment segment) {
         System.out.println("Je vais dessiner un segment en AWT");
 
+        BufferStrategy strategie = frame.getBufferStrategy();
+        Graphics graphics = strategie.getDrawGraphics();
+
+        graphics.drawLine(
+                segment.getA().getX(),
+                segment.getA().getY(),
+                segment.getB().getX(),
+                segment.getB().getY());
+
+        strategie.show();
+
+        graphics.dispose();
+
     }
 
     @Override
     public void visit(AnyPolygon other) {
         System.out.println("Je vais dessiner un polygone quelconque fermé en AWT");
+
+        BufferStrategy strategie = frame.getBufferStrategy();
+        Graphics graphics = strategie.getDrawGraphics();
+
+        ArrayList<Integer> xPoints = new ArrayList<Integer>();
+        ArrayList<Integer> yPoints = new ArrayList<Integer>();
+        for (Point point : other.getSegments()) {
+            xPoints.add(point.getX());
+            yPoints.add(point.getY());
+        }
+        graphics.drawPolygon(
+                xPoints.stream().mapToInt(i -> i).toArray(),
+                yPoints.stream().mapToInt(i -> i).toArray(),
+                xPoints.size());
+
+        strategie.show();
+
+        graphics.dispose();
 
     }
 
