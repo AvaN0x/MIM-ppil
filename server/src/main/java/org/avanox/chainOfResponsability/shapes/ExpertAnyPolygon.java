@@ -31,8 +31,8 @@ public class ExpertAnyPolygon extends ExpertShapes {
             for (int i = 1; i < length; i += 2) {
                 if (i != 0) {
                     Point point = new Point(
-                            Double.parseDouble(matches[i]),
-                            Double.parseDouble(matches[i + 1]));
+                            Integer.parseInt(matches[i]),
+                            Integer.parseInt(matches[i + 1]));
                     points.addFirst(point);
                 }
             }

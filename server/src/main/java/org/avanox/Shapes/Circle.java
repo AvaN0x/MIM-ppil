@@ -4,9 +4,9 @@ import org.avanox.visitor.ShapeVisitor;
 
 public class Circle extends Shape {
     private Point _center;
-    private double _radius;
+    private int _radius;
 
-    public Circle(Point center, double radius) {
+    public Circle(Point center, int radius) {
         this._center = center;
         this._radius = radius;
     }
@@ -15,7 +15,7 @@ public class Circle extends Shape {
         return this._center;
     }
 
-    public double getRadius() {
+    public int getRadius() {
         return this._radius;
     }
 

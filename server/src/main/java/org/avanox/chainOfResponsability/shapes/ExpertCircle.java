@@ -26,9 +26,9 @@ public class ExpertCircle extends ExpertShapes {
             graphicLibrairy.visit(
                     new Circle(
                             new Point(
-                                    Double.parseDouble(matches[1]),
-                                    Double.parseDouble(matches[2])),
-                            Double.parseDouble(matches[3])));
+                                    Integer.parseInt(matches[1]),
+                                    Integer.parseInt(matches[2])),
+                            Integer.parseInt(matches[3])));
             return true;
         }
         return false;

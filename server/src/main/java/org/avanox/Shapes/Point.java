@@ -1,19 +1,19 @@
 package org.avanox.Shapes;
 
 public class Point {
-    protected double x;
-    protected double y;
+    protected int x;
+    protected int y;
 
-    public Point(double x, double y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 

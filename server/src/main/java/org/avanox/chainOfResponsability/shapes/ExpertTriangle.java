@@ -23,9 +23,9 @@ public class ExpertTriangle extends ExpertShapes {
 
         if (matches[0].equalsIgnoreCase("triangle")) {
             Triangle triangle = new Triangle(
-                    new Point(Double.parseDouble(matches[1]), Double.parseDouble(matches[2])),
-                    new Point(Double.parseDouble(matches[3]), Double.parseDouble(matches[4])),
-                    new Point(Double.parseDouble(matches[5]), Double.parseDouble(matches[6])));
+                    new Point(Integer.parseInt(matches[1]), Integer.parseInt(matches[2])),
+                    new Point(Integer.parseInt(matches[3]), Integer.parseInt(matches[4])),
+                    new Point(Integer.parseInt(matches[5]), Integer.parseInt(matches[6])));
             graphicLibrairy.visit(triangle);
             return true;
         }

@@ -24,8 +24,8 @@ public class ExpertSegment extends ExpertShapes {
 
         if (matches[0].equalsIgnoreCase("segment")) {
             Segment segment = new Segment(
-                    new Point(Double.parseDouble(matches[1]), Double.parseDouble(matches[2])),
-                    new Point(Double.parseDouble(matches[3]), Double.parseDouble(matches[4])));
+                    new Point(Integer.parseInt(matches[1]), Integer.parseInt(matches[2])),
+                    new Point(Integer.parseInt(matches[3]), Integer.parseInt(matches[4])));
 
             graphicLibrairy.visit(segment);
             return true;
