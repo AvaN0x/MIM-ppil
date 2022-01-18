@@ -17,7 +17,7 @@ public class ExpertAWT extends ExpertGL {
 
         String subStr = str.substring(1, idx);
         if (subStr.equalsIgnoreCase("awt"))
-            return DrawAWT.getInstance();
+            return new DrawAWT();
         return null;
     }
 

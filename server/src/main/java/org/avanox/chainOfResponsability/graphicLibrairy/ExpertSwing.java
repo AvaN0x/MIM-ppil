@@ -17,7 +17,7 @@ public class ExpertSwing extends ExpertGL {
 
         String subStr = str.substring(1, idx);
         if (subStr.equalsIgnoreCase("swing"))
-            return DrawSwing.getInstance();
+            return new DrawSwing();
         return null;
     }
 

@@ -17,7 +17,7 @@ public class ExpertFX extends ExpertGL {
 
         String subStr = str.substring(1, idx);
         if (subStr.equalsIgnoreCase("javafx"))
-            return DrawFX.getInstance();
+            return new DrawFX();
         return null;
     }
 
