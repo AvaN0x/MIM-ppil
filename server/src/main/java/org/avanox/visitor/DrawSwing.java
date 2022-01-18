@@ -3,8 +3,6 @@ package org.avanox.visitor;
 import org.avanox.Shapes.*;
 
 public class DrawSwing extends Draw {
-    private static DrawSwing instance;
-
     @Override
     public void visit(Triangle triangle) {
         System.out.println("Je vais dessiner un triangle en Swing");
@@ -30,14 +28,8 @@ public class DrawSwing extends Draw {
     }
 
     @Override
-    public void init() {
+    public void closeDraw() {
         // TODO Auto-generated method stub
 
-    }
-
-    public static DrawSwing getInstance() {
-        if (instance == null)
-            instance = new DrawSwing();
-        return instance;
     }
 }

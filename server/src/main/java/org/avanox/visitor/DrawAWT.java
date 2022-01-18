@@ -7,25 +7,43 @@ import java.util.logging.Logger;
 
 import java.awt.image.BufferStrategy;
 import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.Graphics;
 
 public class DrawAWT extends Draw {
-    private static DrawAWT instance;
-    private static Frame frame;
+    private Frame frame;
+    private BufferStrategy strategie;
+    private Graphics graphics;
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 
     public DrawAWT() {
-        frame = new Frame("Frame toute simple");
-        frame.setBounds(0, 0, 400, 400);
+        this.frame = new Frame("Frame toute simple");
+        this.frame.setBounds(0, 0, 400, 400);
+        this.frame.setVisible(true);
+        this.frame.createBufferStrategy(2);
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        this.frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent event) {
+                frame.dispose();
+                strategie.dispose();
+                graphics.dispose();
+            }
+        });
+
+        this.strategie = this.frame.getBufferStrategy();
+        this.graphics = this.strategie.getDrawGraphics();
+
         LOGGER.info("La fenetre awt a ete initialisee");
     }
 
     @Override
     public void visit(Triangle triangle) {
-        System.out.println("Je vais dessiner un triangle en AWT");
-        BufferStrategy strategie = frame.getBufferStrategy();
-        Graphics graphics = strategie.getDrawGraphics();
-
         int[] xPoints = {
                 triangle.getA().getX(),
                 triangle.getB().getX(),
@@ -40,35 +58,21 @@ public class DrawAWT extends Draw {
         graphics.drawPolygon(xPoints, yPoints, 3);
 
         strategie.show();
-
-        graphics.dispose();
     }
 
     @Override
     public void visit(Circle circle) {
-        System.out.println("Je vais dessiner un cercle en AWT");
-
-        BufferStrategy strategie = frame.getBufferStrategy();
-        Graphics graphics = strategie.getDrawGraphics();
-
-        graphics.fillOval(
+        graphics.drawOval(
                 circle.getCenter().getX(),
                 circle.getCenter().getY(),
                 circle.getRadius(),
                 circle.getRadius());
 
         strategie.show();
-
-        graphics.dispose();
     }
 
     @Override
     public void visit(Segment segment) {
-        System.out.println("Je vais dessiner un segment en AWT");
-
-        BufferStrategy strategie = frame.getBufferStrategy();
-        Graphics graphics = strategie.getDrawGraphics();
-
         graphics.drawLine(
                 segment.getA().getX(),
                 segment.getA().getY(),
@@ -76,18 +80,10 @@ public class DrawAWT extends Draw {
                 segment.getB().getY());
 
         strategie.show();
-
-        graphics.dispose();
-
     }
 
     @Override
     public void visit(AnyPolygon other) {
-        System.out.println("Je vais dessiner un polygone quelconque fermé en AWT");
-
-        BufferStrategy strategie = frame.getBufferStrategy();
-        Graphics graphics = strategie.getDrawGraphics();
-
         ArrayList<Integer> xPoints = new ArrayList<Integer>();
         ArrayList<Integer> yPoints = new ArrayList<Integer>();
         for (Point point : other.getSegments()) {
@@ -100,20 +96,12 @@ public class DrawAWT extends Draw {
                 xPoints.size());
 
         strategie.show();
-
-        graphics.dispose();
-
-    }
-
-    public static DrawAWT getInstance() {
-        if (instance == null)
-            instance = new DrawAWT();
-        return instance;
     }
 
     @Override
-    public void init() {
-        // TODO Auto-generated method stub
-
+    public void closeDraw() {
+        frame.dispose();
+        strategie.dispose();
+        graphics.dispose();
     }
 }

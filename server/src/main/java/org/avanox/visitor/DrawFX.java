@@ -7,7 +7,6 @@ import javafx.application.Platform;
 import javafx.stage.Stage;
 
 public class DrawFX extends Draw {
-    private static DrawFX instance;
     private static Stage stage;
 
     @Override
@@ -35,16 +34,8 @@ public class DrawFX extends Draw {
     }
 
     @Override
-    public void init() {
-        Application.launch(FXApplicationThread.class);
-        // Platform.runLater(() -> {
-        // stage = new Stage();
-        // });
-    }
+    public void closeDraw() {
+        // TODO Auto-generated method stub
 
-    public static DrawFX getInstance() {
-        if (instance == null)
-            instance = new DrawFX();
-        return instance;
     }
 }
