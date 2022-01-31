@@ -1,15 +1,23 @@
 package org.avanox.visitor;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.stage.Stage;
 
 public class FXApplicationThread extends Application {
+    private static FXApplicationThread instance;
+
+    public FXApplicationThread() {
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Platform.setImplicitExit(true);
-        primaryStage.showAndWait();
+    }
+
+    public static FXApplicationThread getInstance() {
+        if (instance == null)
+            instance = new FXApplicationThread();
+
+        return instance;
     }
 
 }
