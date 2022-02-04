@@ -28,7 +28,7 @@ LIB		:= lib
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
-SOURCEDIRS	:= $(SRC)
+SOURCEDIRS	:= $(shell find $(SRC) -type d)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
 FIXPATH = $(subst /,\,$1)
