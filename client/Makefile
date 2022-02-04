@@ -18,7 +18,7 @@ LFLAGS = -lws2_32
 OUTPUT	:= output
 
 # define source directory
-SRC		:= src
+SRC		:= src src/shape src/utils src/shape/composed src/shape/simple
 
 # define include directory
 INCLUDE	:= include
@@ -28,7 +28,7 @@ LIB		:= lib
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
-SOURCEDIRS	:= $(shell find $(SRC) -type d)
+SOURCEDIRS	:= $(SRC)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
 FIXPATH = $(subst /,\,$1)
