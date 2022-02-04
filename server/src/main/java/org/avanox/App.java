@@ -1,6 +1,5 @@
 package org.avanox;
 
-import java.awt.Frame;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.logging.Level;
