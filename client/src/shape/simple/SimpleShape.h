@@ -27,9 +27,9 @@ public:
 	virtual operator std::string() const;
 
 	// ==================== OPERATIONS ====================
-	virtual SimpleShape *homothety(const Vecteur2D &origin, double coeff) const = 0;
-	virtual SimpleShape *translation(const Vecteur2D &v) const = 0;
-	virtual SimpleShape *rotation(const Vecteur2D &origin, double alpha) const = 0;
+	virtual Shape *homothety(const Vecteur2D &origin, double coeff) const = 0;
+	virtual Shape *translation(const Vecteur2D &v) const = 0;
+	virtual Shape *rotation(const Vecteur2D &origin, double alpha) const = 0;
 	virtual double area() const = 0;
 
 	// ==================== OPERATORS ====================
