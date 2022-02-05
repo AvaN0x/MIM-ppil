@@ -2,6 +2,8 @@
 
 Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius) : _radius(radius)
 {
+    if (points.size != 1)
+        throw std::invalid_argument("You need only 1 point to create a circle");
     _points = points;
     _color = color;
 }
@@ -17,7 +19,7 @@ Circle::Circle(const std::string &str)
     // TODO @Avan0x
 }
 
-SimpleShape *Circle::homothety(const Vecteur2D &origin, double coeff) const
+Shape *Circle::homothety(const Vecteur2D &origin, double coeff) const
 {
     std::vector<Vecteur2D> points;
     for (const Vecteur2D &point : _points)
@@ -27,7 +29,7 @@ SimpleShape *Circle::homothety(const Vecteur2D &origin, double coeff) const
     return new Circle(points, _color, _radius);
 }
 
-SimpleShape *Circle::translation(const Vecteur2D &v) const
+Shape *Circle::translation(const Vecteur2D &v) const
 {
     std::vector<Vecteur2D> points;
     for (const Vecteur2D &point : _points)
@@ -37,7 +39,7 @@ SimpleShape *Circle::translation(const Vecteur2D &v) const
     return new Circle(points, _color, _radius);
 }
 
-SimpleShape *Circle::rotation(const Vecteur2D &origin, double alpha) const
+Shape *Circle::rotation(const Vecteur2D &origin, double alpha) const
 {
     // TODO
 }

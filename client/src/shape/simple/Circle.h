@@ -20,9 +20,9 @@ public:
     double getRadius() const { return _radius; }
 
     // ==================== OPERATIONS ====================
-    SimpleShape *homothety(const Vecteur2D &origin, double coeff) const;
-    SimpleShape *translation(const Vecteur2D &v) const;
-    SimpleShape *rotation(const Vecteur2D &origin, double alpha) const;
+    Shape *homothety(const Vecteur2D &origin, double coeff) const;
+    Shape *translation(const Vecteur2D &v) const;
+    Shape *rotation(const Vecteur2D &origin, double alpha) const;
     double area() const;
 
     // ==================== OPERATORS ====================
