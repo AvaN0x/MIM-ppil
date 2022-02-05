@@ -3,7 +3,7 @@
 
 class Shape
 {
-private:
+protected:
     Color _color;
 
 public:

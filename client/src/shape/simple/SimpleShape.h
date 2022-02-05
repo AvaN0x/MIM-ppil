@@ -12,7 +12,7 @@ class Color;
 
 class SimpleShape : public Shape
 {
-private:
+protected:
 	std::vector<Vecteur2D> _points;
 
 public:
