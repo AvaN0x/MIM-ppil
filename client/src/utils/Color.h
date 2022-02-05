@@ -13,12 +13,12 @@ public:
     static const Color YELLOW;
     static const Color CYAN;
 
-    Color() :
-        _r(0),
-        _g(0),
-        _b(0),
-        _a(0)
-    {}
+    Color() : _r(0),
+              _g(0),
+              _b(0),
+              _a(0)
+    {
+    }
 
     Color(int r, int g, int b, int a)
     {
@@ -28,10 +28,20 @@ public:
         _a = (a < 0 || a > 255) ? 0 : a;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const Color& c);
+    bool operator==(const Color &c) const
+    {
+        return _r == c._r && _g == c._g && _b == c._b && _a == c._a;
+    }
+
+    bool operator!=(const Color &c) const
+    {
+        return !(*this == c);
+    }
+
+    friend std::ostream &operator<<(std::ostream &os, const Color &c);
 };
 
-inline std::ostream& operator<<(std::ostream& os, const Color& c)
+inline std::ostream &operator<<(std::ostream &os, const Color &c)
 {
     return os << "r : " << c._r << "g : " << c._g << "b : " << c._b << "a : " << c._a;
 }
