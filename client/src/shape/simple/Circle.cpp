@@ -1,9 +1,13 @@
 #include "Circle.h"
 
-Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius) : _radius(radius)
+Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius)
 {
     if (points.size() != 1)
         throw std::invalid_argument("You need only 1 point to create a circle");
+    if (radius <= 0)
+        throw std::invalid_argument("The radius must be positive");
+
+    _radius = radius;
     _points = points;
     _color = color;
 }
