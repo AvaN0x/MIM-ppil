@@ -2,7 +2,7 @@
 
 Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius) : _radius(radius)
 {
-    if (points.size != 1)
+    if (points.size() != 1)
         throw std::invalid_argument("You need only 1 point to create a circle");
     _points = points;
     _color = color;
@@ -51,10 +51,7 @@ double Circle::area() const
 
 bool Circle::operator==(Shape *shape) const
 {
-    bool res = SimpleShape::operator==(shape);
-    if (((Circle *)shape)->getRadius() != _radius)
-        return false;
-    return true;
+    return SimpleShape::operator==(shape) && ((Circle *)shape)->getRadius() == _radius;
 }
 
 bool Circle::operator!=(Shape *shape) const
