@@ -4,11 +4,6 @@
 #include <string>
 
 #include "../Shape.h"
-// #include "../utils/Color.h"
-// #include "Vecteur2D.h"
-
-class Vecteur2D;
-class Color;
 
 class SimpleShape : public Shape
 {
@@ -16,11 +11,6 @@ protected:
 	std::vector<Vecteur2D> _points;
 
 public:
-	// ==================== CONSTRUCTORS ====================
-	// SimpleShape(std::vector<Vecteur2D> points, Color color);
-	// SimpleShape(const SimpleShape &shape);
-	// SimpleShape(const std::string &str);
-
 	// ==================== DESTRUCTORS ====================
 	virtual ~SimpleShape() {}
 
@@ -43,6 +33,6 @@ public:
 	virtual double area() const = 0;
 
 	// ==================== OPERATORS ====================
-	virtual bool operator==(Shape *shape) const = 0;
-	virtual bool operator!=(Shape *shape) const = 0;
+	virtual bool operator==(Shape *shape) const;
+	virtual bool operator!=(Shape *shape) const;
 };
