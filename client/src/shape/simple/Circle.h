@@ -19,6 +19,9 @@ public:
     // ==================== GETTERS ====================
     double getRadius() const { return _radius; }
 
+    // ==================== STRING ====================
+    operator std::string() const;
+
     // ==================== OPERATIONS ====================
     Shape *homothety(const Vecteur2D &origin, double coeff) const;
     Shape *translation(const Vecteur2D &v) const;

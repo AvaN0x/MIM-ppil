@@ -1,6 +1,9 @@
 #include "Circle.h"
 #define _USE_MATH_DEFINES
+#include <sstream>
 #include <math.h>
+
+using namespace std;
 
 Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius)
 {
@@ -23,6 +26,13 @@ Circle::Circle(const Circle &shape) : _radius(shape.getRadius())
 Circle::Circle(const std::string &str)
 {
     // TODO @Avan0x
+}
+
+Circle::operator std::string() const
+{
+    ostringstream s;
+    s << "Circle|" << SimpleShape::operator std::string() << "|" << _radius;
+    return s.str();
 }
 
 Shape *Circle::homothety(const Vecteur2D &origin, double coeff) const
