@@ -2,6 +2,9 @@
 
 #include <string>
 #include <string.h>
+#include <sstream>
+
+using namespace std;
 
 class Vecteur2D
 {
@@ -33,7 +36,7 @@ public:
     // ================== TOSTRING AND PRINT ==================
     std::string toString() const
     {
-        return ""; // TODO @Avan0x
+        return (std::string) * this;
     }
     friend std::ostream &operator<<(std::ostream &os, const Vecteur2D &u);
 };
