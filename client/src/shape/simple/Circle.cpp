@@ -1,4 +1,6 @@
 #include "Circle.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius)
 {
@@ -50,7 +52,7 @@ Shape *Circle::rotation(const Vecteur2D &origin, double alpha) const
 
 double Circle::area() const
 {
-    return _radius * _radius * 3.14159265358979323846;
+    return _radius * _radius * M_PI;
 }
 
 bool Circle::operator==(Shape *shape) const
