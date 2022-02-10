@@ -4,6 +4,7 @@
 
 class Polygon : public SimpleShape
 {
+public:
     // ==================== CONSTRUCTORS ====================
     Polygon(std::vector<Vecteur2D> points, Color color);
     Polygon(const Polygon &shape);
