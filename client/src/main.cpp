@@ -22,53 +22,53 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    try
-    {
-        // User inputs
-        string address;
-        int port;
-        cout << "Tapez l'adresse du serveur : " FONT_CYAN;
-        cin >> address;
+    // try
+    // {
+    //     // User inputs
+    //     string address;
+    //     int port;
+    //     cout << "Tapez l'adresse du serveur : " FONT_CYAN;
+    //     cin >> address;
 
-        cout << FONT_DEFAULT "Tapez le n° de port du serveur : " FONT_CYAN;
-        cin >> port;
+    //     cout << FONT_DEFAULT "Tapez le n° de port du serveur : " FONT_CYAN;
+    //     cin >> port;
 
-        cout << FONT_DEFAULT "Trying to connect to " FONT_CYAN << address << FONT_DEFAULT ":" FONT_CYAN << port << FONT_DEFAULT << endl;
+    //     cout << FONT_DEFAULT "Trying to connect to " FONT_CYAN << address << FONT_DEFAULT ":" FONT_CYAN << port << FONT_DEFAULT << endl;
 
-        ConnectionHandler connection = ConnectionHandler(address, port);
-        cout << FONT_YELLOW "Connexion au serveur de majuscule réussie" FONT_DEFAULT << endl;
+    //     ConnectionHandler connection = ConnectionHandler(address, port);
+    //     cout << FONT_YELLOW "Connexion au serveur de majuscule réussie" FONT_DEFAULT << endl;
 
-        // Clear cin because for some reasons the first request is empty
-        cin.clear();
-        fflush(stdin);
+    //     // Clear cin because for some reasons the first request is empty
+    //     cin.clear();
+    //     fflush(stdin);
 
-        do
-        {
-            string request;
-            cout << "Tapez la chaîne à mettre en majuscule ou tapez \"quitter\" : " FONT_CYAN;
-            getline(cin, request);
-            cout << FONT_DEFAULT;
-            if (request.empty())
-            {
-                cout << endl;
-                continue;
-            }
-            if (request == "quitter")
-                break;
+    //     do
+    //     {
+    //         string request;
+    //         cout << "Tapez la chaîne à mettre en majuscule ou tapez \"quitter\" : " FONT_CYAN;
+    //         getline(cin, request);
+    //         cout << FONT_DEFAULT;
+    //         if (request.empty())
+    //         {
+    //             cout << endl;
+    //             continue;
+    //         }
+    //         if (request == "quitter")
+    //             break;
 
-            request += "\r\n";
-            connection.sendLine(request);
+    //         request += "\r\n";
+    //         connection.sendLine(request);
 
-            string response = connection.receive();
+    //         string response = connection.receive();
 
-            cout << FONT_GREEN ">> " FONT_DEFAULT << response << endl;
-        } while (true);
+    //         cout << FONT_GREEN ">> " FONT_DEFAULT << response << endl;
+    //     } while (true);
 
-        connection.close();
-        cout << FONT_YELLOW "Arrêt normal du client" FONT_DEFAULT << endl;
-    }
-    catch (const exception &e)
-    {
-        cerr << FONT_RED "[Exception]" FONT_DEFAULT " : " << e.what() << endl;
-    }
+    //     connection.close();
+    //     cout << FONT_YELLOW "Arrêt normal du client" FONT_DEFAULT << endl;
+    // }
+    // catch (const exception &e)
+    // {
+    //     cerr << FONT_RED "[Exception]" FONT_DEFAULT " : " << e.what() << endl;
+    // }
 }
