@@ -43,5 +43,5 @@ public:
 
 inline std::ostream &operator<<(std::ostream &os, const Color &c)
 {
-    return os << "r : " << c._r << "g : " << c._g << "b : " << c._b << "a : " << c._a;
+    return os << "r : " << c._r << "g : " << c._g << "b : " << c._b << "a : " << c._a; // TODO @AvaN0x redo this, #00000000
 }
