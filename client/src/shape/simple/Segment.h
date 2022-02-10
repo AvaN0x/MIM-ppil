@@ -4,6 +4,7 @@
 
 class Segment : public SimpleShape
 {
+public:
     // ==================== CONSTRUCTORS ====================
     Segment(std::vector<Vecteur2D> points, Color color);
     Segment(const Segment &shape);
