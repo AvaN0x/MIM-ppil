@@ -28,6 +28,10 @@ public:
         _a = (a < 0 || a > 255) ? 0 : a;
     }
 
+    Color(std::string s){
+        // TODO @AvaN0x
+    };
+
     operator std::string() const;
 
     bool operator==(const Color &c) const
