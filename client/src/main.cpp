@@ -6,6 +6,13 @@
 #include <string.h>
 #include "ConnectionHandler.h"
 
+#include "utils/Color.h"
+#include "shape/Vecteur2D.h"
+#include "shape/simple/Circle.h"
+#include "shape/simple/Segment.h"
+// #include "shape/simple/Polygon.h"
+#include "shape/simple/Triangle.h"
+
 #define FONT_DEFAULT "\033[0m"
 
 #define FONT_RED "\033[0;31m"
@@ -71,4 +78,13 @@ int main(int argc, char *argv[])
     // {
     //     cerr << FONT_RED "[Exception]" FONT_DEFAULT " : " << e.what() << endl;
     // }
+
+    Circle c1(vector<Vecteur2D>({Vecteur2D(0, 0)}), Color(0, 0, 0), 1);
+    cout << "c1 : " << c1 << endl;
+    Segment s1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1)}), Color(0, 0, 0));
+    cout << "s1 : " << s1 << endl;
+    // Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(0, 0, 0));
+    // cout << "p1 : " << p1 << endl;
+    Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(0, 0, 0));
+    cout << "t1 : " << t1 << endl;
 }
