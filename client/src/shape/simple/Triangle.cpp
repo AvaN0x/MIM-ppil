@@ -21,7 +21,7 @@ Triangle::Triangle(const std::string &str)
 
 Triangle::operator std::string() const
 {
-    // TODO
+    return "Triangle|" + SimpleShape::operator std::string();
 }
 
 Shape *Triangle::homothety(const Vecteur2D &origin, double coeff) const
