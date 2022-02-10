@@ -28,6 +28,8 @@ public:
         _a = (a < 0 || a > 255) ? 0 : a;
     }
 
+    operator std::string() const;
+
     bool operator==(const Color &c) const
     {
         return _r == c._r && _g == c._g && _b == c._b && _a == c._a;
@@ -43,5 +45,5 @@ public:
 
 inline std::ostream &operator<<(std::ostream &os, const Color &c)
 {
-    return os << "r : " << c._r << "g : " << c._g << "b : " << c._b << "a : " << c._a; // TODO @AvaN0x redo this, #00000000
+    return os << (std::string)c;
 }
