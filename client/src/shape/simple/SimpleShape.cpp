@@ -1,9 +1,23 @@
 #include "SimpleShape.h"
+#include <sstream>
+
+using namespace std;
 
 SimpleShape::operator std::string() const
 {
-    return "";
-    // TODO @Avan0x
+    ostringstream s;
+    s << "";
+    bool isFirst = true;
+    for (const Vecteur2D &point : _points)
+    {
+        if (isFirst)
+            isFirst = false;
+        else
+            s << ";";
+        s << point;
+    }
+    s << "|" << _color;
+    return s.str();
 }
 
 bool SimpleShape::operator==(Shape *shape) const
