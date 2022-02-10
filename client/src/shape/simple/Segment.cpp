@@ -3,7 +3,7 @@
 Segment::Segment(std::vector<Vecteur2D> points, Color color)
 {
     if (points.size() != 2)
-        throw std::invalid_argument("You need only 3 points to create a segment");
+        throw std::invalid_argument("You need only 2 points to create a segment");
     _points = points;
     _color = color;
 }
@@ -51,7 +51,7 @@ Shape *Segment::rotation(const Vecteur2D &origin, double alpha) const
 
 double Segment::area() const
 {
-    // TODO
+    return 0.0; // TODO @Fentomee I guess area of segment is 0 ?
 }
 
 bool Segment::operator==(Shape *shape) const
