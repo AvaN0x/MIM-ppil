@@ -21,7 +21,7 @@ Polygon::Polygon(const std::string &str)
 
 Polygon::operator std::string() const
 {
-    // TODO
+    return "Polygon|" + SimpleShape::operator std::string();
 }
 
 Shape *Polygon::homothety(const Vecteur2D &origin, double coeff) const
