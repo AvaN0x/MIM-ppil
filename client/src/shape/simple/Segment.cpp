@@ -21,7 +21,7 @@ Segment::Segment(const std::string &str)
 
 Segment::operator std::string() const
 {
-    // TODO
+    return "Segment|" + SimpleShape::operator std::string();
 }
 
 Shape *Segment::homothety(const Vecteur2D &origin, double coeff) const
