@@ -20,7 +20,7 @@ public:
     {
     }
 
-    Color(int r, int g, int b, int a)
+    Color(int r, int g, int b, int a = 255)
     {
         _r = (r < 0 || r > 255) ? 0 : r;
         _g = (g < 0 || g > 255) ? 0 : g;
