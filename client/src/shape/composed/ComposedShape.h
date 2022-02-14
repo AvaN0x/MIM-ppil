@@ -13,6 +13,7 @@ private:
 
 public:
     // ==================== CONSTRUCTORS ====================
+    ComposedShape();
     ComposedShape(std::vector<Shape *> shapes);
     ComposedShape(const ComposedShape &composedShape);
 

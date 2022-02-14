@@ -1,19 +1,22 @@
 #include <stdexcept>
 #include "ComposedShape.h"
 
+ComposedShape::ComposedShape()
+{
+}
+
 ComposedShape::ComposedShape(std::vector<Shape *> shapes)
 {
-    if (shapes.size() == 0)
-        throw std::invalid_argument("vector given has no value");
-    _shapes = shapes;
+    if (shapes.size() > 0)
+        for (Shape *shape : shapes)
+            addShape(shape);
 }
 
 ComposedShape::ComposedShape(const ComposedShape &composedShape)
 {
-    if (composedShape.getShapes().size() == 0)
-        throw std::invalid_argument("composedShape is NULL");
-    for (Shape *shape : composedShape.getShapes())
-        addShape(shape);
+    if (composedShape.getShapes().size() > 0)
+        for (Shape *shape : composedShape.getShapes())
+            addShape(shape);
 }
 
 ComposedShape::~ComposedShape()
