@@ -1,5 +1,7 @@
 #include "Segment.h"
 
+using namespace shape;
+
 Segment::Segment(std::vector<Vecteur2D> points, Color color)
 {
     if (points.size() != 2)

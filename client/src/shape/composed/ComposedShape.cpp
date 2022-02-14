@@ -2,6 +2,8 @@
 #include <sstream>
 #include "ComposedShape.h"
 
+using namespace shape;
+
 ComposedShape::ComposedShape(Color color)
 {
     _color = color;

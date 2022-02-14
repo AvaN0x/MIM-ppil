@@ -1,5 +1,7 @@
 #include "Triangle.h"
 
+using namespace shape;
+
 Triangle::Triangle(std::vector<Vecteur2D> points, Color color)
 {
     if (points.size() != 3)

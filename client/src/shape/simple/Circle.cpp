@@ -4,6 +4,7 @@
 #include <math.h>
 
 using namespace std;
+using namespace shape;
 
 Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius)
 {

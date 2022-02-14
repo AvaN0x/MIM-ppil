@@ -1,5 +1,7 @@
 #include "Polygon.h"
 
+using namespace shape;
+
 Polygon::Polygon(std::vector<Vecteur2D> points, Color color)
 {
     if (points.size() < 3)

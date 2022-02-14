@@ -10,7 +10,7 @@
 #include "shape/composed/ComposedShape.h"
 #include "shape/simple/Circle.h"
 #include "shape/simple/Segment.h"
-// #include "shape/simple/Polygon.h"
+#include "shape/simple/Polygon.h"
 #include "shape/simple/Triangle.h"
 
 #define FONT_DEFAULT "\033[0m"
@@ -26,6 +26,7 @@
 #define L 200
 
 using namespace std;
+using namespace shape;
 
 int main(int argc, char *argv[])
 {
@@ -98,8 +99,8 @@ int main(int argc, char *argv[])
     cout << "c1 : " << c1 << endl;
     Segment s1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1)}), Color(0, 254, 0));
     cout << "s1 : " << s1 << endl;
-    // Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 255, 255));
-    // cout << "p1 : " << p1 << endl;
+    shape::Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 255, 255));
+    cout << "p1 : " << p1 << endl;
     Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 0, 255));
     cout << "t1 : " << t1 << endl;
 

@@ -2,6 +2,7 @@
 #include <sstream>
 
 using namespace std;
+using namespace shape;
 
 SimpleShape::operator std::string() const
 {
