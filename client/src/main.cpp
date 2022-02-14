@@ -1,4 +1,3 @@
-#include <winsock2.h>
 #include <iostream>
 #include <sstream>
 #include <string>
