@@ -33,7 +33,7 @@ public:
     {
         const std::regex pattern("^#[0-9a-f]{6}(?:[0-9a-f]{2})?$");
         if (!regex_match(s, pattern))
-            throw std::invalid_argument("string is not in a valid format");
+            throw std::invalid_argument("string \"" + s + "\" is not in a valid color format (expected #000000 or #00000000)");
 
         _r = std::stoi(s.substr(1, 2), nullptr, 16);
         _g = std::stoi(s.substr(3, 2), nullptr, 16);
