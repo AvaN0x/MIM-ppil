@@ -86,4 +86,18 @@ int main(int argc, char *argv[])
     // cout << "p1 : " << p1 << endl;
     Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(0, 0, 0));
     cout << "t1 : " << t1 << endl;
+    Color color1("#f208408f");
+    cout << "color1 : " << color1 << endl;
+    Color color2("#180054");
+    cout << "color2 : " << color2 << endl;
+
+    try
+    {
+        Color color3("aled");
+        cout << "color3 : " << color3 << endl;
+    }
+    catch (const exception &e)
+    {
+        cerr << e.what() << endl;
+    }
 }

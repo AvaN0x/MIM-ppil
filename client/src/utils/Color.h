@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <sstream>
+#include <regex>
 
 class Color
 {
@@ -28,8 +29,19 @@ public:
         _a = (a < 0 || a > 255) ? 0 : a;
     }
 
-    Color(std::string s){
-        // TODO @AvaN0x
+    Color(std::string s)
+    {
+        const std::regex pattern("^#[0-9a-f]{6}(?:[0-9a-f]{2})?$");
+        if (!regex_match(s, pattern))
+            throw std::invalid_argument("string is not in a valid format");
+
+        _r = std::stoi(s.substr(1, 2), nullptr, 16);
+        _g = std::stoi(s.substr(3, 2), nullptr, 16);
+        _b = std::stoi(s.substr(5, 2), nullptr, 16);
+        if (s.length() == 9)
+            _a = std::stoi(s.substr(7, 2), nullptr, 16);
+        else
+            _a = 255;
     };
 
     operator std::string() const;
