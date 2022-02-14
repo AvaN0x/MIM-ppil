@@ -66,7 +66,7 @@ const Vecteur2D &Vecteur2D::operator/=(const double &a)
 Vecteur2D::operator std::string() const
 {
     std::ostringstream os;
-    os << "Vecteur2D(" << x << ", " << y << ")";
+    os << "Vecteur2D(" << x << "," << y << ")";
     return os.str();
 }
 
