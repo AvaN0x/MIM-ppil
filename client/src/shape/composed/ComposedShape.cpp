@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <sstream>
 #include "ComposedShape.h"
 
 ComposedShape::ComposedShape()
@@ -49,7 +50,12 @@ void ComposedShape::removeShape(Shape *shape)
 
 ComposedShape::operator std::string() const
 {
-    // TODO @Avan0x
+    ostringstream s;
+    s << "ComposedShape(" << std::endl;
+    for (Shape *shape : _shapes)
+        s << "\t" << *shape << std::endl;
+    s << ")";
+    return s.str();
 }
 
 Shape *ComposedShape::homothety(const Vecteur2D &origin, double coeff) const
