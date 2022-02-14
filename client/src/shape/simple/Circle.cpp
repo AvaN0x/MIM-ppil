@@ -31,7 +31,7 @@ Circle::Circle(const std::string &str)
 Circle::operator std::string() const
 {
     ostringstream s;
-    s << "Circle|" << SimpleShape::operator std::string() << "|" << _radius;
+    s << "Circle(" << SimpleShape::operator std::string() << "|" << _radius << ")";
     return s.str();
 }
 
