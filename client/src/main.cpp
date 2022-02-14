@@ -7,6 +7,7 @@
 
 #include "utils/Color.h"
 #include "shape/Vecteur2D.h"
+#include "shape/composed/ComposedShape.h"
 #include "shape/simple/Circle.h"
 #include "shape/simple/Segment.h"
 // #include "shape/simple/Polygon.h"
@@ -78,14 +79,6 @@ int main(int argc, char *argv[])
     //     cerr << FONT_RED "[Exception]" FONT_DEFAULT " : " << e.what() << endl;
     // }
 
-    Circle c1(vector<Vecteur2D>({Vecteur2D(0, 0)}), Color(0, 0, 0), 1);
-    cout << "c1 : " << c1 << endl;
-    Segment s1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1)}), Color(0, 0, 0));
-    cout << "s1 : " << s1 << endl;
-    // Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(0, 0, 0));
-    // cout << "p1 : " << p1 << endl;
-    Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(0, 0, 0));
-    cout << "t1 : " << t1 << endl;
     Color color1("#f208408f");
     cout << "color1 : " << color1 << endl;
     Color color2("#180054");
@@ -93,11 +86,29 @@ int main(int argc, char *argv[])
 
     try
     {
-        Color color3("aled");
+        Color color3("test");
         cout << "color3 : " << color3 << endl;
     }
     catch (const exception &e)
     {
         cerr << e.what() << endl;
     }
+
+    Circle c1(vector<Vecteur2D>({Vecteur2D(0, 0)}), color1, 1);
+    cout << "c1 : " << c1 << endl;
+    Segment s1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1)}), Color(0, 254, 0));
+    cout << "s1 : " << s1 << endl;
+    // Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 255, 255));
+    // cout << "p1 : " << p1 << endl;
+    Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 0, 255));
+    cout << "t1 : " << t1 << endl;
+
+    ComposedShape cs1(vector<Shape *>({&c1}), Color("#ff00ffff"));
+    cout << "cs1 : " << cs1 << endl;
+    cs1.addShape(&s1);
+    cout << "cs1 : " << cs1 << endl;
+    cs1.addShape(&t1);
+    cout << "cs1 : " << cs1 << endl;
+    cs1.removeShape(&t1);
+    cout << "cs1 : " << cs1 << endl;
 }

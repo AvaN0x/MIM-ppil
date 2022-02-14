@@ -2,15 +2,17 @@
 #include <sstream>
 #include "ComposedShape.h"
 
-ComposedShape::ComposedShape()
+ComposedShape::ComposedShape(Color color)
 {
+    _color = color;
 }
 
-ComposedShape::ComposedShape(std::vector<Shape *> shapes)
+ComposedShape::ComposedShape(std::vector<Shape *> shapes, Color color)
 {
     if (shapes.size() > 0)
         for (Shape *shape : shapes)
             addShape(shape);
+    _color = color;
 }
 
 ComposedShape::ComposedShape(const ComposedShape &composedShape)
@@ -18,6 +20,7 @@ ComposedShape::ComposedShape(const ComposedShape &composedShape)
     if (composedShape.getShapes().size() > 0)
         for (Shape *shape : composedShape.getShapes())
             addShape(shape);
+    _color = composedShape.getColor();
 }
 
 ComposedShape::~ComposedShape()
@@ -31,7 +34,9 @@ void ComposedShape::addShape(Shape *shape)
 {
     if (shape == nullptr)
         throw std::invalid_argument("shape is NULL");
-    _shapes.push_back(shape->clone());
+    Shape *temp = shape->clone();
+    temp->setColor(_color);
+    _shapes.push_back(temp);
 }
 
 void ComposedShape::removeShape(Shape *shape)
@@ -63,7 +68,7 @@ Shape *ComposedShape::homothety(const Vecteur2D &origin, double coeff) const
     for (Shape *shape : _shapes)
         shapes.push_back(shape->homothety(origin, coeff));
 
-    return new ComposedShape(shapes);
+    return new ComposedShape(shapes, _color);
 }
 
 Shape *ComposedShape::translation(const Vecteur2D &v) const
@@ -72,7 +77,7 @@ Shape *ComposedShape::translation(const Vecteur2D &v) const
     for (Shape *shape : _shapes)
         shapes.push_back(shape->translation(v));
 
-    return new ComposedShape(shapes);
+    return new ComposedShape(shapes, _color);
 }
 
 Shape *ComposedShape::rotation(const Vecteur2D &origin, double alpha) const
@@ -81,7 +86,7 @@ Shape *ComposedShape::rotation(const Vecteur2D &origin, double alpha) const
     for (Shape *shape : _shapes)
         shapes.push_back(shape->rotation(origin, alpha));
 
-    return new ComposedShape(shapes);
+    return new ComposedShape(shapes, _color);
 }
 
 double ComposedShape::area() const
@@ -99,7 +104,7 @@ bool ComposedShape::operator==(Shape *shape) const
         return false;
     if (typeid(*shape) != typeid(ComposedShape))
         return false;
-    return (((ComposedShape *)shape)->getShapes() == _shapes);
+    return (((ComposedShape *)shape)->getColor() == _color && ((ComposedShape *)shape)->getShapes() == _shapes);
 }
 
 bool ComposedShape::operator!=(Shape *shape) const

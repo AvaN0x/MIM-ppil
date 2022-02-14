@@ -5,6 +5,7 @@
 #include <sstream>
 
 #include "../Shape.h"
+#include "../../utils/Color.h"
 
 class ComposedShape : public Shape
 {
@@ -13,8 +14,8 @@ private:
 
 public:
     // ==================== CONSTRUCTORS ====================
-    ComposedShape();
-    ComposedShape(std::vector<Shape *> shapes);
+    ComposedShape(Color color);
+    ComposedShape(std::vector<Shape *> shapes, Color color);
     ComposedShape(const ComposedShape &composedShape);
 
     // ==================== DESTRUCTORS ====================
