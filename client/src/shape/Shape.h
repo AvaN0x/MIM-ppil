@@ -1,3 +1,4 @@
+#pragma once
 #include "Vecteur2D.h"
 #include "../utils/Color.h"
 
