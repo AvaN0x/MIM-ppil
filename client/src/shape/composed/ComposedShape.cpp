@@ -38,13 +38,12 @@ void ComposedShape::removeShape(Shape *shape)
 {
     if (shape == nullptr)
         throw std::invalid_argument("shape is NULL");
-    for (Shape *s : _shapes)
+    for (std::vector<Shape *>::iterator it = _shapes.begin(); it != _shapes.end();)
     {
-        if ((*s) == shape)
-        {
-            delete s;
-            return;
-        }
+        if (**it == shape)
+            it = _shapes.erase(it);
+        else
+            ++it;
     }
 }
 
