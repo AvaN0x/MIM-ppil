@@ -2,7 +2,7 @@
 
 using namespace shape;
 
-Triangle::Triangle(std::vector<Vecteur2D> points, Color color)
+Triangle::Triangle(std::vector<Vector2D> points, Color color)
 {
     if (points.size() != 3)
         throw std::invalid_argument("You need only 3 points to create a triangle");
@@ -26,27 +26,27 @@ Triangle::operator std::string() const
     return "Triangle(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Triangle::homothety(const Vecteur2D &origin, double coeff) const
+Shape *Triangle::homothety(const Vector2D &origin, double coeff) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point * coeff + origin * (1 - coeff));
     }
     return new Triangle(points, _color);
 }
 
-Shape *Triangle::translation(const Vecteur2D &v) const
+Shape *Triangle::translation(const Vector2D &v) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point + v);
     }
     return new Triangle(points, _color);
 }
 
-Shape *Triangle::rotation(const Vecteur2D &origin, double alpha) const
+Shape *Triangle::rotation(const Vector2D &origin, double alpha) const
 {
     // TODO
 }

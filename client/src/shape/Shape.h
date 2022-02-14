@@ -1,5 +1,5 @@
 #pragma once
-#include "Vecteur2D.h"
+#include "Vector2D.h"
 #include "../utils/Color.h"
 
 namespace shape
@@ -27,9 +27,9 @@ namespace shape
         friend std::ostream &operator<<(std::ostream &os, const Shape &s);
 
         // ==================== OPERATIONS ====================
-        virtual Shape *homothety(const Vecteur2D &origin, double coeff) const = 0;
-        virtual Shape *translation(const Vecteur2D &v) const = 0;
-        virtual Shape *rotation(const Vecteur2D &origin, double alpha) const = 0;
+        virtual Shape *homothety(const Vector2D &origin, double coeff) const = 0;
+        virtual Shape *translation(const Vector2D &v) const = 0;
+        virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
         // ==================== OPERATORS ====================

@@ -6,7 +6,7 @@
 #include "ConnectionHandler.h"
 
 #include "utils/Color.h"
-#include "shape/Vecteur2D.h"
+#include "shape/Vector2D.h"
 #include "shape/composed/ComposedShape.h"
 #include "shape/simple/Circle.h"
 #include "shape/simple/Segment.h"
@@ -95,13 +95,13 @@ int main(int argc, char *argv[])
         cerr << e.what() << endl;
     }
 
-    Circle c1(vector<Vecteur2D>({Vecteur2D(0, 0)}), color1, 1);
+    Circle c1(vector<Vector2D>({Vector2D(0, 0)}), color1, 1);
     cout << "c1 : " << c1 << endl;
-    Segment s1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1)}), Color(0, 254, 0));
+    Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 254, 0));
     cout << "s1 : " << s1 << endl;
-    shape::Polygon p1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 255, 255));
+    shape::Polygon p1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1), Vector2D(2, 2)}), Color(255, 255, 255));
     cout << "p1 : " << p1 << endl;
-    Triangle t1(vector<Vecteur2D>({Vecteur2D(0, 0), Vecteur2D(1, 1), Vecteur2D(2, 2)}), Color(255, 0, 255));
+    Triangle t1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1), Vector2D(2, 2)}), Color(255, 0, 255));
     cout << "t1 : " << t1 << endl;
 
     ComposedShape cs1(vector<Shape *>({&c1}), Color("#ff00ffff"));

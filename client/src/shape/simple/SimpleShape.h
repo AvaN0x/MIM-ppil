@@ -10,7 +10,7 @@ namespace shape
     class SimpleShape : public Shape
     {
     protected:
-        std::vector<Vecteur2D> _points;
+        std::vector<Vector2D> _points;
 
     public:
         // ==================== DESTRUCTORS ====================
@@ -20,18 +20,18 @@ namespace shape
         virtual Shape *clone() const = 0;
 
         // ==================== GETTERS ====================
-        virtual std::vector<Vecteur2D> getPoints() const { return _points; }
+        virtual std::vector<Vector2D> getPoints() const { return _points; }
 
         // ==================== SETTERS ====================
-        virtual void setPoints(std::vector<Vecteur2D> points) { _points = points; }
+        virtual void setPoints(std::vector<Vector2D> points) { _points = points; }
 
         // ==================== STRING ====================
         virtual operator std::string() const;
 
         // ==================== OPERATIONS ====================
-        virtual Shape *homothety(const Vecteur2D &origin, double coeff) const = 0;
-        virtual Shape *translation(const Vecteur2D &v) const = 0;
-        virtual Shape *rotation(const Vecteur2D &origin, double alpha) const = 0;
+        virtual Shape *homothety(const Vector2D &origin, double coeff) const = 0;
+        virtual Shape *translation(const Vector2D &v) const = 0;
+        virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
         // ==================== OPERATORS ====================

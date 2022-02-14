@@ -9,7 +9,7 @@ SimpleShape::operator std::string() const
     ostringstream s;
     s << "";
     bool isFirst = true;
-    for (const Vecteur2D &point : _points)
+    for (const Vector2D &point : _points)
     {
         if (isFirst)
             isFirst = false;

@@ -6,7 +6,7 @@
 using namespace std;
 using namespace shape;
 
-Circle::Circle(std::vector<Vecteur2D> points, Color color, double radius)
+Circle::Circle(std::vector<Vector2D> points, Color color, double radius)
 {
     if (points.size() != 1)
         throw std::invalid_argument("You need only 1 point to create a circle");
@@ -36,27 +36,27 @@ Circle::operator std::string() const
     return s.str();
 }
 
-Shape *Circle::homothety(const Vecteur2D &origin, double coeff) const
+Shape *Circle::homothety(const Vector2D &origin, double coeff) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point * coeff + origin * (1 - coeff));
     }
     return new Circle(points, _color, _radius);
 }
 
-Shape *Circle::translation(const Vecteur2D &v) const
+Shape *Circle::translation(const Vector2D &v) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point + v);
     }
     return new Circle(points, _color, _radius);
 }
 
-Shape *Circle::rotation(const Vecteur2D &origin, double alpha) const
+Shape *Circle::rotation(const Vector2D &origin, double alpha) const
 {
     // TODO
 }

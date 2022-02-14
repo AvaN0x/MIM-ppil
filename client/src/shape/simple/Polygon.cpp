@@ -2,7 +2,7 @@
 
 using namespace shape;
 
-Polygon::Polygon(std::vector<Vecteur2D> points, Color color)
+Polygon::Polygon(std::vector<Vector2D> points, Color color)
 {
     if (points.size() < 3)
         throw std::invalid_argument("You need at least 3 points to create a polygon");
@@ -26,27 +26,27 @@ Polygon::operator std::string() const
     return "Polygon(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Polygon::homothety(const Vecteur2D &origin, double coeff) const
+Shape *Polygon::homothety(const Vector2D &origin, double coeff) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point * coeff + origin * (1 - coeff));
     }
     return new Polygon(points, _color);
 }
 
-Shape *Polygon::translation(const Vecteur2D &v) const
+Shape *Polygon::translation(const Vector2D &v) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point + v);
     }
     return new Polygon(points, _color);
 }
 
-Shape *Polygon::rotation(const Vecteur2D &origin, double alpha) const
+Shape *Polygon::rotation(const Vector2D &origin, double alpha) const
 {
     // TODO
 }

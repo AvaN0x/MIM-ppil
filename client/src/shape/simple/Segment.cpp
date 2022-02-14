@@ -2,7 +2,7 @@
 
 using namespace shape;
 
-Segment::Segment(std::vector<Vecteur2D> points, Color color)
+Segment::Segment(std::vector<Vector2D> points, Color color)
 {
     if (points.size() != 2)
         throw std::invalid_argument("You need only 2 points to create a segment");
@@ -26,27 +26,27 @@ Segment::operator std::string() const
     return "Segment(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Segment::homothety(const Vecteur2D &origin, double coeff) const
+Shape *Segment::homothety(const Vector2D &origin, double coeff) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point * coeff + origin * (1 - coeff));
     }
     return new Segment(points, _color);
 }
 
-Shape *Segment::translation(const Vecteur2D &v) const
+Shape *Segment::translation(const Vector2D &v) const
 {
-    std::vector<Vecteur2D> points;
-    for (const Vecteur2D &point : _points)
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
     {
         points.push_back(point + v);
     }
     return new Segment(points, _color);
 }
 
-Shape *Segment::rotation(const Vecteur2D &origin, double alpha) const
+Shape *Segment::rotation(const Vector2D &origin, double alpha) const
 {
     // TODO
 }

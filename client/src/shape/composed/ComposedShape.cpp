@@ -64,7 +64,7 @@ ComposedShape::operator std::string() const
     return s.str();
 }
 
-Shape *ComposedShape::homothety(const Vecteur2D &origin, double coeff) const
+Shape *ComposedShape::homothety(const Vector2D &origin, double coeff) const
 {
     std::vector<Shape *> shapes;
     for (Shape *shape : _shapes)
@@ -73,7 +73,7 @@ Shape *ComposedShape::homothety(const Vecteur2D &origin, double coeff) const
     return new ComposedShape(shapes, _color);
 }
 
-Shape *ComposedShape::translation(const Vecteur2D &v) const
+Shape *ComposedShape::translation(const Vector2D &v) const
 {
     std::vector<Shape *> shapes;
     for (Shape *shape : _shapes)
@@ -82,7 +82,7 @@ Shape *ComposedShape::translation(const Vecteur2D &v) const
     return new ComposedShape(shapes, _color);
 }
 
-Shape *ComposedShape::rotation(const Vecteur2D &origin, double alpha) const
+Shape *ComposedShape::rotation(const Vector2D &origin, double alpha) const
 {
     std::vector<Shape *> shapes;
     for (Shape *shape : _shapes)
