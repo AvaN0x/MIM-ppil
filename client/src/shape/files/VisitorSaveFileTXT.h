@@ -2,7 +2,7 @@
 #include <string>
 #include "VisitorSaveFile.h"
 
-class VisitorSaveFilePPIL : public VisitorSaveFile
+class VisitorSaveFileTXT : public VisitorSaveFile
 {
 public:
     virtual void visit(const shape::Circle *s, const std::string filePath) const;

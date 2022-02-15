@@ -12,7 +12,7 @@
 #include "shape/simple/Segment.h"
 #include "shape/simple/Polygon.h"
 #include "shape/simple/Triangle.h"
-#include "shape/files/VisitorSaveFilePPIL.h"
+#include "shape/files/VisitorSaveFileTXT.h"
 
 #define FONT_DEFAULT "\033[0m"
 
@@ -114,10 +114,10 @@ int main(int argc, char *argv[])
     cs1.removeShape(&t1);
     cout << "cs1 : " << cs1 << endl;
 
-    VisitorSaveFilePPIL *v = new VisitorSaveFilePPIL;
-    c1.saveFile(v, "c1.ppil");
-    s1.saveFile(v, "s1.ppil");
-    p1.saveFile(v, "p1.ppil");
-    t1.saveFile(v, "t1.ppil");
-    cs1.saveFile(v, "cs1.ppil");
+    VisitorSaveFileTXT *v = new VisitorSaveFileTXT;
+    c1.saveFile(v, "c1.txt");
+    s1.saveFile(v, "s1.txt");
+    p1.saveFile(v, "p1.txt");
+    t1.saveFile(v, "t1.txt");
+    cs1.saveFile(v, "cs1.txt");
 }
