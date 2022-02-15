@@ -1,6 +1,7 @@
 #pragma once
 #include "Vector2D.h"
 #include "../utils/Color.h"
+#include "files/VisitorSaveFile.h"
 
 namespace shape
 {
@@ -32,6 +33,8 @@ namespace shape
         virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
+        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const = 0;
+
         // ==================== OPERATORS ====================
         virtual bool operator==(Shape *shape) const = 0;
         virtual bool operator!=(Shape *shape) const = 0;
@@ -42,3 +45,6 @@ namespace shape
         return os << (std::string)s;
     }
 } // namespace shape
+
+// virtual void saveToFile(visitor idk) const = 0; // TODO @AvaN0x
+// in the visitor have something like Shape visitor::getShapeFromFile(std::string fileName) const;

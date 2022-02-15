@@ -30,6 +30,11 @@ namespace shape
         Shape *rotation(const Vector2D &origin, double alpha) const;
         double area() const;
 
+        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
+        {
+            return v->visit(this, filePath);
+        };
+
         // ==================== OPERATORS ====================
         bool operator==(Shape *shape) const;
         bool operator!=(Shape *shape) const;

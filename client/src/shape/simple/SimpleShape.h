@@ -34,6 +34,8 @@ namespace shape
         virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
+        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const = 0;
+
         // ==================== OPERATORS ====================
         virtual bool operator==(Shape *shape) const;
         virtual bool operator!=(Shape *shape) const;
