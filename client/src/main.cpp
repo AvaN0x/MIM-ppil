@@ -12,7 +12,7 @@
 #include "shape/simple/Segment.h"
 #include "shape/simple/Polygon.h"
 #include "shape/simple/Triangle.h"
-#include "shape/files/VisitorSaveFileTXT.h"
+#include "shape/files/txt/VisitorSaveFileTXT.h"
 
 #define FONT_DEFAULT "\033[0m"
 
@@ -115,9 +115,11 @@ int main(int argc, char *argv[])
     cout << "cs1 : " << cs1 << endl;
 
     VisitorSaveFileTXT *v = new VisitorSaveFileTXT;
-    c1.saveFile(v, "c1.txt");
-    s1.saveFile(v, "s1.txt");
-    p1.saveFile(v, "p1.txt");
-    t1.saveFile(v, "t1.txt");
-    cs1.saveFile(v, "cs1.txt");
+    c1.saveFile(v, "output/c1.txt");
+    s1.saveFile(v, "output/s1.txt");
+    p1.saveFile(v, "output/p1.txt");
+    t1.saveFile(v, "output/t1.txt");
+    cs1.saveFile(v, "output/cs1.txt");
+
+    Shape *s = v->loadFile("output/c1.txt");
 }
