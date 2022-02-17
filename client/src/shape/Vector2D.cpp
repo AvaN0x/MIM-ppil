@@ -1,5 +1,4 @@
 #include <sstream>
-#include <iostream> // FIXME remove
 #include "Vector2D.h"
 
 Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
