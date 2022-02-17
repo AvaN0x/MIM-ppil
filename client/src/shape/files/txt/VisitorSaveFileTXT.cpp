@@ -17,7 +17,7 @@
 using namespace std;
 using namespace shape;
 
-Shape *VisitorSaveFileTXT::loadFile(const std::string filePath)
+Shape *VisitorSaveFileTXT::loadFile(const std::string &filePath)
 {
     try
     {
@@ -40,35 +40,35 @@ Shape *VisitorSaveFileTXT::loadFile(const std::string filePath)
     return nullptr;
 }
 
-void VisitorSaveFileTXT::visit(const Circle *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Circle *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Polygon *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Polygon *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Segment *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Segment *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Triangle *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Triangle *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const ComposedShape *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const ComposedShape *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
