@@ -16,10 +16,10 @@ namespace shape
 
     public:
         // ==================== CONSTRUCTORS ====================
+        ComposedShape();
         ComposedShape(Color color);
         ComposedShape(std::vector<Shape *> shapes, Color color);
         ComposedShape(const ComposedShape &composedShape);
-        ComposedShape(const std::string &s);
 
         // ==================== DESTRUCTORS ====================
         ~ComposedShape();

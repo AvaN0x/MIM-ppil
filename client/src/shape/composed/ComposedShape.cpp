@@ -4,6 +4,10 @@
 
 using namespace shape;
 
+ComposedShape::ComposedShape()
+{
+}
+
 ComposedShape::ComposedShape(Color color)
 {
     _color = color;
@@ -23,10 +27,6 @@ ComposedShape::ComposedShape(const ComposedShape &composedShape)
         for (Shape *shape : composedShape.getShapes())
             addShape(shape);
     _color = composedShape.getColor();
-}
-ComposedShape::ComposedShape(const std::string &s)
-{
-    throw std::invalid_argument("The string is not a ComposedShape"); // TODO
 }
 
 ComposedShape::~ComposedShape()
@@ -63,7 +63,7 @@ ComposedShape::operator std::string() const
     ostringstream s;
     s << "ComposedShape[" << std::endl;
     for (Shape *shape : _shapes)
-        s << "\t" << *shape << std::endl;
+        s << "\t" << *shape << "/" << std::endl;
     s << "]";
     return s.str();
 }

@@ -114,6 +114,7 @@ int main(int argc, char *argv[])
     cs1.removeShape(&t1);
     cout << "cs1 : " << cs1 << endl;
     cs1.addShape(&cs1);
+    cs1.addShape(&cs1);
     cout << "cs1 : " << cs1 << endl;
 
     VisitorSaveFileTXT *v = new VisitorSaveFileTXT;
@@ -125,24 +126,28 @@ int main(int argc, char *argv[])
 
     cout << FONT_YELLOW << "Load from files !" << FONT_DEFAULT << endl;
 
-    Shape *c1txt = v->loadFile("output/c1.txt");
     cout << "c1 : " << c1 << endl;
+    Shape *c1txt = v->loadFile("output/c1.txt");
     if (c1txt != nullptr)
         cout << "c1txt : " << FONT_BLUE << *c1txt << FONT_DEFAULT << endl;
-    Shape *s1txt = v->loadFile("output/s1.txt");
+
     cout << "s1 : " << s1 << endl;
+    Shape *s1txt = v->loadFile("output/s1.txt");
     if (s1txt != nullptr)
         cout << "s1txt : " << FONT_BLUE << *s1txt << FONT_DEFAULT << endl;
-    Shape *p1txt = v->loadFile("output/p1.txt");
+
     cout << "p1 : " << p1 << endl;
+    Shape *p1txt = v->loadFile("output/p1.txt");
     if (p1txt != nullptr)
         cout << "p1txt : " << FONT_BLUE << *p1txt << FONT_DEFAULT << endl;
-    Shape *t1txt = v->loadFile("output/t1.txt");
+
     cout << "t1 : " << t1 << endl;
+    Shape *t1txt = v->loadFile("output/t1.txt");
     if (t1txt != nullptr)
         cout << "t1txt : " << FONT_BLUE << *t1txt << FONT_DEFAULT << endl;
-    Shape *cs1txt = v->loadFile("output/cs1.txt");
+
     cout << "cs1 : " << cs1 << endl;
+    Shape *cs1txt = v->loadFile("output/cs1.txt");
     if (cs1txt != nullptr)
         cout << "cs1txt : " << FONT_BLUE << *cs1txt << FONT_DEFAULT << endl;
 }

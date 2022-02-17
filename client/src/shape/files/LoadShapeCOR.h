@@ -19,5 +19,5 @@ public:
     shape::Shape *getShape(const string &text) const;
 
 protected:
-    virtual shape::Shape *_getShape(const string &text) const = 0;
+    virtual shape::Shape *_getShape(const string &s) const = 0;
 };

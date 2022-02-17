@@ -19,22 +19,32 @@ using namespace shape;
 
 Shape *VisitorSaveFileTXT::loadFile(const std::string &filePath)
 {
+    ifstream file(filePath, ifstream::in);
+    if (!file.is_open())
+    {
+        throw std::invalid_argument("File not found");
+    }
+
+    std::string content = std::string((std::istreambuf_iterator<char>(file)),
+                                      (std::istreambuf_iterator<char>()));
+
+    Shape *s = getShapeFromString(content);
+
+    file.close();
+    return s;
+}
+
+Shape *VisitorSaveFileTXT::getShapeFromString(const std::string &str)
+{
     try
     {
-        ifstream file(filePath, ifstream::in);
-
         LoadShape *loadShape = new LoadShapeTriangleTXTCOR(
             new LoadShapeCircleTXTCOR(
                 new LoadShapePolygonTXTCOR(
                     new LoadShapeSegmentTXTCOR(
                         new LoadShapeComposedShapeTXTCOR(nullptr)))));
 
-        std::string content = std::string((std::istreambuf_iterator<char>(file)),
-                                          (std::istreambuf_iterator<char>()));
-
-        Shape *s = loadShape->getShape(content);
-
-        file.close();
+        Shape *s = loadShape->getShape(str);
         return s;
     }
     catch (const std::exception &e)

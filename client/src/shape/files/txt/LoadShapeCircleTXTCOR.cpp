@@ -7,11 +7,11 @@ using namespace std;
 
 LoadShapeCircleTXTCOR::LoadShapeCircleTXTCOR(LoadShapeCOR *next) : LoadShapeCOR(next) {}
 
-shape::Shape *LoadShapeCircleTXTCOR::_getShape(const string &d) const
+shape::Shape *LoadShapeCircleTXTCOR::_getShape(const string &s) const
 {
     try
     {
-        return new shape::Circle(d);
+        return new shape::Circle(s);
     }
     catch (const std::exception &e)
     {

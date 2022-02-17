@@ -7,11 +7,11 @@ using namespace std;
 
 LoadShapeSegmentTXTCOR::LoadShapeSegmentTXTCOR(LoadShapeCOR *next) : LoadShapeCOR(next) {}
 
-shape::Shape *LoadShapeSegmentTXTCOR::_getShape(const string &d) const
+shape::Shape *LoadShapeSegmentTXTCOR::_getShape(const string &s) const
 {
     try
     {
-        return new shape::Segment(d);
+        return new shape::Segment(s);
     }
     catch (const std::exception &e)
     {

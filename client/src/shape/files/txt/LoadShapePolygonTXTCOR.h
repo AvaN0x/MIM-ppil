@@ -9,5 +9,5 @@ public:
     LoadShapePolygonTXTCOR(LoadShapeCOR *next);
 
 protected:
-    virtual shape::Shape *_getShape(const string &d) const;
+    virtual shape::Shape *_getShape(const string &s) const;
 };

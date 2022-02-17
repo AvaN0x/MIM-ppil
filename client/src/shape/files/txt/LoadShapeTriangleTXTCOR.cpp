@@ -7,11 +7,11 @@ using namespace std;
 
 LoadShapeTriangleTXTCOR::LoadShapeTriangleTXTCOR(LoadShapeCOR *next) : LoadShapeCOR(next) {}
 
-shape::Shape *LoadShapeTriangleTXTCOR::_getShape(const string &d) const
+shape::Shape *LoadShapeTriangleTXTCOR::_getShape(const string &s) const
 {
     try
     {
-        return new shape::Triangle(d);
+        return new shape::Triangle(s);
     }
     catch (const std::exception &e)
     {

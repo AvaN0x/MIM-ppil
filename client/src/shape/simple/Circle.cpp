@@ -32,8 +32,8 @@ Circle::Circle(const std::string &s)
 
     size_t firstParenthesis = s.find('(') + 1;
     size_t lastParenthesis = s.find_last_of(')');
-    size_t sLenght = s.length();
-    if (firstParenthesis > lastParenthesis || lastParenthesis > sLenght)
+    size_t sLength = s.length();
+    if (firstParenthesis > lastParenthesis || lastParenthesis > sLength)
         throw std::invalid_argument("The string is not a circle");
 
     string dataStr = s.substr(firstParenthesis, lastParenthesis - firstParenthesis);
