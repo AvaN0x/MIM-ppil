@@ -10,7 +10,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Triangle(std::vector<Vector2D> points, Color color);
         Triangle(const Triangle &shape);
-        Triangle(const std::string &str);
+        Triangle(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Triangle(*this); }

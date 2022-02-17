@@ -1,6 +1,7 @@
 #include "Circle.h"
 #define _USE_MATH_DEFINES
 #include <sstream>
+#include <iostream>
 #include <math.h>
 
 using namespace std;
@@ -24,9 +25,31 @@ Circle::Circle(const Circle &shape) : _radius(shape.getRadius())
     _color = shape.getColor();
 }
 
-Circle::Circle(const std::string &str)
+Circle::Circle(const std::string &s)
 {
-    // TODO @Avan0x
+    if (s.rfind("Circle", 0) != 0)
+        throw std::invalid_argument("The string is not a circle");
+
+    size_t firstParenthesis = s.find('(') + 1;
+    size_t lastParenthesis = s.find_last_of(')');
+    size_t sLenght = s.length();
+    if (firstParenthesis > lastParenthesis || lastParenthesis > sLenght)
+        throw std::invalid_argument("The string is not a circle");
+
+    string dataStr = s.substr(firstParenthesis, lastParenthesis - firstParenthesis);
+    std::string token;
+    std::istringstream iss(dataStr);
+    // Get vector
+    getline(iss, token, '|');
+    _points.push_back(Vector2D(token));
+
+    // Get color
+    getline(iss, token, '|');
+    _color = Color(token);
+
+    // Get Radius
+    getline(iss, token, '|');
+    _radius = stod(token);
 }
 
 Circle::operator std::string() const

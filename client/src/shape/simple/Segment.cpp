@@ -16,9 +16,36 @@ Segment::Segment(const Segment &shape)
     _color = shape.getColor();
 }
 
-Segment::Segment(const std::string &str)
+Segment::Segment(const std::string &s)
 {
-    // TODO @Avan0x
+    if (s.rfind("Segment", 0) != 0)
+        throw std::invalid_argument("The string is not a Segment");
+
+    size_t firstParenthesis = s.find('(') + 1;
+    size_t lastParenthesis = s.find_last_of(')');
+    size_t sLenght = s.length();
+    if (firstParenthesis > lastParenthesis || lastParenthesis > sLenght)
+        throw std::invalid_argument("The string is not a Segment");
+
+    string dataStr = s.substr(firstParenthesis, lastParenthesis - firstParenthesis);
+    std::string token;
+    std::istringstream iss(dataStr);
+    // Get vectors
+    getline(iss, token, '|');
+    {
+        std::string vectorString;
+        std::istringstream iss(token);
+
+        while (getline(iss, vectorString, ';') && _points.size() <= 2)
+            _points.push_back(Vector2D(vectorString));
+
+        if (_points.size() != 2)
+            throw std::invalid_argument("You need only 2 points to create a Segment");
+    }
+
+    // Get color
+    getline(iss, token, '|');
+    _color = Color(token);
 }
 
 Segment::operator std::string() const

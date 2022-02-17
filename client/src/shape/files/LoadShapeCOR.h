@@ -4,6 +4,8 @@
 #include "LoadShape.h"
 #include "../Shape.h"
 
+// #define DEBUG_LOAD_SHAPE_COR 1
+
 using namespace std;
 
 class LoadShapeCOR : public LoadShape

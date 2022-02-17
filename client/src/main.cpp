@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
         cerr << e.what() << endl;
     }
 
-    Circle c1(vector<Vector2D>({Vector2D(0, 0)}), color1, 1);
+    Circle c1(vector<Vector2D>({Vector2D(628.4, -48.72)}), color1, 1);
     cout << "c1 : " << c1 << endl;
     Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 254, 0));
     cout << "s1 : " << s1 << endl;
@@ -113,6 +113,8 @@ int main(int argc, char *argv[])
     cout << "cs1 : " << cs1 << endl;
     cs1.removeShape(&t1);
     cout << "cs1 : " << cs1 << endl;
+    cs1.addShape(&cs1);
+    cout << "cs1 : " << cs1 << endl;
 
     VisitorSaveFileTXT *v = new VisitorSaveFileTXT;
     c1.saveFile(v, "output/c1.txt");
@@ -121,5 +123,26 @@ int main(int argc, char *argv[])
     t1.saveFile(v, "output/t1.txt");
     cs1.saveFile(v, "output/cs1.txt");
 
-    Shape *s = v->loadFile("output/c1.txt");
+    cout << FONT_YELLOW << "Load from files !" << FONT_DEFAULT << endl;
+
+    Shape *c1txt = v->loadFile("output/c1.txt");
+    cout << "c1 : " << c1 << endl;
+    if (c1txt != nullptr)
+        cout << "c1txt : " << FONT_BLUE << *c1txt << FONT_DEFAULT << endl;
+    Shape *s1txt = v->loadFile("output/s1.txt");
+    cout << "s1 : " << s1 << endl;
+    if (s1txt != nullptr)
+        cout << "s1txt : " << FONT_BLUE << *s1txt << FONT_DEFAULT << endl;
+    Shape *p1txt = v->loadFile("output/p1.txt");
+    cout << "p1 : " << p1 << endl;
+    if (p1txt != nullptr)
+        cout << "p1txt : " << FONT_BLUE << *p1txt << FONT_DEFAULT << endl;
+    Shape *t1txt = v->loadFile("output/t1.txt");
+    cout << "t1 : " << t1 << endl;
+    if (t1txt != nullptr)
+        cout << "t1txt : " << FONT_BLUE << *t1txt << FONT_DEFAULT << endl;
+    Shape *cs1txt = v->loadFile("output/cs1.txt");
+    cout << "cs1 : " << cs1 << endl;
+    if (cs1txt != nullptr)
+        cout << "cs1txt : " << FONT_BLUE << *cs1txt << FONT_DEFAULT << endl;
 }

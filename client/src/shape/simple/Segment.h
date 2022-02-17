@@ -10,7 +10,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Segment(std::vector<Vector2D> points, Color color);
         Segment(const Segment &shape);
-        Segment(const std::string &str);
+        Segment(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Segment(*this); }

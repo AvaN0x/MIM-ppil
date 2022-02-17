@@ -13,7 +13,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Circle(std::vector<Vector2D> points, Color color, double radius);
         Circle(const Circle &shape);
-        Circle(const std::string &str);
+        Circle(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Circle(*this); }

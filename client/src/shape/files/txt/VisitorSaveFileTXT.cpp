@@ -21,7 +21,7 @@ Shape *VisitorSaveFileTXT::loadFile(const std::string &filePath)
 {
     try
     {
-        // ifstream file(filePath, ifstream::in);
+        ifstream file(filePath, ifstream::in);
 
         LoadShape *loadShape = new LoadShapeTriangleTXTCOR(
             new LoadShapeCircleTXTCOR(
@@ -29,9 +29,13 @@ Shape *VisitorSaveFileTXT::loadFile(const std::string &filePath)
                     new LoadShapeSegmentTXTCOR(
                         new LoadShapeComposedShapeTXTCOR(nullptr)))));
 
-        Shape *s = loadShape->getShape("test");
+        std::string content = std::string((std::istreambuf_iterator<char>(file)),
+                                          (std::istreambuf_iterator<char>()));
 
-        // TODO call COR with file
+        Shape *s = loadShape->getShape(content);
+
+        file.close();
+        return s;
     }
     catch (const std::exception &e)
     {

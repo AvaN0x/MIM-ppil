@@ -16,9 +16,36 @@ Polygon::Polygon(const Polygon &shape)
     _color = shape.getColor();
 }
 
-Polygon::Polygon(const std::string &str)
+Polygon::Polygon(const std::string &s)
 {
-    // TODO @Avan0x
+    if (s.rfind("Polygon", 0) != 0)
+        throw std::invalid_argument("The string is not a Polygon");
+
+    size_t firstParenthesis = s.find('(') + 1;
+    size_t lastParenthesis = s.find_last_of(')');
+    size_t sLenght = s.length();
+    if (firstParenthesis > lastParenthesis || lastParenthesis > sLenght)
+        throw std::invalid_argument("The string is not a Polygon");
+
+    string dataStr = s.substr(firstParenthesis, lastParenthesis - firstParenthesis);
+    std::string token;
+    std::istringstream iss(dataStr);
+    // Get vectors
+    getline(iss, token, '|');
+    {
+        std::string vectorString;
+        std::istringstream iss(token);
+
+        while (getline(iss, vectorString, ';'))
+            _points.push_back(Vector2D(vectorString));
+
+        if (_points.size() < 3)
+            throw std::invalid_argument("You need at least 3 points to create a polygon");
+    }
+
+    // Get color
+    getline(iss, token, '|');
+    _color = Color(token);
 }
 
 Polygon::operator std::string() const

@@ -1,4 +1,5 @@
 #include <sstream>
+#include <iostream> // FIXME remove
 #include "Vector2D.h"
 
 Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
@@ -7,7 +8,14 @@ Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
 
 Vector2D::Vector2D(const std::string &s)
 {
-    // TODO @Avan0x
+    if (s.rfind("Vector2D(", 0) != 0)
+        throw std::invalid_argument("The string is not a Vector2D");
+
+    std::istringstream iss(s.substr(9, s.length() - 1));
+    if (!(iss >> x &&
+          iss.get() == ',' &&
+          iss >> y))
+        throw std::invalid_argument("The string is not a Vector2D");
 }
 
 const Vector2D Vector2D::operator+(const Vector2D &u) const

@@ -24,6 +24,10 @@ ComposedShape::ComposedShape(const ComposedShape &composedShape)
             addShape(shape);
     _color = composedShape.getColor();
 }
+ComposedShape::ComposedShape(const std::string &s)
+{
+    throw std::invalid_argument("The string is not a ComposedShape"); // TODO
+}
 
 ComposedShape::~ComposedShape()
 {
@@ -57,10 +61,10 @@ void ComposedShape::removeShape(Shape *shape)
 ComposedShape::operator std::string() const
 {
     ostringstream s;
-    s << "ComposedShape(" << std::endl;
+    s << "ComposedShape[" << std::endl;
     for (Shape *shape : _shapes)
         s << "\t" << *shape << std::endl;
-    s << ")";
+    s << "]";
     return s.str();
 }
 
