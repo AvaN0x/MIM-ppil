@@ -44,7 +44,7 @@ void mainTests()
     cout << "c1 : " << c1 << endl;
     Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 254, 0));
     cout << "s1 : " << s1 << endl;
-    shape::Polygon p1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1), Vector2D(2, 2), Vector2D(3, 3)}), Color(255, 255, 255));
+    shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(255, 255, 255));
     cout << "p1 : " << p1 << endl;
     Triangle t1(vector<Vector2D>({Vector2D(1.4, 2), Vector2D(3, 4.8), Vector2D(12, 4)}), Color(255, 0, 255));
     cout << "t1 : " << t1 << endl;

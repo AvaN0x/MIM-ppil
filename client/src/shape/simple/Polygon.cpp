@@ -1,4 +1,7 @@
+#include <vector>
+#include "../../utils/Color.h"
 #include "Polygon.h"
+#include "Triangle.h"
 
 using namespace shape;
 
@@ -80,8 +83,16 @@ Shape *Polygon::rotation(const Vector2D &origin, double alpha) const
 
 double Polygon::area() const
 {
-    // TODO
-    return 0.0;
+    // Verified with https://www.omnicalculator.com/math/irregular-polygon-area
+    Vector2D g;
+    for (const Vector2D &point : _points)
+        g += point;
+    g /= _points.size();
+
+    double area = 0;
+    for (size_t i = 0; i < _points.size(); i++)
+        area += shape::Triangle(std::vector<Vector2D>({_points[i], _points[(i + 1) % _points.size()], g}), Color::BLACK).area();
+    return area;
 }
 
 bool Polygon::operator==(Shape *shape) const
