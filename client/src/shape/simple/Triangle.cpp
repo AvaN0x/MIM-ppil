@@ -1,4 +1,5 @@
 #include "Triangle.h"
+#include <math.h>
 
 using namespace shape;
 
@@ -80,7 +81,12 @@ Shape *Triangle::rotation(const Vector2D &origin, double alpha) const
 
 double Triangle::area() const
 {
-    // TODO
+    // Source : https://www.cuemath.com/measurement/area-of-triangle/
+    double a = _points[0].distance(_points[1]);
+    double b = _points[1].distance(_points[2]);
+    double c = _points[2].distance(_points[0]);
+    double s = (a + b + c) / 2; // Semi perimeter
+    return sqrt(s * (s - a) * (s - b) * (s - c));
 }
 
 bool Triangle::operator==(Shape *shape) const
