@@ -59,6 +59,11 @@ public class Interlocuteur extends Thread {
                 if (requete == null)
                     throw new SocketException();
 
+                if (requete.equalsIgnoreCase("disconnect")) {
+                    _fluxSortant.println("disconnect authorized");
+                    throw new SocketException();
+                }
+
                 LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
 
                 if (graphicLibrairy == null) {
@@ -66,15 +71,14 @@ public class Interlocuteur extends Thread {
                 } else {
                     expertShapes.resolve(requete, graphicLibrairy);
                 }
-
-                _fluxSortant.println(requete.toUpperCase());
             }
         } catch (SocketException e) {
             e.printStackTrace();
             // Connection interrupted
         } catch (IOException e) {
+            e.printStackTrace();
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la lecture de la requete");
-            System.err.println(e);
+            // System.err.println(e);
         } finally {
             closeStreamAndSocket();
         }
