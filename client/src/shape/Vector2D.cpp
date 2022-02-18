@@ -23,6 +23,12 @@ double Vector2D::distance(const Vector2D &u) const
     return sqrt(pow(x - u.x, 2) + pow(y - u.y, 2));
 }
 
+const Vector2D Vector2D::rotation(const Vector2D &origin, double alpha) const
+{
+    return Vector2D(origin.x + (x - origin.x) * cos(alpha) - (y - origin.y) * sin(alpha),
+                    origin.y + (x - origin.x) * sin(alpha) + (y - origin.y) * cos(alpha));
+}
+
 const Vector2D Vector2D::operator+(const Vector2D &u) const
 {
     return Vector2D(x + u.x, y + u.y);
