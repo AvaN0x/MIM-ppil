@@ -19,8 +19,12 @@ public class ExpertCircle extends ExpertShapes {
         String subStr = str.substring(1, idx);
         // System.out.println("subStr is : " + subStr);
 
-        String[] matches = subStr.split(",");
-        if (matches.length != 4)
+        String[] matches = subStr.split(";");
+        for (String tmp : matches) {
+            System.out.println(tmp);
+        }
+
+        if (matches.length != 5)
             return false;
         if (matches[0].equalsIgnoreCase("circle")) {
             graphicLibrairy.visit(
