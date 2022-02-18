@@ -81,6 +81,7 @@ Shape *Polygon::rotation(const Vector2D &origin, double alpha) const
 double Polygon::area() const
 {
     // TODO
+    return 0.0;
 }
 
 bool Polygon::operator==(Shape *shape) const
