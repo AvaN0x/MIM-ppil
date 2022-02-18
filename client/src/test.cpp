@@ -18,6 +18,7 @@ using namespace shape;
 
 // #define TEST_SAVE_LOAD_FILES 1
 #define TEST_AREAS 1
+#define TEST_ROTATIONS 1
 
 void mainTests()
 {
@@ -40,7 +41,7 @@ void mainTests()
 
     cout << FONT_YELLOW << "Create shapes !" << FONT_DEFAULT << endl;
 
-    Circle c1(vector<Vector2D>({Vector2D(628.4, -48.72)}), color1, 2.2);
+    Circle c1(vector<Vector2D>({Vector2D(2.4, 8.2)}), color1, 2.2);
     cout << "c1 : " << c1 << endl;
     Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 254, 0));
     cout << "s1 : " << s1 << endl;
@@ -52,12 +53,10 @@ void mainTests()
     ComposedShape cs1(vector<Shape *>({&c1}), Color("#ff00ffff"));
     cout << "cs1 : " << cs1 << endl;
     cs1.addShape(&s1);
-    cout << "cs1 : " << cs1 << endl;
     cs1.addShape(&t1);
     cout << "cs1 : " << cs1 << endl;
     cs1.removeShape(&t1);
     cout << "cs1 : " << cs1 << endl;
-    cs1.addShape(&cs1);
     cs1.addShape(&cs1);
     cout << "cs1 : " << cs1 << endl;
 
@@ -107,5 +106,20 @@ void mainTests()
     cout << "p1 : " << p1.area() << endl;
     cout << "t1 : " << t1.area() << endl;
     cout << "cs1 : " << cs1.area() << endl;
+#endif
+
+#ifdef TEST_ROTATIONS
+    cout << FONT_YELLOW << "Shapes rotations !" << FONT_DEFAULT << endl;
+
+    Circle c2 = *(Circle *)c1.rotation(Vector2D(0, 0), 3.14 / 2);
+    cout << "c2 : " << c2 << endl;
+    Segment s2 = *(Segment *)s1.rotation(Vector2D(0, 0), 3.14 / 2);
+    cout << "s2 : " << s2 << endl;
+    Polygon p2 = *(Polygon *)p1.rotation(Vector2D(0, 0), 3.14 / 2);
+    cout << "p2 : " << p2 << endl;
+    Triangle t2 = *(Triangle *)t1.rotation(Vector2D(0, 0), 3.14 / 2);
+    cout << "t2 : " << t2 << endl;
+    ComposedShape cs2 = *(ComposedShape *)cs1.rotation(Vector2D(0, 0), 3.14 / 2);
+    cout << "cs2 : " << cs2 << endl;
 #endif
 }
