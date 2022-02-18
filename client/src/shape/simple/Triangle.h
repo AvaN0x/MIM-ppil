@@ -10,7 +10,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Triangle(std::vector<Vector2D> points, Color color);
         Triangle(const Triangle &shape);
-        Triangle(const std::string &str);
+        Triangle(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Triangle(*this); }
@@ -25,7 +25,7 @@ namespace shape
         double area() const;
 
         // ==================== VISITORS ====================
-        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
+        virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const
         {
             return v->visit(this, filePath);
         };

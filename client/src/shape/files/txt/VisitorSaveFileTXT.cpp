@@ -17,21 +17,35 @@
 using namespace std;
 using namespace shape;
 
-Shape *VisitorSaveFileTXT::loadFile(const std::string filePath)
+Shape *VisitorSaveFileTXT::loadFile(const std::string &filePath)
+{
+    ifstream file(filePath, ifstream::in);
+    if (!file.is_open())
+    {
+        throw std::invalid_argument("File not found");
+    }
+
+    std::string content = std::string((std::istreambuf_iterator<char>(file)),
+                                      (std::istreambuf_iterator<char>()));
+
+    Shape *s = getShapeFromString(content);
+
+    file.close();
+    return s;
+}
+
+Shape *VisitorSaveFileTXT::getShapeFromString(const std::string &str)
 {
     try
     {
-        // ifstream file(filePath, ifstream::in);
-
         LoadShape *loadShape = new LoadShapeTriangleTXTCOR(
             new LoadShapeCircleTXTCOR(
                 new LoadShapePolygonTXTCOR(
                     new LoadShapeSegmentTXTCOR(
                         new LoadShapeComposedShapeTXTCOR(nullptr)))));
 
-        Shape *s = loadShape->getShape("test");
-
-        // TODO call COR with file
+        Shape *s = loadShape->getShape(str);
+        return s;
     }
     catch (const std::exception &e)
     {
@@ -40,35 +54,35 @@ Shape *VisitorSaveFileTXT::loadFile(const std::string filePath)
     return nullptr;
 }
 
-void VisitorSaveFileTXT::visit(const Circle *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Circle *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Polygon *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Polygon *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Segment *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Segment *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const Triangle *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const Triangle *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;
     file.close();
 }
 
-void VisitorSaveFileTXT::visit(const ComposedShape *s, const std::string filePath) const
+void VisitorSaveFileTXT::visit(const ComposedShape *s, const std::string &filePath) const
 {
     ofstream file(filePath);
     file << *s;

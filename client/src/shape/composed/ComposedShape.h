@@ -16,6 +16,7 @@ namespace shape
 
     public:
         // ==================== CONSTRUCTORS ====================
+        ComposedShape();
         ComposedShape(Color color);
         ComposedShape(std::vector<Shape *> shapes, Color color);
         ComposedShape(const ComposedShape &composedShape);
@@ -43,7 +44,7 @@ namespace shape
         double area() const;
 
         // ==================== VISITORS ====================
-        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
+        virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const
         {
             return v->visit(this, filePath);
         };

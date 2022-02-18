@@ -1,4 +1,5 @@
 #include <sstream>
+#include <math.h>
 #include "Vector2D.h"
 
 Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
@@ -7,7 +8,25 @@ Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
 
 Vector2D::Vector2D(const std::string &s)
 {
-    // TODO @Avan0x
+    if (s.rfind("Vector2D(", 0) != 0)
+        throw std::invalid_argument("The string is not a Vector2D");
+
+    std::istringstream iss(s.substr(9, s.length() - 1));
+    if (!(iss >> x &&
+          iss.get() == ',' &&
+          iss >> y))
+        throw std::invalid_argument("The string is not a Vector2D");
+}
+
+double Vector2D::distance(const Vector2D &u) const
+{
+    return sqrt(pow(x - u.x, 2) + pow(y - u.y, 2));
+}
+
+const Vector2D Vector2D::rotation(const Vector2D &origin, double alpha) const
+{
+    return Vector2D(origin.x + (x - origin.x) * cos(alpha) - (y - origin.y) * sin(alpha),
+                    origin.y + (x - origin.x) * sin(alpha) + (y - origin.y) * cos(alpha));
 }
 
 const Vector2D Vector2D::operator+(const Vector2D &u) const

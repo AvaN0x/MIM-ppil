@@ -10,7 +10,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Polygon(std::vector<Vector2D> points, Color color);
         Polygon(const Polygon &shape);
-        Polygon(const std::string &str);
+        Polygon(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Polygon(*this); }
@@ -25,7 +25,7 @@ namespace shape
         double area() const;
 
         // ==================== VISITORS ====================
-        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
+        virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const
         {
             return v->visit(this, filePath);
         };

@@ -4,6 +4,8 @@
 #include "LoadShape.h"
 #include "../Shape.h"
 
+// #define DEBUG_LOAD_SHAPE_COR 1
+
 using namespace std;
 
 class LoadShapeCOR : public LoadShape
@@ -17,5 +19,5 @@ public:
     shape::Shape *getShape(const string &text) const;
 
 protected:
-    virtual shape::Shape *_getShape(const string &text) const = 0;
+    virtual shape::Shape *_getShape(const string &s) const = 0;
 };

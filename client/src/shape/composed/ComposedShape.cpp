@@ -4,6 +4,10 @@
 
 using namespace shape;
 
+ComposedShape::ComposedShape()
+{
+}
+
 ComposedShape::ComposedShape(Color color)
 {
     _color = color;
@@ -57,10 +61,10 @@ void ComposedShape::removeShape(Shape *shape)
 ComposedShape::operator std::string() const
 {
     ostringstream s;
-    s << "ComposedShape(" << std::endl;
+    s << "ComposedShape[" << std::endl;
     for (Shape *shape : _shapes)
-        s << "\t" << *shape << std::endl;
-    s << ")";
+        s << "\t" << *shape << "/" << std::endl;
+    s << "]";
     return s.str();
 }
 

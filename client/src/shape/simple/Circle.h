@@ -13,7 +13,7 @@ namespace shape
         // ==================== CONSTRUCTORS ====================
         Circle(std::vector<Vector2D> points, Color color, double radius);
         Circle(const Circle &shape);
-        Circle(const std::string &str);
+        Circle(const std::string &s);
 
         // ==================== CLONE ====================
         Shape *clone() const { return new Circle(*this); }
@@ -32,7 +32,7 @@ namespace shape
         double area() const;
 
         // ==================== VISITORS ====================
-        virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
+        virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const
         {
             return v->visit(this, filePath);
         };
