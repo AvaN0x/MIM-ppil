@@ -76,7 +76,12 @@ Shape *Triangle::translation(const Vector2D &v) const
 
 Shape *Triangle::rotation(const Vector2D &origin, double alpha) const
 {
-    // TODO
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
+    {
+        points.push_back(point.rotation(origin, alpha));
+    }
+    return new Triangle(points, _color);
 }
 
 double Triangle::area() const
