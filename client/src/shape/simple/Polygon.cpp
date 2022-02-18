@@ -4,7 +4,7 @@ using namespace shape;
 
 Polygon::Polygon(std::vector<Vector2D> points, Color color)
 {
-    if (points.size() < 3)
+    if (points.size() <= 3)
         throw std::invalid_argument("You need at least 3 points to create a polygon");
     _points = points;
     _color = color;
@@ -39,7 +39,7 @@ Polygon::Polygon(const std::string &s)
         while (getline(iss, vectorString, ';'))
             _points.push_back(Vector2D(vectorString));
 
-        if (_points.size() < 3)
+        if (_points.size() <= 3)
             throw std::invalid_argument("You need at least 3 points to create a polygon");
     }
 
