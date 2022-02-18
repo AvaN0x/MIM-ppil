@@ -75,12 +75,17 @@ Shape *Segment::translation(const Vector2D &v) const
 
 Shape *Segment::rotation(const Vector2D &origin, double alpha) const
 {
-    // TODO
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
+    {
+        points.push_back(point.rotation(origin, alpha));
+    }
+    return new Segment(points, _color);
 }
 
 double Segment::area() const
 {
-    return 0.0; // TODO @Fentomee I guess area of segment is 0 ?
+    return 0.0;
 }
 
 bool Segment::operator==(Shape *shape) const
