@@ -81,7 +81,12 @@ Shape *Circle::translation(const Vector2D &v) const
 
 Shape *Circle::rotation(const Vector2D &origin, double alpha) const
 {
-    // TODO
+    std::vector<Vector2D> points;
+    for (const Vector2D &point : _points)
+    {
+        points.push_back(point.rotation(origin, alpha));
+    }
+    return new Circle(points, _color, _radius);
 }
 
 double Circle::area() const
