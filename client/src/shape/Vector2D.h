@@ -19,6 +19,9 @@ public:
 
     virtual ~Vector2D() {}
 
+    // ================== METHODS ==================
+    double distance(const Vector2D &u) const;
+
     // ================== OPERATORS ==================
     const Vector2D operator+(const Vector2D &u) const;
     const Vector2D &operator+=(const Vector2D &u);

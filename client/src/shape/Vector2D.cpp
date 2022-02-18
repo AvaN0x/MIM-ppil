@@ -1,4 +1,5 @@
 #include <sstream>
+#include <math.h>
 #include "Vector2D.h"
 
 Vector2D::Vector2D(const double &x, const double &y) : x(x), y(y)
@@ -15,6 +16,11 @@ Vector2D::Vector2D(const std::string &s)
           iss.get() == ',' &&
           iss >> y))
         throw std::invalid_argument("The string is not a Vector2D");
+}
+
+double Vector2D::distance(const Vector2D &u) const
+{
+    return sqrt(pow(x - u.x, 2) + pow(y - u.y, 2));
 }
 
 const Vector2D Vector2D::operator+(const Vector2D &u) const
