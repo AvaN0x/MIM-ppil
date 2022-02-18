@@ -18,7 +18,7 @@ LFLAGS = -lws2_32
 OUTPUT	:= output
 
 # define source directory
-SRC		:= src src/shape src/utils src/shape/composed src/shape/simple src/shape/files src/shape/files/txt
+SRC		:= src src/shape src/utils src/shape/composed src/shape/simple src/shape/files src/shape/files/txt src/shape/draw/java
 
 # define include directory
 INCLUDE	:= include

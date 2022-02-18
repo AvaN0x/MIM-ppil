@@ -2,6 +2,7 @@
 #include "Vector2D.h"
 #include "../utils/Color.h"
 #include "files/VisitorSaveFile.h"
+#include "draw/VisitorDrawShape.h"
 
 namespace shape
 {
@@ -33,7 +34,9 @@ namespace shape
         virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
+        // ==================== VISITORS ====================
         virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const = 0;
+        virtual void draw(const VisitorDrawShape *v, int port = 9111, const std::string &address = "127.0.0.1") const = 0;
 
         // ==================== OPERATORS ====================
         virtual bool operator==(Shape *shape) const = 0;

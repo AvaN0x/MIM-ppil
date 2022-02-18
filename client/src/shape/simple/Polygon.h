@@ -24,9 +24,15 @@ namespace shape
         Shape *rotation(const Vector2D &origin, double alpha) const;
         double area() const;
 
+        // ==================== VISITORS ====================
         virtual void saveFile(const VisitorSaveFile *v, const std::string filePath) const
         {
             return v->visit(this, filePath);
+        };
+
+        virtual void draw(const VisitorDrawShape *v, int port = 9111, const std::string &address = "127.0.0.1") const
+        {
+            return v->visit(this, port, address);
         };
 
         // ==================== OPERATORS ====================
