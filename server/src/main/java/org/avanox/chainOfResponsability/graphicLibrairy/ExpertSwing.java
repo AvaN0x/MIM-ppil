@@ -16,8 +16,19 @@ public class ExpertSwing extends ExpertGL {
             return null;
 
         String subStr = str.substring(1, idx);
-        if (subStr.equalsIgnoreCase("swing"))
-            return new DrawSwing();
+
+        String[] matches = subStr.split(";");
+        if (matches.length != 3)
+            return null;
+
+        if (matches[0].equalsIgnoreCase("swing")) {
+            try {
+                return new DrawSwing(Integer.parseInt(matches[1]), Integer.parseInt(matches[2]));
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }
+
         return null;
     }
 

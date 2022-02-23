@@ -17,9 +17,9 @@ public class DrawAWT extends Draw {
     private Graphics graphics;
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 
-    public DrawAWT() {
+    public DrawAWT(int x, int y) {
         this.frame = new Frame("Frame toute simple");
-        this.frame.setBounds(0, 0, 400, 400);
+        this.frame.setBounds(0, 0, x, y);
         this.frame.setVisible(true);
         this.frame.createBufferStrategy(2);
         try {
