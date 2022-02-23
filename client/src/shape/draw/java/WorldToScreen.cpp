@@ -21,7 +21,7 @@ WorldToScreen::WorldToScreen(Vector2D P1World, Vector2D P2World, int screenX, in
     _b = WorldToScreen::getB(P1World, P2World, P1Screen, P2Screen, _lambda, _E2);
 }
 
-Vector2D WorldToScreen::toScreen(Vector2D PWorld)
+Vector2D WorldToScreen::toScreen(Vector2D PWorld) const
 {
     return Vector2D(
         _lambda * _E1 * PWorld.x + _a,

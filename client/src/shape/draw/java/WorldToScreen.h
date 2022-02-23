@@ -25,7 +25,7 @@ public:
      * @param PWorld World coordinate
      * @return Screen coordinate
      */
-    Vector2D toScreen(Vector2D PWorld);
+    Vector2D toScreen(Vector2D PWorld) const;
 
     static double getLambda(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen);
     static double getE1(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen);
