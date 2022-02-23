@@ -2,14 +2,23 @@ package org.avanox.Shapes;
 
 import org.avanox.visitor.ShapeVisitor;
 
-public class Segment extends Shape {
+import javafx.scene.paint.Color;
 
+public class Segment extends Shape {
     private Point a;
     private Point b;
+    private Color color;
 
     public Segment(Point a, Point b) {
         this.a = a;
         this.b = b;
+        this.color = Color.BLACK;
+    }
+
+    public Segment(Point a, Point b, Color color) {
+        this.a = a;
+        this.b = b;
+        this.color = color;
     }
 
     public Point getA() {
@@ -18,6 +27,10 @@ public class Segment extends Shape {
 
     public Point getB() {
         return b;
+    }
+
+    public Color getColor() {
+        return color;
     }
 
     @Override
@@ -32,6 +45,8 @@ public class Segment extends Shape {
         if (!this.a.equals(((Segment) obj).a))
             return false;
         if (!this.b.equals(((Segment) obj).b))
+            return false;
+        if (!this.color.equals(((Segment) obj).color))
             return false;
 
         return true;
