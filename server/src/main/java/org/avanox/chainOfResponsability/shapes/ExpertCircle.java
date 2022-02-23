@@ -1,5 +1,7 @@
 package org.avanox.chainOfResponsability.shapes;
 
+import java.awt.Color;
+
 import org.avanox.Shapes.Circle;
 import org.avanox.Shapes.Point;
 import org.avanox.visitor.Draw;
@@ -24,13 +26,18 @@ public class ExpertCircle extends ExpertShapes {
         if (matches.length != 5)
             return false;
         if (matches[0].equalsIgnoreCase("circle")) {
-            graphicLibrairy.visit(
-                    new Circle(
-                            new Point(
-                                    Integer.parseInt(matches[1]),
-                                    Integer.parseInt(matches[2])),
-                            Integer.parseInt(matches[3])));
-            return true;
+            try {
+                graphicLibrairy.visit(
+                        new Circle(
+                                new Point(
+                                        Integer.parseInt(matches[1]),
+                                        Integer.parseInt(matches[2])),
+                                Integer.parseInt(matches[3]),
+                                Color.decode(matches[4])));
+                return true;
+            } catch (NumberFormatException e) {
+                return false;
+            }
         }
         return false;
     }

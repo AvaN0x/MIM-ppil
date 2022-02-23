@@ -1,5 +1,6 @@
 package org.avanox.chainOfResponsability.shapes;
 
+import java.awt.Color;
 import java.util.LinkedList;
 
 import org.avanox.Shapes.AnyPolygon;
@@ -20,24 +21,30 @@ public class ExpertAnyPolygon extends ExpertShapes {
 
         String subStr = str.substring(1, idx);
 
-        String[] matches = subStr.split(",");
+        String[] matches = subStr.split(";");
 
         if (matches[0].equalsIgnoreCase("anypolygon")) {
             int length = matches.length;
-            if (length < 7 || length % 2 == 0)
+            if (length < 8 || length % 2 != 0)
                 return false;
 
             LinkedList<Point> points = new LinkedList<>();
-            for (int i = 1; i < length; i += 2) {
-                if (i != 0) {
+            try {
+                for (int i = 1; i < length; i += 2) {
                     Point point = new Point(
                             Integer.parseInt(matches[i]),
                             Integer.parseInt(matches[i + 1]));
                     points.addFirst(point);
                 }
+
+                Color color = Color.decode(matches[0]);
+
+                graphicLibrairy.visit(new AnyPolygon(points, color));
+                return true;
+
+            } catch (NumberFormatException e) {
+                return false;
             }
-            graphicLibrairy.visit(new AnyPolygon(points));
-            return true;
         }
 
         return false;
