@@ -15,18 +15,18 @@ ComposedShape::ComposedShape(Color color)
 
 ComposedShape::ComposedShape(std::vector<Shape *> shapes, Color color)
 {
+    _color = color;
     if (shapes.size() > 0)
         for (Shape *shape : shapes)
             addShape(shape);
-    _color = color;
 }
 
 ComposedShape::ComposedShape(const ComposedShape &composedShape)
 {
+    _color = composedShape.getColor();
     if (composedShape.getShapes().size() > 0)
         for (Shape *shape : composedShape.getShapes())
             addShape(shape);
-    _color = composedShape.getColor();
 }
 
 ComposedShape::~ComposedShape()
@@ -34,6 +34,13 @@ ComposedShape::~ComposedShape()
     for (Shape *shape : _shapes)
         delete shape;
     _shapes.clear();
+}
+
+void ComposedShape::setColor(Color color)
+{
+    _color = color;
+    for (Shape *shape : _shapes)
+        shape->setColor(color);
 }
 
 void ComposedShape::addShape(Shape *shape)

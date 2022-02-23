@@ -31,6 +31,7 @@ namespace shape
         std::vector<Shape *> getShapes() const { return _shapes; }
 
         // ==================== SETTERS ====================
+        virtual void setColor(Color color);
         void addShape(Shape *shape);
         void removeShape(Shape *shape);
         virtual Vector2D getBottomLeft() const;
