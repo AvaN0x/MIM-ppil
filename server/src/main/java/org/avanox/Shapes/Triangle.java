@@ -2,7 +2,7 @@ package org.avanox.Shapes;
 
 import org.avanox.visitor.ShapeVisitor;
 
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 public class Triangle extends Shape {
     private Point a;

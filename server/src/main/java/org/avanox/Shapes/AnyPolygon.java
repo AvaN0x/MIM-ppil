@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import org.avanox.visitor.ShapeVisitor;
 
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 public class AnyPolygon extends Shape {
     private LinkedList<Point> _segments;
