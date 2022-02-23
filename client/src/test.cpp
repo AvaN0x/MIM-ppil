@@ -47,11 +47,11 @@ void mainTests()
 
     Circle c1(vector<Vector2D>({Vector2D(2.4, 8.2)}), color1, 2.2);
     cout << "c1 : " << c1 << endl;
-    Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 0, 0));
+    Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 255, 0));
     cout << "s1 : " << s1 << endl;
-    shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(128, 0, 0));
+    shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(255, 0, 0));
     cout << "p1 : " << p1 << endl;
-    Triangle t1(vector<Vector2D>({Vector2D(1.4, 2), Vector2D(3, 4.8), Vector2D(12, 4)}), Color(255, 0, 255));
+    Triangle t1(vector<Vector2D>({Vector2D(-4, -4), Vector2D(-8, -8), Vector2D(0, -8)}), Color(0, 0, 255));
     cout << "t1 : " << t1 << endl;
 
     ComposedShape cs1(vector<Shape *>({&c1}), Color("#ff00ffff"));
@@ -62,6 +62,8 @@ void mainTests()
     cs1.removeShape(&t1);
     cout << "cs1 : " << cs1 << endl;
     cs1.addShape(&cs1);
+    cs1.addShape(&t1);
+    cs1.addShape(&p1);
     cout << "cs1 : " << cs1 << endl;
 
 #ifdef TEST_SAVE_LOAD_FILES
@@ -123,6 +125,8 @@ void mainTests()
     cout << "p2 : " << p2 << endl;
     Triangle t2 = *(Triangle *)t1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "t2 : " << t2 << endl;
+    Triangle t3 = *(Triangle *)t1.rotation(Vector2D(0, 0), 3.14);
+    cout << "t2 : " << t2 << endl;
     ComposedShape cs2 = *(ComposedShape *)cs1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "cs2 : " << cs2 << endl;
 #endif
@@ -159,5 +163,8 @@ void mainTests()
     s1.draw(&vDraw);
     p1.draw(&vDraw);
     t1.draw(&vDraw);
+    t2.draw(&vDraw);
+    t3.draw(&vDraw);
+    cs1.draw(&vDraw);
 #endif
 }

@@ -27,9 +27,9 @@ public:
         return *this;
     }
 
-    virtual void visit(const shape::Circle *s) const;
-    virtual void visit(const shape::Polygon *s) const;
-    virtual void visit(const shape::Segment *s) const;
-    virtual void visit(const shape::Triangle *s) const;
-    virtual void visit(const shape::ComposedShape *s) const;
+    virtual void visit(const shape::Circle *s, ConnectionHandler *connection, WorldToScreen *wts) const;
+    virtual void visit(const shape::Polygon *s, ConnectionHandler *connection, WorldToScreen *wts) const;
+    virtual void visit(const shape::Segment *s, ConnectionHandler *connection, WorldToScreen *wts) const;
+    virtual void visit(const shape::Triangle *s, ConnectionHandler *connection, WorldToScreen *wts) const;
+    virtual void visit(const shape::ComposedShape *s, ConnectionHandler *connection, WorldToScreen *wts) const;
 };

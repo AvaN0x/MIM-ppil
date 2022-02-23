@@ -52,9 +52,9 @@ namespace shape
             return v->visit(this, filePath);
         };
 
-        virtual void draw(const VisitorDrawShape *v) const
+        virtual void draw(const VisitorDrawShape *v, ConnectionHandler *connection = nullptr, WorldToScreen *wts = nullptr) const
         {
-            return v->visit(this);
+            return v->visit(this, connection, wts);
         };
 
         // ==================== OPERATORS ====================

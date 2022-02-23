@@ -12,12 +12,15 @@ namespace shape
     class ComposedShape;
 };
 
+class ConnectionHandler;
+class WorldToScreen;
+
 class VisitorDrawShape
 {
 public:
-    virtual void visit(const shape::Circle *s) const = 0;
-    virtual void visit(const shape::Polygon *s) const = 0;
-    virtual void visit(const shape::Segment *s) const = 0;
-    virtual void visit(const shape::Triangle *s) const = 0;
-    virtual void visit(const shape::ComposedShape *s) const = 0;
+    virtual void visit(const shape::Circle *s, ConnectionHandler *connection, WorldToScreen *wts) const = 0;
+    virtual void visit(const shape::Polygon *s, ConnectionHandler *connection, WorldToScreen *wts) const = 0;
+    virtual void visit(const shape::Segment *s, ConnectionHandler *connection, WorldToScreen *wts) const = 0;
+    virtual void visit(const shape::Triangle *s, ConnectionHandler *connection, WorldToScreen *wts) const = 0;
+    virtual void visit(const shape::ComposedShape *s, ConnectionHandler *connection, WorldToScreen *wts) const = 0;
 };

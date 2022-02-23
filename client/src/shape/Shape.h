@@ -4,6 +4,9 @@
 #include "files/VisitorSaveFile.h"
 #include "draw/VisitorDrawShape.h"
 
+class ConnectionHandler;
+class WorldToScreen;
+
 namespace shape
 {
     class Shape
@@ -37,7 +40,7 @@ namespace shape
         virtual double area() const = 0;
 
         // ==================== VISITORS ====================
-        virtual void draw(const VisitorDrawShape *v) const = 0;
+        virtual void draw(const VisitorDrawShape *v, ConnectionHandler *connection = nullptr, WorldToScreen *wts = nullptr) const = 0;
         virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const = 0;
 
         // ==================== OPERATORS ====================
