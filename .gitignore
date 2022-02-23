@@ -43,6 +43,7 @@ server/target
 
 # Logs
 server/log/*.log
+server/log/*.log.lck
 
 # Environment file
 .env
