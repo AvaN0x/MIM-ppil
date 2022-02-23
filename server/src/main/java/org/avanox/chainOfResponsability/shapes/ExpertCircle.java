@@ -20,9 +20,6 @@ public class ExpertCircle extends ExpertShapes {
         // System.out.println("subStr is : " + subStr);
 
         String[] matches = subStr.split(";");
-        for (String tmp : matches) {
-            System.out.println(tmp);
-        }
 
         if (matches.length != 5)
             return false;
