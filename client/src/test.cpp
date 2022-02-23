@@ -47,9 +47,9 @@ void mainTests()
 
     Circle c1(vector<Vector2D>({Vector2D(2.4, 8.2)}), color1, 2.2);
     cout << "c1 : " << c1 << endl;
-    Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 254, 0));
+    Segment s1(vector<Vector2D>({Vector2D(0, 0), Vector2D(1, 1)}), Color(0, 0, 0));
     cout << "s1 : " << s1 << endl;
-    shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(255, 255, 255));
+    shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(128, 0, 0));
     cout << "p1 : " << p1 << endl;
     Triangle t1(vector<Vector2D>({Vector2D(1.4, 2), Vector2D(3, 4.8), Vector2D(12, 4)}), Color(255, 0, 255));
     cout << "t1 : " << t1 << endl;
@@ -154,7 +154,10 @@ void mainTests()
     cout << FONT_YELLOW << "Draw circle !" << FONT_DEFAULT << endl;
 
     VisitorDrawShapeAWT vDraw = VisitorDrawShapeAWT();
-    vDraw.setWindowSize(800, 600);
+    // vDraw.setWindowSize(800, 600);
     c1.draw(&vDraw);
+    s1.draw(&vDraw);
+    p1.draw(&vDraw);
+    t1.draw(&vDraw);
 #endif
 }

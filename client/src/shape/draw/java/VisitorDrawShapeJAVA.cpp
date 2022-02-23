@@ -9,8 +9,22 @@
 #include "../../composed/ComposedShape.h"
 #include "WorldToScreen.h"
 
-// TODO @Avan0x Convert world's coordinates to screen's coordinates
-// TODO @Avan0x Send datas to server (not (string)(*s))
+/**
+ * @brief vectorPointsToScreen
+ * @param points vector of points
+ * @param wts WorldToScreen object
+ * @return std::string : the string to send to the server
+ */
+std::string vectorPointsToScreen(const vector<Vector2D> &points, const WorldToScreen &wts)
+{
+    ostringstream oss;
+    for (const Vector2D &point : points)
+    {
+        Vector2D screenPoint = wts.toScreen(point);
+        oss << ";" << (int)screenPoint.x << ";" << (int)screenPoint.y;
+    }
+    return oss.str();
+}
 
 void VisitorDrawShapeJAVA::visit(const shape::Circle *s) const
 {
@@ -39,7 +53,14 @@ void VisitorDrawShapeJAVA::visit(const shape::Polygon *s) const
 {
     ConnectionHandler connection = ConnectionHandler(_address, _port);
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
-    connection.sendLine("|" + (string)(*s) + "|" + "\n");
+
+    // Construct rectangle for circle
+    WorldToScreen wts(s->getBottomLeft(), s->getTopRight(), _screenX, _screenY);
+
+    ostringstream str;
+    str << "|AnyPolygon" << vectorPointsToScreen(s->getPoints(), wts) << ";" << (string)s->getColor() << "|\n";
+    cout << str.str();
+    connection.sendLine(str.str());
 
     connection.sendLine("disconnect\n");
     connection.receive();
@@ -50,7 +71,15 @@ void VisitorDrawShapeJAVA::visit(const shape::Segment *s) const
 {
     ConnectionHandler connection = ConnectionHandler(_address, _port);
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
-    connection.sendLine("|" + (string)(*s) + "|" + "\n");
+
+    // Construct rectangle for circle
+    WorldToScreen wts(s->getBottomLeft(), s->getTopRight(), _screenX, _screenY);
+
+    ostringstream str;
+    str << "|Segment" << vectorPointsToScreen(s->getPoints(), wts) << ";" << (string)s->getColor() << "|\n";
+
+    cout << str.str();
+    connection.sendLine(str.str());
 
     connection.sendLine("disconnect\n");
     connection.receive();
@@ -61,7 +90,15 @@ void VisitorDrawShapeJAVA::visit(const shape::Triangle *s) const
 {
     ConnectionHandler connection = ConnectionHandler(_address, _port);
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
-    connection.sendLine("|" + (string)(*s) + "|" + "\n");
+
+    // Construct rectangle for circle
+    WorldToScreen wts(s->getBottomLeft(), s->getTopRight(), _screenX, _screenY);
+
+    ostringstream str;
+    str << "|Triangle" << vectorPointsToScreen(s->getPoints(), wts) << ";" << (string)s->getColor() << "|\n";
+
+    cout << str.str();
+    connection.sendLine(str.str());
 
     connection.sendLine("disconnect\n");
     connection.receive();
@@ -73,6 +110,8 @@ void VisitorDrawShapeJAVA::visit(const shape::ComposedShape *s) const
     ConnectionHandler connection = ConnectionHandler(_address, _port);
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
     connection.sendLine("|" + (string)(*s) + "|" + "\n");
+
+    // TODO
 
     connection.sendLine("disconnect\n");
     connection.receive();
