@@ -18,22 +18,17 @@ void VisitorDrawShapeJAVA::visit(const shape::Circle *s) const
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
 
     // Construct rectangle for circle
-    Vector2D P1World = s->getBottomLeft();
-    Vector2D P2World = s->getTopRight();
-
-    cout << "P1World : " << P1World << endl;
-    cout << "P2World : " << P2World << endl;
-
-    WorldToScreen wts(P1World, P2World, _screenX, _screenY);
+    WorldToScreen wts(s->getBottomLeft(), s->getTopRight(), _screenX, _screenY);
 
     // Circle's center on screen size
     Vector2D centerS = wts.toScreen(s->getCenter());
-
     // New coordinates of random point on screen size
     double screenRadius = wts.toScreen(Vector2D(s->getCenter().x + s->getRadius(), 0)).x - centerS.x;
 
-    cout << "|Circle;" + to_string((int)centerS.x) + ";" + to_string((int)centerS.y) + ";" + to_string((int)screenRadius) + ";" + (string)s->getColor() + "|\n";
-    connection.sendLine("|Circle;" + to_string((int)centerS.x) + ";" + to_string((int)centerS.y) + ";" + to_string((int)screenRadius) + ";" + (string)s->getColor() + "|\n");
+    ostringstream str;
+    str << "|Circle;" << (int)centerS.x << ";" << (int)centerS.y << ";" << (int)screenRadius << ";" << (string)s->getColor() << "|\n";
+    cout << str.str();
+    connection.sendLine(str.str());
 
     connection.sendLine("disconnect\n");
     connection.receive();

@@ -2,8 +2,13 @@
 #include <algorithm>
 #include "WorldToScreen.h"
 
+#include <iostream> // FIXME remove
+
 WorldToScreen::WorldToScreen(Vector2D P1World, Vector2D P2World, int screenX, int screenY)
 {
+    std::cout << "P1World : " << P1World << std::endl;
+    std::cout << "P2World : " << P2World << std::endl;
+
     // Get coordinates of the screen
     Vector2D P1Screen(0, screenY);
     Vector2D P2Screen(screenX, 0);
