@@ -13,6 +13,7 @@
 #include "shape/simple/Triangle.h"
 #include "shape/files/txt/VisitorSaveFileTXT.h"
 #include "shape/draw/java/WorldToScreen.h"
+#include "shape/draw/java/VisitorDrawShapeAWT.h"
 
 using namespace std;
 using namespace shape;
@@ -20,13 +21,14 @@ using namespace shape;
 // #define TEST_SAVE_LOAD_FILES 1
 #define TEST_AREAS 0
 #define TEST_ROTATIONS 0
-#define TEST_REPERES 1
+#define TEST_REPERES 0
+#define TEST_DRAW_CIRCLE 1
 
 void mainTests()
 {
     cout << FONT_YELLOW << "Create colors !" << FONT_DEFAULT << endl;
 
-    Color color1("#f208408f");
+    Color color1("#f20840");
     cout << "color1 : " << color1 << endl;
     Color color2("#180054");
     cout << "color2 : " << color2 << endl;
@@ -146,5 +148,11 @@ void mainTests()
     cout << "a : " << a << endl;
     double b = WorldToScreen::getB(P1World, P2World, P1Screen, P2Screen, alpha, E2);
     cout << "b : " << b << endl;
+#endif
+
+#ifdef TEST_DRAW_CIRCLE
+    cout << FONT_YELLOW << "Draw circle !" << FONT_DEFAULT << endl;
+
+    c1.draw(new VisitorDrawShapeAWT());
 #endif
 }
