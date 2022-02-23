@@ -30,14 +30,14 @@ public class ExpertAnyPolygon extends ExpertShapes {
 
             LinkedList<Point> points = new LinkedList<>();
             try {
-                for (int i = 1; i < length; i += 2) {
+                for (int i = 1; i < length - 1; i += 2) {
                     Point point = new Point(
                             Integer.parseInt(matches[i]),
                             Integer.parseInt(matches[i + 1]));
                     points.addFirst(point);
                 }
 
-                Color color = Color.decode(matches[0]);
+                Color color = Color.decode(matches[length - 1]);
 
                 graphicLibrairy.visit(new AnyPolygon(points, color));
                 return true;
