@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "WorldToScreen.h"
 
-double WorldToScreen::getAlpha(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen)
+double WorldToScreen::getLambda(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen)
 {
     return std::min(
         (std::abs(P2Screen.x - P1Screen.x) / std::abs(P2World.x - P1World.x)),

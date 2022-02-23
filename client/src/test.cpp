@@ -136,7 +136,7 @@ void mainTests()
     Vector2D P1Screen(0, 500);
     Vector2D P2Screen(800, 0);
 
-    double alpha = WorldToScreen::getAlpha(P1World, P2World, P1Screen, P2Screen);
+    double alpha = WorldToScreen::getLambda(P1World, P2World, P1Screen, P2Screen);
     cout << "alpha : " << alpha << endl;
 
     double E1 = WorldToScreen::getE1(P1World, P2World, P1Screen, P2Screen);

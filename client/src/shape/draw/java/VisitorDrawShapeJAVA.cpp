@@ -30,7 +30,7 @@ void VisitorDrawShapeJAVA::visit(const shape::Circle *s, int port, const string 
     cout << "P1World : " << P1World << endl;
     cout << "P2World : " << P2World << endl;
 
-    double alpha = WorldToScreen::getAlpha(P1World, P2World, P1Screen, P2Screen);
+    double alpha = WorldToScreen::getLambda(P1World, P2World, P1Screen, P2Screen);
     double E1 = WorldToScreen::getE1(P1World, P2World, P1Screen, P2Screen);
     double E2 = WorldToScreen::getE2(P1World, P2World, P1Screen, P2Screen);
     double a = WorldToScreen::getA(P1World, P2World, P1Screen, P2Screen, alpha, E1);
