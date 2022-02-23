@@ -2,6 +2,27 @@
 #include <algorithm>
 #include "WorldToScreen.h"
 
+WorldToScreen::WorldToScreen(Vector2D P1World, Vector2D P2World, int screenX, int screenY)
+{
+    // Get coordinates of the screen
+    Vector2D P1Screen(0, screenY);
+    Vector2D P2Screen(screenX, 0);
+
+    // Calculate needed values
+    _lambda = WorldToScreen::getLambda(P1World, P2World, P1Screen, P2Screen);
+    _E1 = WorldToScreen::getE1(P1World, P2World, P1Screen, P2Screen);
+    _E2 = WorldToScreen::getE2(P1World, P2World, P1Screen, P2Screen);
+    _a = WorldToScreen::getA(P1World, P2World, P1Screen, P2Screen, _lambda, _E1);
+    _b = WorldToScreen::getB(P1World, P2World, P1Screen, P2Screen, _lambda, _E2);
+}
+
+Vector2D WorldToScreen::toScreen(Vector2D PWorld)
+{
+    return Vector2D(
+        _lambda * _E1 * PWorld.x + _a,
+        _lambda * _E2 * PWorld.y + _b);
+}
+
 double WorldToScreen::getLambda(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen)
 {
     return std::min(

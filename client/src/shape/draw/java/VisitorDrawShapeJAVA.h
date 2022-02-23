@@ -6,8 +6,8 @@ class VisitorDrawShapeJAVA : public VisitorDrawShape
 {
 protected:
     std::string _name;
-    int _screen_x = 400;
-    int _screen_y = 320;
+    int _screenX = 400;
+    int _screenY = 320;
     int _port = 9111;
     std::string _address = "127.0.0.1";
 
@@ -16,8 +16,8 @@ protected:
 public:
     virtual VisitorDrawShapeJAVA &setWindowSize(int x, int y)
     {
-        _screen_x = x;
-        _screen_y = y;
+        _screenX = x;
+        _screenY = y;
         return *this;
     }
     virtual VisitorDrawShapeJAVA &setServer(int port, const std::string &address = "127.0.0.1")
