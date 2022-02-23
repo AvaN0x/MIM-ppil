@@ -28,7 +28,7 @@ void mainTests()
 {
     cout << FONT_YELLOW << "Create colors !" << FONT_DEFAULT << endl;
 
-    Color color1("#f20840");
+    Color color1("#f20840b0");
     cout << "color1 : " << color1 << endl;
     Color color2("#180054");
     cout << "color2 : " << color2 << endl;

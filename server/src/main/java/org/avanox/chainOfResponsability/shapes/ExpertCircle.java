@@ -1,7 +1,6 @@
 package org.avanox.chainOfResponsability.shapes;
 
-import java.awt.Color;
-
+import org.avanox.Utils;
 import org.avanox.Shapes.Circle;
 import org.avanox.Shapes.Point;
 import org.avanox.visitor.Draw;
@@ -33,7 +32,7 @@ public class ExpertCircle extends ExpertShapes {
                                         Integer.parseInt(matches[1]),
                                         Integer.parseInt(matches[2])),
                                 Integer.parseInt(matches[3]),
-                                Color.decode(matches[4])));
+                                Utils.hexToRGBA(matches[4])));
                 return true;
             } catch (NumberFormatException e) {
                 return false;

@@ -1,7 +1,6 @@
 package org.avanox.chainOfResponsability.shapes;
 
-import java.awt.Color;
-
+import org.avanox.Utils;
 import org.avanox.Shapes.Point;
 import org.avanox.Shapes.Segment;
 import org.avanox.visitor.Draw;
@@ -29,7 +28,7 @@ public class ExpertSegment extends ExpertShapes {
                 Segment segment = new Segment(
                         new Point(Integer.parseInt(matches[1]), Integer.parseInt(matches[2])),
                         new Point(Integer.parseInt(matches[3]), Integer.parseInt(matches[4])),
-                        Color.decode(matches[5]));
+                        Utils.hexToRGBA(matches[5]));
 
                 graphicLibrairy.visit(segment);
                 return true;

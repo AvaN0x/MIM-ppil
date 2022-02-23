@@ -20,7 +20,7 @@ public class DrawAWT extends Draw {
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 
     public DrawAWT(int x, int y) {
-        this.frame = new Frame("Frame toute simple");
+        this.frame = new Frame("Frame toute simple"); // TODO edit frame name
         this.frame.setBounds(0, 0, x + 16, y + 39);
         this.frame.setVisible(true);
         this.frame.setResizable(false);

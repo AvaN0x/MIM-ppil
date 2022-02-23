@@ -3,6 +3,7 @@ package org.avanox.chainOfResponsability.shapes;
 import java.awt.Color;
 import java.util.LinkedList;
 
+import org.avanox.Utils;
 import org.avanox.Shapes.AnyPolygon;
 import org.avanox.Shapes.Point;
 import org.avanox.visitor.Draw;
@@ -37,7 +38,7 @@ public class ExpertAnyPolygon extends ExpertShapes {
                     points.addFirst(point);
                 }
 
-                Color color = Color.decode(matches[length - 1]);
+                Color color = Utils.hexToRGBA(matches[length - 1]);
 
                 graphicLibrairy.visit(new AnyPolygon(points, color));
                 return true;
