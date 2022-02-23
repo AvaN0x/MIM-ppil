@@ -20,6 +20,8 @@ namespace shape
 
         // ==================== GETTERS ====================
         virtual Color getColor() const { return _color; }
+        virtual Vector2D getBottomLeft() const = 0;
+        virtual Vector2D getTopRight() const = 0;
 
         // ==================== SETTERS ====================
         virtual void setColor(Color color) { _color = color; }

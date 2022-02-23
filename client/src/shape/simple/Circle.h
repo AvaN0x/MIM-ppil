@@ -21,6 +21,8 @@ namespace shape
         // ==================== GETTERS ====================
         double getRadius() const { return _radius; }
         Vector2D getCenter() const { return _points.at(0); }
+        virtual Vector2D getBottomLeft() const;
+        virtual Vector2D getTopRight() const;
 
         // ==================== STRING ====================
         operator std::string() const;

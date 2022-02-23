@@ -4,6 +4,36 @@
 using namespace std;
 using namespace shape;
 
+Vector2D SimpleShape::getBottomLeft() const
+{
+    double minX = _points[0].x;
+    double minY = _points[0].y;
+
+    for (unsigned int i = 1; i < _points.size(); i++)
+    {
+        if (_points[i].x < minX)
+            minX = _points[i].x;
+        if (_points[i].y < minY)
+            minY = _points[i].y;
+    }
+    return Vector2D(minX, minY);
+}
+
+Vector2D SimpleShape::getTopRight() const
+{
+    double maxX = _points[0].x;
+    double maxY = _points[0].y;
+
+    for (unsigned int i = 1; i < _points.size(); i++)
+    {
+        if (_points[i].x > maxX)
+            maxX = _points[i].x;
+        if (_points[i].y > maxY)
+            maxY = _points[i].y;
+    }
+    return Vector2D(maxX, maxY);
+}
+
 SimpleShape::operator std::string() const
 {
     ostringstream s;

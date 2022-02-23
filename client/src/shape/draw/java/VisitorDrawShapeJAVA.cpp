@@ -18,8 +18,9 @@ void VisitorDrawShapeJAVA::visit(const shape::Circle *s) const
     connection.sendLine("|" + _name + ";" + to_string(_screenX) + ";" + to_string(_screenY) + "|" + "\n");
 
     // Construct rectangle for circle
-    Vector2D P1World(s->getCenter().x - s->getRadius(), s->getCenter().y + s->getRadius());
-    Vector2D P2World(s->getCenter().x + s->getRadius(), s->getCenter().y - s->getRadius());
+    Vector2D P1World = s->getBottomLeft();
+    Vector2D P2World = s->getTopRight();
+
     cout << "P1World : " << P1World << endl;
     cout << "P2World : " << P2World << endl;
 

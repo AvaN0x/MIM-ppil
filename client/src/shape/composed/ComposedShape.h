@@ -33,6 +33,8 @@ namespace shape
         // ==================== SETTERS ====================
         void addShape(Shape *shape);
         void removeShape(Shape *shape);
+        virtual Vector2D getBottomLeft() const;
+        virtual Vector2D getTopRight() const;
 
         // ==================== STRING ====================
         operator std::string() const;

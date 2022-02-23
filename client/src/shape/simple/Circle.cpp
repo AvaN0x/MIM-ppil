@@ -52,6 +52,16 @@ Circle::Circle(const std::string &s)
     _radius = stod(token);
 }
 
+Vector2D Circle::getBottomLeft() const
+{
+    return Vector2D(_points[0].x - _radius, _points[0].y - _radius);
+}
+
+Vector2D Circle::getTopRight() const
+{
+    return Vector2D(_points[0].x + _radius, _points[0].y + _radius);
+}
+
 Circle::operator std::string() const
 {
     ostringstream s;

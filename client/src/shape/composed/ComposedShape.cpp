@@ -58,6 +58,34 @@ void ComposedShape::removeShape(Shape *shape)
     }
 }
 
+Vector2D ComposedShape::getBottomLeft() const
+{
+    Vector2D bottomLeft = _shapes[0]->getBottomLeft();
+    for (unsigned int i = 1; i < _shapes.size(); i++)
+    {
+        Vector2D temp = _shapes[i]->getBottomLeft();
+        if (temp.x < bottomLeft.x)
+            bottomLeft.x = temp.x;
+        if (temp.y < bottomLeft.y)
+            bottomLeft.y = temp.y;
+    }
+    return bottomLeft;
+}
+
+Vector2D ComposedShape::getTopRight() const
+{
+    Vector2D topRight = _shapes[0]->getTopRight();
+    for (unsigned int i = 1; i < _shapes.size(); i++)
+    {
+        Vector2D temp = _shapes[i]->getTopRight();
+        if (temp.x > topRight.x)
+            topRight.x = temp.x;
+        if (temp.y > topRight.y)
+            topRight.y = temp.y;
+    }
+    return topRight;
+}
+
 ComposedShape::operator std::string() const
 {
     ostringstream s;

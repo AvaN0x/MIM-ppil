@@ -21,6 +21,8 @@ namespace shape
 
         // ==================== GETTERS ====================
         virtual std::vector<Vector2D> getPoints() const { return _points; }
+        virtual Vector2D getBottomLeft() const;
+        virtual Vector2D getTopRight() const;
 
         // ==================== SETTERS ====================
         virtual void setPoints(std::vector<Vector2D> points) { _points = points; }
