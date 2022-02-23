@@ -153,6 +153,8 @@ void mainTests()
 #ifdef TEST_DRAW_CIRCLE
     cout << FONT_YELLOW << "Draw circle !" << FONT_DEFAULT << endl;
 
-    c1.draw(new VisitorDrawShapeAWT());
+    VisitorDrawShapeAWT vDraw = VisitorDrawShapeAWT();
+    vDraw.setWindowSize(800, 600);
+    c1.draw(&vDraw);
 #endif
 }

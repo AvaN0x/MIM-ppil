@@ -49,9 +49,9 @@ namespace shape
             return v->visit(this, filePath);
         };
 
-        virtual void draw(const VisitorDrawShape *v, int port = 9111, const std::string &address = "127.0.0.1") const
+        virtual void draw(const VisitorDrawShape *v) const
         {
-            return v->visit(this, port, address);
+            return v->visit(this);
         };
 
         // ==================== OPERATORS ====================

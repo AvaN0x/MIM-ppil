@@ -13,15 +13,13 @@
 // TODO @Avan0x Send screen size to server
 // TODO @Avan0x Convert world's coordinates to screen's coordinates
 // TODO @Avan0x Send datas to server (not (string)(*s))
+// TODO @AvaN0x fix color problem
 
-void VisitorDrawShapeJAVA::visit(const shape::Circle *s, int port, const string &address) const
+void VisitorDrawShapeJAVA::visit(const shape::Circle *s) const
 {
-    int screen_x = 400;
-    int screen_y = 320;
-
     // Get coordinates of the screen
-    Vector2D P1Screen(0, screen_y);
-    Vector2D P2Screen(screen_x, 0);
+    Vector2D P1Screen(0, _screen_y);
+    Vector2D P2Screen(_screen_x, 0);
 
     // Construct rectangle for circle
     Vector2D P1World(s->getCenter().x - s->getRadius(), s->getCenter().y + s->getRadius());
@@ -48,8 +46,8 @@ void VisitorDrawShapeJAVA::visit(const shape::Circle *s, int port, const string 
 
     double newRadius = tmpNewX - x;
 
-    ConnectionHandler connection = ConnectionHandler(address, port);
-    connection.sendLine("|" + _name + ";400;320" + "|" + "\n");
+    ConnectionHandler connection = ConnectionHandler(_address, _port);
+    connection.sendLine("|" + _name + ";" + to_string(_screen_x) + ";" + to_string(_screen_y) + "|" + "\n");
 
     cout << "|Circle;" + to_string((int)x) + ";" + to_string((int)y) + ";" + to_string((int)newRadius) + ";" + (string)s->getColor() + "|\n";
     connection.sendLine("|Circle;" + to_string((int)x) + ";" + to_string((int)y) + ";" + to_string((int)newRadius) + ";" + (string)s->getColor() + "|\n");
@@ -59,10 +57,10 @@ void VisitorDrawShapeJAVA::visit(const shape::Circle *s, int port, const string 
     connection.close();
 }
 
-void VisitorDrawShapeJAVA::visit(const shape::Polygon *s, int port, const string &address) const
+void VisitorDrawShapeJAVA::visit(const shape::Polygon *s) const
 {
-    ConnectionHandler connection = ConnectionHandler(address, port);
-    connection.sendLine("|" + _name + ";400;320" + "|" + "\n");
+    ConnectionHandler connection = ConnectionHandler(_address, _port);
+    connection.sendLine("|" + _name + ";" + to_string(_screen_x) + ";" + to_string(_screen_y) + "|" + "\n");
     connection.sendLine("|" + (string)(*s) + "|" + "\n");
 
     connection.sendLine("disconnect\n");
@@ -70,10 +68,10 @@ void VisitorDrawShapeJAVA::visit(const shape::Polygon *s, int port, const string
     connection.close();
 }
 
-void VisitorDrawShapeJAVA::visit(const shape::Segment *s, int port, const string &address) const
+void VisitorDrawShapeJAVA::visit(const shape::Segment *s) const
 {
-    ConnectionHandler connection = ConnectionHandler(address, port);
-    connection.sendLine("|" + _name + ";400;320" + "|" + "\n");
+    ConnectionHandler connection = ConnectionHandler(_address, _port);
+    connection.sendLine("|" + _name + ";" + to_string(_screen_x) + ";" + to_string(_screen_y) + "|" + "\n");
     connection.sendLine("|" + (string)(*s) + "|" + "\n");
 
     connection.sendLine("disconnect\n");
@@ -81,10 +79,10 @@ void VisitorDrawShapeJAVA::visit(const shape::Segment *s, int port, const string
     connection.close();
 }
 
-void VisitorDrawShapeJAVA::visit(const shape::Triangle *s, int port, const string &address) const
+void VisitorDrawShapeJAVA::visit(const shape::Triangle *s) const
 {
-    ConnectionHandler connection = ConnectionHandler(address, port);
-    connection.sendLine("|" + _name + ";400;320" + "|" + "\n");
+    ConnectionHandler connection = ConnectionHandler(_address, _port);
+    connection.sendLine("|" + _name + ";" + to_string(_screen_x) + ";" + to_string(_screen_y) + "|" + "\n");
     connection.sendLine("|" + (string)(*s) + "|" + "\n");
 
     connection.sendLine("disconnect\n");
@@ -92,10 +90,10 @@ void VisitorDrawShapeJAVA::visit(const shape::Triangle *s, int port, const strin
     connection.close();
 }
 
-void VisitorDrawShapeJAVA::visit(const shape::ComposedShape *s, int port, const string &address) const
+void VisitorDrawShapeJAVA::visit(const shape::ComposedShape *s) const
 {
-    ConnectionHandler connection = ConnectionHandler(address, port);
-    connection.sendLine("|" + _name + ";400;320" + "|" + "\n");
+    ConnectionHandler connection = ConnectionHandler(_address, _port);
+    connection.sendLine("|" + _name + ";" + to_string(_screen_x) + ";" + to_string(_screen_y) + "|" + "\n");
     connection.sendLine("|" + (string)(*s) + "|" + "\n");
 
     connection.sendLine("disconnect\n");

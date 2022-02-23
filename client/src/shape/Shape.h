@@ -35,7 +35,7 @@ namespace shape
         virtual double area() const = 0;
 
         // ==================== VISITORS ====================
-        virtual void draw(const VisitorDrawShape *v, int port = 9111, const std::string &address = "127.0.0.1") const = 0;
+        virtual void draw(const VisitorDrawShape *v) const = 0;
         virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const = 0;
 
         // ==================== OPERATORS ====================
