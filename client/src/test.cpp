@@ -12,13 +12,15 @@
 #include "shape/simple/Polygon.h"
 #include "shape/simple/Triangle.h"
 #include "shape/files/txt/VisitorSaveFileTXT.h"
+#include "shape/draw/java/WorldToScreen.h"
 
 using namespace std;
 using namespace shape;
 
 // #define TEST_SAVE_LOAD_FILES 1
-#define TEST_AREAS 1
-#define TEST_ROTATIONS 1
+#define TEST_AREAS 0
+#define TEST_ROTATIONS 0
+#define TEST_REPERES 1
 
 void mainTests()
 {
@@ -121,5 +123,28 @@ void mainTests()
     cout << "t2 : " << t2 << endl;
     ComposedShape cs2 = *(ComposedShape *)cs1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "cs2 : " << cs2 << endl;
+#endif
+
+#ifdef TEST_REPERES
+    cout << FONT_YELLOW << "Soit R le repere monde def par P1World(Vector2D(-1.5,-1.5)) et par P2World(Vector2D(4.5,4.5))" << FONT_DEFAULT << endl;
+    cout << FONT_YELLOW << "Soit R' le repere monde def par P1Screen(Vector2D(0,500)) et par P2Screen(Vector2D(800,0))" << FONT_DEFAULT << endl;
+
+    Vector2D P1World(-1.5, -1.5);
+    Vector2D P2World(4.5, 4.5);
+    Vector2D P1Screen(0, 500);
+    Vector2D P2Screen(800, 0);
+
+    double alpha = WorldToScreen::getAlpha(P1World, P2World, P1Screen, P2Screen);
+    cout << "alpha : " << alpha << endl;
+
+    double E1 = WorldToScreen::getE1(P1World, P2World, P1Screen, P2Screen);
+    cout << "E1 : " << E1 << endl;
+    double E2 = WorldToScreen::getE2(P1World, P2World, P1Screen, P2Screen);
+    cout << "E2 : " << E2 << endl;
+
+    double a = WorldToScreen::getA(P1World, P2World, P1Screen, P2Screen, alpha, E1);
+    cout << "a : " << a << endl;
+    double b = WorldToScreen::getB(P1World, P2World, P1Screen, P2Screen, alpha, E2);
+    cout << "b : " << b << endl;
 #endif
 }
