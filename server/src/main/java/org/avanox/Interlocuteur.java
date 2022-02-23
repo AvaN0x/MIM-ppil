@@ -48,7 +48,6 @@ public class Interlocuteur extends Thread {
 
         ExpertGL expertGL = null;
         expertGL = new ExpertAWT(expertGL);
-        expertGL = new ExpertFX(expertGL);
         expertGL = new ExpertSwing(expertGL);
 
         Draw graphicLibrairy = null;
