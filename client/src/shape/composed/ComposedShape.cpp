@@ -43,13 +43,14 @@ void ComposedShape::setColor(Color color)
         shape->setColor(color);
 }
 
-void ComposedShape::addShape(Shape *shape)
+Shape *ComposedShape::addShape(Shape *shape)
 {
     if (shape == nullptr)
         throw std::invalid_argument("shape is NULL");
     Shape *temp = shape->clone();
     temp->setColor(_color);
     _shapes.push_back(temp);
+    return temp;
 }
 
 void ComposedShape::removeShape(Shape *shape)

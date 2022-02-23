@@ -160,11 +160,26 @@ void mainTests()
     VisitorDrawShapeAWT vDraw = VisitorDrawShapeAWT();
     // vDraw.setWindowSize(800, 600);
     c1.draw(&vDraw);
+#ifdef TEST_ROTATIONS
+    c2.draw(&vDraw);
+#endif
     s1.draw(&vDraw);
+#ifdef TEST_ROTATIONS
+    s2.draw(&vDraw);
+#endif
     p1.draw(&vDraw);
+#ifdef TEST_ROTATIONS
+    p2.draw(&vDraw);
+#endif
     t1.draw(&vDraw);
+#ifdef TEST_ROTATIONS
     t2.draw(&vDraw);
     t3.draw(&vDraw);
+#endif
     cs1.draw(&vDraw);
+#ifdef TEST_ROTATIONS
+    cs2.draw(&vDraw);
+#endif
+
 #endif
 }

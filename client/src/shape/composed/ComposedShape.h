@@ -32,7 +32,7 @@ namespace shape
 
         // ==================== SETTERS ====================
         virtual void setColor(Color color);
-        void addShape(Shape *shape);
+        Shape *addShape(Shape *shape);
         void removeShape(Shape *shape);
         virtual Vector2D getBottomLeft() const;
         virtual Vector2D getTopRight() const;
