@@ -47,15 +47,16 @@ public class DrawAWT extends Draw {
 
     @Override
     public void visit(Triangle triangle) {
+        Insets insets = frame.getInsets();
         int[] xPoints = {
-                triangle.getA().getX(),
-                triangle.getB().getX(),
-                triangle.getC().getX()
+                insets.left + triangle.getA().getX(),
+                insets.left + triangle.getB().getX(),
+                insets.left + triangle.getC().getX()
         };
         int[] yPoints = {
-                triangle.getA().getY(),
-                triangle.getB().getY(),
-                triangle.getC().getY()
+                insets.top + triangle.getA().getY(),
+                insets.top + triangle.getB().getY(),
+                insets.top + triangle.getC().getY()
         };
         graphics.setColor(triangle.getColor());
         graphics.fillPolygon(xPoints, yPoints, 3);
@@ -67,7 +68,6 @@ public class DrawAWT extends Draw {
     public void visit(Circle circle) {
         Insets insets = frame.getInsets();
         graphics.setColor(circle.getColor());
-
         graphics.fillOval(
                 insets.left + circle.getCenter().getX() - circle.getRadius(),
                 insets.top + circle.getCenter().getY() - circle.getRadius(),
@@ -79,23 +79,25 @@ public class DrawAWT extends Draw {
 
     @Override
     public void visit(Segment segment) {
+        Insets insets = frame.getInsets();
         graphics.setColor(segment.getColor());
         graphics.drawLine(
-                segment.getA().getX(),
-                segment.getA().getY(),
-                segment.getB().getX(),
-                segment.getB().getY());
+                insets.left + segment.getA().getX(),
+                insets.top + segment.getA().getY(),
+                insets.left + segment.getB().getX(),
+                insets.top + segment.getB().getY());
 
         strategie.show();
     }
 
     @Override
     public void visit(AnyPolygon other) {
+        Insets insets = frame.getInsets();
         ArrayList<Integer> xPoints = new ArrayList<Integer>();
         ArrayList<Integer> yPoints = new ArrayList<Integer>();
         for (Point point : other.getSegments()) {
-            xPoints.add(point.getX());
-            yPoints.add(point.getY());
+            xPoints.add(insets.left + point.getX());
+            yPoints.add(insets.top + point.getY());
         }
         graphics.setColor(other.getColor());
         graphics.fillPolygon(
