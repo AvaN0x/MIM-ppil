@@ -76,7 +76,7 @@ Shape *Circle::homothety(const Vector2D &origin, double coeff) const
     {
         points.push_back(point * coeff + origin * (1 - coeff));
     }
-    return new Circle(points, _color, _radius);
+    return new Circle(points, _color, _radius * coeff);
 }
 
 Shape *Circle::translation(const Vector2D &v) const

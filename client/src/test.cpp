@@ -21,8 +21,9 @@ using namespace shape;
 // #define TEST_SAVE_LOAD_FILES 1
 #define TEST_AREAS 0
 #define TEST_ROTATIONS 0
+#define TEST_HOMOTHETY 1
 #define TEST_REPERES 0
-#define TEST_DRAW_CIRCLE 1
+#define TEST_DRAW_SHAPES 1
 
 void mainTests()
 {
@@ -51,7 +52,7 @@ void mainTests()
     cout << "s1 : " << s1 << endl;
     shape::Polygon p1(vector<Vector2D>({Vector2D(2, 2), Vector2D(0, 3), Vector2D(4, 4), Vector2D(30, 5)}), Color(255, 0, 0));
     cout << "p1 : " << p1 << endl;
-    Triangle t1(vector<Vector2D>({Vector2D(-4, -4), Vector2D(-8, -8), Vector2D(0, -8)}), Color(0, 0, 255));
+    Triangle t1(vector<Vector2D>({Vector2D(-4, -4), Vector2D(-8, -8), Vector2D(0, -8)}), Color("#ff00ffff"));
     cout << "t1 : " << t1 << endl;
 
     ComposedShape cs1(vector<Shape *>({&c1}), Color("#ff00ffff"));
@@ -154,8 +155,8 @@ void mainTests()
     cout << "b : " << b << endl;
 #endif
 
-#ifdef TEST_DRAW_CIRCLE
-    cout << FONT_YELLOW << "Draw circle !" << FONT_DEFAULT << endl;
+#ifdef TEST_DRAW_SHAPES
+    cout << FONT_YELLOW << "Draw shapes !" << FONT_DEFAULT << endl;
 
     VisitorDrawShapeAWT vDraw = VisitorDrawShapeAWT();
     // vDraw.setWindowSize(800, 600);
@@ -181,5 +182,13 @@ void mainTests()
     cs2.draw(&vDraw);
 #endif
 
+#ifdef TEST_HOMOTHETY
+    cout << FONT_YELLOW << "Draw homotheties !" << FONT_DEFAULT << endl;
+
+    cs1 = *(ComposedShape *)cs1.homothety(Vector2D(0, 0), 2);
+    cs1.setColor(Color(255, 0, 0));
+    cs1.draw(&vDraw);
+
+#endif
 #endif
 }
