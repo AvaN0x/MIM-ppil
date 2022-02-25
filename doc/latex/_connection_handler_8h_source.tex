@@ -1,0 +1,35 @@
+\hypertarget{_connection_handler_8h_source}{}\doxysection{Connection\+Handler.\+h}
+\label{_connection_handler_8h_source}\index{client/src/ConnectionHandler.h@{client/src/ConnectionHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_connection_handler}{ConnectionHandler}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     \textcolor{keywordtype}{bool} \_closed;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     SOCKET \_socket;}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&address, \textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_connection_handler}{\string~ConnectionHandler}}()}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         close();}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} close();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} isClosed()\textcolor{keyword}{ const}}
+\DoxyCodeLine{23 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{24         \textcolor{keywordflow}{return} \_closed;}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} sendLine(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&content);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{string} receive();}
+\DoxyCodeLine{29 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\hypertarget{_world_to_screen_8h_source}{}\doxysection{World\+To\+Screen.\+h}
+\label{_world_to_screen_8h_source}\index{client/src/shape/draw/java/WorldToScreen.h@{client/src/shape/draw/java/WorldToScreen.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}../../Vector2D.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_world_to_screen}{WorldToScreen}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     \textcolor{keywordtype}{double} \_lambda;}
+\DoxyCodeLine{9     \textcolor{keywordtype}{double} \_E1;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{double} \_E2;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{double} \_a;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} \_b;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}} P1World, \mbox{\hyperlink{class_vector2_d}{Vector2D}} P2World, \textcolor{keywordtype}{int} screenX, \textcolor{keywordtype}{int} screenY);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{double} getLambda()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_lambda; \}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{double} getE1()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_E1; \}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{double} getE2()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_E2; \}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{double} getA()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_a; \}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{double} getB()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_b; \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_world_to_screen_a063b85536ae665308e08a22a380258ad}{toScreen}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}} PWorld) \textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{static} \textcolor{keywordtype}{double} getLambda(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1Screen, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2Screen);}
+\DoxyCodeLine{31     \textcolor{keyword}{static} \textcolor{keywordtype}{double} getE1(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1Screen, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2Screen);}
+\DoxyCodeLine{32     \textcolor{keyword}{static} \textcolor{keywordtype}{double} getE2(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1Screen, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2Screen);}
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{double} getA(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1Screen, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2Screen, \textcolor{keywordtype}{double} alpha, \textcolor{keywordtype}{double} E1);}
+\DoxyCodeLine{34     \textcolor{keyword}{static} \textcolor{keywordtype}{double} getB(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2World, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1Screen, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2Screen, \textcolor{keywordtype}{double} alpha, \textcolor{keywordtype}{double} E2);}
+\DoxyCodeLine{35 \};}
+
+\end{DoxyCode}

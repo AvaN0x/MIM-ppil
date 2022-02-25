@@ -1,0 +1,150 @@
+\hypertarget{classshape_1_1_triangle}{}\doxysection{shape\+::Triangle Class Reference}
+\label{classshape_1_1_triangle}\index{shape::Triangle@{shape::Triangle}}
+Inheritance diagram for shape\+::Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classshape_1_1_triangle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_triangle_aaab92c1ae626fc5eff00a94a5076e164}\label{classshape_1_1_triangle_aaab92c1ae626fc5eff00a94a5076e164}} 
+{\bfseries Triangle} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_triangle_a02155772b79ffd8b85b08a737521eb38}\label{classshape_1_1_triangle_a02155772b79ffd8b85b08a737521eb38}} 
+{\bfseries Triangle} (const \mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} \&shape)
+\item 
+\mbox{\Hypertarget{classshape_1_1_triangle_abe09deeefc869c185b14f84e6e4a0037}\label{classshape_1_1_triangle_abe09deeefc869c185b14f84e6e4a0037}} 
+{\bfseries Triangle} (const std\+::string \&s)
+\item 
+\mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{classshape_1_1_triangle_aba8cab4568fc8656305c98bee2afb77c}{clone}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_triangle_a5d7e66e54f0f83b6ec05858ef28ff5b0}{operator std\+::string}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{classshape_1_1_triangle_aacf3cc86c9961da6406664242b9f05b5}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
+\item 
+\mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{classshape_1_1_triangle_abdbf1c252929e7ccb57122a50e668751}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
+\item 
+\mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{classshape_1_1_triangle_acda084366f389fbe384c8ddeea8111e2}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
+\item 
+double \mbox{\hyperlink{classshape_1_1_triangle_a5b86d43152f84325da7c657650e1f3f1}{area}} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_triangle_a0bb0452e1cf73ea8c06424613cbf535c}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_triangle_aab7cec8523501d6c111c851e8c324f41}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_triangle_a2b241c0f86b5e7c0a22be7b64762330c}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_triangle_a5c6325028a3d631851bc39cb5cd061c4}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_triangle_a5b86d43152f84325da7c657650e1f3f1}\label{classshape_1_1_triangle_a5b86d43152f84325da7c657650e1f3f1}} 
+\index{shape::Triangle@{shape::Triangle}!area@{area}}
+\index{area@{area}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double Triangle\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_aba8cab4568fc8656305c98bee2afb77c}\label{classshape_1_1_triangle_aba8cab4568fc8656305c98bee2afb77c}} 
+\index{shape::Triangle@{shape::Triangle}!clone@{clone}}
+\index{clone@{clone}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ shape\+::\+Triangle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_aab7cec8523501d6c111c851e8c324f41}\label{classshape_1_1_triangle_aab7cec8523501d6c111c851e8c324f41}} 
+\index{shape::Triangle@{shape::Triangle}!draw@{draw}}
+\index{draw@{draw}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Triangle\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_aacf3cc86c9961da6406664242b9f05b5}\label{classshape_1_1_triangle_aacf3cc86c9961da6406664242b9f05b5}} 
+\index{shape::Triangle@{shape::Triangle}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ Triangle\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_a5d7e66e54f0f83b6ec05858ef28ff5b0}\label{classshape_1_1_triangle_a5d7e66e54f0f83b6ec05858ef28ff5b0}} 
+\index{shape::Triangle@{shape::Triangle}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Triangle\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_a5c6325028a3d631851bc39cb5cd061c4}\label{classshape_1_1_triangle_a5c6325028a3d631851bc39cb5cd061c4}} 
+\index{shape::Triangle@{shape::Triangle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Triangle\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_a2b241c0f86b5e7c0a22be7b64762330c}\label{classshape_1_1_triangle_a2b241c0f86b5e7c0a22be7b64762330c}} 
+\index{shape::Triangle@{shape::Triangle}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Triangle\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_acda084366f389fbe384c8ddeea8111e2}\label{classshape_1_1_triangle_acda084366f389fbe384c8ddeea8111e2}} 
+\index{shape::Triangle@{shape::Triangle}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ Triangle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_a0bb0452e1cf73ea8c06424613cbf535c}\label{classshape_1_1_triangle_a0bb0452e1cf73ea8c06424613cbf535c}} 
+\index{shape::Triangle@{shape::Triangle}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Triangle\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_triangle_abdbf1c252929e7ccb57122a50e668751}\label{classshape_1_1_triangle_abdbf1c252929e7ccb57122a50e668751}} 
+\index{shape::Triangle@{shape::Triangle}!translation@{translation}}
+\index{translation@{translation}!shape::Triangle@{shape::Triangle}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_triangle}{Triangle}} $\ast$ Triangle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/simple/Triangle.\+h\item 
+client/src/shape/simple/Triangle.\+cpp\end{DoxyCompactItemize}

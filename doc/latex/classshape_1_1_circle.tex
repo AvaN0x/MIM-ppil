@@ -1,0 +1,180 @@
+\hypertarget{classshape_1_1_circle}{}\doxysection{shape\+::Circle Class Reference}
+\label{classshape_1_1_circle}\index{shape::Circle@{shape::Circle}}
+Inheritance diagram for shape\+::Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classshape_1_1_circle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}\label{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}} 
+{\bfseries Circle} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color, double radius)
+\item 
+\mbox{\Hypertarget{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}\label{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}} 
+{\bfseries Circle} (const \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&shape)
+\item 
+\mbox{\Hypertarget{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}\label{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}} 
+{\bfseries Circle} (const std\+::string \&s)
+\item 
+\mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}{clone}} () const
+\item 
+\mbox{\Hypertarget{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}\label{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}} 
+double {\bfseries get\+Radius} () const
+\item 
+\mbox{\Hypertarget{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}\label{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}} 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries get\+Center} () const
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}{get\+Bottom\+Left}} () const
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}{get\+Top\+Right}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}{operator std\+::string}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
+\item 
+\mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
+\item 
+\mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
+\item 
+double \mbox{\hyperlink{classshape_1_1_circle_ae84375a24b208fec2d3f85ece4d8a82b}{area}} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_circle_ae84375a24b208fec2d3f85ece4d8a82b}\label{classshape_1_1_circle_ae84375a24b208fec2d3f85ece4d8a82b}} 
+\index{shape::Circle@{shape::Circle}!area@{area}}
+\index{area@{area}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double Circle\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}\label{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}} 
+\index{shape::Circle@{shape::Circle}!clone@{clone}}
+\index{clone@{clone}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ shape\+::\+Circle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}\label{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}} 
+\index{shape::Circle@{shape::Circle}!draw@{draw}}
+\index{draw@{draw}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Circle\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}\label{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}} 
+\index{shape::Circle@{shape::Circle}!getBottomLeft@{getBottomLeft}}
+\index{getBottomLeft@{getBottomLeft}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{getBottomLeft()}{getBottomLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Circle\+::get\+Bottom\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}\label{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}} 
+\index{shape::Circle@{shape::Circle}!getTopRight@{getTopRight}}
+\index{getTopRight@{getTopRight}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{getTopRight()}{getTopRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Circle\+::get\+Top\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}\label{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}} 
+\index{shape::Circle@{shape::Circle}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ Circle\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}\label{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}} 
+\index{shape::Circle@{shape::Circle}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Circle\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}\label{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}} 
+\index{shape::Circle@{shape::Circle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Circle\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}\label{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}} 
+\index{shape::Circle@{shape::Circle}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Circle\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}\label{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}} 
+\index{shape::Circle@{shape::Circle}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ Circle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}\label{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}} 
+\index{shape::Circle@{shape::Circle}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Circle\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}\label{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}} 
+\index{shape::Circle@{shape::Circle}!translation@{translation}}
+\index{translation@{translation}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ Circle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/simple/Circle.\+h\item 
+client/src/shape/simple/Circle.\+cpp\end{DoxyCompactItemize}

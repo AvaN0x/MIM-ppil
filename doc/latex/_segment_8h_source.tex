@@ -1,0 +1,48 @@
+\hypertarget{_segment_8h_source}{}\doxysection{Segment.\+h}
+\label{_segment_8h_source}\index{client/src/shape/simple/Segment.h@{client/src/shape/simple/Segment.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SimpleShape.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }shape}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keyword}{class }\mbox{\hyperlink{classshape_1_1_segment}{Segment}} : \textcolor{keyword}{public} \mbox{\hyperlink{classshape_1_1_simple_shape}{SimpleShape}}}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9     \textcolor{keyword}{public}:}
+\DoxyCodeLine{10         \textcolor{comment}{// ==================== CONSTRUCTORS ====================}}
+\DoxyCodeLine{11         \mbox{\hyperlink{classshape_1_1_segment}{Segment}}(std::vector<Vector2D> points, Color color);}
+\DoxyCodeLine{12         \mbox{\hyperlink{classshape_1_1_segment}{Segment}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_segment}{Segment}} \&shape);}
+\DoxyCodeLine{13         \mbox{\hyperlink{classshape_1_1_segment}{Segment}}(\textcolor{keyword}{const} std::string \&s);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{comment}{// ==================== CLONE ====================}}
+\DoxyCodeLine{16         \mbox{\hyperlink{classshape_1_1_segment}{Segment}} *clone()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_segment}{Segment}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \textcolor{comment}{// ==================== STRING ====================}}
+\DoxyCodeLine{19         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{comment}{// ==================== OPERATIONS ====================}}
+\DoxyCodeLine{22         \mbox{\hyperlink{classshape_1_1_segment}{Segment}} *homothety(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
+\DoxyCodeLine{23         \mbox{\hyperlink{classshape_1_1_segment}{Segment}} *translation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
+\DoxyCodeLine{24         \mbox{\hyperlink{classshape_1_1_segment}{Segment}} *rotation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{25         \textcolor{keywordtype}{double} area() \textcolor{keyword}{const};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{// ==================== VISITORS ====================}}
+\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} saveFile(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
+\DoxyCodeLine{29 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, filePath);}
+\DoxyCodeLine{31         \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
+\DoxyCodeLine{34 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{35             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, connection, wts);}
+\DoxyCodeLine{36         \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// ==================== OPERATORS ====================}}
+\DoxyCodeLine{39         \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{40         \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \};}
+\DoxyCodeLine{42 \} \textcolor{comment}{// namespace shape}}
+
+\end{DoxyCode}

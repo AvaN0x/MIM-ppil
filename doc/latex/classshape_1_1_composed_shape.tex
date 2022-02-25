@@ -1,0 +1,195 @@
+\hypertarget{classshape_1_1_composed_shape}{}\doxysection{shape\+::Composed\+Shape Class Reference}
+\label{classshape_1_1_composed_shape}\index{shape::ComposedShape@{shape::ComposedShape}}
+Inheritance diagram for shape\+::Composed\+Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classshape_1_1_composed_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_aa415f123d3c667afff9e72b0bc9ba847}\label{classshape_1_1_composed_shape_aa415f123d3c667afff9e72b0bc9ba847}} 
+{\bfseries Composed\+Shape} (\mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_afe16a4b95e9e4109269077ae166e3361}\label{classshape_1_1_composed_shape_afe16a4b95e9e4109269077ae166e3361}} 
+{\bfseries Composed\+Shape} (std\+::vector$<$ \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ $>$ shapes, \mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_aab92f83cd308578159016eb6d34b74d2}\label{classshape_1_1_composed_shape_aab92f83cd308578159016eb6d34b74d2}} 
+{\bfseries Composed\+Shape} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} \&composed\+Shape)
+\item 
+\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}{clone}} () const
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}\label{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}} 
+std\+::vector$<$ \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ $>$ {\bfseries get\+Shapes} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}{set\+Color}} (\mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}\label{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}} 
+\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ {\bfseries add\+Shape} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
+\item 
+\mbox{\Hypertarget{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}\label{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}} 
+void {\bfseries remove\+Shape} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}{get\+Bottom\+Left}} () const
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}{get\+Top\+Right}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}{operator std\+::string}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
+\item 
+\mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
+\item 
+\mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
+\item 
+double \mbox{\hyperlink{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}{area}} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}\label{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!area@{area}}
+\index{area@{area}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double Composed\+Shape\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}\label{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!clone@{clone}}
+\index{clone@{clone}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ shape\+::\+Composed\+Shape\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}\label{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!draw@{draw}}
+\index{draw@{draw}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Composed\+Shape\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}\label{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!getBottomLeft@{getBottomLeft}}
+\index{getBottomLeft@{getBottomLeft}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{getBottomLeft()}{getBottomLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Composed\+Shape\+::get\+Bottom\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}\label{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!getTopRight@{getTopRight}}
+\index{getTopRight@{getTopRight}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{getTopRight()}{getTopRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Composed\+Shape\+::get\+Top\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}\label{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ Composed\+Shape\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}\label{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Composed\+Shape\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}\label{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Composed\+Shape\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}\label{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Composed\+Shape\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}\label{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ Composed\+Shape\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}\label{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Composed\+Shape\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}\label{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!setColor@{setColor}}
+\index{setColor@{setColor}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Composed\+Shape\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_color}{Color}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}\label{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!translation@{translation}}
+\index{translation@{translation}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ Composed\+Shape\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/composed/Composed\+Shape.\+h\item 
+client/src/shape/composed/Composed\+Shape.\+cpp\end{DoxyCompactItemize}

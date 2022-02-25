@@ -1,0 +1,150 @@
+\hypertarget{classshape_1_1_polygon}{}\doxysection{shape\+::Polygon Class Reference}
+\label{classshape_1_1_polygon}\index{shape::Polygon@{shape::Polygon}}
+Inheritance diagram for shape\+::Polygon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classshape_1_1_polygon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}\label{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}} 
+{\bfseries Polygon} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}\label{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}} 
+{\bfseries Polygon} (const \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&shape)
+\item 
+\mbox{\Hypertarget{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}\label{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}} 
+{\bfseries Polygon} (const std\+::string \&s)
+\item 
+\mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}{clone}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}{operator std\+::string}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
+\item 
+\mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
+\item 
+\mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
+\item 
+double \mbox{\hyperlink{classshape_1_1_polygon_a4d0afaa20413f6cb532daa57c0a59f1b}{area}} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_polygon_a4d0afaa20413f6cb532daa57c0a59f1b}\label{classshape_1_1_polygon_a4d0afaa20413f6cb532daa57c0a59f1b}} 
+\index{shape::Polygon@{shape::Polygon}!area@{area}}
+\index{area@{area}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double Polygon\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}\label{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}} 
+\index{shape::Polygon@{shape::Polygon}!clone@{clone}}
+\index{clone@{clone}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ shape\+::\+Polygon\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}\label{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}} 
+\index{shape::Polygon@{shape::Polygon}!draw@{draw}}
+\index{draw@{draw}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Polygon\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}\label{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}} 
+\index{shape::Polygon@{shape::Polygon}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ Polygon\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}\label{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}} 
+\index{shape::Polygon@{shape::Polygon}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Polygon\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}\label{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}} 
+\index{shape::Polygon@{shape::Polygon}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Polygon\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}\label{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}} 
+\index{shape::Polygon@{shape::Polygon}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Polygon\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}\label{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}} 
+\index{shape::Polygon@{shape::Polygon}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ Polygon\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}\label{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}} 
+\index{shape::Polygon@{shape::Polygon}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Polygon\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}\label{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}} 
+\index{shape::Polygon@{shape::Polygon}!translation@{translation}}
+\index{translation@{translation}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ Polygon\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/simple/Polygon.\+h\item 
+client/src/shape/simple/Polygon.\+cpp\end{DoxyCompactItemize}

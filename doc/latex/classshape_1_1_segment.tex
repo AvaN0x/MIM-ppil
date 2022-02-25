@@ -1,0 +1,150 @@
+\hypertarget{classshape_1_1_segment}{}\doxysection{shape\+::Segment Class Reference}
+\label{classshape_1_1_segment}\index{shape::Segment@{shape::Segment}}
+Inheritance diagram for shape\+::Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classshape_1_1_segment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}\label{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}} 
+{\bfseries Segment} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
+\item 
+\mbox{\Hypertarget{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}\label{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}} 
+{\bfseries Segment} (const \mbox{\hyperlink{classshape_1_1_segment}{Segment}} \&shape)
+\item 
+\mbox{\Hypertarget{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}\label{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}} 
+{\bfseries Segment} (const std\+::string \&s)
+\item 
+\mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}{clone}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}{operator std\+::string}} () const
+\item 
+\mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
+\item 
+\mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
+\item 
+\mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
+\item 
+double \mbox{\hyperlink{classshape_1_1_segment_a41d8b0f3a3bdb75d5b085e936948eadc}{area}} () const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+bool \mbox{\hyperlink{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_segment_a41d8b0f3a3bdb75d5b085e936948eadc}\label{classshape_1_1_segment_a41d8b0f3a3bdb75d5b085e936948eadc}} 
+\index{shape::Segment@{shape::Segment}!area@{area}}
+\index{area@{area}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double Segment\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}\label{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}} 
+\index{shape::Segment@{shape::Segment}!clone@{clone}}
+\index{clone@{clone}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ shape\+::\+Segment\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}\label{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}} 
+\index{shape::Segment@{shape::Segment}!draw@{draw}}
+\index{draw@{draw}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Segment\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}\label{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}} 
+\index{shape::Segment@{shape::Segment}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ Segment\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}\label{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}} 
+\index{shape::Segment@{shape::Segment}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Segment\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}\label{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}} 
+\index{shape::Segment@{shape::Segment}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Segment\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}\label{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}} 
+\index{shape::Segment@{shape::Segment}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Segment\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}\label{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}} 
+\index{shape::Segment@{shape::Segment}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ Segment\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}\label{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}} 
+\index{shape::Segment@{shape::Segment}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Segment\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}\label{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}} 
+\index{shape::Segment@{shape::Segment}!translation@{translation}}
+\index{translation@{translation}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ Segment\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/simple/Segment.\+h\item 
+client/src/shape/simple/Segment.\+cpp\end{DoxyCompactItemize}

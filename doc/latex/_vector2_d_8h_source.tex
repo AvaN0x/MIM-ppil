@@ -1,0 +1,57 @@
+\hypertarget{_vector2_d_8h_source}{}\doxysection{Vector2\+D.\+h}
+\label{_vector2_d_8h_source}\index{client/src/shape/Vector2D.h@{client/src/shape/Vector2D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_vector2_d}{Vector2D}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} x, y;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{comment}{// ================== CONSTRUCTORS ==================}}
+\DoxyCodeLine{15     \textcolor{comment}{// If no explicit, parameters from constructor can be converted implicitly by compiler to Vector2D}}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_vector2_d}{Vector2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&x = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{double} \&y = 0);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_vector2_d}{Vector2D}}(\textcolor{keyword}{const} std::string \&s);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_vector2_d}{Vector2D}} *clone()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_vector2_d}{Vector2D}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{\string~Vector2D}}() \{\}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// ================== METHODS ==================}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{double} distance(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} rotation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// ================== OPERATORS ==================}}
+\DoxyCodeLine{27     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator+(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) \textcolor{keyword}{const};}
+\DoxyCodeLine{28     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&operator+=(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u);}
+\DoxyCodeLine{29     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator-\/() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator-\/(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&operator-\/=(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u);}
+\DoxyCodeLine{32     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator*(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&a) \textcolor{keyword}{const};}
+\DoxyCodeLine{33     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&operator*=(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&a);}
+\DoxyCodeLine{34     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator/(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&a) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&operator/=(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&a);}
+\DoxyCodeLine{36     \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} operator==(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} operator!=(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// ================== TOSTRING AND PRINT ==================}}
+\DoxyCodeLine{41     std::string toString()\textcolor{keyword}{ const}}
+\DoxyCodeLine{42 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{return} (std::string) * \textcolor{keyword}{this};}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45     \textcolor{keyword}{friend} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u);}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{inline} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u)}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} os << u.toString();}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}

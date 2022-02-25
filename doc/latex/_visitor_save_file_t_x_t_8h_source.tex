@@ -1,0 +1,22 @@
+\hypertarget{_visitor_save_file_t_x_t_8h_source}{}\doxysection{Visitor\+Save\+File\+TXT.\+h}
+\label{_visitor_save_file_t_x_t_8h_source}\index{client/src/shape/files/txt/VisitorSaveFileTXT.h@{client/src/shape/files/txt/VisitorSaveFileTXT.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}../VisitorSaveFile.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_visitor_save_file_t_x_t}{VisitorSaveFileTXT}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_shape}{shape::Shape}} *loadFile(\textcolor{keyword}{const} std::string \&filePath);}
+\DoxyCodeLine{9     \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_shape}{shape::Shape}} *getShapeFromString(\textcolor{keyword}{const} std::string \&str);}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_circle}{shape::Circle}} *s, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{12     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_polygon}{shape::Polygon}} *s, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_segment}{shape::Segment}} *s, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_triangle}{shape::Triangle}} *s, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_composed_shape}{shape::ComposedShape}} *s, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{16 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,164 @@
+\hypertarget{classshape_1_1_simple_shape}{}\doxysection{shape\+::Simple\+Shape Class Reference}
+\label{classshape_1_1_simple_shape}\index{shape::SimpleShape@{shape::SimpleShape}}
+Inheritance diagram for shape\+::Simple\+Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classshape_1_1_simple_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}{clone}} () const =0
+\item 
+\mbox{\Hypertarget{classshape_1_1_simple_shape_ac144e1f87d2f2b683789b1ec5a898441}\label{classshape_1_1_simple_shape_ac144e1f87d2f2b683789b1ec5a898441}} 
+virtual std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ {\bfseries get\+Points} () const
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_simple_shape_a80fe90c34803b662b4e9407ba5f12f68}{get\+Bottom\+Left}} () const
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_simple_shape_a5f254d426fb7059f3c9c12916f232fc9}{get\+Top\+Right}} () const
+\item 
+\mbox{\Hypertarget{classshape_1_1_simple_shape_ac9da2c341de375d2b4610e4914743142}\label{classshape_1_1_simple_shape_ac9da2c341de375d2b4610e4914743142}} 
+virtual void {\bfseries set\+Points} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points)
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}{operator std\+::string}} () const
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const =0
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const =0
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const =0
+\item 
+virtual double \mbox{\hyperlink{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}{area}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const =0
+\item 
+virtual bool \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\item 
+virtual bool \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}\label{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}} 
+std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ {\bfseries \+\_\+points}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}\label{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!area@{area}}
+\index{area@{area}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily virtual double shape\+::\+Simple\+Shape\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}\label{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!clone@{clone}}
+\index{clone@{clone}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ shape\+::\+Simple\+Shape\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a80fe90c34803b662b4e9407ba5f12f68}\label{classshape_1_1_simple_shape_a80fe90c34803b662b4e9407ba5f12f68}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!getBottomLeft@{getBottomLeft}}
+\index{getBottomLeft@{getBottomLeft}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{getBottomLeft()}{getBottomLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Simple\+Shape\+::get\+Bottom\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a5f254d426fb7059f3c9c12916f232fc9}\label{classshape_1_1_simple_shape_a5f254d426fb7059f3c9c12916f232fc9}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!getTopRight@{getTopRight}}
+\index{getTopRight@{getTopRight}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{getTopRight()}{getTopRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Simple\+Shape\+::get\+Top\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}\label{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!homothety@{homothety}}
+\index{homothety@{homothety}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{homothety()}{homothety()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ shape\+::\+Simple\+Shape\+::homothety (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{coeff }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}\label{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Simple\+Shape\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}\label{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Simple\+Shape\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}\label{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!operator==@{operator==}}
+\index{operator==@{operator==}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Simple\+Shape\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}\label{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!rotation@{rotation}}
+\index{rotation@{rotation}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ shape\+::\+Simple\+Shape\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{origin,  }\item[{double}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}\label{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily virtual void shape\+::\+Simple\+Shape\+::save\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$}]{v,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}\label{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}} 
+\index{shape::SimpleShape@{shape::SimpleShape}!translation@{translation}}
+\index{translation@{translation}!shape::SimpleShape@{shape::SimpleShape}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_simple_shape}{Simple\+Shape}} $\ast$ shape\+::\+Simple\+Shape\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/simple/Simple\+Shape.\+h\item 
+client/src/shape/simple/Simple\+Shape.\+cpp\end{DoxyCompactItemize}

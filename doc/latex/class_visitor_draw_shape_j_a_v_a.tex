@@ -1,0 +1,110 @@
+\hypertarget{class_visitor_draw_shape_j_a_v_a}{}\doxysection{Visitor\+Draw\+Shape\+JAVA Class Reference}
+\label{class_visitor_draw_shape_j_a_v_a}\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+Inheritance diagram for Visitor\+Draw\+Shape\+JAVA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_visitor_draw_shape_j_a_v_a}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}\label{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}} 
+virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& {\bfseries set\+Window\+Size} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}\label{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}} 
+virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& {\bfseries set\+Server} (int port, const std\+::string \&address=\char`\"{}127.\+0.\+0.\+1\char`\"{})
+\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}{visit}} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}{visit}} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}{visit}} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}{visit}} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}\label{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}} 
+{\bfseries Visitor\+Draw\+Shape\+JAVA} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_aabaf38ca16528e641c7509ac8cdd1527}\label{class_visitor_draw_shape_j_a_v_a_aabaf38ca16528e641c7509ac8cdd1527}} 
+std\+::string {\bfseries \+\_\+name}
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_aed92e0830b052706796cfa05f9b468f5}\label{class_visitor_draw_shape_j_a_v_a_aed92e0830b052706796cfa05f9b468f5}} 
+int {\bfseries \+\_\+screenX} = 400
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_ac0f00e8a8d158b689f6a093c1cb49281}\label{class_visitor_draw_shape_j_a_v_a_ac0f00e8a8d158b689f6a093c1cb49281}} 
+int {\bfseries \+\_\+screenY} = 320
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a8cc48efba6256549a01affba93150e21}\label{class_visitor_draw_shape_j_a_v_a_a8cc48efba6256549a01affba93150e21}} 
+int {\bfseries \+\_\+port} = 9111
+\item 
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a0bd37a834ca58dcb5615f6c45dde4807}\label{class_visitor_draw_shape_j_a_v_a_a0bd37a834ca58dcb5615f6c45dde4807}} 
+std\+::string {\bfseries \+\_\+address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}\label{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Visitor\+Draw\+Shape\+JAVA\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}\label{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Visitor\+Draw\+Shape\+JAVA\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}\label{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Visitor\+Draw\+Shape\+JAVA\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}\label{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Visitor\+Draw\+Shape\+JAVA\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}\label{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Visitor\+Draw\+Shape\+JAVA\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/draw/java/Visitor\+Draw\+Shape\+JAVA.\+h\item 
+client/src/shape/draw/java/Visitor\+Draw\+Shape\+JAVA.\+cpp\end{DoxyCompactItemize}

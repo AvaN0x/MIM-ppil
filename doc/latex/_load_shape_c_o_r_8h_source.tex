@@ -1,0 +1,29 @@
+\hypertarget{_load_shape_c_o_r_8h_source}{}\doxysection{Load\+Shape\+COR.\+h}
+\label{_load_shape_c_o_r_8h_source}\index{client/src/shape/files/LoadShapeCOR.h@{client/src/shape/files/LoadShapeCOR.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}LoadShape.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../Shape.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{// \#define DEBUG\_LOAD\_SHAPE\_COR 1}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_load_shape_c_o_r}{LoadShapeCOR}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_load_shape}{LoadShape}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_load_shape_c_o_r}{LoadShapeCOR}} *next;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_load_shape_c_o_r}{LoadShapeCOR}}(\mbox{\hyperlink{class_load_shape_c_o_r}{LoadShapeCOR}} *next);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{classshape_1_1_shape}{shape::Shape}} *getShape(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&text) \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_shape}{shape::Shape}} *\_getShape(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&s) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{23 \};}
+
+\end{DoxyCode}

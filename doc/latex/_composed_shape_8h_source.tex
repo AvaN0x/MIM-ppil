@@ -1,0 +1,70 @@
+\hypertarget{_composed_shape_8h_source}{}\doxysection{Composed\+Shape.\+h}
+\label{_composed_shape_8h_source}\index{client/src/shape/composed/ComposedShape.h@{client/src/shape/composed/ComposedShape.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../Shape.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../../utils/Color.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }shape}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keyword}{class }\mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} : \textcolor{keyword}{public} \mbox{\hyperlink{classshape_1_1_shape}{Shape}}}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14     \textcolor{keyword}{private}:}
+\DoxyCodeLine{15         std::vector<Shape *> \_shapes;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{public}:}
+\DoxyCodeLine{18         \textcolor{comment}{// ==================== CONSTRUCTORS ====================}}
+\DoxyCodeLine{19         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}();}
+\DoxyCodeLine{20         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(Color color);}
+\DoxyCodeLine{21         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(std::vector<Shape *> shapes, Color color);}
+\DoxyCodeLine{22         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} \&composedShape);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{comment}{// ==================== DESTRUCTORS ====================}}
+\DoxyCodeLine{25         \mbox{\hyperlink{classshape_1_1_composed_shape}{\string~ComposedShape}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{// ==================== CLONE ====================}}
+\DoxyCodeLine{28         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *clone()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{comment}{// ==================== GETTERS ====================}}
+\DoxyCodeLine{31         std::vector<Shape *> getShapes()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_shapes; \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{comment}{// ==================== SETTERS ====================}}
+\DoxyCodeLine{34         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} setColor(Color color);}
+\DoxyCodeLine{35         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *addShape(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} removeShape(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
+\DoxyCodeLine{37         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} getBottomLeft() \textcolor{keyword}{const};}
+\DoxyCodeLine{38         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} getTopRight() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \textcolor{comment}{// ==================== STRING ====================}}
+\DoxyCodeLine{41         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{comment}{// ==================== OPERATIONS ====================}}
+\DoxyCodeLine{44         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *homothety(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
+\DoxyCodeLine{45         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *translation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
+\DoxyCodeLine{46         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *rotation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{47         \textcolor{keywordtype}{double} area() \textcolor{keyword}{const};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{// ==================== VISITORS ====================}}
+\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} saveFile(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
+\DoxyCodeLine{51 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, filePath);}
+\DoxyCodeLine{53         \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
+\DoxyCodeLine{56 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, connection, wts);}
+\DoxyCodeLine{58         \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{comment}{// ==================== OPERATORS ====================}}
+\DoxyCodeLine{61         \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{62         \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{63     \};}
+\DoxyCodeLine{64 \} \textcolor{comment}{// namespace shape}}
+
+\end{DoxyCode}

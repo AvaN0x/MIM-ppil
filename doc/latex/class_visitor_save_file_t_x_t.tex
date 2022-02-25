@@ -1,0 +1,95 @@
+\hypertarget{class_visitor_save_file_t_x_t}{}\doxysection{Visitor\+Save\+File\+TXT Class Reference}
+\label{class_visitor_save_file_t_x_t}\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+Inheritance diagram for Visitor\+Save\+File\+TXT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visitor_save_file_t_x_t}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ \mbox{\hyperlink{class_visitor_save_file_t_x_t_ab6e19fddcff6e679061ca58c31ad7b54}{load\+File}} (const std\+::string \&file\+Path)
+\item 
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_a9c577ae41addafa7e06287c79d737614}\label{class_visitor_save_file_t_x_t_a9c577ae41addafa7e06287c79d737614}} 
+virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ {\bfseries get\+Shape\+From\+String} (const std\+::string \&str)
+\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_t_x_t_a166cb1be88a98436466c6b1d28618686}{visit}} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_t_x_t_a1646162e589a23c01651f7404f3d40d0}{visit}} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_t_x_t_a1d1d084e059afa5a5d3174e584f6dc43}{visit}} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_t_x_t_a171ff9234181567c4aaddfb0fc96f58f}{visit}} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, const std\+::string \&file\+Path) const
+\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_t_x_t_ab3249ac92aa2d27b43380993bb6b074f}{visit}} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, const std\+::string \&file\+Path) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_ab6e19fddcff6e679061ca58c31ad7b54}\label{class_visitor_save_file_t_x_t_ab6e19fddcff6e679061ca58c31ad7b54}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ Visitor\+Save\+File\+TXT\+::load\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_a166cb1be88a98436466c6b1d28618686}\label{class_visitor_save_file_t_x_t_a166cb1be88a98436466c6b1d28618686}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Visitor\+Save\+File\+TXT\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_ab3249ac92aa2d27b43380993bb6b074f}\label{class_visitor_save_file_t_x_t_ab3249ac92aa2d27b43380993bb6b074f}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Visitor\+Save\+File\+TXT\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_a1646162e589a23c01651f7404f3d40d0}\label{class_visitor_save_file_t_x_t_a1646162e589a23c01651f7404f3d40d0}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Visitor\+Save\+File\+TXT\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_a1d1d084e059afa5a5d3174e584f6dc43}\label{class_visitor_save_file_t_x_t_a1d1d084e059afa5a5d3174e584f6dc43}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Visitor\+Save\+File\+TXT\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_t_x_t_a171ff9234181567c4aaddfb0fc96f58f}\label{class_visitor_save_file_t_x_t_a171ff9234181567c4aaddfb0fc96f58f}} 
+\index{VisitorSaveFileTXT@{VisitorSaveFileTXT}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFileTXT@{VisitorSaveFileTXT}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Visitor\+Save\+File\+TXT\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/src/shape/files/txt/Visitor\+Save\+File\+TXT.\+h\item 
+client/src/shape/files/txt/Visitor\+Save\+File\+TXT.\+cpp\end{DoxyCompactItemize}
