@@ -16,7 +16,7 @@ namespace shape
         Circle(const std::string &s);
 
         // ==================== CLONE ====================
-        Shape *clone() const { return new Circle(*this); }
+        Circle *clone() const { return new Circle(*this); }
 
         // ==================== GETTERS ====================
         double getRadius() const { return _radius; }
@@ -28,9 +28,9 @@ namespace shape
         operator std::string() const;
 
         // ==================== OPERATIONS ====================
-        Shape *homothety(const Vector2D &origin, double coeff) const;
-        Shape *translation(const Vector2D &v) const;
-        Shape *rotation(const Vector2D &origin, double alpha) const;
+        Circle *homothety(const Vector2D &origin, double coeff) const;
+        Circle *translation(const Vector2D &v) const;
+        Circle *rotation(const Vector2D &origin, double alpha) const;
         double area() const;
 
         // ==================== VISITORS ====================

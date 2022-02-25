@@ -53,7 +53,7 @@ Segment::operator std::string() const
     return "Segment(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Segment::homothety(const Vector2D &origin, double coeff) const
+Segment *Segment::homothety(const Vector2D &origin, double coeff) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -63,7 +63,7 @@ Shape *Segment::homothety(const Vector2D &origin, double coeff) const
     return new Segment(points, _color);
 }
 
-Shape *Segment::translation(const Vector2D &v) const
+Segment *Segment::translation(const Vector2D &v) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -73,7 +73,7 @@ Shape *Segment::translation(const Vector2D &v) const
     return new Segment(points, _color);
 }
 
-Shape *Segment::rotation(const Vector2D &origin, double alpha) const
+Segment *Segment::rotation(const Vector2D &origin, double alpha) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)

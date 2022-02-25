@@ -69,7 +69,7 @@ Circle::operator std::string() const
     return s.str();
 }
 
-Shape *Circle::homothety(const Vector2D &origin, double coeff) const
+Circle *Circle::homothety(const Vector2D &origin, double coeff) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -79,7 +79,7 @@ Shape *Circle::homothety(const Vector2D &origin, double coeff) const
     return new Circle(points, _color, _radius * coeff);
 }
 
-Shape *Circle::translation(const Vector2D &v) const
+Circle *Circle::translation(const Vector2D &v) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -89,7 +89,7 @@ Shape *Circle::translation(const Vector2D &v) const
     return new Circle(points, _color, _radius);
 }
 
-Shape *Circle::rotation(const Vector2D &origin, double alpha) const
+Circle *Circle::rotation(const Vector2D &origin, double alpha) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)

@@ -13,15 +13,15 @@ namespace shape
         Segment(const std::string &s);
 
         // ==================== CLONE ====================
-        Shape *clone() const { return new Segment(*this); }
+        Segment *clone() const { return new Segment(*this); }
 
         // ==================== STRING ====================
         operator std::string() const;
 
         // ==================== OPERATIONS ====================
-        Shape *homothety(const Vector2D &origin, double coeff) const;
-        Shape *translation(const Vector2D &v) const;
-        Shape *rotation(const Vector2D &origin, double alpha) const;
+        Segment *homothety(const Vector2D &origin, double coeff) const;
+        Segment *translation(const Vector2D &v) const;
+        Segment *rotation(const Vector2D &origin, double alpha) const;
         double area() const;
 
         // ==================== VISITORS ====================

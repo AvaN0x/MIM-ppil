@@ -118,15 +118,15 @@ void mainTests()
 #ifdef TEST_ROTATIONS
     cout << FONT_YELLOW << "Shapes rotations !" << FONT_DEFAULT << endl;
 
-    Circle c2 = *(Circle *)c1.rotation(Vector2D(0, 0), 3.14 / 2);
+    Circle c2 = *c1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "c2 : " << c2 << endl;
-    Segment s2 = *(Segment *)s1.rotation(Vector2D(0, 0), 3.14 / 2);
+    Segment s2 = *s1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "s2 : " << s2 << endl;
-    Polygon p2 = *(Polygon *)p1.rotation(Vector2D(0, 0), 3.14 / 2);
+    Polygon p2 = *p1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "p2 : " << p2 << endl;
-    Triangle t2 = *(Triangle *)t1.rotation(Vector2D(0, 0), 3.14 / 2);
+    Triangle t2 = *t1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "t2 : " << t2 << endl;
-    Triangle t3 = *(Triangle *)t1.rotation(Vector2D(0, 0), 3.14);
+    Triangle t3 = *t1.rotation(Vector2D(0, 0), 3.14);
     cout << "t2 : " << t2 << endl;
     ComposedShape cs2 = *(ComposedShape *)cs1.rotation(Vector2D(0, 0), 3.14 / 2);
     cout << "cs2 : " << cs2 << endl;
@@ -185,10 +185,9 @@ void mainTests()
 #ifdef TEST_HOMOTHETY
     cout << FONT_YELLOW << "Draw homotheties !" << FONT_DEFAULT << endl;
 
-    cs1 = *(ComposedShape *)cs1.homothety(Vector2D(0, 0), 2);
+    cs1 = *cs1.homothety(Vector2D(0, 0), 2);
     cs1.setColor(Color(255, 0, 0));
     cs1.draw(&vDraw);
-
 #endif
 #endif
 }

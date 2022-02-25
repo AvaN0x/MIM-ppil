@@ -54,7 +54,7 @@ Triangle::operator std::string() const
     return "Triangle(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Triangle::homothety(const Vector2D &origin, double coeff) const
+Triangle *Triangle::homothety(const Vector2D &origin, double coeff) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -64,7 +64,7 @@ Shape *Triangle::homothety(const Vector2D &origin, double coeff) const
     return new Triangle(points, _color);
 }
 
-Shape *Triangle::translation(const Vector2D &v) const
+Triangle *Triangle::translation(const Vector2D &v) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -74,7 +74,7 @@ Shape *Triangle::translation(const Vector2D &v) const
     return new Triangle(points, _color);
 }
 
-Shape *Triangle::rotation(const Vector2D &origin, double alpha) const
+Triangle *Triangle::rotation(const Vector2D &origin, double alpha) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)

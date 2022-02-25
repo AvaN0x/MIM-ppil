@@ -31,9 +31,9 @@ namespace shape
         virtual operator std::string() const;
 
         // ==================== OPERATIONS ====================
-        virtual Shape *homothety(const Vector2D &origin, double coeff) const = 0;
-        virtual Shape *translation(const Vector2D &v) const = 0;
-        virtual Shape *rotation(const Vector2D &origin, double alpha) const = 0;
+        virtual SimpleShape *homothety(const Vector2D &origin, double coeff) const = 0;
+        virtual SimpleShape *translation(const Vector2D &v) const = 0;
+        virtual SimpleShape *rotation(const Vector2D &origin, double alpha) const = 0;
         virtual double area() const = 0;
 
         virtual void saveFile(const VisitorSaveFile *v, const std::string &filePath) const = 0;

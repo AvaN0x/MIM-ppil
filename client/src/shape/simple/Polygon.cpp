@@ -56,7 +56,7 @@ Polygon::operator std::string() const
     return "Polygon(" + SimpleShape::operator std::string() + ")";
 }
 
-Shape *Polygon::homothety(const Vector2D &origin, double coeff) const
+Polygon *Polygon::homothety(const Vector2D &origin, double coeff) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -66,7 +66,7 @@ Shape *Polygon::homothety(const Vector2D &origin, double coeff) const
     return new Polygon(points, _color);
 }
 
-Shape *Polygon::translation(const Vector2D &v) const
+Polygon *Polygon::translation(const Vector2D &v) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)
@@ -76,7 +76,7 @@ Shape *Polygon::translation(const Vector2D &v) const
     return new Polygon(points, _color);
 }
 
-Shape *Polygon::rotation(const Vector2D &origin, double alpha) const
+Polygon *Polygon::rotation(const Vector2D &origin, double alpha) const
 {
     std::vector<Vector2D> points;
     for (const Vector2D &point : _points)

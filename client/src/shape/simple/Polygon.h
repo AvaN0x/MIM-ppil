@@ -13,15 +13,15 @@ namespace shape
         Polygon(const std::string &s);
 
         // ==================== CLONE ====================
-        Shape *clone() const { return new Polygon(*this); }
+        Polygon *clone() const { return new Polygon(*this); }
 
         // ==================== STRING ====================
         operator std::string() const;
 
         // ==================== OPERATIONS ====================
-        Shape *homothety(const Vector2D &origin, double coeff) const;
-        Shape *translation(const Vector2D &v) const;
-        Shape *rotation(const Vector2D &origin, double alpha) const;
+        Polygon *homothety(const Vector2D &origin, double coeff) const;
+        Polygon *translation(const Vector2D &v) const;
+        Polygon *rotation(const Vector2D &origin, double alpha) const;
         double area() const;
 
         // ==================== VISITORS ====================
