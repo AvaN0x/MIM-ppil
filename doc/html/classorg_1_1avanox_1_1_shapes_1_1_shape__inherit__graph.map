@@ -1,0 +1,7 @@
+<map id="org.avanox.Shapes.Shape" name="org.avanox.Shapes.Shape">
+<area shape="rect" id="node1" title=" " alt="" coords="335,5,509,83"/>
+<area shape="rect" id="node2" href="$classorg_1_1avanox_1_1_shapes_1_1_any_polygon.html" title=" " alt="" coords="5,160,212,325"/>
+<area shape="rect" id="node3" href="$classorg_1_1avanox_1_1_shapes_1_1_circle.html" title=" " alt="" coords="236,145,405,340"/>
+<area shape="rect" id="node4" href="$classorg_1_1avanox_1_1_shapes_1_1_segment.html" title=" " alt="" coords="429,145,617,340"/>
+<area shape="rect" id="node5" href="$classorg_1_1avanox_1_1_shapes_1_1_triangle.html" title=" " alt="" coords="642,131,823,355"/>
+</map>

@@ -19,5 +19,6 @@ var searchData=
   ['gettopright_16',['getTopRight',['../classshape_1_1_composed_shape.html#a16822f1254ab70c13f3b8c31af7e1c7f',1,'shape::ComposedShape::getTopRight()'],['../classshape_1_1_shape.html#a290e4a8f28013f32f0d578aae603e5c7',1,'shape::Shape::getTopRight()'],['../classshape_1_1_circle.html#a111df1e26ee731ffbf11846fb53b171b',1,'shape::Circle::getTopRight()'],['../classshape_1_1_simple_shape.html#a5f254d426fb7059f3c9c12916f232fc9',1,'shape::SimpleShape::getTopRight()']]],
   ['getx_17',['getX',['../classorg_1_1avanox_1_1_shapes_1_1_point.html#aa9b7492556cefc65c6387e6a8a8c99be',1,'org::avanox::Shapes::Point']]],
   ['gety_18',['getY',['../classorg_1_1avanox_1_1_shapes_1_1_point.html#aed838fc790a63d1097164157fcb848b4',1,'org::avanox::Shapes::Point']]],
-  ['green_19',['GREEN',['../class_color.html#a1995c0ef6be986e023c4a79392d6d6d9',1,'Color']]]
+  ['graphics_19',['graphics',['../classorg_1_1avanox_1_1visitor_1_1_draw_a_w_t.html#aacca508dc98806005c9eafb8e17983aa',1,'org.avanox.visitor.DrawAWT.graphics()'],['../classorg_1_1avanox_1_1visitor_1_1_draw_swing.html#ae9777b5dac0c63a7a9e73790fcfd29f2',1,'org.avanox.visitor.DrawSwing.graphics()']]],
+  ['green_20',['GREEN',['../class_color.html#a1995c0ef6be986e023c4a79392d6d6d9',1,'Color']]]
 ];

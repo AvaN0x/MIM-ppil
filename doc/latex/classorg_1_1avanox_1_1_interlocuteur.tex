@@ -1,9 +1,21 @@
 \hypertarget{classorg_1_1avanox_1_1_interlocuteur}{}\doxysection{org.\+avanox.\+Interlocuteur Class Reference}
 \label{classorg_1_1avanox_1_1_interlocuteur}\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
-Inheritance diagram for org.\+avanox.\+Interlocuteur\+:\begin{figure}[H]
+
+
+Inheritance diagram for org.\+avanox.\+Interlocuteur\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classorg_1_1avanox_1_1_interlocuteur}
+\includegraphics[width=211pt]{classorg_1_1avanox_1_1_interlocuteur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\+avanox.\+Interlocuteur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1avanox_1_1_interlocuteur__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -12,6 +24,27 @@ Inheritance diagram for org.\+avanox.\+Interlocuteur\+:\begin{figure}[H]
 \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_a754daa8b55ee28e1b9d0d575f379624e}{Interlocuteur}} (Thread\+Group group, Socket socket, int no\+Client)
 \item 
 void \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_af3b619f810deca9b1c0db2fe56679fd4}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_a226605abe0974bde5d978b87754d317d}{close\+Stream\+And\+Socket}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Buffered\+Reader \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_af63854f2ead40c46b9a014df5ee68e7c}{\+\_\+flux\+Entrant}} = null
+\item 
+Print\+Stream \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_a65b01614e8e6d82d1e3d5231e65e74cb}{\+\_\+flux\+Sortant}} = null
+\item 
+Socket \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_afb16427dd27fe987480d28ac3dc67385}{\+\_\+socket}} = null
+\item 
+int \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_a734f6e5173de36fb7657ac2799f8d9e5}{\+\_\+no\+Client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final Logger \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_a047046c4a776b30eeee8fa05a3ab70bd}{LOGGER}} = Logger.\+get\+Logger(\char`\"{}Serveur\char`\"{})
 \end{DoxyCompactItemize}
 
 
@@ -25,11 +58,50 @@ void \mbox{\hyperlink{classorg_1_1avanox_1_1_interlocuteur_af3b619f810deca9b1c0d
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_a226605abe0974bde5d978b87754d317d}\label{classorg_1_1avanox_1_1_interlocuteur_a226605abe0974bde5d978b87754d317d}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!closeStreamAndSocket@{closeStreamAndSocket}}
+\index{closeStreamAndSocket@{closeStreamAndSocket}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{closeStreamAndSocket()}{closeStreamAndSocket()}}
+{\footnotesize\ttfamily void org.\+avanox.\+Interlocuteur.\+close\+Stream\+And\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
 \mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_af3b619f810deca9b1c0db2fe56679fd4}\label{classorg_1_1avanox_1_1_interlocuteur_af3b619f810deca9b1c0db2fe56679fd4}} 
 \index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!run@{run}}
 \index{run@{run}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily void org.\+avanox.\+Interlocuteur.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_af63854f2ead40c46b9a014df5ee68e7c}\label{classorg_1_1avanox_1_1_interlocuteur_af63854f2ead40c46b9a014df5ee68e7c}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!\_fluxEntrant@{\_fluxEntrant}}
+\index{\_fluxEntrant@{\_fluxEntrant}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{\_fluxEntrant}{\_fluxEntrant}}
+{\footnotesize\ttfamily Buffered\+Reader org.\+avanox.\+Interlocuteur.\+\_\+flux\+Entrant = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_a65b01614e8e6d82d1e3d5231e65e74cb}\label{classorg_1_1avanox_1_1_interlocuteur_a65b01614e8e6d82d1e3d5231e65e74cb}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!\_fluxSortant@{\_fluxSortant}}
+\index{\_fluxSortant@{\_fluxSortant}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{\_fluxSortant}{\_fluxSortant}}
+{\footnotesize\ttfamily Print\+Stream org.\+avanox.\+Interlocuteur.\+\_\+flux\+Sortant = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_a734f6e5173de36fb7657ac2799f8d9e5}\label{classorg_1_1avanox_1_1_interlocuteur_a734f6e5173de36fb7657ac2799f8d9e5}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!\_noClient@{\_noClient}}
+\index{\_noClient@{\_noClient}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{\_noClient}{\_noClient}}
+{\footnotesize\ttfamily int org.\+avanox.\+Interlocuteur.\+\_\+no\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_afb16427dd27fe987480d28ac3dc67385}\label{classorg_1_1avanox_1_1_interlocuteur_afb16427dd27fe987480d28ac3dc67385}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!\_socket@{\_socket}}
+\index{\_socket@{\_socket}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{\_socket}{\_socket}}
+{\footnotesize\ttfamily Socket org.\+avanox.\+Interlocuteur.\+\_\+socket = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_interlocuteur_a047046c4a776b30eeee8fa05a3ab70bd}\label{classorg_1_1avanox_1_1_interlocuteur_a047046c4a776b30eeee8fa05a3ab70bd}} 
+\index{org.avanox.Interlocuteur@{org.avanox.Interlocuteur}!LOGGER@{LOGGER}}
+\index{LOGGER@{LOGGER}!org.avanox.Interlocuteur@{org.avanox.Interlocuteur}}
+\doxysubsubsection{\texorpdfstring{LOGGER}{LOGGER}}
+{\footnotesize\ttfamily final Logger org.\+avanox.\+Interlocuteur.\+LOGGER = Logger.\+get\+Logger(\char`\"{}Serveur\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 

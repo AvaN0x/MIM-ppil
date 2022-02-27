@@ -1,0 +1,8 @@
+<map id="shape::SimpleShape" name="shape::SimpleShape">
+<area shape="rect" id="node1" title=" " alt="" coords="267,336,417,604"/>
+<area shape="rect" id="node3" href="$classshape_1_1_circle.html" title=" " alt="" coords="5,667,156,891"/>
+<area shape="rect" id="node4" href="$classshape_1_1_polygon.html" title=" " alt="" coords="180,652,331,905"/>
+<area shape="rect" id="node5" href="$classshape_1_1_segment.html" title=" " alt="" coords="355,652,505,905"/>
+<area shape="rect" id="node6" href="$classshape_1_1_triangle.html" title=" " alt="" coords="529,652,680,905"/>
+<area shape="rect" id="node2" href="$classshape_1_1_shape.html" title=" " alt="" coords="267,5,417,288"/>
+</map>

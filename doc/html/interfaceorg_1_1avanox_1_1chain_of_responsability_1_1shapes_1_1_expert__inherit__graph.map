@@ -1,0 +1,8 @@
+<map id="org.avanox.chainOfResponsability.shapes.Expert" name="org.avanox.chainOfResponsability.shapes.Expert">
+<area shape="rect" id="node1" title=" " alt="" coords="441,5,708,97"/>
+<area shape="rect" id="node2" href="$classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_shapes.html" title=" " alt="" coords="441,145,708,267"/>
+<area shape="rect" id="node3" href="$classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_any_polygon.html" title=" " alt="" coords="5,315,272,421"/>
+<area shape="rect" id="node4" href="$classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_circle.html" title=" " alt="" coords="296,315,563,421"/>
+<area shape="rect" id="node5" href="$classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_segment.html" title=" " alt="" coords="587,315,853,421"/>
+<area shape="rect" id="node6" href="$classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_triangle.html" title=" " alt="" coords="877,315,1144,421"/>
+</map>

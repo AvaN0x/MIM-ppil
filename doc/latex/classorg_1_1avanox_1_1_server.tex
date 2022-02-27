@@ -1,9 +1,21 @@
 \hypertarget{classorg_1_1avanox_1_1_server}{}\doxysection{org.\+avanox.\+Server Class Reference}
 \label{classorg_1_1avanox_1_1_server}\index{org.avanox.Server@{org.avanox.Server}}
-Inheritance diagram for org.\+avanox.\+Server\+:\begin{figure}[H]
+
+
+Inheritance diagram for org.\+avanox.\+Server\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classorg_1_1avanox_1_1_server}
+\includegraphics[width=230pt]{classorg_1_1avanox_1_1_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\+avanox.\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1avanox_1_1_server__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -14,6 +26,16 @@ Inheritance diagram for org.\+avanox.\+Server\+:\begin{figure}[H]
 void \mbox{\hyperlink{classorg_1_1avanox_1_1_server_a05e4a658d95d25943fedeea7f09c2f4e}{run}} ()
 \item 
 void \mbox{\hyperlink{classorg_1_1avanox_1_1_server_aae4f7000852951a719ed16022f6120ee}{close\+Server}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Thread\+Group \mbox{\hyperlink{classorg_1_1avanox_1_1_server_a7d0fcf2a99541f3a21b052640d0e842b}{client\+Threads}} = new Thread\+Group(\char`\"{}clients\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final Logger \mbox{\hyperlink{classorg_1_1avanox_1_1_server_a1f92ab5eba9189316442016d53822687}{LOGGER}} = Logger.\+get\+Logger(\char`\"{}Serveur\char`\"{})
 \end{DoxyCompactItemize}
 
 
@@ -38,6 +60,21 @@ Close the socket of the server \mbox{\Hypertarget{classorg_1_1avanox_1_1_server_
 \index{run@{run}!org.avanox.Server@{org.avanox.Server}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily void org.\+avanox.\+Server.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_server_a7d0fcf2a99541f3a21b052640d0e842b}\label{classorg_1_1avanox_1_1_server_a7d0fcf2a99541f3a21b052640d0e842b}} 
+\index{org.avanox.Server@{org.avanox.Server}!clientThreads@{clientThreads}}
+\index{clientThreads@{clientThreads}!org.avanox.Server@{org.avanox.Server}}
+\doxysubsubsection{\texorpdfstring{clientThreads}{clientThreads}}
+{\footnotesize\ttfamily Thread\+Group org.\+avanox.\+Server.\+client\+Threads = new Thread\+Group(\char`\"{}clients\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classorg_1_1avanox_1_1_server_a1f92ab5eba9189316442016d53822687}\label{classorg_1_1avanox_1_1_server_a1f92ab5eba9189316442016d53822687}} 
+\index{org.avanox.Server@{org.avanox.Server}!LOGGER@{LOGGER}}
+\index{LOGGER@{LOGGER}!org.avanox.Server@{org.avanox.Server}}
+\doxysubsubsection{\texorpdfstring{LOGGER}{LOGGER}}
+{\footnotesize\ttfamily final Logger org.\+avanox.\+Server.\+LOGGER = Logger.\+get\+Logger(\char`\"{}Serveur\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 

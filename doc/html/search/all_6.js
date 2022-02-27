@@ -8,6 +8,7 @@ var searchData=
   ['font_5fred_5',['FONT_RED',['../test_8h.html#a1916dd06096f930ac5ab057f88bac4d5',1,'test.h']]],
   ['font_5fwhite_6',['FONT_WHITE',['../test_8h.html#a923ce83d627db1a0b35ea7377495c6c9',1,'test.h']]],
   ['font_5fyellow_7',['FONT_YELLOW',['../test_8h.html#a3bb7fb619f510d46792aa972d037164c',1,'test.h']]],
-  ['fxapplicationthread_8',['FXApplicationThread',['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html#a88ca0262ec1e29bec3bc5f916fdd93ea',1,'org.avanox.visitor.FXApplicationThread.FXApplicationThread()'],['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html',1,'org.avanox.visitor.FXApplicationThread']]],
-  ['fxapplicationthread_2ejava_9',['FXApplicationThread.java',['../_f_x_application_thread_8java.html',1,'']]]
+  ['frame_8',['frame',['../classorg_1_1avanox_1_1visitor_1_1_draw_a_w_t.html#a92ba66f1e4770488a7f32de0ada33415',1,'org.avanox.visitor.DrawAWT.frame()'],['../classorg_1_1avanox_1_1visitor_1_1_draw_swing.html#a7927279773f0e2cf9fbd0a69f42d4aa2',1,'org.avanox.visitor.DrawSwing.frame()']]],
+  ['fxapplicationthread_9',['FXApplicationThread',['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html#a88ca0262ec1e29bec3bc5f916fdd93ea',1,'org.avanox.visitor.FXApplicationThread.FXApplicationThread()'],['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html',1,'org.avanox.visitor.FXApplicationThread']]],
+  ['fxapplicationthread_2ejava_10',['FXApplicationThread.java',['../_f_x_application_thread_8java.html',1,'']]]
 ];

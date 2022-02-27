@@ -4,6 +4,15 @@
 
 {\ttfamily \#include $<$World\+To\+Screen.\+h$>$}
 
+
+
+Collaboration diagram for World\+To\+Screen\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_world_to_screen__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,6 +43,19 @@ static double \mbox{\hyperlink{class_world_to_screen_ad171ec0e34a381600cba9fd481
 \begin{DoxyCompactList}\small\item\em Get the A double, used to calculate screen coordinates. \end{DoxyCompactList}\item 
 static double \mbox{\hyperlink{class_world_to_screen_a36cf7e8fa72d592ad4eded72552f787d}{getB}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1\+World, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2\+World, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P1\+Screen, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&P2\+Screen, double lambda, double E2)
 \begin{DoxyCompactList}\small\item\em Get the B double, used to calculate screen coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_world_to_screen_a5076cda5d8c357e2b2b1340dedb6b076}{\+\_\+lambda}}
+\item 
+double \mbox{\hyperlink{class_world_to_screen_a2a38645bbb52eb426ebcd720593f03a2}{\+\_\+\+E1}}
+\item 
+double \mbox{\hyperlink{class_world_to_screen_ad6d074aad9065575b7420d623c179d03}{\+\_\+\+E2}}
+\item 
+double \mbox{\hyperlink{class_world_to_screen_a94d87c57b0b4f6eba6587a652d305de1}{\+\_\+a}}
+\item 
+double \mbox{\hyperlink{class_world_to_screen_a1c81221213190cddad003e5b593d62ea}{\+\_\+b}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -272,6 +294,39 @@ Converts a world coordinate to a screen coordinate.
 \begin{DoxyReturn}{Returns}
 Screen coordinate 
 \end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_world_to_screen_a94d87c57b0b4f6eba6587a652d305de1}\label{class_world_to_screen_a94d87c57b0b4f6eba6587a652d305de1}} 
+\index{WorldToScreen@{WorldToScreen}!\_a@{\_a}}
+\index{\_a@{\_a}!WorldToScreen@{WorldToScreen}}
+\doxysubsubsection{\texorpdfstring{\_a}{\_a}}
+{\footnotesize\ttfamily double World\+To\+Screen\+::\+\_\+a\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_to_screen_a1c81221213190cddad003e5b593d62ea}\label{class_world_to_screen_a1c81221213190cddad003e5b593d62ea}} 
+\index{WorldToScreen@{WorldToScreen}!\_b@{\_b}}
+\index{\_b@{\_b}!WorldToScreen@{WorldToScreen}}
+\doxysubsubsection{\texorpdfstring{\_b}{\_b}}
+{\footnotesize\ttfamily double World\+To\+Screen\+::\+\_\+b\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_to_screen_a2a38645bbb52eb426ebcd720593f03a2}\label{class_world_to_screen_a2a38645bbb52eb426ebcd720593f03a2}} 
+\index{WorldToScreen@{WorldToScreen}!\_E1@{\_E1}}
+\index{\_E1@{\_E1}!WorldToScreen@{WorldToScreen}}
+\doxysubsubsection{\texorpdfstring{\_E1}{\_E1}}
+{\footnotesize\ttfamily double World\+To\+Screen\+::\+\_\+\+E1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_to_screen_ad6d074aad9065575b7420d623c179d03}\label{class_world_to_screen_ad6d074aad9065575b7420d623c179d03}} 
+\index{WorldToScreen@{WorldToScreen}!\_E2@{\_E2}}
+\index{\_E2@{\_E2}!WorldToScreen@{WorldToScreen}}
+\doxysubsubsection{\texorpdfstring{\_E2}{\_E2}}
+{\footnotesize\ttfamily double World\+To\+Screen\+::\+\_\+\+E2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_world_to_screen_a5076cda5d8c357e2b2b1340dedb6b076}\label{class_world_to_screen_a5076cda5d8c357e2b2b1340dedb6b076}} 
+\index{WorldToScreen@{WorldToScreen}!\_lambda@{\_lambda}}
+\index{\_lambda@{\_lambda}!WorldToScreen@{WorldToScreen}}
+\doxysubsubsection{\texorpdfstring{\_lambda}{\_lambda}}
+{\footnotesize\ttfamily double World\+To\+Screen\+::\+\_\+lambda\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

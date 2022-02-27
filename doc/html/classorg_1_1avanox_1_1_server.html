@@ -68,16 +68,34 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">org.avanox.Server Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
 Inheritance diagram for org.avanox.Server:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classorg_1_1avanox_1_1_server.png" alt=""/>
- </div></div>
+<div class="center"><img src="classorg_1_1avanox_1_1_server__inherit__graph.png" border="0" usemap="#aorg_8avanox_8_server_inherit__map" alt="Inheritance graph"/></div>
+<map name="aorg_8avanox_8_server_inherit__map" id="aorg_8avanox_8_server_inherit__map">
+<area shape="rect" title=" " alt="" coords="49,131,173,252"/>
+<area shape="rect" title=" " alt="" coords="5,5,104,83"/>
+<area shape="rect" title=" " alt="" coords="129,5,205,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for org.avanox.Server:</div>
+<div class="dyncontent">
+<div class="center"><img src="classorg_1_1avanox_1_1_server__coll__graph.png" border="0" usemap="#aorg_8avanox_8_server_coll__map" alt="Collaboration graph"/></div>
+<map name="aorg_8avanox_8_server_coll__map" id="aorg_8avanox_8_server_coll__map">
+<area shape="rect" title=" " alt="" coords="151,145,275,252"/>
+<area shape="rect" title=" " alt="" coords="5,5,104,83"/>
+<area shape="rect" title=" " alt="" coords="129,5,205,83"/>
+<area shape="rect" title=" " alt="" coords="229,5,291,83"/>
+<area shape="rect" title=" " alt="" coords="315,5,411,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -87,6 +105,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a05e4a658d95d25943fedeea7f09c2f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae4f7000852951a719ed16022f6120ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_server.html#aae4f7000852951a719ed16022f6120ee">closeServer</a> ()</td></tr>
 <tr class="separator:aae4f7000852951a719ed16022f6120ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7d0fcf2a99541f3a21b052640d0e842b"><td class="memItemLeft" align="right" valign="top">ThreadGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_server.html#a7d0fcf2a99541f3a21b052640d0e842b">clientThreads</a> = new ThreadGroup(&quot;clients&quot;)</td></tr>
+<tr class="separator:a7d0fcf2a99541f3a21b052640d0e842b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a1f92ab5eba9189316442016d53822687"><td class="memItemLeft" align="right" valign="top">static final Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_server.html#a1f92ab5eba9189316442016d53822687">LOGGER</a> = Logger.getLogger(&quot;Serveur&quot;)</td></tr>
+<tr class="separator:a1f92ab5eba9189316442016d53822687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a862df2e535b019d084f6b495634b6c74" name="a862df2e535b019d084f6b495634b6c74"></a>
@@ -161,6 +189,51 @@ Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a7d0fcf2a99541f3a21b052640d0e842b" name="a7d0fcf2a99541f3a21b052640d0e842b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0fcf2a99541f3a21b052640d0e842b">&#9670;&nbsp;</a></span>clientThreads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ThreadGroup org.avanox.Server.clientThreads = new ThreadGroup(&quot;clients&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f92ab5eba9189316442016d53822687" name="a1f92ab5eba9189316442016d53822687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f92ab5eba9189316442016d53822687">&#9670;&nbsp;</a></span>LOGGER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger org.avanox.Server.LOGGER = Logger.getLogger(&quot;Serveur&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
