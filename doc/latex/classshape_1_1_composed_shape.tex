@@ -19,44 +19,59 @@ Inheritance diagram for shape\+::Composed\+Shape\+:\begin{figure}[H]
 {\bfseries Composed\+Shape} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} \&composed\+Shape)
 \item 
 \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}{clone}} () const
-\item 
-\mbox{\Hypertarget{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}\label{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}} 
-std\+::vector$<$ \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ $>$ {\bfseries get\+Shapes} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Clone the shape. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ $>$ \mbox{\hyperlink{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}{get\+Shapes}} () const
+\begin{DoxyCompactList}\small\item\em Get the Shapes object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}{set\+Color}} (\mbox{\hyperlink{class_color}{Color}} color)
-\item 
-\mbox{\Hypertarget{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}\label{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}} 
-\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ {\bfseries add\+Shape} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
-\item 
-\mbox{\Hypertarget{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}\label{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}} 
-void {\bfseries remove\+Shape} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the color of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}{add\+Shape}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
+\begin{DoxyCompactList}\small\item\em Add a shape to the \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}{remove\+Shape}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape)
+\begin{DoxyCompactList}\small\item\em Remove a shape from the \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}{get\+Bottom\+Left}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the extrem bottom left vector of the shape. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}{get\+Top\+Right}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the extrem top right vector of the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}{operator std\+::string}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the string representation of the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply homothety to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply a translation to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply rotation to the shape. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}{area}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Calculate the area of the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to save the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw the shape. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two shapes for equality. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compare two shapes for non equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}\label{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!addShape@{addShape}}
+\index{addShape@{addShape}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{addShape()}{addShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ Composed\+Shape\+::add\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption})}
+
+
+
+Add a shape to the \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The shape to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ The added shape 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}\label{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!area@{area}}
 \index{area@{area}!shape::ComposedShape@{shape::ComposedShape}}
@@ -65,7 +80,14 @@ bool \mbox{\hyperlink{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Calculate the area of the shape. 
+
+\begin{DoxyReturn}{Returns}
+double Area of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_acbc9e9e764f977c0bc8446d732831e26}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}\label{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!clone@{clone}}
@@ -75,7 +97,14 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Clone the shape. 
+
+\begin{DoxyReturn}{Returns}
+The cloned shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_af3d05f705244f8aa65f840c9bf3ee04f}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}\label{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!draw@{draw}}
@@ -85,7 +114,20 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Visitor to draw the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a2c81bb66856b17e82f9599e9f00f1e97}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}\label{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!getBottomLeft@{getBottomLeft}}
@@ -95,8 +137,28 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Get the extrem bottom left vector of the shape. 
 
+\begin{DoxyReturn}{Returns}
+The extrem bottom left vector of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_ac253a7aac7c4781fbc2c609056d9cf95}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}\label{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!getShapes@{getShapes}}
+\index{getShapes@{getShapes}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{getShapes()}{getShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ $>$ shape\+::\+Composed\+Shape\+::get\+Shapes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Shapes object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Shape $\ast$$>$ The Shapes object 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}\label{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!getTopRight@{getTopRight}}
 \index{getTopRight@{getTopRight}!shape::ComposedShape@{shape::ComposedShape}}
@@ -105,7 +167,14 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Get the extrem top right vector of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The extrem top right vector of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a290e4a8f28013f32f0d578aae603e5c7}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}\label{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!homothety@{homothety}}
@@ -115,7 +184,21 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Apply homothety to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the homothety \\
+\hline
+{\em coeff} & The coefficient of the homothety \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a2c4d8b884e0f679e358b73e7fc553810}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}\label{classshape_1_1_composed_shape_a8261573a5a4260d78d9b48e4156eeee1}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!operator std::string@{operator std::string}}
@@ -125,7 +208,14 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Get the string representation of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a5023b1388c90315baabcfc303021e208}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}\label{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!operator"!=@{operator"!=}}
@@ -135,7 +225,19 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Compare two shapes for non equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are not equal 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_ab29a4ee99e5cf0c92a010d2cd6bc6584}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}\label{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!operator==@{operator==}}
@@ -145,8 +247,35 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Compare two shapes for equality. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are equal 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a10f04aeb89ac98353dc062f97fb52013}{shape\+::\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}\label{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}} 
+\index{shape::ComposedShape@{shape::ComposedShape}!removeShape@{removeShape}}
+\index{removeShape@{removeShape}!shape::ComposedShape@{shape::ComposedShape}}
+\doxysubsubsection{\texorpdfstring{removeShape()}{removeShape()}}
+{\footnotesize\ttfamily void Composed\+Shape\+::remove\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption})}
+
+
+
+Remove a shape from the \mbox{\hyperlink{classshape_1_1_composed_shape}{Composed\+Shape}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The shape to remove \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}\label{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!rotation@{rotation}}
 \index{rotation@{rotation}!shape::ComposedShape@{shape::ComposedShape}}
@@ -155,7 +284,21 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Apply rotation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the rotation \\
+\hline
+{\em alpha} & The alpha of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_ad5e001b1c6650015495636a4ef209b06}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}\label{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!saveFile@{saveFile}}
@@ -165,7 +308,18 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Visitor to save the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em file\+Path} & The file path \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a9f8a438fb063e2c9c8aeb8ac38e3daf7}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}\label{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!setColor@{setColor}}
@@ -175,7 +329,16 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Set the color of the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color of the shape \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_shape_a8e50e4ac286916c04970017013bc9842}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}\label{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}} 
 \index{shape::ComposedShape@{shape::ComposedShape}!translation@{translation}}
@@ -185,7 +348,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Apply a translation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The translation vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a6fec4d84a79a34b29327d0a42a72cedd}{shape\+::\+Shape}}.
 
 
 

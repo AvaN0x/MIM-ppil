@@ -1,0 +1,81 @@
+\hypertarget{test_8cpp}{}\doxysection{client/src/test.cpp File Reference}
+\label{test_8cpp}\index{client/src/test.cpp@{client/src/test.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/\+Color.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/\+Vector2\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/composed/\+Composed\+Shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/simple/\+Circle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/simple/\+Segment.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/simple/\+Polygon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/simple/\+Triangle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/files/txt/\+Visitor\+Save\+File\+TXT.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/draw/java/\+World\+To\+Screen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shape/draw/java/\+Visitor\+Draw\+Shape\+AWT.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test_8cpp_a8168921ced3732b319904e3a46973a07}{TEST\+\_\+\+AREAS}}~0
+\item 
+\#define \mbox{\hyperlink{test_8cpp_a0778044a57905cbfecfa7dc5cc14c168}{TEST\+\_\+\+ROTATIONS}}~0
+\item 
+\#define \mbox{\hyperlink{test_8cpp_a22e3d91d6673f55b922a6efe49f7b31e}{TEST\+\_\+\+HOMOTHETY}}~1
+\item 
+\#define \mbox{\hyperlink{test_8cpp_a52f47891b531110d1e452b9116b49e3e}{TEST\+\_\+\+REPERES}}~0
+\item 
+\#define \mbox{\hyperlink{test_8cpp_ae227470b8d450e1c11bdc3b8d404b844}{TEST\+\_\+\+DRAW\+\_\+\+SHAPES}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test_8cpp_a625423570454cce7e8228a005d02a852}{main\+Tests}} ()
+\begin{DoxyCompactList}\small\item\em Do some tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test_8cpp_a8168921ced3732b319904e3a46973a07}\label{test_8cpp_a8168921ced3732b319904e3a46973a07}} 
+\index{test.cpp@{test.cpp}!TEST\_AREAS@{TEST\_AREAS}}
+\index{TEST\_AREAS@{TEST\_AREAS}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_AREAS}{TEST\_AREAS}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+AREAS~0}
+
+\mbox{\Hypertarget{test_8cpp_ae227470b8d450e1c11bdc3b8d404b844}\label{test_8cpp_ae227470b8d450e1c11bdc3b8d404b844}} 
+\index{test.cpp@{test.cpp}!TEST\_DRAW\_SHAPES@{TEST\_DRAW\_SHAPES}}
+\index{TEST\_DRAW\_SHAPES@{TEST\_DRAW\_SHAPES}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_DRAW\_SHAPES}{TEST\_DRAW\_SHAPES}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+DRAW\+\_\+\+SHAPES~1}
+
+\mbox{\Hypertarget{test_8cpp_a22e3d91d6673f55b922a6efe49f7b31e}\label{test_8cpp_a22e3d91d6673f55b922a6efe49f7b31e}} 
+\index{test.cpp@{test.cpp}!TEST\_HOMOTHETY@{TEST\_HOMOTHETY}}
+\index{TEST\_HOMOTHETY@{TEST\_HOMOTHETY}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_HOMOTHETY}{TEST\_HOMOTHETY}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+HOMOTHETY~1}
+
+\mbox{\Hypertarget{test_8cpp_a52f47891b531110d1e452b9116b49e3e}\label{test_8cpp_a52f47891b531110d1e452b9116b49e3e}} 
+\index{test.cpp@{test.cpp}!TEST\_REPERES@{TEST\_REPERES}}
+\index{TEST\_REPERES@{TEST\_REPERES}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_REPERES}{TEST\_REPERES}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+REPERES~0}
+
+\mbox{\Hypertarget{test_8cpp_a0778044a57905cbfecfa7dc5cc14c168}\label{test_8cpp_a0778044a57905cbfecfa7dc5cc14c168}} 
+\index{test.cpp@{test.cpp}!TEST\_ROTATIONS@{TEST\_ROTATIONS}}
+\index{TEST\_ROTATIONS@{TEST\_ROTATIONS}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_ROTATIONS}{TEST\_ROTATIONS}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+ROTATIONS~0}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8cpp_a625423570454cce7e8228a005d02a852}\label{test_8cpp_a625423570454cce7e8228a005d02a852}} 
+\index{test.cpp@{test.cpp}!mainTests@{mainTests}}
+\index{mainTests@{mainTests}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{mainTests()}{mainTests()}}
+{\footnotesize\ttfamily void main\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Do some tests. 
+

@@ -9,36 +9,83 @@ Inheritance diagram for shape\+::Polygon\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}\label{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}} 
-{\bfseries Polygon} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
-\item 
-\mbox{\Hypertarget{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}\label{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}} 
-{\bfseries Polygon} (const \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&shape)
-\item 
-\mbox{\Hypertarget{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}\label{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}} 
-{\bfseries Polygon} (const std\+::string \&s)
-\item 
+\mbox{\hyperlink{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}{Polygon}} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}{Polygon}} (const \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&shape)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}{Polygon}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}{clone}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Clone the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}{operator std\+::string}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the string representation of the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply homothety to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply a translation to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} $\ast$ \mbox{\hyperlink{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply rotation to the shape. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classshape_1_1_polygon_a4d0afaa20413f6cb532daa57c0a59f1b}{area}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Calculate the area of the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to save the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw the shape. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two shapes for equality. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compare two shapes for non equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}\label{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}} 
+\index{shape::Polygon@{shape::Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$}]{points,  }\item[{\mbox{\hyperlink{class_color}{Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The points of the polygon \\
+\hline
+{\em color} & The color of the polygon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}\label{classshape_1_1_polygon_af5839b72851dbf05512e67ac07160986}} 
+\index{shape::Polygon@{shape::Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The polygon to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}\label{classshape_1_1_polygon_a8f96de18248e92a3dc3fae45cea9868a}} 
+\index{shape::Polygon@{shape::Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!shape::Polygon@{shape::Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to use as source \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -50,7 +97,14 @@ bool \mbox{\hyperlink{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}{
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Calculate the area of the shape. 
+
+\begin{DoxyReturn}{Returns}
+double Area of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}\label{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}} 
 \index{shape::Polygon@{shape::Polygon}!clone@{clone}}
@@ -60,7 +114,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Clone the shape. 
+
+\begin{DoxyReturn}{Returns}
+The cloned shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}\label{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}} 
 \index{shape::Polygon@{shape::Polygon}!draw@{draw}}
@@ -70,7 +131,20 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Visitor to draw the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a2c81bb66856b17e82f9599e9f00f1e97}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}\label{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}} 
 \index{shape::Polygon@{shape::Polygon}!homothety@{homothety}}
@@ -80,7 +154,21 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply homothety to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the homothety \\
+\hline
+{\em coeff} & The coefficient of the homothety \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}\label{classshape_1_1_polygon_a25c1e1f7e06fa57f72245f09e49b9d47}} 
 \index{shape::Polygon@{shape::Polygon}!operator std::string@{operator std::string}}
@@ -90,7 +178,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Get the string representation of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the shape 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}\label{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}} 
 \index{shape::Polygon@{shape::Polygon}!operator"!=@{operator"!=}}
@@ -100,7 +195,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for non equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are not equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}\label{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}} 
 \index{shape::Polygon@{shape::Polygon}!operator==@{operator==}}
@@ -110,7 +217,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}\label{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}} 
 \index{shape::Polygon@{shape::Polygon}!rotation@{rotation}}
@@ -120,7 +239,21 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply rotation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the rotation \\
+\hline
+{\em alpha} & The alpha of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}\label{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}} 
 \index{shape::Polygon@{shape::Polygon}!saveFile@{saveFile}}
@@ -130,7 +263,18 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Visitor to save the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em file\+Path} & The file path \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}\label{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}} 
 \index{shape::Polygon@{shape::Polygon}!translation@{translation}}
@@ -140,7 +284,19 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply a translation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The translation vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}{shape\+::\+Simple\+Shape}}.
 
 
 

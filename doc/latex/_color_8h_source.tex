@@ -18,54 +18,54 @@
 \DoxyCodeLine{14     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} YELLOW;}
 \DoxyCodeLine{15     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} CYAN;}
 \DoxyCodeLine{16 }
-\DoxyCodeLine{17     \mbox{\hyperlink{class_color}{Color}}() : \_r(0),}
-\DoxyCodeLine{18               \_g(0),}
-\DoxyCodeLine{19               \_b(0),}
-\DoxyCodeLine{20               \_a(255)}
-\DoxyCodeLine{21     \{}
-\DoxyCodeLine{22     \}}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24     \mbox{\hyperlink{class_color}{Color}}(\textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} g, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{int} a = 255)}
-\DoxyCodeLine{25     \{}
-\DoxyCodeLine{26         \_r = (r < 0 || r > 255) ? 0 : r;}
-\DoxyCodeLine{27         \_g = (g < 0 || g > 255) ? 0 : g;}
-\DoxyCodeLine{28         \_b = (b < 0 || b > 255) ? 0 : b;}
-\DoxyCodeLine{29         \_a = (a < 0 || a > 255) ? 0 : a;}
-\DoxyCodeLine{30     \}}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32     \mbox{\hyperlink{class_color}{Color}}(std::string s)}
-\DoxyCodeLine{33     \{}
-\DoxyCodeLine{34         \textcolor{keyword}{const} std::regex pattern(\textcolor{stringliteral}{"{}\string^\#[0-\/9a-\/f]\{6\}(?:[0-\/9a-\/f]\{2\})?\$"{}});}
-\DoxyCodeLine{35         \textcolor{keywordflow}{if} (!regex\_match(s, pattern))}
-\DoxyCodeLine{36             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}string \(\backslash\)"{}"{}} + s + \textcolor{stringliteral}{"{}\(\backslash\)"{} is not in a valid color format (expected \#000000 or \#00000000)"{}});}
-\DoxyCodeLine{37 }
-\DoxyCodeLine{38         \_r = std::stoi(s.substr(1, 2), \textcolor{keyword}{nullptr}, 16);}
-\DoxyCodeLine{39         \_g = std::stoi(s.substr(3, 2), \textcolor{keyword}{nullptr}, 16);}
-\DoxyCodeLine{40         \_b = std::stoi(s.substr(5, 2), \textcolor{keyword}{nullptr}, 16);}
-\DoxyCodeLine{41         \textcolor{keywordflow}{if} (s.length() == 9)}
-\DoxyCodeLine{42             \_a = std::stoi(s.substr(7, 2), \textcolor{keyword}{nullptr}, 16);}
-\DoxyCodeLine{43         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{44             \_a = 255;}
-\DoxyCodeLine{45     \};}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47     \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49     \textcolor{keywordtype}{bool} operator==(\textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)\textcolor{keyword}{ const}}
-\DoxyCodeLine{50 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{51         \textcolor{keywordflow}{return} \_r == c.\_r \&\& \_g == c.\_g \&\& \_b == c.\_b \&\& \_a == c.\_a;}
-\DoxyCodeLine{52     \}}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{54     \textcolor{keywordtype}{bool} operator!=(\textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)\textcolor{keyword}{ const}}
-\DoxyCodeLine{55 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{56         \textcolor{keywordflow}{return} !(*\textcolor{keyword}{this} == c);}
-\DoxyCodeLine{57     \}}
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59     \textcolor{keyword}{friend} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c);}
-\DoxyCodeLine{60 \};}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62 \textcolor{keyword}{inline} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)}
-\DoxyCodeLine{63 \{}
-\DoxyCodeLine{64     \textcolor{keywordflow}{return} os << (std::string)c;}
-\DoxyCodeLine{65 \}}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}}() : \_r(0),}
+\DoxyCodeLine{21               \_g(0),}
+\DoxyCodeLine{22               \_b(0),}
+\DoxyCodeLine{23               \_a(255)}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{34     \mbox{\hyperlink{class_color_aa803bcae4fa0ce72755607b25e5bb015}{Color}}(\textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} g, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{int} a = 255)}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \_r = (r < 0 || r > 255) ? 0 : r;}
+\DoxyCodeLine{37         \_g = (g < 0 || g > 255) ? 0 : g;}
+\DoxyCodeLine{38         \_b = (b < 0 || b > 255) ? 0 : b;}
+\DoxyCodeLine{39         \_a = (a < 0 || a > 255) ? 0 : a;}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_color_aadc4a44c6ac92a699befbd92a9a11657}{Color}}(std::string s)}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48         \textcolor{keyword}{const} std::regex pattern(\textcolor{stringliteral}{"{}\string^\#[0-\/9a-\/f]\{6\}(?:[0-\/9a-\/f]\{2\})?\$"{}});}
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (!regex\_match(s, pattern))}
+\DoxyCodeLine{50             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}string \(\backslash\)"{}"{}} + s + \textcolor{stringliteral}{"{}\(\backslash\)"{} is not in a valid color format (expected \#000000 or \#00000000)"{}});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \_r = std::stoi(s.substr(1, 2), \textcolor{keyword}{nullptr}, 16);}
+\DoxyCodeLine{53         \_g = std::stoi(s.substr(3, 2), \textcolor{keyword}{nullptr}, 16);}
+\DoxyCodeLine{54         \_b = std::stoi(s.substr(5, 2), \textcolor{keyword}{nullptr}, 16);}
+\DoxyCodeLine{55         \textcolor{keywordflow}{if} (s.length() == 9)}
+\DoxyCodeLine{56             \_a = std::stoi(s.substr(7, 2), \textcolor{keyword}{nullptr}, 16);}
+\DoxyCodeLine{57         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{58             \_a = 255;}
+\DoxyCodeLine{59     \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_color_ac87cb4e25b3c6f87fa7a713fc757114b}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)\textcolor{keyword}{ const}}
+\DoxyCodeLine{74 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{return} \_r == c.\_r \&\& \_g == c.\_g \&\& \_b == c.\_b \&\& \_a == c.\_a;}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_color_a778d35994ccf92725aa1a0785bd1183c}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)\textcolor{keyword}{ const}}
+\DoxyCodeLine{85 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{return} !(*\textcolor{keyword}{this} == c);}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keyword}{friend} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c);}
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{inline} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_color}{Color}} \&c)}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} os << (std::string)c;}
+\DoxyCodeLine{95 \}}
 
 \end{DoxyCode}

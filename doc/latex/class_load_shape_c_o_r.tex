@@ -10,28 +10,78 @@ Inheritance diagram for Load\+Shape\+COR\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ \mbox{\hyperlink{class_load_shape_c_o_r_af6c13a1628f594afb379b098f315fcf1}{get\+Shape}} (const string \&text) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get a Shape pointer from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_load_shape_c_o_r_ab2f25c246c6ceea8af31ed1740ff5e89}{Load\+Shape\+COR}} (\mbox{\hyperlink{class_load_shape_c_o_r}{Load\+Shape\+COR}} $\ast$next)
+\begin{DoxyCompactList}\small\item\em Construct a new Load Shape\+COR object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ \mbox{\hyperlink{class_load_shape_c_o_r_a964a1ff4b44316d357646e5c44ad14f4}{\+\_\+get\+Shape}} (const string \&s) const =0
+\begin{DoxyCompactList}\small\item\em Internal method to get a Shape pointer from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_load_shape_c_o_r_ab2f25c246c6ceea8af31ed1740ff5e89}\label{class_load_shape_c_o_r_ab2f25c246c6ceea8af31ed1740ff5e89}} 
-{\bfseries Load\+Shape\+COR} (\mbox{\hyperlink{class_load_shape_c_o_r}{Load\+Shape\+COR}} $\ast$next)
-\item 
-\mbox{\Hypertarget{class_load_shape_c_o_r_a964a1ff4b44316d357646e5c44ad14f4}\label{class_load_shape_c_o_r_a964a1ff4b44316d357646e5c44ad14f4}} 
-virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ {\bfseries \+\_\+get\+Shape} (const string \&s) const =0
-\end{DoxyCompactItemize}
+\index{LoadShapeCOR@{LoadShapeCOR}!LoadShapeCOR@{LoadShapeCOR}}
+\index{LoadShapeCOR@{LoadShapeCOR}!LoadShapeCOR@{LoadShapeCOR}}
+\doxysubsubsection{\texorpdfstring{LoadShapeCOR()}{LoadShapeCOR()}}
+{\footnotesize\ttfamily Load\+Shape\+COR\+::\+Load\+Shape\+COR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_load_shape_c_o_r}{Load\+Shape\+COR}} $\ast$}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Construct a new Load Shape\+COR object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_load_shape_c_o_r_a964a1ff4b44316d357646e5c44ad14f4}\label{class_load_shape_c_o_r_a964a1ff4b44316d357646e5c44ad14f4}} 
+\index{LoadShapeCOR@{LoadShapeCOR}!\_getShape@{\_getShape}}
+\index{\_getShape@{\_getShape}!LoadShapeCOR@{LoadShapeCOR}}
+\doxysubsubsection{\texorpdfstring{\_getShape()}{\_getShape()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ Load\+Shape\+COR\+::\+\_\+get\+Shape (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Internal method to get a Shape pointer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}$\ast$ The shape pointer or nullptr 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_load_shape_circle_t_x_t_c_o_r_a971b823d49de7e8833f44add5345f681}{Load\+Shape\+Circle\+TXTCOR}}, \mbox{\hyperlink{class_load_shape_composed_shape_t_x_t_c_o_r_ab7bcc8a2d6e96b9fb47734c13e83bf3a}{Load\+Shape\+Composed\+Shape\+TXTCOR}}, \mbox{\hyperlink{class_load_shape_polygon_t_x_t_c_o_r_a0dcdf676459f66bcb1c1897e9c8f216c}{Load\+Shape\+Polygon\+TXTCOR}}, \mbox{\hyperlink{class_load_shape_segment_t_x_t_c_o_r_ae105152d4539fb85dde7413a29c4f6bd}{Load\+Shape\+Segment\+TXTCOR}}, and \mbox{\hyperlink{class_load_shape_triangle_t_x_t_c_o_r_a33021503474ec081b1969c5946b651b2}{Load\+Shape\+Triangle\+TXTCOR}}.
+
 \mbox{\Hypertarget{class_load_shape_c_o_r_af6c13a1628f594afb379b098f315fcf1}\label{class_load_shape_c_o_r_af6c13a1628f594afb379b098f315fcf1}} 
 \index{LoadShapeCOR@{LoadShapeCOR}!getShape@{getShape}}
 \index{getShape@{getShape}!LoadShapeCOR@{LoadShapeCOR}}
 \doxysubsubsection{\texorpdfstring{getShape()}{getShape()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ Load\+Shape\+COR\+::get\+Shape (\begin{DoxyParamCaption}\item[{const string \&}]{text }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ Load\+Shape\+COR\+::get\+Shape (\begin{DoxyParamCaption}\item[{const string \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_load_shape}{Load\+Shape}}.
+Get a Shape pointer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}$\ast$ The shape pointer or nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_load_shape_a4edb8adbbf01e5ffe8ae263adb77d9ef}{Load\+Shape}}.
 
 
 

@@ -9,21 +9,134 @@ Inheritance diagram for Visitor\+Draw\+Shape\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}{visit}} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Circle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}{visit}} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Polygon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}{visit}} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Segment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}{visit}} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Triangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_draw_shape_aaea02b98fabc804398b92d39a6d22fae}{visit}} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Composed\+Shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}\label{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}\label{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}\label{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}\label{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
-\item 
+\index{VisitorDrawShape@{VisitorDrawShape}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShape@{VisitorDrawShape}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Draw\+Shape\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visitor to draw a Circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Circle \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{Visitor\+Draw\+Shape\+JAVA}}.
+
 \mbox{\Hypertarget{class_visitor_draw_shape_aaea02b98fabc804398b92d39a6d22fae}\label{class_visitor_draw_shape_aaea02b98fabc804398b92d39a6d22fae}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const =0
-\end{DoxyCompactItemize}
+\index{VisitorDrawShape@{VisitorDrawShape}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShape@{VisitorDrawShape}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Draw\+Shape\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visitor to draw a Composed\+Shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Composed\+Shape \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}{Visitor\+Draw\+Shape\+JAVA}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}\label{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}} 
+\index{VisitorDrawShape@{VisitorDrawShape}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShape@{VisitorDrawShape}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Draw\+Shape\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visitor to draw a Polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Polygon \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}{Visitor\+Draw\+Shape\+JAVA}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}\label{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}} 
+\index{VisitorDrawShape@{VisitorDrawShape}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShape@{VisitorDrawShape}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Draw\+Shape\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visitor to draw a Segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Segment \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}{Visitor\+Draw\+Shape\+JAVA}}.
+
+\mbox{\Hypertarget{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}\label{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}} 
+\index{VisitorDrawShape@{VisitorDrawShape}!visit@{visit}}
+\index{visit@{visit}!VisitorDrawShape@{VisitorDrawShape}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Draw\+Shape\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$}]{connection,  }\item[{\mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visitor to draw a Triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Triangle \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}{Visitor\+Draw\+Shape\+JAVA}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

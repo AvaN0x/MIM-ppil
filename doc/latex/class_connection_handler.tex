@@ -3,27 +3,88 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}\label{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}} 
-{\bfseries Connection\+Handler} (const string \&address, int port)
-\item 
+\mbox{\hyperlink{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}{Connection\+Handler}} (const string \&address, int port)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} constructor, this will automatically connect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}\label{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}} 
+virtual {\bfseries $\sim$\+Connection\+Handler} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} destructor, this will automatically close the socket. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_connection_handler_ad26404fc0171ab0557430e9136b64863}\label{class_connection_handler_ad26404fc0171ab0557430e9136b64863}} 
 void {\bfseries close} ()
-\item 
-\mbox{\Hypertarget{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}\label{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}} 
-bool {\bfseries is\+Closed} () const
-\item 
-\mbox{\Hypertarget{class_connection_handler_a91c3bda3d4efce920a2029ce2b93156a}\label{class_connection_handler_a91c3bda3d4efce920a2029ce2b93156a}} 
-int {\bfseries send\+Line} (const string \&content)
-\item 
-\mbox{\Hypertarget{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b46}\label{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b46}} 
-string {\bfseries receive} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Close the socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}{is\+Closed}} () const
+\begin{DoxyCompactList}\small\item\em Check if the socket has been closed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_connection_handler_a91c3bda3d4efce920a2029ce2b93156a}{send\+Line}} (const string \&content)
+\begin{DoxyCompactList}\small\item\em Send a string to the server. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b46}{receive}} ()
+\begin{DoxyCompactList}\small\item\em Receive a string from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_connection_handler_a672bf161e51d428f71013860bf30d39b}\label{class_connection_handler_a672bf161e51d428f71013860bf30d39b}} 
 SOCKET {\bfseries \+\_\+socket}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}\label{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}} 
+\index{ConnectionHandler@{ConnectionHandler}!ConnectionHandler@{ConnectionHandler}}
+\index{ConnectionHandler@{ConnectionHandler}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{ConnectionHandler()}{ConnectionHandler()}}
+{\footnotesize\ttfamily Connection\+Handler\+::\+Connection\+Handler (\begin{DoxyParamCaption}\item[{const string \&}]{address,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} constructor, this will automatically connect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket to use \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}\label{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}} 
+\index{ConnectionHandler@{ConnectionHandler}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the socket has been closed. 
+
+\begin{DoxyReturn}{Returns}
+bool True if the socket has been closed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b46}\label{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b46}} 
+\index{ConnectionHandler@{ConnectionHandler}!receive@{receive}}
+\index{receive@{receive}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily string Connection\+Handler\+::receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Receive a string from the server. 
+
+\begin{DoxyReturn}{Returns}
+The string received 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_connection_handler_a91c3bda3d4efce920a2029ce2b93156a}\label{class_connection_handler_a91c3bda3d4efce920a2029ce2b93156a}} 
+\index{ConnectionHandler@{ConnectionHandler}!sendLine@{sendLine}}
+\index{sendLine@{sendLine}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{sendLine()}{sendLine()}}
+{\footnotesize\ttfamily int Connection\+Handler\+::send\+Line (\begin{DoxyParamCaption}\item[{const string \&}]{content }\end{DoxyParamCaption})}
+
+
+
+Send a string to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & The string to send \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

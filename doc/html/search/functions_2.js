@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['toscreen_0',['toScreen',['../class_world_to_screen.html#a063b85536ae665308e08a22a380258ad',1,'WorldToScreen']]]
+  ['circle_0',['Circle',['../classshape_1_1_circle.html#a4da6db6a8303e24c38a41ab54de19e46',1,'shape::Circle::Circle(std::vector&lt; Vector2D &gt; points, Color color, double radius)'],['../classshape_1_1_circle.html#ac201c1997031d5a21b4c59e92a67cdbd',1,'shape::Circle::Circle(const Circle &amp;shape)'],['../classshape_1_1_circle.html#a509866118fd3b0c243ce7852fc23d339',1,'shape::Circle::Circle(const std::string &amp;s)']]],
+  ['clone_1',['clone',['../classshape_1_1_composed_shape.html#a894a36b3a6f72c908e0cf08d9934f14e',1,'shape::ComposedShape::clone()'],['../classshape_1_1_shape.html#af3d05f705244f8aa65f840c9bf3ee04f',1,'shape::Shape::clone()'],['../classshape_1_1_circle.html#a3bcb57d7ca7b513e50481c29af42bb51',1,'shape::Circle::clone()'],['../classshape_1_1_polygon.html#a3b67d3b67536b004709305a4e624e986',1,'shape::Polygon::clone()'],['../classshape_1_1_segment.html#a301d8e3e714b2711ff696df5e4c88a8f',1,'shape::Segment::clone()'],['../classshape_1_1_simple_shape.html#a81c238ba14a155317378b7c8fce59838',1,'shape::SimpleShape::clone()'],['../classshape_1_1_triangle.html#aba8cab4568fc8656305c98bee2afb77c',1,'shape::Triangle::clone()'],['../class_vector2_d.html#aa4b30db241b45ae2eaacf338f4831ba4',1,'Vector2D::clone()']]],
+  ['close_2',['close',['../class_connection_handler.html#ad26404fc0171ab0557430e9136b64863',1,'ConnectionHandler']]],
+  ['closeserver_3',['closeServer',['../classorg_1_1avanox_1_1_server.html#aae4f7000852951a719ed16022f6120ee',1,'org::avanox::Server']]],
+  ['color_4',['Color',['../class_color.html#a9a742cbe9f9f4037f5d9f4e81a9b2428',1,'Color::Color()'],['../class_color.html#aa803bcae4fa0ce72755607b25e5bb015',1,'Color::Color(int r, int g, int b, int a=255)'],['../class_color.html#aadc4a44c6ac92a699befbd92a9a11657',1,'Color::Color(std::string s)']]],
+  ['connectionhandler_5',['ConnectionHandler',['../class_connection_handler.html#a5df3066586bcbf1bd52756c6a95ea412',1,'ConnectionHandler']]]
 ];

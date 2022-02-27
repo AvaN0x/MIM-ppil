@@ -1,0 +1,39 @@
+\hypertarget{_visitor_draw_shape_j_a_v_a_8cpp}{}\doxysection{client/src/shape/draw/java/\+Visitor\+Draw\+Shape\+JAVA.cpp File Reference}
+\label{_visitor_draw_shape_j_a_v_a_8cpp}\index{client/src/shape/draw/java/VisitorDrawShapeJAVA.cpp@{client/src/shape/draw/java/VisitorDrawShapeJAVA.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Visitor\+Draw\+Shape\+JAVA.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../\+Connection\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../simple/\+Circle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../simple/\+Polygon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../simple/\+Segment.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../simple/\+Triangle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../composed/\+Composed\+Shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}World\+To\+Screen.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_visitor_draw_shape_j_a_v_a_8cpp_af8fbf220e54e864a8ebc45575843b531}{vector\+Points\+To\+Screen}} (const vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&points, const \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts)
+\begin{DoxyCompactList}\small\item\em vector\+Points\+To\+Screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_visitor_draw_shape_j_a_v_a_8cpp_af8fbf220e54e864a8ebc45575843b531}\label{_visitor_draw_shape_j_a_v_a_8cpp_af8fbf220e54e864a8ebc45575843b531}} 
+\index{VisitorDrawShapeJAVA.cpp@{VisitorDrawShapeJAVA.cpp}!vectorPointsToScreen@{vectorPointsToScreen}}
+\index{vectorPointsToScreen@{vectorPointsToScreen}!VisitorDrawShapeJAVA.cpp@{VisitorDrawShapeJAVA.cpp}}
+\doxysubsubsection{\texorpdfstring{vectorPointsToScreen()}{vectorPointsToScreen()}}
+{\footnotesize\ttfamily std\+::string vector\+Points\+To\+Screen (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ \&}]{points,  }\item[{const \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$}]{wts }\end{DoxyParamCaption})}
+
+
+
+vector\+Points\+To\+Screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & vector of points \\
+\hline
+{\em wts} & \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string \+: the string to send to the server 
+\end{DoxyReturn}

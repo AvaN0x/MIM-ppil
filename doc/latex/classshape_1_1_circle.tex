@@ -9,46 +9,95 @@ Inheritance diagram for shape\+::Circle\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}\label{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}} 
-{\bfseries Circle} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color, double radius)
-\item 
-\mbox{\Hypertarget{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}\label{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}} 
-{\bfseries Circle} (const \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&shape)
-\item 
-\mbox{\Hypertarget{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}\label{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}} 
-{\bfseries Circle} (const std\+::string \&s)
-\item 
+\mbox{\hyperlink{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}{Circle}} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color, double radius)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}{Circle}} (const \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&shape)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}{Circle}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}{clone}} () const
-\item 
-\mbox{\Hypertarget{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}\label{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}} 
-double {\bfseries get\+Radius} () const
-\item 
-\mbox{\Hypertarget{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}\label{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}} 
-\mbox{\hyperlink{class_vector2_d}{Vector2D}} {\bfseries get\+Center} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Clone the shape. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}{get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Get the radius of the circle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}{get\+Center}} () const
+\begin{DoxyCompactList}\small\item\em Get the Center object. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}{get\+Bottom\+Left}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the extrem bottom left vector of the shape. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}{get\+Top\+Right}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the extrem top right vector of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classshape_1_1_circle_a7a1b334833a9f468498c804264553f41}{set\+Radius}} (double radius)
+\begin{DoxyCompactList}\small\item\em Set the radius of the circle. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}{operator std\+::string}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the string representation of the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply homothety to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply a translation to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_circle}{Circle}} $\ast$ \mbox{\hyperlink{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply rotation to the shape. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classshape_1_1_circle_ae84375a24b208fec2d3f85ece4d8a82b}{area}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Calculate the area of the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to save the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw the shape. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two shapes for equality. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compare two shapes for non equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}\label{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}} 
+\index{shape::Circle@{shape::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$}]{points,  }\item[{\mbox{\hyperlink{class_color}{Color}}}]{color,  }\item[{double}]{radius }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The points of the circle \\
+\hline
+{\em color} & The color of the circle \\
+\hline
+{\em radius} & The radius of the circle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}\label{classshape_1_1_circle_ac201c1997031d5a21b4c59e92a67cdbd}} 
+\index{shape::Circle@{shape::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The circle to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}\label{classshape_1_1_circle_a509866118fd3b0c243ce7852fc23d339}} 
+\index{shape::Circle@{shape::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_circle}{Circle}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to use as source \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -60,7 +109,14 @@ bool \mbox{\hyperlink{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}{o
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Calculate the area of the shape. 
+
+\begin{DoxyReturn}{Returns}
+double Area of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}\label{classshape_1_1_circle_a3bcb57d7ca7b513e50481c29af42bb51}} 
 \index{shape::Circle@{shape::Circle}!clone@{clone}}
@@ -70,7 +126,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Clone the shape. 
+
+\begin{DoxyReturn}{Returns}
+The cloned shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}\label{classshape_1_1_circle_ae5d841e88384e9e4e7d988e6c9abcaf8}} 
 \index{shape::Circle@{shape::Circle}!draw@{draw}}
@@ -80,7 +143,20 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Visitor to draw the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a2c81bb66856b17e82f9599e9f00f1e97}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}\label{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}} 
 \index{shape::Circle@{shape::Circle}!getBottomLeft@{getBottomLeft}}
@@ -90,8 +166,41 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Get the extrem bottom left vector of the shape. 
 
+\begin{DoxyReturn}{Returns}
+The extrem bottom left vector of the shape 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a80fe90c34803b662b4e9407ba5f12f68}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}\label{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}} 
+\index{shape::Circle@{shape::Circle}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} shape\+::\+Circle\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Center object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} The center point of the circle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}\label{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}} 
+\index{shape::Circle@{shape::Circle}!getRadius@{getRadius}}
+\index{getRadius@{getRadius}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{getRadius()}{getRadius()}}
+{\footnotesize\ttfamily double shape\+::\+Circle\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the radius of the circle. 
+
+\begin{DoxyReturn}{Returns}
+double The radius of the circle 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}\label{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}} 
 \index{shape::Circle@{shape::Circle}!getTopRight@{getTopRight}}
 \index{getTopRight@{getTopRight}!shape::Circle@{shape::Circle}}
@@ -100,7 +209,14 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Get the extrem top right vector of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The extrem top right vector of the shape 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a5f254d426fb7059f3c9c12916f232fc9}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}\label{classshape_1_1_circle_ab433575d1e9a68554be69ca05da430f4}} 
 \index{shape::Circle@{shape::Circle}!homothety@{homothety}}
@@ -110,7 +226,21 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply homothety to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the homothety \\
+\hline
+{\em coeff} & The coefficient of the homothety \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}\label{classshape_1_1_circle_a93a17497a6722d5988baa5ee04ee9c31}} 
 \index{shape::Circle@{shape::Circle}!operator std::string@{operator std::string}}
@@ -120,7 +250,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Get the string representation of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the shape 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}\label{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}} 
 \index{shape::Circle@{shape::Circle}!operator"!=@{operator"!=}}
@@ -130,7 +267,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for non equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are not equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}\label{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}} 
 \index{shape::Circle@{shape::Circle}!operator==@{operator==}}
@@ -140,7 +289,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}\label{classshape_1_1_circle_ab30beace88106bfaae929c98a811d4ea}} 
 \index{shape::Circle@{shape::Circle}!rotation@{rotation}}
@@ -150,7 +311,21 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply rotation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the rotation \\
+\hline
+{\em alpha} & The alpha of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}\label{classshape_1_1_circle_a222e9db4dc87f10dc422f9775d6bd3f3}} 
 \index{shape::Circle@{shape::Circle}!saveFile@{saveFile}}
@@ -160,8 +335,34 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Visitor to save the shape. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em file\+Path} & The file path \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}{shape\+::\+Simple\+Shape}}.
+
+\mbox{\Hypertarget{classshape_1_1_circle_a7a1b334833a9f468498c804264553f41}\label{classshape_1_1_circle_a7a1b334833a9f468498c804264553f41}} 
+\index{shape::Circle@{shape::Circle}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!shape::Circle@{shape::Circle}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily void Circle\+::set\+Radius (\begin{DoxyParamCaption}\item[{double}]{radius }\end{DoxyParamCaption})}
+
+
+
+Set the radius of the circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The new radius of the circle \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}\label{classshape_1_1_circle_ad9249a6cc8fa265349411fe1e4c6b8b5}} 
 \index{shape::Circle@{shape::Circle}!translation@{translation}}
 \index{translation@{translation}!shape::Circle@{shape::Circle}}
@@ -170,7 +371,19 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply a translation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The translation vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}{shape\+::\+Simple\+Shape}}.
 
 
 

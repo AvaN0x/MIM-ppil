@@ -15,27 +15,28 @@
 \DoxyCodeLine{11     \textcolor{keywordtype}{int} \_port = 9111;}
 \DoxyCodeLine{12     std::string \_address = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
 \DoxyCodeLine{13 }
-\DoxyCodeLine{14     \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}}(\textcolor{keyword}{const} std::string \&name) : \_name(name) \{\}}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16 \textcolor{keyword}{public}:}
-\DoxyCodeLine{17     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&setWindowSize(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
-\DoxyCodeLine{18     \{}
-\DoxyCodeLine{19         \_screenX = x;}
-\DoxyCodeLine{20         \_screenY = y;}
-\DoxyCodeLine{21         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{22     \}}
-\DoxyCodeLine{23     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&setServer(\textcolor{keywordtype}{int} port, \textcolor{keyword}{const} std::string \&address = \textcolor{stringliteral}{"{}127.0.0.1"{}})}
-\DoxyCodeLine{24     \{}
-\DoxyCodeLine{25         \_port = port;}
-\DoxyCodeLine{26         \_address = address;}
-\DoxyCodeLine{27         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{28     \}}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_circle}{shape::Circle}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
-\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_polygon}{shape::Polygon}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
-\DoxyCodeLine{32     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_segment}{shape::Segment}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
-\DoxyCodeLine{33     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_triangle}{shape::Triangle}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
-\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} visit(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_composed_shape}{shape::ComposedShape}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
-\DoxyCodeLine{35 \};}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}{VisitorDrawShapeJAVA}}(\textcolor{keyword}{const} std::string \&name) : \_name(name) \{\}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}{setWindowSize}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \_screenX = x;}
+\DoxyCodeLine{32         \_screenY = y;}
+\DoxyCodeLine{33         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}{setServer}}(\textcolor{keywordtype}{int} port, \textcolor{keyword}{const} std::string \&address = \textcolor{stringliteral}{"{}127.0.0.1"{}})}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \_port = port;}
+\DoxyCodeLine{46         \_address = address;}
+\DoxyCodeLine{47         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_circle}{shape::Circle}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
+\DoxyCodeLine{51     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_polygon}{shape::Polygon}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_segment}{shape::Segment}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_triangle}{shape::Triangle}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_composed_shape}{shape::ComposedShape}} *s, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts) \textcolor{keyword}{const};}
+\DoxyCodeLine{55 \};}
 
 \end{DoxyCode}

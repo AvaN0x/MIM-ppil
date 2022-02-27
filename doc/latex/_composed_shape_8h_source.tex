@@ -29,42 +29,42 @@
 \DoxyCodeLine{25         \mbox{\hyperlink{classshape_1_1_composed_shape}{\string~ComposedShape}}();}
 \DoxyCodeLine{26 }
 \DoxyCodeLine{27         \textcolor{comment}{// ==================== CLONE ====================}}
-\DoxyCodeLine{28         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *clone()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{28         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{classshape_1_1_composed_shape_a894a36b3a6f72c908e0cf08d9934f14e}{clone}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}}(*\textcolor{keyword}{this}); \}}
 \DoxyCodeLine{29 }
 \DoxyCodeLine{30         \textcolor{comment}{// ==================== GETTERS ====================}}
-\DoxyCodeLine{31         std::vector<Shape *> getShapes()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_shapes; \}}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33         \textcolor{comment}{// ==================== SETTERS ====================}}
-\DoxyCodeLine{34         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} setColor(Color color);}
-\DoxyCodeLine{35         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *addShape(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
-\DoxyCodeLine{36         \textcolor{keywordtype}{void} removeShape(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
-\DoxyCodeLine{37         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} getBottomLeft() \textcolor{keyword}{const};}
-\DoxyCodeLine{38         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} getTopRight() \textcolor{keyword}{const};}
-\DoxyCodeLine{39 }
-\DoxyCodeLine{40         \textcolor{comment}{// ==================== STRING ====================}}
-\DoxyCodeLine{41         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43         \textcolor{comment}{// ==================== OPERATIONS ====================}}
-\DoxyCodeLine{44         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *homothety(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
-\DoxyCodeLine{45         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *translation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
-\DoxyCodeLine{46         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *rotation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
-\DoxyCodeLine{47         \textcolor{keywordtype}{double} area() \textcolor{keyword}{const};}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49         \textcolor{comment}{// ==================== VISITORS ====================}}
-\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} saveFile(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
-\DoxyCodeLine{51 \textcolor{keyword}{        }\{}
-\DoxyCodeLine{52             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, filePath);}
-\DoxyCodeLine{53         \};}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
-\DoxyCodeLine{56 \textcolor{keyword}{        }\{}
-\DoxyCodeLine{57             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, connection, wts);}
-\DoxyCodeLine{58         \};}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{60         \textcolor{comment}{// ==================== OPERATORS ====================}}
-\DoxyCodeLine{61         \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{62         \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{63     \};}
-\DoxyCodeLine{64 \} \textcolor{comment}{// namespace shape}}
+\DoxyCodeLine{36 \textcolor{comment}{}        std::vector<Shape *> \mbox{\hyperlink{classshape_1_1_composed_shape_aca5760bd3b22aa514ec857afcbb662cc}{getShapes}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_shapes; \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// ==================== SETTERS ====================}}
+\DoxyCodeLine{39         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_composed_shape_a75e0e6045045271e8a42d22cb9903119}{setColor}}(Color color);}
+\DoxyCodeLine{46         \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{classshape_1_1_composed_shape_add8039cda6c50ed631ea0febac406b00}{addShape}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
+\DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_composed_shape_ae4fc2caefa769d2edf85f09f0e2b61ad}{removeShape}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape);}
+\DoxyCodeLine{53         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a7d38c9337c73f406e412596cb34cb605}{getBottomLeft}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_composed_shape_a16822f1254ab70c13f3b8c31af7e1c7f}{getTopRight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{comment}{// ==================== STRING ====================}}
+\DoxyCodeLine{57         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         \textcolor{comment}{// ==================== OPERATIONS ====================}}
+\DoxyCodeLine{60         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *\mbox{\hyperlink{classshape_1_1_composed_shape_a3cab7cb68846c3e70a6ebef89386dbde}{homothety}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
+\DoxyCodeLine{61         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *\mbox{\hyperlink{classshape_1_1_composed_shape_a7bbf603ee109d71d8425b27342c3124b}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
+\DoxyCodeLine{62         \mbox{\hyperlink{classshape_1_1_composed_shape}{ComposedShape}} *\mbox{\hyperlink{classshape_1_1_composed_shape_a3eb69d64d093d0e80ca2b70d38526362}{rotation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{63         \textcolor{keywordtype}{double} \mbox{\hyperlink{classshape_1_1_composed_shape_a5b9eaec627b0e88fcfe475f31e92c92f}{area}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{comment}{// ==================== VISITORS ====================}}
+\DoxyCodeLine{66         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_composed_shape_ace65ac0ae0985c6f82eb12c1156e9f6c}{saveFile}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
+\DoxyCodeLine{67 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{return} v-\/>\mbox{\hyperlink{class_visitor_save_file_a20560240ed81db1b53a458237f256deb}{visit}}(\textcolor{keyword}{this}, filePath);}
+\DoxyCodeLine{69         \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_composed_shape_a6d479c9ffab4c2fe4f5991ba80030f14}{draw}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
+\DoxyCodeLine{72 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{73             \textcolor{keywordflow}{return} v-\/>\mbox{\hyperlink{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}{visit}}(\textcolor{keyword}{this}, connection, wts);}
+\DoxyCodeLine{74         \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// ==================== OPERATORS ====================}}
+\DoxyCodeLine{77         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_composed_shape_a9fea34296a0e9770c5a0d694e523d6dc}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{78         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_composed_shape_adcc0a38d98d149a086d999d2b1d846f5}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{79     \};}
+\DoxyCodeLine{80 \} \textcolor{comment}{// namespace shape}}
 
 \end{DoxyCode}

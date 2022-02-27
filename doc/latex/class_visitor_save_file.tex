@@ -9,24 +9,148 @@ Inheritance diagram for Visitor\+Save\+File\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ \mbox{\hyperlink{class_visitor_save_file_a33f1fae9c96348d61ea799cec34629cf}{load\+File}} (const std\+::string \&file\+Path)=0
+\begin{DoxyCompactList}\small\item\em Load a shape from a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_a20560240ed81db1b53a458237f256deb}{visit}} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, const std\+::string \&file\+Path) const =0
+\begin{DoxyCompactList}\small\item\em Save a Circle to a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_a83b98684905f539eecd09d0efd532fe3}{visit}} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, const std\+::string \&file\+Path) const =0
+\begin{DoxyCompactList}\small\item\em Save a Polygon to a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_a476e03397364cbb31906b3c66c93dce1}{visit}} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, const std\+::string \&file\+Path) const =0
+\begin{DoxyCompactList}\small\item\em Save a shape to a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_a70acd4ce6f016245b701fbd759d02ba6}{visit}} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, const std\+::string \&file\+Path) const =0
+\begin{DoxyCompactList}\small\item\em Save a Triangle to a file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visitor_save_file_a6b20486fa292998f73c9c2d4e7d47357}{visit}} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, const std\+::string \&file\+Path) const =0
+\begin{DoxyCompactList}\small\item\em Save a Composed\+Shape to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_visitor_save_file_a33f1fae9c96348d61ea799cec34629cf}\label{class_visitor_save_file_a33f1fae9c96348d61ea799cec34629cf}} 
-virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ {\bfseries load\+File} (const std\+::string \&file\+Path)=0
-\item 
+\index{VisitorSaveFile@{VisitorSaveFile}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}} $\ast$ Visitor\+Save\+File\+::load\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load a shape from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}$\ast$ The shape or nullptr if an error occured 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_ab6e19fddcff6e679061ca58c31ad7b54}{Visitor\+Save\+File\+TXT}}.
+
 \mbox{\Hypertarget{class_visitor_save_file_a20560240ed81db1b53a458237f256deb}\label{class_visitor_save_file_a20560240ed81db1b53a458237f256deb}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, const std\+::string \&file\+Path) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_save_file_a83b98684905f539eecd09d0efd532fe3}\label{class_visitor_save_file_a83b98684905f539eecd09d0efd532fe3}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, const std\+::string \&file\+Path) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_save_file_a476e03397364cbb31906b3c66c93dce1}\label{class_visitor_save_file_a476e03397364cbb31906b3c66c93dce1}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, const std\+::string \&file\+Path) const =0
-\item 
-\mbox{\Hypertarget{class_visitor_save_file_a70acd4ce6f016245b701fbd759d02ba6}\label{class_visitor_save_file_a70acd4ce6f016245b701fbd759d02ba6}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, const std\+::string \&file\+Path) const =0
-\item 
+\index{VisitorSaveFile@{VisitorSaveFile}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Save\+File\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save a Circle to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Circle to save \\
+\hline
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_a166cb1be88a98436466c6b1d28618686}{Visitor\+Save\+File\+TXT}}.
+
 \mbox{\Hypertarget{class_visitor_save_file_a6b20486fa292998f73c9c2d4e7d47357}\label{class_visitor_save_file_a6b20486fa292998f73c9c2d4e7d47357}} 
-virtual void {\bfseries visit} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, const std\+::string \&file\+Path) const =0
-\end{DoxyCompactItemize}
+\index{VisitorSaveFile@{VisitorSaveFile}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Save\+File\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save a Composed\+Shape to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Composed\+Shape to save \\
+\hline
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_ab3249ac92aa2d27b43380993bb6b074f}{Visitor\+Save\+File\+TXT}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_a83b98684905f539eecd09d0efd532fe3}\label{class_visitor_save_file_a83b98684905f539eecd09d0efd532fe3}} 
+\index{VisitorSaveFile@{VisitorSaveFile}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Save\+File\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save a Polygon to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Polygon to save \\
+\hline
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_a1646162e589a23c01651f7404f3d40d0}{Visitor\+Save\+File\+TXT}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_a476e03397364cbb31906b3c66c93dce1}\label{class_visitor_save_file_a476e03397364cbb31906b3c66c93dce1}} 
+\index{VisitorSaveFile@{VisitorSaveFile}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Save\+File\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save a shape to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The shape to save \\
+\hline
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_a1d1d084e059afa5a5d3174e584f6dc43}{Visitor\+Save\+File\+TXT}}.
+
+\mbox{\Hypertarget{class_visitor_save_file_a70acd4ce6f016245b701fbd759d02ba6}\label{class_visitor_save_file_a70acd4ce6f016245b701fbd759d02ba6}} 
+\index{VisitorSaveFile@{VisitorSaveFile}!visit@{visit}}
+\index{visit@{visit}!VisitorSaveFile@{VisitorSaveFile}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual void Visitor\+Save\+File\+::visit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$}]{s,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save a Triangle to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Triangle to save \\
+\hline
+{\em file\+Path} & The path of the file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_visitor_save_file_t_x_t_a171ff9234181567c4aaddfb0fc96f58f}{Visitor\+Save\+File\+TXT}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

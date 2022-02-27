@@ -12,37 +12,37 @@
 \DoxyCodeLine{8     \{}
 \DoxyCodeLine{9     \textcolor{keyword}{public}:}
 \DoxyCodeLine{10         \textcolor{comment}{// ==================== CONSTRUCTORS ====================}}
-\DoxyCodeLine{11         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}}(std::vector<Vector2D> points, Color color);}
-\DoxyCodeLine{12         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&shape);}
-\DoxyCodeLine{13         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}}(\textcolor{keyword}{const} std::string \&s);}
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15         \textcolor{comment}{// ==================== CLONE ====================}}
-\DoxyCodeLine{16         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *clone()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}}(*\textcolor{keyword}{this}); \}}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18         \textcolor{comment}{// ==================== STRING ====================}}
-\DoxyCodeLine{19         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21         \textcolor{comment}{// ==================== OPERATIONS ====================}}
-\DoxyCodeLine{22         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *homothety(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
-\DoxyCodeLine{23         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *translation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
-\DoxyCodeLine{24         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *rotation(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
-\DoxyCodeLine{25         \textcolor{keywordtype}{double} area() \textcolor{keyword}{const};}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27         \textcolor{comment}{// ==================== VISITORS ====================}}
-\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} saveFile(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
-\DoxyCodeLine{29 \textcolor{keyword}{        }\{}
-\DoxyCodeLine{30             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, filePath);}
-\DoxyCodeLine{31         \};}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} draw(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
-\DoxyCodeLine{34 \textcolor{keyword}{        }\{}
-\DoxyCodeLine{35             \textcolor{keywordflow}{return} v-\/>visit(\textcolor{keyword}{this}, connection, wts);}
-\DoxyCodeLine{36         \};}
-\DoxyCodeLine{37 }
-\DoxyCodeLine{38         \textcolor{comment}{// ==================== OPERATORS ====================}}
-\DoxyCodeLine{39         \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{40         \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{41     \};}
-\DoxyCodeLine{42 \} \textcolor{comment}{// namespace shape}}
+\DoxyCodeLine{17 \textcolor{comment}{}        \mbox{\hyperlink{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}{Polygon}}(std::vector<Vector2D> points, Color color);}
+\DoxyCodeLine{23         \mbox{\hyperlink{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}{Polygon}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} \&shape);}
+\DoxyCodeLine{29         \mbox{\hyperlink{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}{Polygon}}(\textcolor{keyword}{const} std::string \&s);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{comment}{// ==================== CLONE ====================}}
+\DoxyCodeLine{32         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *\mbox{\hyperlink{classshape_1_1_polygon_a3b67d3b67536b004709305a4e624e986}{clone}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classshape_1_1_polygon_adc8a4f69b6fb2388f0375a8ed83e6493}{Polygon}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// ==================== STRING ====================}}
+\DoxyCodeLine{35         \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{comment}{// ==================== OPERATIONS ====================}}
+\DoxyCodeLine{38         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *\mbox{\hyperlink{classshape_1_1_polygon_ae3ff1bd369a22cf607f93f8ef1b553c5}{homothety}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} coeff) \textcolor{keyword}{const};}
+\DoxyCodeLine{39         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *\mbox{\hyperlink{classshape_1_1_polygon_ad8329b613cddb297a59bea80b17ba255}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) \textcolor{keyword}{const};}
+\DoxyCodeLine{40         \mbox{\hyperlink{classshape_1_1_polygon}{Polygon}} *\mbox{\hyperlink{classshape_1_1_polygon_add8f88fdf5a212cefaf215af775ce8e3}{rotation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, \textcolor{keywordtype}{double} alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{41         \textcolor{keywordtype}{double} \mbox{\hyperlink{classshape_1_1_polygon_a4d0afaa20413f6cb532daa57c0a59f1b}{area}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{comment}{// ==================== VISITORS ====================}}
+\DoxyCodeLine{44         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_polygon_a2600cae6a8b87930fa00b8c56ab36aac}{saveFile}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath)\textcolor{keyword}{ const}}
+\DoxyCodeLine{45 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{46             \textcolor{keywordflow}{return} v-\/>\mbox{\hyperlink{class_visitor_save_file_a20560240ed81db1b53a458237f256deb}{visit}}(\textcolor{keyword}{this}, filePath);}
+\DoxyCodeLine{47         \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_polygon_afcf52baaef6b7a95bb33bb5ffe241d0a}{draw}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}} *v, \mbox{\hyperlink{class_connection_handler}{ConnectionHandler}} *connection = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_world_to_screen}{WorldToScreen}} *wts = \textcolor{keyword}{nullptr})\textcolor{keyword}{ const}}
+\DoxyCodeLine{50 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{return} v-\/>\mbox{\hyperlink{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}{visit}}(\textcolor{keyword}{this}, connection, wts);}
+\DoxyCodeLine{52         \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{comment}{// ==================== OPERATORS ====================}}
+\DoxyCodeLine{55         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_polygon_adcc9e9bc91355c089e9422a45dcb0313}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{56         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_polygon_a2ead10fc2204efdf98f16373d8267c15}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 \} \textcolor{comment}{// namespace shape}}
 
 \end{DoxyCode}

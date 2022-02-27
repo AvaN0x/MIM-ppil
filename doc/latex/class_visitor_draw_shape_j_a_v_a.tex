@@ -9,28 +9,25 @@ Inheritance diagram for Visitor\+Draw\+Shape\+JAVA\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}\label{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}} 
-virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& {\bfseries set\+Window\+Size} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}\label{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}} 
-virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& {\bfseries set\+Server} (int port, const std\+::string \&address=\char`\"{}127.\+0.\+0.\+1\char`\"{})
-\item 
+virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}{set\+Window\+Size}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Set the Window Size object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}{set\+Server}} (int port, const std\+::string \&address=\char`\"{}127.\+0.\+0.\+1\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set the Server variables. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}{visit}} (const \mbox{\hyperlink{classshape_1_1_circle}{shape\+::\+Circle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Circle. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}{visit}} (const \mbox{\hyperlink{classshape_1_1_polygon}{shape\+::\+Polygon}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Polygon. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}{visit}} (const \mbox{\hyperlink{classshape_1_1_segment}{shape\+::\+Segment}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Segment. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}{visit}} (const \mbox{\hyperlink{classshape_1_1_triangle}{shape\+::\+Triangle}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Triangle. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}{visit}} (const \mbox{\hyperlink{classshape_1_1_composed_shape}{shape\+::\+Composed\+Shape}} $\ast$s, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Visitor to draw a Composed\+Shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}\label{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}} 
-{\bfseries Visitor\+Draw\+Shape\+JAVA} (const std\+::string \&name)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}{Visitor\+Draw\+Shape\+JAVA}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,7 +48,65 @@ std\+::string {\bfseries \+\_\+address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}\label{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{VisitorDrawShapeJAVA()}{VisitorDrawShapeJAVA()}}
+{\footnotesize\ttfamily Visitor\+Draw\+Shape\+JAVA\+::\+Visitor\+Draw\+Shape\+JAVA (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the drawing library \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}\label{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!setServer@{setServer}}
+\index{setServer@{setServer}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{setServer()}{setServer()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& Visitor\+Draw\+Shape\+JAVA\+::set\+Server (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{const std\+::string \&}]{address = {\ttfamily \char`\"{}127.0.0.1\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Server variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port \\
+\hline
+{\em address} & The address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}}\& this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}\label{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}} 
+\index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!setWindowSize@{setWindowSize}}
+\index{setWindowSize@{setWindowSize}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
+\doxysubsubsection{\texorpdfstring{setWindowSize()}{setWindowSize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}} \& Visitor\+Draw\+Shape\+JAVA\+::set\+Window\+Size (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Window Size object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the window \\
+\hline
+{\em y} & Y coordinate of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{Visitor\+Draw\+Shape\+JAVA}}\& this 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}\label{class_visitor_draw_shape_j_a_v_a_a7ccdbe6413be51f3764465b0c2f3ebf7}} 
 \index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
 \index{visit@{visit}!VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}}
@@ -60,7 +115,20 @@ std\+::string {\bfseries \+\_\+address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
 
 
 
-Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+Visitor to draw a Circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Circle \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape_a05f9f3e7c7661899cdf8cc54d6841be5}{Visitor\+Draw\+Shape}}.
 
 \mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}\label{class_visitor_draw_shape_j_a_v_a_a2912006dec8b65db4f99778fd5f42a48}} 
 \index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
@@ -70,7 +138,20 @@ Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+Visitor to draw a Composed\+Shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Composed\+Shape \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape_aaea02b98fabc804398b92d39a6d22fae}{Visitor\+Draw\+Shape}}.
 
 \mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}\label{class_visitor_draw_shape_j_a_v_a_a3380b83ba214df21a70d0945158ee256}} 
 \index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
@@ -80,7 +161,20 @@ Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+Visitor to draw a Polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Polygon \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape_affd13f728cf978ea9d6c630690779b92}{Visitor\+Draw\+Shape}}.
 
 \mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}\label{class_visitor_draw_shape_j_a_v_a_a839b67d260a666897fade913770f941a}} 
 \index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
@@ -90,7 +184,20 @@ Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+Visitor to draw a Segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Segment \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape_a12749effbce3f89b6d6dbcb6ae812fe1}{Visitor\+Draw\+Shape}}.
 
 \mbox{\Hypertarget{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}\label{class_visitor_draw_shape_j_a_v_a_af3e317ce64c962cdd329f6fc785e2761}} 
 \index{VisitorDrawShapeJAVA@{VisitorDrawShapeJAVA}!visit@{visit}}
@@ -100,7 +207,20 @@ Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}}.
+Visitor to draw a Triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The Triangle \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_draw_shape_af11af972d818d8b07430755c59d8c086}{Visitor\+Draw\+Shape}}.
 
 
 

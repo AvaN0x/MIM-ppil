@@ -9,36 +9,83 @@ Inheritance diagram for shape\+::Segment\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}\label{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}} 
-{\bfseries Segment} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
-\item 
-\mbox{\Hypertarget{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}\label{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}} 
-{\bfseries Segment} (const \mbox{\hyperlink{classshape_1_1_segment}{Segment}} \&shape)
-\item 
-\mbox{\Hypertarget{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}\label{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}} 
-{\bfseries Segment} (const std\+::string \&s)
-\item 
+\mbox{\hyperlink{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}{Segment}} (std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$ points, \mbox{\hyperlink{class_color}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}{Segment}} (const \mbox{\hyperlink{classshape_1_1_segment}{Segment}} \&shape)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}{Segment}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}{clone}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Clone the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}{operator std\+::string}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the string representation of the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}{homothety}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double coeff) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply homothety to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}{translation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&v) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply a translation to the shape. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classshape_1_1_segment}{Segment}} $\ast$ \mbox{\hyperlink{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}{rotation}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&origin, double alpha) const
-\item 
+\begin{DoxyCompactList}\small\item\em Apply rotation to the shape. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classshape_1_1_segment_a41d8b0f3a3bdb75d5b085e936948eadc}{area}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Calculate the area of the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}{save\+File}} (const \mbox{\hyperlink{class_visitor_save_file}{Visitor\+Save\+File}} $\ast$v, const std\+::string \&file\+Path) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to save the shape. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}{draw}} (const \mbox{\hyperlink{class_visitor_draw_shape}{Visitor\+Draw\+Shape}} $\ast$v, \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} $\ast$connection=nullptr, \mbox{\hyperlink{class_world_to_screen}{World\+To\+Screen}} $\ast$wts=nullptr) const
-\item 
+\begin{DoxyCompactList}\small\item\em Visitor to draw the shape. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}{operator==}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two shapes for equality. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}{operator!=}} (\mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$shape) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compare two shapes for non equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}\label{classshape_1_1_segment_a15a4a996dcbc095bc94989525453816d}} 
+\index{shape::Segment@{shape::Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vector2_d}{Vector2D}} $>$}]{points,  }\item[{\mbox{\hyperlink{class_color}{Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The points of the segment \\
+\hline
+{\em color} & The color of the segment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}\label{classshape_1_1_segment_a690d5d8cc9b26e00232500ac9c2770c4}} 
+\index{shape::Segment@{shape::Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_segment}{Segment}} \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The segment to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}\label{classshape_1_1_segment_a3063b56d5f84c333dcfb00dd6a19bbe4}} 
+\index{shape::Segment@{shape::Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!shape::Segment@{shape::Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classshape_1_1_segment}{Segment}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to use as source \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -50,7 +97,14 @@ bool \mbox{\hyperlink{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}{
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Calculate the area of the shape. 
+
+\begin{DoxyReturn}{Returns}
+double Area of the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a4c6943b5edc46e2decb3de26aa1b3abc}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}\label{classshape_1_1_segment_a301d8e3e714b2711ff696df5e4c88a8f}} 
 \index{shape::Segment@{shape::Segment}!clone@{clone}}
@@ -60,7 +114,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Clone the shape. 
+
+\begin{DoxyReturn}{Returns}
+The cloned shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}\label{classshape_1_1_segment_aa5189e5bab2ac1fddb11664d1898836c}} 
 \index{shape::Segment@{shape::Segment}!draw@{draw}}
@@ -70,7 +131,20 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
+Visitor to draw the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em connection} & The connection handler \\
+\hline
+{\em wts} & The world to screen object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_shape_a2c81bb66856b17e82f9599e9f00f1e97}{shape\+::\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}\label{classshape_1_1_segment_abe47f6aa2a99eb8ee3b62baffe964d95}} 
 \index{shape::Segment@{shape::Segment}!homothety@{homothety}}
@@ -80,7 +154,21 @@ Implements \mbox{\hyperlink{classshape_1_1_shape}{shape\+::\+Shape}}.
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply homothety to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the homothety \\
+\hline
+{\em coeff} & The coefficient of the homothety \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a800d7152934f04cbd228072cf3c3c083}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}\label{classshape_1_1_segment_a9dc87d0f760b1568c2ba1bf964c19d35}} 
 \index{shape::Segment@{shape::Segment}!operator std::string@{operator std::string}}
@@ -90,7 +178,14 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Get the string representation of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the shape 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a44488eb1c3ba05e641b43e2d96e4b4a0}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}\label{classshape_1_1_segment_a2ff7d96912f3f82ef133581a9bbae3ee}} 
 \index{shape::Segment@{shape::Segment}!operator"!=@{operator"!=}}
@@ -100,7 +195,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for non equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are not equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}\label{classshape_1_1_segment_a3d233df6480b7a90bac2e9a8517ec116}} 
 \index{shape::Segment@{shape::Segment}!operator==@{operator==}}
@@ -110,7 +217,19 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Compare two shapes for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The other shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Shapes are equal 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}\label{classshape_1_1_segment_a73b9701e698d85106e87158d93d5ed25}} 
 \index{shape::Segment@{shape::Segment}!rotation@{rotation}}
@@ -120,7 +239,21 @@ Reimplemented from \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simp
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply rotation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the rotation \\
+\hline
+{\em alpha} & The alpha of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a353a33844fd004fc787fccc4e86db213}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}\label{classshape_1_1_segment_a5541bcee8cb8c6272027207ba0ac5878}} 
 \index{shape::Segment@{shape::Segment}!saveFile@{saveFile}}
@@ -130,7 +263,18 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Visitor to save the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The visitor \\
+\hline
+{\em file\+Path} & The file path \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}{shape\+::\+Simple\+Shape}}.
 
 \mbox{\Hypertarget{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}\label{classshape_1_1_segment_aa36ec10e2e9daaa3e2727d247d785851}} 
 \index{shape::Segment@{shape::Segment}!translation@{translation}}
@@ -140,7 +284,19 @@ Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shap
 
 
 
-Implements \mbox{\hyperlink{classshape_1_1_simple_shape}{shape\+::\+Simple\+Shape}}.
+Apply a translation to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The translation vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shape$\ast$ A new shape pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classshape_1_1_simple_shape_a507b8237201912aff74302fb15ca9beb}{shape\+::\+Simple\+Shape}}.
 
 
 
