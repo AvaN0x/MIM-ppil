@@ -10,7 +10,7 @@ public class TestDrawSwing {
 
     @Test
     public void testCircle() {
-        Draw graphicLibrairy = new DrawSwing();
+        Draw graphicLibrairy = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result = false;
 
@@ -57,7 +57,7 @@ public class TestDrawSwing {
 
     @Test
     public void testTriangle() {
-        Draw graphicLibrairy = new DrawSwing();
+        Draw graphicLibrairy = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
@@ -104,7 +104,7 @@ public class TestDrawSwing {
 
     @Test
     public void testAnyPolygon() {
-        Draw graphicLibrairy = new DrawSwing();
+        Draw graphicLibrairy = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
@@ -159,7 +159,7 @@ public class TestDrawSwing {
 
     @Test
     public void testSegment() {
-        Draw graphicLibrairy = new DrawSwing();
+        Draw graphicLibrairy = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
