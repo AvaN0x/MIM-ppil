@@ -2,7 +2,7 @@ var searchData=
 [
   ['avanox_0',['avanox',['../namespaceorg_1_1avanox.html',1,'org']]],
   ['controller_1',['controller',['../namespaceorg_1_1avanox_1_1controller.html',1,'org::avanox']]],
-  ['graphiclibrairy_2',['graphicLibrairy',['../namespaceorg_1_1avanox_1_1chain_of_responsability_1_1graphic_librairy.html',1,'org::avanox::chainOfResponsability']]],
+  ['graphiclibrary_2',['graphicLibrary',['../namespaceorg_1_1avanox_1_1chain_of_responsability_1_1graphic_library.html',1,'org::avanox::chainOfResponsability']]],
   ['operator_21_3d_3',['operator!=',['../classshape_1_1_triangle.html#a5c6325028a3d631851bc39cb5cd061c4',1,'shape::Triangle::operator!=()'],['../class_vector2_d.html#a5315c038273474c16dd51288a1b75cbb',1,'Vector2D::operator!=()'],['../class_color.html#a778d35994ccf92725aa1a0785bd1183c',1,'Color::operator!=()'],['../classshape_1_1_composed_shape.html#adcc0a38d98d149a086d999d2b1d846f5',1,'shape::ComposedShape::operator!=()'],['../classshape_1_1_shape.html#ab29a4ee99e5cf0c92a010d2cd6bc6584',1,'shape::Shape::operator!=()'],['../classshape_1_1_circle.html#a33da662a94d7272ce5aa61cd3ab3e178',1,'shape::Circle::operator!=()'],['../classshape_1_1_polygon.html#a2ead10fc2204efdf98f16373d8267c15',1,'shape::Polygon::operator!=()'],['../classshape_1_1_segment.html#a2ff7d96912f3f82ef133581a9bbae3ee',1,'shape::Segment::operator!=()'],['../classshape_1_1_simple_shape.html#a1ca742b0215570be68e40ea311070a95',1,'shape::SimpleShape::operator!=()']]],
   ['operator_2a_4',['operator*',['../class_vector2_d.html#a4931b15799ccc2432d472fff3ee76e39',1,'Vector2D']]],
   ['operator_2a_3d_5',['operator*=',['../class_vector2_d.html#a9ec785cca2a48d62596dfdbfa0546267',1,'Vector2D']]],

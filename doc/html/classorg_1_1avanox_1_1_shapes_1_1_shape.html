@@ -68,6 +68,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pac-methods">Package Functions</a>  </div>
   <div class="headertitle"><div class="title">org.avanox.Shapes.Shape Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -77,11 +79,11 @@ Inheritance diagram for org.avanox.Shapes.Shape:</div>
 <div class="dyncontent">
 <div class="center"><img src="classorg_1_1avanox_1_1_shapes_1_1_shape__inherit__graph.png" border="0" usemap="#aorg_8avanox_8_shapes_8_shape_inherit__map" alt="Inheritance graph"/></div>
 <map name="aorg_8avanox_8_shapes_8_shape_inherit__map" id="aorg_8avanox_8_shapes_8_shape_inherit__map">
-<area shape="rect" title=" " alt="" coords="335,5,509,83"/>
-<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_any_polygon.html" title=" " alt="" coords="5,160,212,325"/>
-<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_circle.html" title=" " alt="" coords="236,145,405,340"/>
-<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_segment.html" title=" " alt="" coords="429,145,617,340"/>
-<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_triangle.html" title=" " alt="" coords="642,131,823,355"/>
+<area shape="rect" title=" " alt="" coords="335,5,509,97"/>
+<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_any_polygon.html" title=" " alt="" coords="5,175,212,311"/>
+<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_circle.html" title=" " alt="" coords="236,160,405,325"/>
+<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_segment.html" title=" " alt="" coords="429,160,617,325"/>
+<area shape="rect" href="classorg_1_1avanox_1_1_shapes_1_1_triangle.html" title=" " alt="" coords="642,145,823,340"/>
 </map>
 </div>
 <div class="dynheader">
@@ -89,10 +91,21 @@ Collaboration diagram for org.avanox.Shapes.Shape:</div>
 <div class="dyncontent">
 <div class="center"><img src="classorg_1_1avanox_1_1_shapes_1_1_shape__coll__graph.png" border="0" usemap="#aorg_8avanox_8_shapes_8_shape_coll__map" alt="Collaboration graph"/></div>
 <map name="aorg_8avanox_8_shapes_8_shape_coll__map" id="aorg_8avanox_8_shapes_8_shape_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,179,83"/>
+<area shape="rect" title=" " alt="" coords="5,145,179,237"/>
+<area shape="rect" title=" " alt="" coords="66,5,118,83"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab767a724155b0c16d646a04fd9c18263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_shape.html#ab767a724155b0c16d646a04fd9c18263">getColor</a> ()</td></tr>
+<tr class="separator:ab767a724155b0c16d646a04fd9c18263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aaf20c9a34f3b9792f270ac241712cd93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_shape.html#aaf20c9a34f3b9792f270ac241712cd93">color</a></td></tr>
+<tr class="separator:aaf20c9a34f3b9792f270ac241712cd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:a3000218bf199e55ec2504ffcdc1266e4"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_shape.html#a3000218bf199e55ec2504ffcdc1266e4">accept</a> (<a class="el" href="interfaceorg_1_1avanox_1_1visitor_1_1_shape_visitor.html">ShapeVisitor</a> visitor)</td></tr>
@@ -122,8 +135,65 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Visit a shape</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_any_polygon.html#a992ae72146ec1d8ffb5bfafe201da4f5">org.avanox.Shapes.AnyPolygon</a>, <a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_circle.html#a438feeef562605834a8aa016618c33b0">org.avanox.Shapes.Circle</a>, <a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_segment.html#a6c69e20b126a4159897846c09abd7548">org.avanox.Shapes.Segment</a>, and <a class="el" href="classorg_1_1avanox_1_1_shapes_1_1_triangle.html#aba6d5bc0b50d944dfcadfa2a22889b55">org.avanox.Shapes.Triangle</a>.</p>
+
+</div>
+</div>
+<a id="ab767a724155b0c16d646a04fd9c18263" name="ab767a724155b0c16d646a04fd9c18263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab767a724155b0c16d646a04fd9c18263">&#9670;&nbsp;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_color.html">Color</a> org.avanox.Shapes.Shape.getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Return the color of the shape</p>
+<dl class="section return"><dt>Returns</dt><dd>the color </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="aaf20c9a34f3b9792f270ac241712cd93" name="aaf20c9a34f3b9792f270ac241712cd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf20c9a34f3b9792f270ac241712cd93">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_color.html">Color</a> org.avanox.Shapes.Shape.color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

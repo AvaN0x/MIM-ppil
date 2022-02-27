@@ -23,13 +23,11 @@ Collaboration diagram for org.\+avanox.\+Shapes.\+Segment\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a21f10ed049f94e92bb9dc6b2f2ade37e}{Segment}} (\mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a979cc838111ae662668963e156d12dd9}{a}}, \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_afd6071b6a285b3913da50f249fe1d826}{b}})
 \item 
-\mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a7b5959fb0f2bfad911121f9838d14327}{Segment}} (\mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a979cc838111ae662668963e156d12dd9}{a}}, \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_afd6071b6a285b3913da50f249fe1d826}{b}}, \mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a944acd06c2fb64bc87ff518fdad09d5d}{color}})
+\mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a7b5959fb0f2bfad911121f9838d14327}{Segment}} (\mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a979cc838111ae662668963e156d12dd9}{a}}, \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_afd6071b6a285b3913da50f249fe1d826}{b}}, \mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_shape_aaf20c9a34f3b9792f270ac241712cd93}{color}})
 \item 
 \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_ab085ed1468729ff876ac17d40bab6b17}{getA}} ()
 \item 
 \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a17f0b747ff78459dafd57d0cc70bed13}{getB}} ()
-\item 
-\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a999b9fe8399cce615870afd9cf69af30}{get\+Color}} ()
 \item 
 void \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a6c69e20b126a4159897846c09abd7548}{accept}} (\mbox{\hyperlink{interfaceorg_1_1avanox_1_1visitor_1_1_shape_visitor}{Shape\+Visitor}} visitor)
 \item 
@@ -41,8 +39,6 @@ boolean \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a52b0427b1808
 \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a979cc838111ae662668963e156d12dd9}{a}}
 \item 
 \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_afd6071b6a285b3913da50f249fe1d826}{b}}
-\item 
-\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a944acd06c2fb64bc87ff518fdad09d5d}{color}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -69,6 +65,13 @@ boolean \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_segment_a52b0427b1808
 \doxysubsubsection{\texorpdfstring{accept()}{accept()}}
 {\footnotesize\ttfamily void org.\+avanox.\+Shapes.\+Segment.\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceorg_1_1avanox_1_1visitor_1_1_shape_visitor}{Shape\+Visitor}}}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Visit a shape
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & \\
+\hline
+\end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_shape_a3000218bf199e55ec2504ffcdc1266e4}{org.\+avanox.\+Shapes.\+Shape}}.
@@ -85,18 +88,22 @@ Reimplemented from \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_shape_a300
 \doxysubsubsection{\texorpdfstring{getA()}{getA()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} org.\+avanox.\+Shapes.\+Segment.\+getA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Return point A
+
+\begin{DoxyReturn}{Returns}
+the point a 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classorg_1_1avanox_1_1_shapes_1_1_segment_a17f0b747ff78459dafd57d0cc70bed13}\label{classorg_1_1avanox_1_1_shapes_1_1_segment_a17f0b747ff78459dafd57d0cc70bed13}} 
 \index{org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}!getB@{getB}}
 \index{getB@{getB}!org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}}
 \doxysubsubsection{\texorpdfstring{getB()}{getB()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} org.\+avanox.\+Shapes.\+Segment.\+getB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classorg_1_1avanox_1_1_shapes_1_1_segment_a999b9fe8399cce615870afd9cf69af30}\label{classorg_1_1avanox_1_1_shapes_1_1_segment_a999b9fe8399cce615870afd9cf69af30}} 
-\index{org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}!getColor@{getColor}}
-\index{getColor@{getColor}!org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}}
-\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} org.\+avanox.\+Shapes.\+Segment.\+get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Return point B
 
+\begin{DoxyReturn}{Returns}
+the point b 
+\end{DoxyReturn}
 
 
 \doxysubsection{Field Documentation}
@@ -111,12 +118,6 @@ Reimplemented from \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_shape_a300
 \index{b@{b}!org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}}
 \doxysubsubsection{\texorpdfstring{b}{b}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classorg_1_1avanox_1_1_shapes_1_1_point}{Point}} org.\+avanox.\+Shapes.\+Segment.\+b\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classorg_1_1avanox_1_1_shapes_1_1_segment_a944acd06c2fb64bc87ff518fdad09d5d}\label{classorg_1_1avanox_1_1_shapes_1_1_segment_a944acd06c2fb64bc87ff518fdad09d5d}} 
-\index{org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}!color@{color}}
-\index{color@{color}!org.avanox.Shapes.Segment@{org.avanox.Shapes.Segment}}
-\doxysubsubsection{\texorpdfstring{color}{color}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} org.\+avanox.\+Shapes.\+Segment.\+color\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

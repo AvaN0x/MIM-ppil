@@ -8,13 +8,13 @@ var searchData=
   ['_5fcolor_5',['_color',['../classshape_1_1_shape.html#ad90facab478f13077746b37402a51781',1,'shape::Shape']]],
   ['_5fe1_6',['_E1',['../class_world_to_screen.html#a2a38645bbb52eb426ebcd720593f03a2',1,'WorldToScreen']]],
   ['_5fe2_7',['_E2',['../class_world_to_screen.html#ad6d074aad9065575b7420d623c179d03',1,'WorldToScreen']]],
-  ['_5ffluxentrant_8',['_fluxEntrant',['../classorg_1_1avanox_1_1_interlocuteur.html#af63854f2ead40c46b9a014df5ee68e7c',1,'org::avanox::Interlocuteur']]],
-  ['_5ffluxsortant_9',['_fluxSortant',['../classorg_1_1avanox_1_1_interlocuteur.html#a65b01614e8e6d82d1e3d5231e65e74cb',1,'org::avanox::Interlocuteur']]],
+  ['_5ffluxentrant_8',['_fluxEntrant',['../classorg_1_1avanox_1_1_interlocutor.html#a547e1b6e6e521982b768c1ff03104c26',1,'org::avanox::Interlocutor']]],
+  ['_5ffluxsortant_9',['_fluxSortant',['../classorg_1_1avanox_1_1_interlocutor.html#af0900be60f01534bbbfcb450d2caf263',1,'org::avanox::Interlocutor']]],
   ['_5fg_10',['_g',['../class_color.html#ae50389517226b9f6863210131212c306',1,'Color']]],
   ['_5flambda_11',['_lambda',['../class_world_to_screen.html#a5076cda5d8c357e2b2b1340dedb6b076',1,'WorldToScreen']]],
   ['_5fname_12',['_name',['../class_visitor_draw_shape_j_a_v_a.html#aabaf38ca16528e641c7509ac8cdd1527',1,'VisitorDrawShapeJAVA']]],
-  ['_5fnext_13',['_next',['../classorg_1_1avanox_1_1chain_of_responsability_1_1graphic_librairy_1_1_expert_g_l.html#a469ee49476622091077775999e06e3da',1,'org.avanox.chainOfResponsability.graphicLibrairy.ExpertGL._next()'],['../classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_shapes.html#af9df02cab29672d177ef026a6e838512',1,'org.avanox.chainOfResponsability.shapes.ExpertShapes._next()']]],
-  ['_5fnoclient_14',['_noClient',['../classorg_1_1avanox_1_1_interlocuteur.html#a734f6e5173de36fb7657ac2799f8d9e5',1,'org::avanox::Interlocuteur']]],
+  ['_5fnext_13',['_next',['../classorg_1_1avanox_1_1chain_of_responsability_1_1graphic_library_1_1_expert_g_l.html#a9784e03d9445f1be63379f8d6859bd67',1,'org.avanox.chainOfResponsability.graphicLibrary.ExpertGL._next()'],['../classorg_1_1avanox_1_1chain_of_responsability_1_1shapes_1_1_expert_shapes.html#af9df02cab29672d177ef026a6e838512',1,'org.avanox.chainOfResponsability.shapes.ExpertShapes._next()']]],
+  ['_5fnoclient_14',['_noClient',['../classorg_1_1avanox_1_1_interlocutor.html#a22fbafa6fd761d793d995905e6f00230',1,'org::avanox::Interlocutor']]],
   ['_5fpoints_15',['_points',['../classshape_1_1_simple_shape.html#af9a3ba90e4d10da02374c0c3c3130898',1,'shape::SimpleShape']]],
   ['_5fport_16',['_port',['../class_visitor_draw_shape_j_a_v_a.html#a8cc48efba6256549a01affba93150e21',1,'VisitorDrawShapeJAVA']]],
   ['_5fr_17',['_r',['../class_color.html#a17504cda47887a39e1b5256c0ff10924',1,'Color']]],
@@ -23,5 +23,5 @@ var searchData=
   ['_5fscreeny_20',['_screenY',['../class_visitor_draw_shape_j_a_v_a.html#ac0f00e8a8d158b689f6a093c1cb49281',1,'VisitorDrawShapeJAVA']]],
   ['_5fsegments_21',['_segments',['../classorg_1_1avanox_1_1_shapes_1_1_any_polygon.html#a03b7b434f20a25b2b29c980fd407c7bd',1,'org::avanox::Shapes::AnyPolygon']]],
   ['_5fshapes_22',['_shapes',['../classshape_1_1_composed_shape.html#a75083d86ad438de9baa75370fb342424',1,'shape::ComposedShape']]],
-  ['_5fsocket_23',['_socket',['../class_connection_handler.html#a672bf161e51d428f71013860bf30d39b',1,'ConnectionHandler::_socket()'],['../classorg_1_1avanox_1_1_interlocuteur.html#afb16427dd27fe987480d28ac3dc67385',1,'org.avanox.Interlocuteur._socket()']]]
+  ['_5fsocket_23',['_socket',['../class_connection_handler.html#a672bf161e51d428f71013860bf30d39b',1,'ConnectionHandler::_socket()'],['../classorg_1_1avanox_1_1_interlocutor.html#a4cfcaeb41780f045bdfbc3a61116a117',1,'org.avanox.Interlocutor._socket()']]]
 ];
