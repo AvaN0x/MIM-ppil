@@ -6,6 +6,12 @@ class VisitorSaveFileTXT : public VisitorSaveFile
 {
 public:
     virtual shape::Shape *loadFile(const std::string &filePath);
+    /**
+     * @brief Get the Shape From String object
+     *
+     * @param str The string
+     * @return shape::Shape*
+     */
     virtual shape::Shape *getShapeFromString(const std::string &str);
 
     virtual void visit(const shape::Circle *s, const std::string &filePath) const;

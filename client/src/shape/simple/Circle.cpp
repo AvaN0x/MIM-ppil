@@ -62,6 +62,13 @@ Vector2D Circle::getTopRight() const
     return Vector2D(_points[0].x + _radius, _points[0].y + _radius);
 }
 
+void Circle::setRadius(double radius)
+{
+    if (radius <= 0)
+        throw std::invalid_argument("The radius must be positive");
+    _radius = radius;
+}
+
 Circle::operator std::string() const
 {
     ostringstream s;

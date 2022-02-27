@@ -8,8 +8,24 @@ namespace shape
     {
     public:
         // ==================== CONSTRUCTORS ====================
+        /**
+         * @brief Construct a new Segment object
+         *
+         * @param points The points of the segment
+         * @param color The color of the segment
+         */
         Segment(std::vector<Vector2D> points, Color color);
+        /**
+         * @brief Construct a new Segment object
+         *
+         * @param shape The segment to copy
+         */
         Segment(const Segment &shape);
+        /**
+         * @brief Construct a new Segment object
+         *
+         * @param s The string to use as source
+         */
         Segment(const std::string &s);
 
         // ==================== CLONE ====================

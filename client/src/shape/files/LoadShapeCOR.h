@@ -13,11 +13,22 @@ class LoadShapeCOR : public LoadShape
     LoadShapeCOR *next;
 
 protected:
+    /**
+     * @brief Construct a new Load ShapeCOR object
+     *
+     * @param next
+     */
     LoadShapeCOR(LoadShapeCOR *next);
 
 public:
     shape::Shape *getShape(const string &text) const;
 
 protected:
+    /**
+     * @brief Internal method to get a Shape pointer from a string
+     *
+     * @param s The string
+     * @return shape::Shape* The shape pointer or nullptr
+     */
     virtual shape::Shape *_getShape(const string &s) const = 0;
 };

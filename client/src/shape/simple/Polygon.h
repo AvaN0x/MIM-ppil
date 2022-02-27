@@ -8,8 +8,24 @@ namespace shape
     {
     public:
         // ==================== CONSTRUCTORS ====================
+        /**
+         * @brief Construct a new Polygon object
+         *
+         * @param points The points of the polygon
+         * @param color The color of the polygon
+         */
         Polygon(std::vector<Vector2D> points, Color color);
+        /**
+         * @brief Construct a new Polygon object
+         *
+         * @param shape The polygon to copy
+         */
         Polygon(const Polygon &shape);
+        /**
+         * @brief Construct a new Polygon object
+         *
+         * @param s The string to use as source
+         */
         Polygon(const std::string &s);
 
         // ==================== CLONE ====================

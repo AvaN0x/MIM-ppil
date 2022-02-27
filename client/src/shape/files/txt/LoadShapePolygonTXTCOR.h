@@ -6,6 +6,11 @@
 class LoadShapePolygonTXTCOR : public LoadShapeCOR
 {
 public:
+    /**
+     * @brief Construct a new LoadShapePolygonTXTCOR object
+     *
+     * @param next Next LoadShapeCOR in chain
+     */
     LoadShapePolygonTXTCOR(LoadShapeCOR *next);
 
 protected:

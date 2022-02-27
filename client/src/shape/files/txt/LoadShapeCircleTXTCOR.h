@@ -6,6 +6,11 @@
 class LoadShapeCircleTXTCOR : public LoadShapeCOR
 {
 public:
+    /**
+     * @brief Construct a new LoadShapeCircleTXTCOR object
+     *
+     * @param next Next LoadShapeCOR in chain
+     */
     LoadShapeCircleTXTCOR(LoadShapeCOR *next);
 
 protected:

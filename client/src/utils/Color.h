@@ -14,6 +14,9 @@ public:
     static const Color YELLOW;
     static const Color CYAN;
 
+    /**
+     * @brief Color constructor, defaults to BLACK
+     */
     Color() : _r(0),
               _g(0),
               _b(0),
@@ -21,6 +24,13 @@ public:
     {
     }
 
+    /**
+     * @brief Color constructor
+     * @param r red
+     * @param g green
+     * @param b blue
+     * @param a alpha default to full opacity
+     */
     Color(int r, int g, int b, int a = 255)
     {
         _r = (r < 0 || r > 255) ? 0 : r;
@@ -29,6 +39,10 @@ public:
         _a = (a < 0 || a > 255) ? 0 : a;
     }
 
+    /**
+     * @brief Color constructor
+     * @param s hex color string format #RRGGBB or #RRGGBBAA
+     */
     Color(std::string s)
     {
         const std::regex pattern("^#[0-9a-f]{6}(?:[0-9a-f]{2})?$");
@@ -44,13 +58,29 @@ public:
             _a = 255;
     };
 
+    /**
+     * @brief Get the string representation of the shape
+     * @return The string representation of the shape
+     */
     operator std::string() const;
 
+    /**
+     * @brief Compare two colors for equality
+     *
+     * @param c The other color
+     * @return bool Colors are equal
+     */
     bool operator==(const Color &c) const
     {
         return _r == c._r && _g == c._g && _b == c._b && _a == c._a;
     }
 
+    /**
+     * @brief Compare two colors for non equality
+     *
+     * @param c The other color
+     * @return bool Colors are not equal
+     */
     bool operator!=(const Color &c) const
     {
         return !(*this == c);

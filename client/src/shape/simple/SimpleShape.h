@@ -20,11 +20,21 @@ namespace shape
         virtual Shape *clone() const = 0;
 
         // ==================== GETTERS ====================
+        /**
+         * @brief Get the Points object
+         *
+         * @return std::vector<Vector2D> The Points object
+         */
         virtual std::vector<Vector2D> getPoints() const { return _points; }
         virtual Vector2D getBottomLeft() const;
         virtual Vector2D getTopRight() const;
 
         // ==================== SETTERS ====================
+        /**
+         * @brief Set the Points object
+         *
+         * @param points The new Points object
+         */
         virtual void setPoints(std::vector<Vector2D> points) { _points = points; }
 
         // ==================== STRING ====================

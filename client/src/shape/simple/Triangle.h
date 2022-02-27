@@ -8,8 +8,24 @@ namespace shape
     {
     public:
         // ==================== CONSTRUCTORS ====================
+        /**
+         * @brief Construct a new Triangle object
+         *
+         * @param points The points of the triangle
+         * @param color The color of the triangle
+         */
         Triangle(std::vector<Vector2D> points, Color color);
+        /**
+         * @brief Construct a new Triangle object
+         *
+         * @param shape The triangle to copy
+         */
         Triangle(const Triangle &shape);
+        /**
+         * @brief Construct a new Triangle object
+         *
+         * @param s The string to use as source
+         */
         Triangle(const std::string &s);
 
         // ==================== CLONE ====================

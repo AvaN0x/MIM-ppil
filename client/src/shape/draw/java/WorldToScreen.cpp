@@ -2,13 +2,8 @@
 #include <algorithm>
 #include "WorldToScreen.h"
 
-#include <iostream> // FIXME remove
-
 WorldToScreen::WorldToScreen(Vector2D P1World, Vector2D P2World, int screenX, int screenY)
 {
-    std::cout << "P1World : " << P1World << std::endl;
-    std::cout << "P2World : " << P2World << std::endl;
-
     // Get coordinates of the screen
     Vector2D P1Screen(0, screenY);
     Vector2D P2Screen(screenX, 0);
@@ -45,14 +40,14 @@ double WorldToScreen::getE2(const Vector2D &P1World, const Vector2D &P2World, co
     return (P2World.y - P1World.y) * (P2Screen.y - P1Screen.y) < 0 ? -1 : 1;
 }
 
-double WorldToScreen::getA(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen, double alpha, double E1)
+double WorldToScreen::getA(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen, double lambda, double E1)
 {
     return (P1Screen.x + P2Screen.x) / 2 -
-           (E1 * alpha) * ((P1World.x + P2World.x) / 2);
+           (E1 * lambda) * ((P1World.x + P2World.x) / 2);
 }
 
-double WorldToScreen::getB(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen, double alpha, double E2)
+double WorldToScreen::getB(const Vector2D &P1World, const Vector2D &P2World, const Vector2D &P1Screen, const Vector2D &P2Screen, double lambda, double E2)
 {
     return (P1Screen.y + P2Screen.y) / 2 -
-           (E2 * alpha) * ((P1World.y + P2World.y) / 2);
+           (E2 * lambda) * ((P1World.y + P2World.y) / 2);
 }

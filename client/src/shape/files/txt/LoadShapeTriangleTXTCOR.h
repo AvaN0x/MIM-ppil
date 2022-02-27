@@ -6,6 +6,11 @@
 class LoadShapeTriangleTXTCOR : public LoadShapeCOR
 {
 public:
+    /**
+     * @brief Construct a new LoadShapeTriangleTXTCOR object
+     *
+     * @param next Next LoadShapeCOR in chain
+     */
     LoadShapeTriangleTXTCOR(LoadShapeCOR *next);
 
 protected:

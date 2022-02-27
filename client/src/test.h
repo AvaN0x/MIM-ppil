@@ -10,4 +10,7 @@
 #define FONT_CYAN "\033[0;36m"
 #define FONT_WHITE "\033[0;37m"
 
+/**
+ * @brief Do some tests
+ */
 void mainTests();
