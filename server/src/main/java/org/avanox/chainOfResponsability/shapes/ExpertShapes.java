@@ -9,16 +9,23 @@ public abstract class ExpertShapes implements Expert {
         _next = next;
     }
 
-    protected abstract boolean resolve1(String str, Draw graphicLibrairy);
+    /**
+     * Internal function to resolve the shape
+     * 
+     * @param str            the shape to resolve
+     * @param graphicLibrary the graphic library to use
+     * @return the shape has been resolved
+     */
+    protected abstract boolean resolve1(String str, Draw graphicLibrary);
 
     @Override
-    public boolean resolve(String str, Draw graphicLibrairy) {
-        boolean isRevolved = resolve1(str, graphicLibrairy);
+    public boolean resolve(String str, Draw graphicLibrary) {
+        boolean isRevolved = resolve1(str, graphicLibrary);
 
         if (isRevolved)
             return true;
         else if (_next != null)
-            return _next.resolve(str, graphicLibrairy);
+            return _next.resolve(str, graphicLibrary);
 
         return false;
     }

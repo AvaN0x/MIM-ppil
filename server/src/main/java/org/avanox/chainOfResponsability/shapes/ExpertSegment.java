@@ -12,7 +12,7 @@ public class ExpertSegment extends ExpertShapes {
     }
 
     @Override
-    protected boolean resolve1(String str, Draw graphicLibrairy) {
+    protected boolean resolve1(String str, Draw graphicLibrary) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
             return false;
@@ -30,7 +30,7 @@ public class ExpertSegment extends ExpertShapes {
                         new Point(Integer.parseInt(matches[3]), Integer.parseInt(matches[4])),
                         Utils.hexToRGBA(matches[5]));
 
-                graphicLibrairy.visit(segment);
+                graphicLibrary.visit(segment);
                 return true;
             } catch (NumberFormatException e) {
                 return false;

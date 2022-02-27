@@ -7,7 +7,6 @@ import java.awt.Color;
 public class Circle extends Shape {
     private Point _center;
     private int _radius;
-    private Color color;
 
     public Circle(Point center, int radius) {
         this._center = center;
@@ -21,16 +20,22 @@ public class Circle extends Shape {
         this.color = color;
     }
 
+    /**
+     * Return the center point
+     * 
+     * @return the center point
+     */
     public Point getCenter() {
         return this._center;
     }
 
+    /**
+     * Return the radius
+     * 
+     * @return the radius
+     */
     public int getRadius() {
         return this._radius;
-    }
-
-    public Color getColor() {
-        return this.color;
     }
 
     @Override

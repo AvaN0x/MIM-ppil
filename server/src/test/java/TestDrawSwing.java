@@ -10,7 +10,7 @@ public class TestDrawSwing {
 
     @Test
     public void testCircle() {
-        Draw graphicLibrairy = new DrawSwing(400, 320);
+        Draw graphicLibrary = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result = false;
 
@@ -32,19 +32,19 @@ public class TestDrawSwing {
         String correct = "|Circle,50,50,100|";
 
         // Will fail
-        result = expert.resolve(tooManyArguments, graphicLibrairy);
+        result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrairy);
+        result = expert.resolve(tooLessArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(wrongSyntax, graphicLibrairy);
+        result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
         // Will succed
-        result = expert.resolve(correct, graphicLibrairy);
+        result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
         try {
@@ -52,12 +52,12 @@ public class TestDrawSwing {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        graphicLibrairy.closeDraw();
+        graphicLibrary.closeDraw();
     }
 
     @Test
     public void testTriangle() {
-        Draw graphicLibrairy = new DrawSwing(400, 320);
+        Draw graphicLibrary = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
@@ -79,19 +79,19 @@ public class TestDrawSwing {
         String correct = "|Triangle,50,50,150,50,100,150|";
 
         // Will fail
-        result = expert.resolve(tooManyArguments, graphicLibrairy);
+        result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrairy);
+        result = expert.resolve(tooLessArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(wrongSyntax, graphicLibrairy);
+        result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
         // Will succed
-        result = expert.resolve(correct, graphicLibrairy);
+        result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
         try {
@@ -99,12 +99,12 @@ public class TestDrawSwing {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        graphicLibrairy.closeDraw();
+        graphicLibrary.closeDraw();
     }
 
     @Test
     public void testAnyPolygon() {
-        Draw graphicLibrairy = new DrawSwing(400, 320);
+        Draw graphicLibrary = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
@@ -128,25 +128,25 @@ public class TestDrawSwing {
         String correct3 = "|AnyPolygon,350,350,250,350,150,250,200,250,250,100|";
 
         // Will fail
-        result = expert.resolve(modulo2Arguments, graphicLibrairy);
+        result = expert.resolve(modulo2Arguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrairy);
+        result = expert.resolve(tooLessArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(wrongSyntax, graphicLibrairy);
+        result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
         // Will succed
-        result = expert.resolve(correct, graphicLibrairy);
+        result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
-        result = expert.resolve(correct2, graphicLibrairy);
+        result = expert.resolve(correct2, graphicLibrary);
         assertNotNull(result);
 
-        result = expert.resolve(correct3, graphicLibrairy);
+        result = expert.resolve(correct3, graphicLibrary);
         assertNotNull(result);
 
         try {
@@ -154,12 +154,12 @@ public class TestDrawSwing {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        graphicLibrairy.closeDraw();
+        graphicLibrary.closeDraw();
     }
 
     @Test
     public void testSegment() {
-        Draw graphicLibrairy = new DrawSwing(400, 320);
+        Draw graphicLibrary = new DrawSwing(400, 320);
         ExpertShapes expert = null;
         boolean result;
 
@@ -181,19 +181,19 @@ public class TestDrawSwing {
         String correct = "|Segment,350,50,250,150|";
 
         // Will fail
-        result = expert.resolve(tooManyArguments, graphicLibrairy);
+        result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrairy);
+        result = expert.resolve(tooLessArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(wrongSyntax, graphicLibrairy);
+        result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
         // Will succed
-        result = expert.resolve(correct, graphicLibrairy);
+        result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
         try {
@@ -201,6 +201,6 @@ public class TestDrawSwing {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        graphicLibrairy.closeDraw();
+        graphicLibrary.closeDraw();
     }
 }

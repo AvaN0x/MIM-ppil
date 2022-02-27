@@ -1,4 +1,4 @@
-package org.avanox.chainOfResponsability.graphicLibrairy;
+package org.avanox.chainOfResponsability.graphicLibrary;
 
 import org.avanox.visitor.Draw;
 
@@ -9,6 +9,12 @@ public abstract class ExpertGL implements Expert {
         this._next = next;
     }
 
+    /**
+     * Internal function to resolve the graphic library
+     * 
+     * @param str the graphic library to resolve
+     * @return the graphic library
+     */
     protected abstract Draw resolve1(String str);
 
     @Override

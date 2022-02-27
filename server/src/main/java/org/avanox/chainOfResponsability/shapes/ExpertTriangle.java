@@ -11,7 +11,7 @@ public class ExpertTriangle extends ExpertShapes {
     }
 
     @Override
-    protected boolean resolve1(String str, Draw graphicLibrairy) {
+    protected boolean resolve1(String str, Draw graphicLibrary) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
             return false;
@@ -29,7 +29,7 @@ public class ExpertTriangle extends ExpertShapes {
                         new Point(Integer.parseInt(matches[3]), Integer.parseInt(matches[4])),
                         new Point(Integer.parseInt(matches[5]), Integer.parseInt(matches[6])),
                         Utils.hexToRGBA(matches[7]));
-                graphicLibrairy.visit(triangle);
+                graphicLibrary.visit(triangle);
                 return true;
             } catch (NumberFormatException e) {
                 return false;

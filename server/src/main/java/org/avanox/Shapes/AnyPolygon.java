@@ -8,7 +8,6 @@ import java.awt.Color;
 
 public class AnyPolygon extends Shape {
     private LinkedList<Point> _segments;
-    private Color color;
 
     public AnyPolygon(LinkedList<Point> segments) {
         this._segments = segments;
@@ -20,12 +19,13 @@ public class AnyPolygon extends Shape {
         this.color = color;
     }
 
+    /**
+     * Return the segments
+     * 
+     * @return the segments
+     */
     public LinkedList<Point> getSegments() {
         return _segments;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     @Override

@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 import org.avanox.chainOfResponsability.shapes.*;
 import org.avanox.visitor.Draw;
-import org.avanox.chainOfResponsability.graphicLibrairy.*;
+import org.avanox.chainOfResponsability.graphicLibrary.*;
 
 import java.lang.ThreadGroup;
 
@@ -23,6 +23,13 @@ public class Interlocuteur extends Thread {
 
     private int _noClient;
 
+    /**
+     * Constructor, will be the interlocutor with the client
+     * 
+     * @param group    the thread group
+     * @param socket   client socket
+     * @param noClient client number
+     */
     public Interlocuteur(ThreadGroup group, Socket socket, int noClient) {
         super(group, "client" + noClient);
         try {
@@ -50,7 +57,7 @@ public class Interlocuteur extends Thread {
         expertGL = new ExpertAWT(expertGL);
         expertGL = new ExpertSwing(expertGL);
 
-        Draw graphicLibrairy = null;
+        Draw graphicLibrary = null;
 
         try {
             while (!this.isInterrupted()) {
@@ -65,10 +72,10 @@ public class Interlocuteur extends Thread {
 
                 LOGGER.info("Client [" + _noClient + "] A envoye : " + requete);
 
-                if (graphicLibrairy == null) {
-                    graphicLibrairy = expertGL.resolve(requete);
+                if (graphicLibrary == null) {
+                    graphicLibrary = expertGL.resolve(requete);
                 } else {
-                    expertShapes.resolve(requete, graphicLibrairy);
+                    expertShapes.resolve(requete, graphicLibrary);
                 }
             }
         } catch (SocketException e) {
@@ -83,6 +90,9 @@ public class Interlocuteur extends Thread {
         }
     }
 
+    /**
+     * Close the socket and the streams
+     */
     private void closeStreamAndSocket() {
         try {
             LOGGER.info("Client [" + _noClient + "] La connexion a ete interrompue");

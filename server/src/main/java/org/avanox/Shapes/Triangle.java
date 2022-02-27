@@ -8,7 +8,6 @@ public class Triangle extends Shape {
     private Point a;
     private Point b;
     private Point c;
-    private Color color;
 
     public Triangle(Point a, Point b, Point c) {
         this.a = a;
@@ -24,20 +23,31 @@ public class Triangle extends Shape {
         this.color = color;
     }
 
+    /**
+     * Return point A
+     * 
+     * @return the point a
+     */
     public Point getA() {
         return a;
     }
 
+    /**
+     * Return point B
+     * 
+     * @return the point b
+     */
     public Point getB() {
         return b;
     }
 
+    /**
+     * Return point C
+     * 
+     * @return the point c
+     */
     public Point getC() {
         return c;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     @Override

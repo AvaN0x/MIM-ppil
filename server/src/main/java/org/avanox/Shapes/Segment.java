@@ -7,7 +7,6 @@ import java.awt.Color;
 public class Segment extends Shape {
     private Point a;
     private Point b;
-    private Color color;
 
     public Segment(Point a, Point b) {
         this.a = a;
@@ -21,16 +20,22 @@ public class Segment extends Shape {
         this.color = color;
     }
 
+    /**
+     * Return point A
+     * 
+     * @return the point a
+     */
     public Point getA() {
         return a;
     }
 
+    /**
+     * Return point B
+     * 
+     * @return the point b
+     */
     public Point getB() {
         return b;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     @Override

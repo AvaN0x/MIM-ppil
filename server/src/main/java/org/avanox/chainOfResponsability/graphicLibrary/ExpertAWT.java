@@ -1,4 +1,4 @@
-package org.avanox.chainOfResponsability.graphicLibrairy;
+package org.avanox.chainOfResponsability.graphicLibrary;
 
 import org.avanox.visitor.Draw;
 import org.avanox.visitor.DrawAWT;

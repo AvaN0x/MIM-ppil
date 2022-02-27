@@ -11,9 +11,15 @@ public class Server extends ServerSocket implements Runnable {
     private static final Logger LOGGER = Logger.getLogger("Serveur");
     private ThreadGroup clientThreads = new ThreadGroup("clients");
 
+    /**
+     * Constructor, will create a server socket on the specified port
+     * 
+     * @param port the port to listen
+     * @throws IOException
+     */
     public Server(int port) throws IOException {
         super(port);
-        LOGGER.info("Serveur de majuscule pret au port : " + this.getLocalPort());
+        LOGGER.info("Serveur de dessin pret au port : " + this.getLocalPort());
     }
 
     @Override

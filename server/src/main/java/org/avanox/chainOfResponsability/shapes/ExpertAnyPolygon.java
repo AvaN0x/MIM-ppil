@@ -15,7 +15,7 @@ public class ExpertAnyPolygon extends ExpertShapes {
     }
 
     @Override
-    protected boolean resolve1(String str, Draw graphicLibrairy) {
+    protected boolean resolve1(String str, Draw graphicLibrary) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
             return false;
@@ -40,7 +40,7 @@ public class ExpertAnyPolygon extends ExpertShapes {
 
                 Color color = Utils.hexToRGBA(matches[length - 1]);
 
-                graphicLibrairy.visit(new AnyPolygon(points, color));
+                graphicLibrary.visit(new AnyPolygon(points, color));
                 return true;
 
             } catch (NumberFormatException e) {

@@ -12,7 +12,7 @@ public class ExpertCircle extends ExpertShapes {
     }
 
     @Override
-    protected boolean resolve1(String str, Draw graphicLibrairy) {
+    protected boolean resolve1(String str, Draw graphicLibrary) {
         int idx = str.indexOf("|", 1);
         if (idx == -1)
             return false;
@@ -26,7 +26,7 @@ public class ExpertCircle extends ExpertShapes {
             return false;
         if (matches[0].equalsIgnoreCase("circle")) {
             try {
-                graphicLibrairy.visit(
+                graphicLibrary.visit(
                         new Circle(
                                 new Point(
                                         Integer.parseInt(matches[1]),

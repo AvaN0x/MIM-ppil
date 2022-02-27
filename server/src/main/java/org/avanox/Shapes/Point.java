@@ -9,10 +9,20 @@ public class Point {
         this.y = y;
     }
 
+    /**
+     * Return the x coordinate
+     * 
+     * @return the x coordinate
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * Return the y coordinate
+     * 
+     * @return the y coordinate
+     */
     public int getY() {
         return y;
     }
