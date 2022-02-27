@@ -14,7 +14,7 @@ import org.avanox.chainOfResponsability.graphicLibrary.*;
 
 import java.lang.ThreadGroup;
 
-public class Interlocuteur extends Thread {
+public class Interlocutor extends Thread {
     private BufferedReader _fluxEntrant = null;
     private PrintStream _fluxSortant = null;
     private Socket _socket = null;
@@ -30,7 +30,7 @@ public class Interlocuteur extends Thread {
      * @param socket   client socket
      * @param noClient client number
      */
-    public Interlocuteur(ThreadGroup group, Socket socket, int noClient) {
+    public Interlocutor(ThreadGroup group, Socket socket, int noClient) {
         super(group, "client" + noClient);
         try {
             this._fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));

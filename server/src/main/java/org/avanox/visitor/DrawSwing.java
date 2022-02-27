@@ -17,7 +17,7 @@ public class DrawSwing extends Draw {
     private static final Logger LOGGER = Logger.getLogger("Serveur");
 
     public DrawSwing(int x, int y) {
-        this.frame = new JFrame("Frame toute simple");
+        this.frame = new JFrame("Frame d'un client");
         this.frame.setBounds(0, 0, x, y);
         this.frame.setVisible(true);
         this.frame.createBufferStrategy(2);

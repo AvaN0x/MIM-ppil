@@ -30,9 +30,9 @@ public class Server extends ServerSocket implements Runnable {
             try {
                 while (!Thread.currentThread().isInterrupted()) {
                     socket = this.accept();
-                    Interlocuteur interlocuteur = new Interlocuteur(clientThreads, socket, noClient);
+                    Interlocutor interlocutor = new Interlocutor(clientThreads, socket, noClient);
                     LOGGER.info("Connexion [" + noClient++ + "] reussie");
-                    interlocuteur.start();
+                    interlocutor.start();
                 }
             } catch (SocketTimeoutException e) {
                 LOGGER.severe("Le delai d'attente de la socket est depasse.");
