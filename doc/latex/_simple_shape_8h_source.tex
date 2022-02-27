@@ -1,6 +1,6 @@
 \hypertarget{_simple_shape_8h_source}{}\doxysection{Simple\+Shape.\+h}
 \label{_simple_shape_8h_source}\index{client/src/shape/simple/SimpleShape.h@{client/src/shape/simple/SimpleShape.h}}
-
+\mbox{\hyperlink{_simple_shape_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
@@ -9,27 +9,27 @@
 \DoxyCodeLine{5 }
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../Shape.h"{}}}
 \DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{keyword}{namespace }shape}
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceshape}{shape}}}
 \DoxyCodeLine{9 \{}
 \DoxyCodeLine{10     \textcolor{keyword}{class }\mbox{\hyperlink{classshape_1_1_simple_shape}{SimpleShape}} : \textcolor{keyword}{public} \mbox{\hyperlink{classshape_1_1_shape}{Shape}}}
 \DoxyCodeLine{11     \{}
 \DoxyCodeLine{12     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{13         std::vector<Vector2D> \_points;}
+\DoxyCodeLine{13         std::vector<Vector2D> \mbox{\hyperlink{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}{\_points}};}
 \DoxyCodeLine{14 }
 \DoxyCodeLine{15     \textcolor{keyword}{public}:}
 \DoxyCodeLine{16         \textcolor{comment}{// ==================== DESTRUCTORS ====================}}
-\DoxyCodeLine{17         \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_simple_shape}{\string~SimpleShape}}() \{\}}
+\DoxyCodeLine{17         \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_simple_shape_afdb9da79e613f198b77bc8b81e138c2c}{\string~SimpleShape}}() \{\}}
 \DoxyCodeLine{18 }
 \DoxyCodeLine{19         \textcolor{comment}{// ==================== CLONE ====================}}
 \DoxyCodeLine{20         \textcolor{keyword}{virtual} \mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{classshape_1_1_simple_shape_a81c238ba14a155317378b7c8fce59838}{clone}}() \textcolor{keyword}{const} = 0;}
 \DoxyCodeLine{21 }
 \DoxyCodeLine{22         \textcolor{comment}{// ==================== GETTERS ====================}}
-\DoxyCodeLine{28 \textcolor{comment}{}        \textcolor{keyword}{virtual} std::vector<Vector2D> \mbox{\hyperlink{classshape_1_1_simple_shape_ac144e1f87d2f2b683789b1ec5a898441}{getPoints}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_points; \}}
+\DoxyCodeLine{28 \textcolor{comment}{}        \textcolor{keyword}{virtual} std::vector<Vector2D> \mbox{\hyperlink{classshape_1_1_simple_shape_ac144e1f87d2f2b683789b1ec5a898441}{getPoints}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}{\_points}}; \}}
 \DoxyCodeLine{29         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_simple_shape_a80fe90c34803b662b4e9407ba5f12f68}{getBottomLeft}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{30         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_simple_shape_a5f254d426fb7059f3c9c12916f232fc9}{getTopRight}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{31 }
 \DoxyCodeLine{32         \textcolor{comment}{// ==================== SETTERS ====================}}
-\DoxyCodeLine{38 \textcolor{comment}{}        \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_simple_shape_ac9da2c341de375d2b4610e4914743142}{setPoints}}(std::vector<Vector2D> points) \{ \_points = points; \}}
+\DoxyCodeLine{38 \textcolor{comment}{}        \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_simple_shape_ac9da2c341de375d2b4610e4914743142}{setPoints}}(std::vector<Vector2D> points) \{ \mbox{\hyperlink{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}{\_points}} = points; \}}
 \DoxyCodeLine{39 }
 \DoxyCodeLine{40         \textcolor{comment}{// ==================== STRING ====================}}
 \DoxyCodeLine{41         \textcolor{keyword}{virtual} \textcolor{keyword}{operator} std::string() \textcolor{keyword}{const};}
@@ -43,8 +43,8 @@
 \DoxyCodeLine{49         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classshape_1_1_simple_shape_a5d9122075e6de070a5d9a633958ec668}{saveFile}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visitor_save_file}{VisitorSaveFile}} *v, \textcolor{keyword}{const} std::string \&filePath) \textcolor{keyword}{const} = 0;}
 \DoxyCodeLine{50 }
 \DoxyCodeLine{51         \textcolor{comment}{// ==================== OPERATORS ====================}}
-\DoxyCodeLine{52         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{53         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{52         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_simple_shape_a62a6cc1ab823565eda606c26a4292b1d}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{namespaceshape}{shape}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{53         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_simple_shape_a1ca742b0215570be68e40ea311070a95}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{namespaceshape}{shape}}) \textcolor{keyword}{const};}
 \DoxyCodeLine{54     \};}
 \DoxyCodeLine{55 \} \textcolor{comment}{// namespace shape}}
 

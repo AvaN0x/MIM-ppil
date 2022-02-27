@@ -1,5 +1,9 @@
 \hypertarget{classshape_1_1_shape}{}\doxysection{shape\+::Shape Class Reference}
 \label{classshape_1_1_shape}\index{shape::Shape@{shape::Shape}}
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
 Inheritance diagram for shape\+::Shape\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -8,6 +12,8 @@ Inheritance diagram for shape\+::Shape\+:\begin{figure}[H]
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classshape_1_1_shape_a073bd9eae74ea5336bbc6347efe39a4a}{$\sim$\+Shape}} ()
 \item 
 virtual \mbox{\hyperlink{classshape_1_1_shape}{Shape}} $\ast$ \mbox{\hyperlink{classshape_1_1_shape_af3d05f705244f8aa65f840c9bf3ee04f}{clone}} () const =0
 \begin{DoxyCompactList}\small\item\em Clone the shape. \end{DoxyCompactList}\item 
@@ -40,15 +46,22 @@ virtual bool \mbox{\hyperlink{classshape_1_1_shape_ab29a4ee99e5cf0c92a010d2cd6bc
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshape_1_1_shape_ad90facab478f13077746b37402a51781}\label{classshape_1_1_shape_ad90facab478f13077746b37402a51781}} 
-\mbox{\hyperlink{class_color}{Color}} {\bfseries \+\_\+color}
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{classshape_1_1_shape_ad90facab478f13077746b37402a51781}{\+\_\+color}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshape_1_1_shape_acd0817888838bfa2fbadb4bb8230b82c}\label{classshape_1_1_shape_acd0817888838bfa2fbadb4bb8230b82c}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classshape_1_1_shape}{Shape}} \&s)
+std\+::ostream \& \mbox{\hyperlink{classshape_1_1_shape_acd0817888838bfa2fbadb4bb8230b82c}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classshape_1_1_shape}{Shape}} \&s)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshape_1_1_shape_a073bd9eae74ea5336bbc6347efe39a4a}\label{classshape_1_1_shape_a073bd9eae74ea5336bbc6347efe39a4a}} 
+\index{shape::Shape@{shape::Shape}!````~Shape@{$\sim$Shape}}
+\index{````~Shape@{$\sim$Shape}!shape::Shape@{shape::Shape}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shape()}{~Shape()}}
+{\footnotesize\ttfamily virtual shape\+::\+Shape\+::$\sim$\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -329,6 +342,24 @@ Implemented in \mbox{\hyperlink{classshape_1_1_composed_shape_a7bbf603ee109d71d8
 
 
 
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classshape_1_1_shape_acd0817888838bfa2fbadb4bb8230b82c}\label{classshape_1_1_shape_acd0817888838bfa2fbadb4bb8230b82c}} 
+\index{shape::Shape@{shape::Shape}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!shape::Shape@{shape::Shape}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classshape_1_1_shape}{Shape}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classshape_1_1_shape_ad90facab478f13077746b37402a51781}\label{classshape_1_1_shape_ad90facab478f13077746b37402a51781}} 
+\index{shape::Shape@{shape::Shape}!\_color@{\_color}}
+\index{\_color@{\_color}!shape::Shape@{shape::Shape}}
+\doxysubsubsection{\texorpdfstring{\_color}{\_color}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} shape\+::\+Shape\+::\+\_\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-client/src/shape/Shape.\+h\end{DoxyCompactItemize}
+client/src/shape/\mbox{\hyperlink{_shape_8h}{Shape.\+h}}\end{DoxyCompactItemize}

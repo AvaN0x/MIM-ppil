@@ -1,6 +1,6 @@
 \hypertarget{_visitor_draw_shape_j_a_v_a_8h_source}{}\doxysection{Visitor\+Draw\+Shape\+JAVA.\+h}
 \label{_visitor_draw_shape_j_a_v_a_8h_source}\index{client/src/shape/draw/java/VisitorDrawShapeJAVA.h@{client/src/shape/draw/java/VisitorDrawShapeJAVA.h}}
-
+\mbox{\hyperlink{_visitor_draw_shape_j_a_v_a_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
@@ -9,26 +9,26 @@
 \DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_visitor_draw_shape}{VisitorDrawShape}}}
 \DoxyCodeLine{6 \{}
 \DoxyCodeLine{7 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{8     std::string \_name;}
-\DoxyCodeLine{9     \textcolor{keywordtype}{int} \_screenX = 400;}
-\DoxyCodeLine{10     \textcolor{keywordtype}{int} \_screenY = 320;}
-\DoxyCodeLine{11     \textcolor{keywordtype}{int} \_port = 9111;}
-\DoxyCodeLine{12     std::string \_address = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{8     std::string \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aabaf38ca16528e641c7509ac8cdd1527}{\_name}};}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aed92e0830b052706796cfa05f9b468f5}{\_screenX}} = 400;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_ac0f00e8a8d158b689f6a093c1cb49281}{\_screenY}} = 320;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a8cc48efba6256549a01affba93150e21}{\_port}} = 9111;}
+\DoxyCodeLine{12     std::string \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a0bd37a834ca58dcb5615f6c45dde4807}{\_address}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
 \DoxyCodeLine{13 }
-\DoxyCodeLine{19     \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}{VisitorDrawShapeJAVA}}(\textcolor{keyword}{const} std::string \&name) : \_name(name) \{\}}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a2acc7bb13e23d62b29f55559c10d8aab}{VisitorDrawShapeJAVA}}(\textcolor{keyword}{const} std::string \&name) : \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aabaf38ca16528e641c7509ac8cdd1527}{\_name}}(name) \{\}}
 \DoxyCodeLine{20 }
 \DoxyCodeLine{21 \textcolor{keyword}{public}:}
 \DoxyCodeLine{29     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aff757280370fb08a45f919d281988604}{setWindowSize}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
 \DoxyCodeLine{30     \{}
-\DoxyCodeLine{31         \_screenX = x;}
-\DoxyCodeLine{32         \_screenY = y;}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_aed92e0830b052706796cfa05f9b468f5}{\_screenX}} = x;}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_ac0f00e8a8d158b689f6a093c1cb49281}{\_screenY}} = y;}
 \DoxyCodeLine{33         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{34     \}}
 \DoxyCodeLine{35 }
 \DoxyCodeLine{43     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a}{VisitorDrawShapeJAVA}} \&\mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_af5d9a914a00d0e3c03ebedafeaee8b06}{setServer}}(\textcolor{keywordtype}{int} port, \textcolor{keyword}{const} std::string \&address = \textcolor{stringliteral}{"{}127.0.0.1"{}})}
 \DoxyCodeLine{44     \{}
-\DoxyCodeLine{45         \_port = port;}
-\DoxyCodeLine{46         \_address = address;}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a8cc48efba6256549a01affba93150e21}{\_port}} = port;}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_visitor_draw_shape_j_a_v_a_a0bd37a834ca58dcb5615f6c45dde4807}{\_address}} = address;}
 \DoxyCodeLine{47         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
 \DoxyCodeLine{48     \}}
 \DoxyCodeLine{49 }

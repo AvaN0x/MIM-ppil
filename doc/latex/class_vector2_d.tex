@@ -1,12 +1,18 @@
 \hypertarget{class_vector2_d}{}\doxysection{Vector2D Class Reference}
 \label{class_vector2_d}\index{Vector2D@{Vector2D}}
+
+
+{\ttfamily \#include $<$Vector2\+D.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}} (const double \&x=0, const double \&y=0)
+\mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}} (const double \&\mbox{\hyperlink{class_vector2_d_ac5c4e553815737aa24bec8281270178f}{x}}=0, const double \&\mbox{\hyperlink{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}{y}}=0)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_vector2_d}{Vector2D}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d_a4240d3859988afed16f86deda43ae16c}{Vector2D}} (const std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_vector2_d}{Vector2D}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_vector2_d_aed227f1380bf056fd75ba9b3df7a6511}{$\sim$\+Vector2D}} ()
+\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} $\ast$ \mbox{\hyperlink{class_vector2_d_aa4b30db241b45ae2eaacf338f4831ba4}{clone}} () const
 \begin{DoxyCompactList}\small\item\em Clone the vector. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_vector2_d_ab99ac066739303e0847b800aeabdbf6b}{distance}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u) const
@@ -42,17 +48,14 @@ std\+::string \mbox{\hyperlink{class_vector2_d_aad7a3b44cb63c575baab7c51dbfb4339
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_vector2_d_ac5c4e553815737aa24bec8281270178f}\label{class_vector2_d_ac5c4e553815737aa24bec8281270178f}} 
-double {\bfseries x}
+double \mbox{\hyperlink{class_vector2_d_ac5c4e553815737aa24bec8281270178f}{x}}
 \item 
-\mbox{\Hypertarget{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}\label{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}} 
-double {\bfseries y}
+double \mbox{\hyperlink{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}{y}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}\label{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u)
+std\+::ostream \& \mbox{\hyperlink{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u)
 \end{DoxyCompactItemize}
 
 
@@ -89,6 +92,12 @@ Construct a new \mbox{\hyperlink{class_vector2_d}{Vector2D}} object.
 {\em s} & The string to use as source \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_vector2_d_aed227f1380bf056fd75ba9b3df7a6511}\label{class_vector2_d_aed227f1380bf056fd75ba9b3df7a6511}} 
+\index{Vector2D@{Vector2D}!````~Vector2D@{$\sim$Vector2D}}
+\index{````~Vector2D@{$\sim$Vector2D}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector2D()}{~Vector2D()}}
+{\footnotesize\ttfamily virtual Vector2\+D\+::$\sim$\+Vector2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -364,7 +373,31 @@ The string representation of the vector
 \end{DoxyReturn}
 
 
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}\label{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}} 
+\index{Vector2D@{Vector2D}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_vector2_d_ac5c4e553815737aa24bec8281270178f}\label{class_vector2_d_ac5c4e553815737aa24bec8281270178f}} 
+\index{Vector2D@{Vector2D}!x@{x}}
+\index{x@{x}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double Vector2\+D\+::x}
+
+\mbox{\Hypertarget{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}\label{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}} 
+\index{Vector2D@{Vector2D}!y@{y}}
+\index{y@{y}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double Vector2\+D\+::y}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-client/src/shape/Vector2\+D.\+h\item 
-client/src/shape/Vector2\+D.\+cpp\end{DoxyCompactItemize}
+client/src/shape/\mbox{\hyperlink{_vector2_d_8h}{Vector2\+D.\+h}}\item 
+client/src/shape/\mbox{\hyperlink{_vector2_d_8cpp}{Vector2\+D.\+cpp}}\end{DoxyCompactItemize}

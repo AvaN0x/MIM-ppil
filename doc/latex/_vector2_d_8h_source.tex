@@ -1,6 +1,6 @@
 \hypertarget{_vector2_d_8h_source}{}\doxysection{Vector2\+D.\+h}
 \label{_vector2_d_8h_source}\index{client/src/shape/Vector2D.h@{client/src/shape/Vector2D.h}}
-
+\mbox{\hyperlink{_vector2_d_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
@@ -13,14 +13,14 @@
 \DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_vector2_d}{Vector2D}}}
 \DoxyCodeLine{10 \{}
 \DoxyCodeLine{11 \textcolor{keyword}{public}:}
-\DoxyCodeLine{12     \textcolor{keywordtype}{double} x, y;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vector2_d_ac5c4e553815737aa24bec8281270178f}{x}}, \mbox{\hyperlink{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}{y}};}
 \DoxyCodeLine{13 }
 \DoxyCodeLine{14     \textcolor{comment}{// ================== CONSTRUCTORS ==================}}
 \DoxyCodeLine{15     \textcolor{comment}{// If no explicit, parameters from constructor can be converted implicitly by compiler to Vector2D}}
-\DoxyCodeLine{22 \textcolor{comment}{}    \mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&x = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{double} \&y = 0);}
+\DoxyCodeLine{22 \textcolor{comment}{}    \mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} \&\mbox{\hyperlink{class_vector2_d_ac5c4e553815737aa24bec8281270178f}{x}} = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{double} \&\mbox{\hyperlink{class_vector2_d_ac38d0179cfe74c30fee290a703ab209a}{y}} = 0);}
 \DoxyCodeLine{28     \mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}}(\textcolor{keyword}{const} std::string \&s);}
 \DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{\string~Vector2D}}() \{\}}
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d_aed227f1380bf056fd75ba9b3df7a6511}{\string~Vector2D}}() \{\}}
 \DoxyCodeLine{31 }
 \DoxyCodeLine{32     \textcolor{comment}{// ==================== CLONE ====================}}
 \DoxyCodeLine{37 \textcolor{comment}{}    \mbox{\hyperlink{class_vector2_d}{Vector2D}} *\mbox{\hyperlink{class_vector2_d_aa4b30db241b45ae2eaacf338f4831ba4}{clone}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_vector2_d_affaf87a7d9ce6c6566c8fe0fe000dfae}{Vector2D}}(*\textcolor{keyword}{this}); \}}
@@ -48,10 +48,10 @@
 \DoxyCodeLine{145 \textcolor{keyword}{    }\{}
 \DoxyCodeLine{146         \textcolor{keywordflow}{return} (std::string) * \textcolor{keyword}{this};}
 \DoxyCodeLine{147     \}}
-\DoxyCodeLine{148     \textcolor{keyword}{friend} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u);}
+\DoxyCodeLine{148     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_vector2_d_a0a70404e8771c37b58780829fdfe855e}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u);}
 \DoxyCodeLine{149 \};}
 \DoxyCodeLine{150 }
-\DoxyCodeLine{151 \textcolor{keyword}{inline} std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u)}
+\DoxyCodeLine{151 \textcolor{keyword}{inline} std::ostream \&\mbox{\hyperlink{_vector2_d_8h_a0a70404e8771c37b58780829fdfe855e}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&u)}
 \DoxyCodeLine{152 \{}
 \DoxyCodeLine{153     \textcolor{keywordflow}{return} os << u.\mbox{\hyperlink{class_vector2_d_aad7a3b44cb63c575baab7c51dbfb4339}{toString}}();}
 \DoxyCodeLine{154 \}}

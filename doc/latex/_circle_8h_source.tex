@@ -1,12 +1,12 @@
 \hypertarget{_circle_8h_source}{}\doxysection{Circle.\+h}
 \label{_circle_8h_source}\index{client/src/shape/simple/Circle.h@{client/src/shape/simple/Circle.h}}
-
+\mbox{\hyperlink{_circle_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SimpleShape.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_simple_shape_8h}{SimpleShape.h}}"{}}}
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{keyword}{namespace }shape}
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceshape}{shape}}}
 \DoxyCodeLine{6 \{}
 \DoxyCodeLine{7     \textcolor{keyword}{class }\mbox{\hyperlink{classshape_1_1_circle}{Circle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classshape_1_1_simple_shape}{SimpleShape}}}
 \DoxyCodeLine{8     \{}
@@ -16,7 +16,7 @@
 \DoxyCodeLine{12     \textcolor{keyword}{public}:}
 \DoxyCodeLine{13         \textcolor{comment}{// ==================== CONSTRUCTORS ====================}}
 \DoxyCodeLine{21 \textcolor{comment}{}        \mbox{\hyperlink{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}{Circle}}(std::vector<Vector2D> points, Color color, \textcolor{keywordtype}{double} radius);}
-\DoxyCodeLine{27         \mbox{\hyperlink{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}{Circle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&shape);}
+\DoxyCodeLine{27         \mbox{\hyperlink{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}{Circle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classshape_1_1_circle}{Circle}} \&\mbox{\hyperlink{namespaceshape}{shape}});}
 \DoxyCodeLine{33         \mbox{\hyperlink{classshape_1_1_circle_a4da6db6a8303e24c38a41ab54de19e46}{Circle}}(\textcolor{keyword}{const} std::string \&s);}
 \DoxyCodeLine{34 }
 \DoxyCodeLine{35         \textcolor{comment}{// ==================== CLONE ====================}}
@@ -24,7 +24,7 @@
 \DoxyCodeLine{37 }
 \DoxyCodeLine{38         \textcolor{comment}{// ==================== GETTERS ====================}}
 \DoxyCodeLine{44 \textcolor{comment}{}        \textcolor{keywordtype}{double} \mbox{\hyperlink{classshape_1_1_circle_a68bc64f2c251221899aa3518c50bee19}{getRadius}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_radius; \}}
-\DoxyCodeLine{50         \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}{getCenter}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \_points.at(0); \}}
+\DoxyCodeLine{50         \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a84d7aa7b8d0306f060d5d8c015ca46a1}{getCenter}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classshape_1_1_simple_shape_af9a3ba90e4d10da02374c0c3c3130898}{\_points}}.at(0); \}}
 \DoxyCodeLine{51         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a2d3b4140e185e157d7b69defe4925fa7}{getBottomLeft}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{52         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{classshape_1_1_circle_a111df1e26ee731ffbf11846fb53b171b}{getTopRight}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{53 }
@@ -52,8 +52,8 @@
 \DoxyCodeLine{80         \};}
 \DoxyCodeLine{81 }
 \DoxyCodeLine{82         \textcolor{comment}{// ==================== OPERATORS ====================}}
-\DoxyCodeLine{83         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
-\DoxyCodeLine{84         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *shape) \textcolor{keyword}{const};}
+\DoxyCodeLine{83         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_circle_ab3958d597bc8d337e08b7106f6eb2130}{operator==}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{namespaceshape}{shape}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{84         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classshape_1_1_circle_a33da662a94d7272ce5aa61cd3ab3e178}{operator!=}}(\mbox{\hyperlink{classshape_1_1_shape}{Shape}} *\mbox{\hyperlink{namespaceshape}{shape}}) \textcolor{keyword}{const};}
 \DoxyCodeLine{85     \};}
 \DoxyCodeLine{86 \} \textcolor{comment}{// namespace shape}}
 

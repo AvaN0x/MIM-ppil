@@ -1,17 +1,13 @@
 var searchData=
 [
-  ['geta_0',['getA',['../class_world_to_screen.html#a57778ecaa0598570cef0d81d0204210b',1,'WorldToScreen::getA() const'],['../class_world_to_screen.html#ad171ec0e34a381600cba9fd48166b9b7',1,'WorldToScreen::getA(const Vector2D &amp;P1World, const Vector2D &amp;P2World, const Vector2D &amp;P1Screen, const Vector2D &amp;P2Screen, double lambda, double E1)']]],
-  ['getb_1',['getB',['../class_world_to_screen.html#a24fb1838552be47c9958fc69b8c805b8',1,'WorldToScreen::getB() const'],['../class_world_to_screen.html#a36cf7e8fa72d592ad4eded72552f787d',1,'WorldToScreen::getB(const Vector2D &amp;P1World, const Vector2D &amp;P2World, const Vector2D &amp;P1Screen, const Vector2D &amp;P2Screen, double lambda, double E2)']]],
-  ['getbottomleft_2',['getBottomLeft',['../classshape_1_1_composed_shape.html#a7d38c9337c73f406e412596cb34cb605',1,'shape::ComposedShape::getBottomLeft()'],['../classshape_1_1_shape.html#ac253a7aac7c4781fbc2c609056d9cf95',1,'shape::Shape::getBottomLeft()'],['../classshape_1_1_circle.html#a2d3b4140e185e157d7b69defe4925fa7',1,'shape::Circle::getBottomLeft()'],['../classshape_1_1_simple_shape.html#a80fe90c34803b662b4e9407ba5f12f68',1,'shape::SimpleShape::getBottomLeft()']]],
-  ['getcenter_3',['getCenter',['../classshape_1_1_circle.html#a84d7aa7b8d0306f060d5d8c015ca46a1',1,'shape::Circle']]],
-  ['getcolor_4',['getColor',['../classshape_1_1_shape.html#a917353bb8a8a8ef1af594a99046280dd',1,'shape::Shape']]],
-  ['gete1_5',['getE1',['../class_world_to_screen.html#afdd422368f9dcb2c244313f30f05f8fb',1,'WorldToScreen::getE1() const'],['../class_world_to_screen.html#ad3afee915946d0953567f553430a5d8d',1,'WorldToScreen::getE1(const Vector2D &amp;P1World, const Vector2D &amp;P2World, const Vector2D &amp;P1Screen, const Vector2D &amp;P2Screen)']]],
-  ['gete2_6',['getE2',['../class_world_to_screen.html#a1b2bd07a9a1414d96e64920eaeb807c0',1,'WorldToScreen::getE2() const'],['../class_world_to_screen.html#a98ad004ff6a684560983e46b9b8e163a',1,'WorldToScreen::getE2(const Vector2D &amp;P1World, const Vector2D &amp;P2World, const Vector2D &amp;P1Screen, const Vector2D &amp;P2Screen)']]],
-  ['getlambda_7',['getLambda',['../class_world_to_screen.html#ad20e9c23480328473562077043361ce8',1,'WorldToScreen::getLambda() const'],['../class_world_to_screen.html#aebf8089e17b7f773f15795876f6539aa',1,'WorldToScreen::getLambda(const Vector2D &amp;P1World, const Vector2D &amp;P2World, const Vector2D &amp;P1Screen, const Vector2D &amp;P2Screen)']]],
-  ['getpoints_8',['getPoints',['../classshape_1_1_simple_shape.html#ac144e1f87d2f2b683789b1ec5a898441',1,'shape::SimpleShape']]],
-  ['getradius_9',['getRadius',['../classshape_1_1_circle.html#a68bc64f2c251221899aa3518c50bee19',1,'shape::Circle']]],
-  ['getshape_10',['getShape',['../class_load_shape.html#a4edb8adbbf01e5ffe8ae263adb77d9ef',1,'LoadShape::getShape()'],['../class_load_shape_c_o_r.html#af6c13a1628f594afb379b098f315fcf1',1,'LoadShapeCOR::getShape()']]],
-  ['getshapefromstring_11',['getShapeFromString',['../class_visitor_save_file_t_x_t.html#a9c577ae41addafa7e06287c79d737614',1,'VisitorSaveFileTXT']]],
-  ['getshapes_12',['getShapes',['../classshape_1_1_composed_shape.html#aca5760bd3b22aa514ec857afcbb662cc',1,'shape::ComposedShape']]],
-  ['gettopright_13',['getTopRight',['../classshape_1_1_composed_shape.html#a16822f1254ab70c13f3b8c31af7e1c7f',1,'shape::ComposedShape::getTopRight()'],['../classshape_1_1_shape.html#a290e4a8f28013f32f0d578aae603e5c7',1,'shape::Shape::getTopRight()'],['../classshape_1_1_circle.html#a111df1e26ee731ffbf11846fb53b171b',1,'shape::Circle::getTopRight()'],['../classshape_1_1_simple_shape.html#a5f254d426fb7059f3c9c12916f232fc9',1,'shape::SimpleShape::getTopRight()']]]
+  ['font_5fblue_0',['FONT_BLUE',['../test_8h.html#afd5e8faad596b620cdd00631d427b6e1',1,'test.h']]],
+  ['font_5fcyan_1',['FONT_CYAN',['../test_8h.html#a01ecb5573fc10dac7aadd96ca4f04f29',1,'test.h']]],
+  ['font_5fdefault_2',['FONT_DEFAULT',['../test_8h.html#a4eb1b5ac9032ef0b8c36c1a7d8d99f8e',1,'test.h']]],
+  ['font_5fgreen_3',['FONT_GREEN',['../test_8h.html#ae20afc89f800965afd0c64ba91237055',1,'test.h']]],
+  ['font_5fmagenta_4',['FONT_MAGENTA',['../test_8h.html#a109a98b0f5149f61273d55d66269359f',1,'test.h']]],
+  ['font_5fred_5',['FONT_RED',['../test_8h.html#a1916dd06096f930ac5ab057f88bac4d5',1,'test.h']]],
+  ['font_5fwhite_6',['FONT_WHITE',['../test_8h.html#a923ce83d627db1a0b35ea7377495c6c9',1,'test.h']]],
+  ['font_5fyellow_7',['FONT_YELLOW',['../test_8h.html#a3bb7fb619f510d46792aa972d037164c',1,'test.h']]],
+  ['fxapplicationthread_8',['FXApplicationThread',['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html#a88ca0262ec1e29bec3bc5f916fdd93ea',1,'org.avanox.visitor.FXApplicationThread.FXApplicationThread()'],['../classorg_1_1avanox_1_1visitor_1_1_f_x_application_thread.html',1,'org.avanox.visitor.FXApplicationThread']]],
+  ['fxapplicationthread_2ejava_9',['FXApplicationThread.java',['../_f_x_application_thread_8java.html',1,'']]]
 ];

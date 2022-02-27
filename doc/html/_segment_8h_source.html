@@ -70,18 +70,18 @@ $(function() {
   <div class="headertitle"><div class="title">Segment.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_segment_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;SimpleShape.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_simple_shape_8h.html">SimpleShape.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>shape</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceshape.html">shape</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classshape_1_1_segment.html">    7</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_segment.html">Segment</a> : <span class="keyword">public</span> <a class="code hl_class" href="classshape_1_1_simple_shape.html">SimpleShape</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="comment">// ==================== CONSTRUCTORS ====================</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span>        <a class="code hl_function" href="classshape_1_1_segment.html#a15a4a996dcbc095bc94989525453816d">Segment</a>(std::vector&lt;Vector2D&gt; points, Color color);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classshape_1_1_segment.html#a15a4a996dcbc095bc94989525453816d">Segment</a>(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_segment.html">Segment</a> &amp;shape);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classshape_1_1_segment.html#a15a4a996dcbc095bc94989525453816d">Segment</a>(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_segment.html">Segment</a> &amp;<a class="code hl_namespace" href="namespaceshape.html">shape</a>);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_function" href="classshape_1_1_segment.html#a15a4a996dcbc095bc94989525453816d">Segment</a>(<span class="keyword">const</span> std::string &amp;s);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="comment">// ==================== CLONE ====================</span></div>
@@ -108,10 +108,11 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        };</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// ==================== OPERATORS ====================</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classshape_1_1_segment.html#a3d233df6480b7a90bac2e9a8517ec116">operator==</a>(<a class="code hl_class" href="classshape_1_1_shape.html">Shape</a> *shape) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classshape_1_1_segment.html#a2ff7d96912f3f82ef133581a9bbae3ee">operator!=</a>(<a class="code hl_class" href="classshape_1_1_shape.html">Shape</a> *shape) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classshape_1_1_segment.html#a3d233df6480b7a90bac2e9a8517ec116">operator==</a>(<a class="code hl_class" href="classshape_1_1_shape.html">Shape</a> *<a class="code hl_namespace" href="namespaceshape.html">shape</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classshape_1_1_segment.html#a2ff7d96912f3f82ef133581a9bbae3ee">operator!=</a>(<a class="code hl_class" href="classshape_1_1_shape.html">Shape</a> *<a class="code hl_namespace" href="namespaceshape.html">shape</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace shape</span></div>
+<div class="ttc" id="a_simple_shape_8h_html"><div class="ttname"><a href="_simple_shape_8h.html">SimpleShape.h</a></div></div>
 <div class="ttc" id="aclass_connection_handler_html"><div class="ttname"><a href="class_connection_handler.html">ConnectionHandler</a></div><div class="ttdef"><b>Definition:</b> ConnectionHandler.h:8</div></div>
 <div class="ttc" id="aclass_vector2_d_html"><div class="ttname"><a href="class_vector2_d.html">Vector2D</a></div><div class="ttdef"><b>Definition:</b> Vector2D.h:10</div></div>
 <div class="ttc" id="aclass_visitor_draw_shape_html"><div class="ttname"><a href="class_visitor_draw_shape.html">VisitorDrawShape</a></div><div class="ttdef"><b>Definition:</b> VisitorDrawShape.h:19</div></div>
@@ -132,6 +133,7 @@ $(function() {
 <div class="ttc" id="aclassshape_1_1_segment_html_abe47f6aa2a99eb8ee3b62baffe964d95"><div class="ttname"><a href="classshape_1_1_segment.html#abe47f6aa2a99eb8ee3b62baffe964d95">shape::Segment::homothety</a></div><div class="ttdeci">Segment * homothety(const Vector2D &amp;origin, double coeff) const</div><div class="ttdoc">Apply homothety to the shape.</div><div class="ttdef"><b>Definition:</b> Segment.cpp:56</div></div>
 <div class="ttc" id="aclassshape_1_1_shape_html"><div class="ttname"><a href="classshape_1_1_shape.html">shape::Shape</a></div><div class="ttdef"><b>Definition:</b> Shape.h:13</div></div>
 <div class="ttc" id="aclassshape_1_1_simple_shape_html"><div class="ttname"><a href="classshape_1_1_simple_shape.html">shape::SimpleShape</a></div><div class="ttdef"><b>Definition:</b> SimpleShape.h:11</div></div>
+<div class="ttc" id="anamespaceshape_html"><div class="ttname"><a href="namespaceshape.html">shape</a></div><div class="ttdef"><b>Definition:</b> ComposedShape.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

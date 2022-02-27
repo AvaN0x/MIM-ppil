@@ -1,15 +1,17 @@
 \hypertarget{class_connection_handler}{}\doxysection{Connection\+Handler Class Reference}
 \label{class_connection_handler}\index{ConnectionHandler@{ConnectionHandler}}
+
+
+{\ttfamily \#include $<$Connection\+Handler.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_connection_handler_a5df3066586bcbf1bd52756c6a95ea412}{Connection\+Handler}} (const string \&address, int port)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} constructor, this will automatically connect. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}\label{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}} 
-virtual {\bfseries $\sim$\+Connection\+Handler} ()
+virtual \mbox{\hyperlink{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}{$\sim$\+Connection\+Handler}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} destructor, this will automatically close the socket. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_connection_handler_ad26404fc0171ab0557430e9136b64863}\label{class_connection_handler_ad26404fc0171ab0557430e9136b64863}} 
-void {\bfseries close} ()
+void \mbox{\hyperlink{class_connection_handler_ad26404fc0171ab0557430e9136b64863}{close}} ()
 \begin{DoxyCompactList}\small\item\em Close the socket. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}{is\+Closed}} () const
 \begin{DoxyCompactList}\small\item\em Check if the socket has been closed. \end{DoxyCompactList}\item 
@@ -20,8 +22,7 @@ string \mbox{\hyperlink{class_connection_handler_a35e229e2a83d47ad052c1c06fb696b
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_connection_handler_a672bf161e51d428f71013860bf30d39b}\label{class_connection_handler_a672bf161e51d428f71013860bf30d39b}} 
-SOCKET {\bfseries \+\_\+socket}
+SOCKET \mbox{\hyperlink{class_connection_handler_a672bf161e51d428f71013860bf30d39b}{\+\_\+socket}}
 \end{DoxyCompactItemize}
 
 
@@ -41,9 +42,29 @@ SOCKET {\bfseries \+\_\+socket}
 {\em socket} & The socket to use \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}\label{class_connection_handler_a36b5999a3994f70c16d5a529d094eab4}} 
+\index{ConnectionHandler@{ConnectionHandler}!````~ConnectionHandler@{$\sim$ConnectionHandler}}
+\index{````~ConnectionHandler@{$\sim$ConnectionHandler}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConnectionHandler()}{~ConnectionHandler()}}
+{\footnotesize\ttfamily virtual Connection\+Handler\+::$\sim$\+Connection\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_connection_handler}{Connection\+Handler}} destructor, this will automatically close the socket. 
+
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_connection_handler_ad26404fc0171ab0557430e9136b64863}\label{class_connection_handler_ad26404fc0171ab0557430e9136b64863}} 
+\index{ConnectionHandler@{ConnectionHandler}!close@{close}}
+\index{close@{close}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Connection\+Handler\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the socket. 
+
 \mbox{\Hypertarget{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}\label{class_connection_handler_af2faaad514a298eeeeb1796581d6250e}} 
 \index{ConnectionHandler@{ConnectionHandler}!isClosed@{isClosed}}
 \index{isClosed@{isClosed}!ConnectionHandler@{ConnectionHandler}}
@@ -87,7 +108,16 @@ Send a string to the server.
 \end{DoxyParams}
 
 
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_connection_handler_a672bf161e51d428f71013860bf30d39b}\label{class_connection_handler_a672bf161e51d428f71013860bf30d39b}} 
+\index{ConnectionHandler@{ConnectionHandler}!\_socket@{\_socket}}
+\index{\_socket@{\_socket}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{\_socket}{\_socket}}
+{\footnotesize\ttfamily SOCKET Connection\+Handler\+::\+\_\+socket}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-client/src/Connection\+Handler.\+h\item 
-client/src/Connection\+Handler.\+cpp\end{DoxyCompactItemize}
+client/src/\mbox{\hyperlink{_connection_handler_8h}{Connection\+Handler.\+h}}\item 
+client/src/\mbox{\hyperlink{_connection_handler_8cpp}{Connection\+Handler.\+cpp}}\end{DoxyCompactItemize}
