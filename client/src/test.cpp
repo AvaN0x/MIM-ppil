@@ -185,9 +185,9 @@ void mainTests()
 #ifdef TEST_HOMOTHETY
     cout << FONT_YELLOW << "Draw homotheties !" << FONT_DEFAULT << endl;
 
-    cs1 = *cs1.homothety(Vector2D(0, 0), 2);
-    cs1.setColor(Color(255, 0, 0));
-    cs1.draw(&vDraw);
+    ComposedShape cs3 = *cs1.homothety(Vector2D(0, 0), 2);
+    cs3.setColor(Color(255, 0, 0));
+    cs3.draw(&vDraw);
 #endif
 #endif
 }
