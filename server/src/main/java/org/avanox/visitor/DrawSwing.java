@@ -2,6 +2,7 @@ package org.avanox.visitor;
 
 import javax.swing.JFrame;
 import java.awt.Graphics;
+import java.awt.Insets;
 import java.awt.image.BufferStrategy;
 import java.util.ArrayList;
 import java.util.logging.Logger;
@@ -18,8 +19,9 @@ public class DrawSwing extends Draw {
 
     public DrawSwing(int x, int y) {
         this.frame = new JFrame("Frame d'un client");
-        this.frame.setBounds(0, 0, x, y);
+        this.frame.setBounds(0, 0, x + 16, y + 39);
         this.frame.setVisible(true);
+        this.frame.setResizable(false);
         this.frame.createBufferStrategy(2);
         try {
             Thread.sleep(150);
@@ -44,53 +46,60 @@ public class DrawSwing extends Draw {
 
     @Override
     public void visit(Triangle triangle) {
+        Insets insets = frame.getInsets();
         int[] xPoints = {
-                triangle.getA().getX(),
-                triangle.getB().getX(),
-                triangle.getC().getX()
+                insets.left + triangle.getA().getX(),
+                insets.left + triangle.getB().getX(),
+                insets.left + triangle.getC().getX()
         };
         int[] yPoints = {
-                triangle.getA().getY(),
-                triangle.getB().getY(),
-                triangle.getC().getY()
+                insets.top + triangle.getA().getY(),
+                insets.top + triangle.getB().getY(),
+                insets.top + triangle.getC().getY()
         };
-
-        graphics.drawPolygon(xPoints, yPoints, 3);
+        graphics.setColor(triangle.getColor());
+        graphics.fillPolygon(xPoints, yPoints, 3);
 
         strategie.show();
     }
 
     @Override
     public void visit(Circle circle) {
-        graphics.drawOval(
-                circle.getCenter().getX(),
-                circle.getCenter().getY(),
-                circle.getRadius(),
-                circle.getRadius());
+        Insets insets = frame.getInsets();
+        graphics.setColor(circle.getColor());
+        graphics.fillOval(
+                insets.left + circle.getCenter().getX() - circle.getRadius(),
+                insets.top + circle.getCenter().getY() - circle.getRadius(),
+                circle.getRadius() * 2,
+                circle.getRadius() * 2);
 
         strategie.show();
     }
 
     @Override
     public void visit(Segment segment) {
+        Insets insets = frame.getInsets();
+        graphics.setColor(segment.getColor());
         graphics.drawLine(
-                segment.getA().getX(),
-                segment.getA().getY(),
-                segment.getB().getX(),
-                segment.getB().getY());
+                insets.left + segment.getA().getX(),
+                insets.top + segment.getA().getY(),
+                insets.left + segment.getB().getX(),
+                insets.top + segment.getB().getY());
 
         strategie.show();
     }
 
     @Override
     public void visit(AnyPolygon other) {
+        Insets insets = frame.getInsets();
         ArrayList<Integer> xPoints = new ArrayList<Integer>();
         ArrayList<Integer> yPoints = new ArrayList<Integer>();
         for (Point point : other.getSegments()) {
-            xPoints.add(point.getX());
-            yPoints.add(point.getY());
+            xPoints.add(insets.left + point.getX());
+            yPoints.add(insets.top + point.getY());
         }
-        graphics.drawPolygon(
+        graphics.setColor(other.getColor());
+        graphics.fillPolygon(
                 xPoints.stream().mapToInt(i -> i).toArray(),
                 yPoints.stream().mapToInt(i -> i).toArray(),
                 xPoints.size());
