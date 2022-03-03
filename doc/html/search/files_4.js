@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fxapplicationthread_2ejava_0',['FXApplicationThread.java',['../_f_x_application_thread_8java.html',1,'']]]
+  ['interlocutor_2ejava_0',['Interlocutor.java',['../_interlocutor_8java.html',1,'']]]
 ];
