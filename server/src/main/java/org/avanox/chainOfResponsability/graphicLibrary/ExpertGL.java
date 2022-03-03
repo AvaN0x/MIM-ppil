@@ -2,7 +2,7 @@ package org.avanox.chainOfResponsability.graphicLibrary;
 
 import org.avanox.visitor.Draw;
 
-public abstract class ExpertGL implements Expert {
+public abstract class ExpertGL {
     protected ExpertGL _next;
 
     public ExpertGL(ExpertGL next) {
@@ -17,7 +17,6 @@ public abstract class ExpertGL implements Expert {
      */
     protected abstract Draw resolve1(String str);
 
-    @Override
     public Draw resolve(String str) {
         Draw shape = resolve1(str);
 

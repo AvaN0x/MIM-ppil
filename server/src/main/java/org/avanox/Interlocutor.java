@@ -40,7 +40,7 @@ public class Interlocutor extends Thread {
 
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la creation de l'interlocuteur.");
-            System.err.println(e);
+            e.printStackTrace();
             closeStreamAndSocket();
         }
     }
@@ -104,7 +104,7 @@ public class Interlocutor extends Thread {
             LOGGER.info("Les flux du client [" + _noClient + "] ont ete fermes avec succes.");
         } catch (IOException e) {
             LOGGER.severe("Client [" + _noClient + "] Une erreur est survenue lors de la fermeture d'un flux");
-            System.err.println(e);
+            e.printStackTrace();
         } finally {
             if (_socket != null) {
                 try {
@@ -114,7 +114,7 @@ public class Interlocutor extends Thread {
                 } catch (IOException e) {
                     LOGGER.severe(
                             "Client [" + _noClient + "] Une erreur est survenue lors de la fermeture de la socket");
-                    System.err.println(e);
+                    e.printStackTrace();
                 }
             }
             if (!this.isInterrupted())
