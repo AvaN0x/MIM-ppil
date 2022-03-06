@@ -26,24 +26,24 @@ public class TestDrawAWT {
         expert = new ExpertAnyPolygon(expert);
         assertNotNull(expert);
 
-        String tooManyArguments = "|Circle,0,0,0,0|";
-        String tooLessArguments = "|Circle,0,0|";
-        String wrongSyntax = "|Circle,0|0,3|";
-        String correct = "|Circle,50,50,100|";
+        String tooManyArguments = "|Circle;0;0;0;0;#ff0000ff|";
+        String tooFewArguments = "|Circle;0;0;#ff0000ff|";
+        String wrongSyntax = "|Circle;0|0;3;#ff0000ff|";
+        String correct = "|Circle;50;50;100;#ff0000ff|";
 
         // Will fail
         result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrary);
+        result = expert.resolve(tooFewArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
         result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
-        // Will succed
+        // Will succeed
         result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
@@ -73,17 +73,17 @@ public class TestDrawAWT {
         expert = new ExpertAnyPolygon(expert);
         assertNotNull(expert);
 
-        String tooManyArguments = "|Triangle,0,0,0,0,0,0,0|";
-        String tooLessArguments = "|Triangle,0,0|";
-        String wrongSyntax = "|Triangle,0,0,0,0|0,0,0|";
-        String correct = "|Triangle,50,50,150,50,100,150|";
+        String tooManyArguments = "|Triangle;0;0;0;0;0;0;0;#ff0000ff|";
+        String tooFewArguments = "|Triangle;0;0;#ff0000ff|";
+        String wrongSyntax = "|Triangle;0;0;0;0|0;0;0;#ff0000ff|";
+        String correct = "|Triangle;50;50;150;50;100;150;#ff0000ff|";
 
         // Will fail
         result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrary);
+        result = expert.resolve(tooFewArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
@@ -120,19 +120,19 @@ public class TestDrawAWT {
         expert = new ExpertSegment(expert);
         assertNotNull(expert);
 
-        String modulo2Arguments = "|AnyPolygon,0,0,0,0,0,0,0|";
-        String tooLessArguments = "|AnyPolygon,0,0,0|";
-        String wrongSyntax = "|AnyPolygon,0,0,0,0|0,0,0|";
-        String correct = "|AnyPolygon,50,50,100,50,75,100|";
-        String correct2 = "|AnyPolygon,50,350,100,350,100,250,50,250|";
-        String correct3 = "|AnyPolygon,350,350,250,350,150,250,200,250,250,100|";
+        String modulo2Arguments = "|AnyPolygon;0;0;0;0;0;0;0;#ff0000ff|";
+        String tooFewArguments = "|AnyPolygon;0;0;0;#ff0000ff|";
+        String wrongSyntax = "|AnyPolygon;0;0;0;0|0;0;0;#ff0000ff|";
+        String correct = "|AnyPolygon;50;50;100;50;75;100;#ff0000ff|";
+        String correct2 = "|AnyPolygon;50;350;100;350;100;250;50;250;#ff0000ff|";
+        String correct3 = "|AnyPolygon;350;350;250;350;150;250;200;250;250;100;#ff0000ff|";
 
         // Will fail
         result = expert.resolve(modulo2Arguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrary);
+        result = expert.resolve(tooFewArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
@@ -175,17 +175,17 @@ public class TestDrawAWT {
         expert = new ExpertCircle(expert);
         assertNotNull(expert);
 
-        String tooManyArguments = "|Segment,0,0,0,0,0,0,0|";
-        String tooLessArguments = "|Segment,0,0,0|";
-        String wrongSyntax = "|Segment,0,0|0,0,0,0,0|";
-        String correct = "|Segment,350,50,250,150|";
+        String tooManyArguments = "|Segment;0;0;0;0;0;0;0;#ff0000ff|";
+        String tooFewArguments = "|Segment;0;0;0;#ff0000ff|";
+        String wrongSyntax = "|Segment;0;0|0;0;0;0;0;#ff0000ff|";
+        String correct = "|Segment;350;50;250;150;#ff0000ff|";
 
         // Will fail
         result = expert.resolve(tooManyArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
-        result = expert.resolve(tooLessArguments, graphicLibrary);
+        result = expert.resolve(tooFewArguments, graphicLibrary);
         assertFalse(result);
 
         // Will fail
