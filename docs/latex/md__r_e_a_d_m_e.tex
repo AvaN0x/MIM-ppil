@@ -1,0 +1,46 @@
+Project made in third year of UFR MIM\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Executer le projet}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Client}\label{md__r_e_a_d_m_e_autotoc_md2}
+Se situer dans le dossier client, exécuter make \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd client; make}
+
+\end{DoxyCode}
+
+
+Pour l\textquotesingle{}exécuter, tapez \+: {\ttfamily ./output/main.exe}. Vous pouvez nettoyer de l\textquotesingle{}ancien exécutable avec
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make clean}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Serveur}\label{md__r_e_a_d_m_e_autotoc_md3}
+Créer un fichier {\ttfamily .env} sous le format présenté dans {\ttfamily .env.\+example}. Configuration par défaut \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LOGGER\_PROPERTIES\_FILE=logger.properties}
+\DoxyCodeLine{SERVER\_PORT=9111}
+
+\end{DoxyCode}
+
+
+Installer maven (\href{https://maven.apache.org/download.cgi}{\texttt{ https\+://maven.\+apache.\+org/download.\+cgi}}, ne pas oublier de l’ajouter aux variable d’environnement dans Path), se situer dans le dossier server. Compiler le projet avec {\ttfamily mvn compile} et l\textquotesingle{}exécuter avec {\ttfamily mvn exec\+:java}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd server; mvn compile; mvn exec:java}
+
+\end{DoxyCode}
+
+
+Vous pouvez nettoyer de l\textquotesingle{}ancien exécutable avec
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mvn clean}
+
+\end{DoxyCode}
+ 

@@ -66,8 +66,25 @@ $(function() {
   <div class="headertitle"><div class="title">MIM-ppil </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >Project made in third year of UFR MIM </p>
-</div></div><!-- contents -->
+<div class="textblock"><p >Project made in third year of UFR MIM</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Executer le projet</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Client</h2>
+<p >Se situer dans le dossier client, exécuter make :</p>
+<div class="fragment"><div class="line">cd client; make</div>
+</div><!-- fragment --><p >Pour l'exécuter, tapez : <code>./output/main.exe</code>. Vous pouvez nettoyer de l'ancien exécutable avec</p>
+<div class="fragment"><div class="line">make clean</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Serveur</h2>
+<p >Créer un fichier <code>.env</code> sous le format présenté dans <code>.env.example</code>. Configuration par défaut :</p>
+<div class="fragment"><div class="line">LOGGER_PROPERTIES_FILE=logger.properties</div>
+<div class="line">SERVER_PORT=9111</div>
+</div><!-- fragment --><p >Installer maven (<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a>, ne pas oublier de l’ajouter aux variable d’environnement dans Path), se situer dans le dossier server. Compiler le projet avec <code>mvn compile</code> et l'exécuter avec <code>mvn exec:java</code>.</p>
+<div class="fragment"><div class="line">cd server; mvn compile; mvn exec:java</div>
+</div><!-- fragment --><p >Vous pouvez nettoyer de l'ancien exécutable avec</p>
+<div class="fragment"><div class="line">mvn clean</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
