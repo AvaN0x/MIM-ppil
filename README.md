@@ -21,7 +21,15 @@ make clean
 
 ### Serveur
 
-Installer maven ( <https://maven.apache.org/download.cgi> ), se situer dans le dossier server. Compiler le projet avec `mvn compile` et l'exécuter avec `mvn exec:java`.
+Créer un fichier `.env` sous le format présenté dans `.env.example`.
+Configuration par défaut :
+
+```env
+LOGGER_PROPERTIES_FILE=logger.properties
+SERVER_PORT=9111
+```
+
+Installer maven (<https://maven.apache.org/download.cgi>, ne pas oublier de l’ajouter aux variable d’environnement dans Path), se situer dans le dossier server. Compiler le projet avec `mvn compile` et l'exécuter avec `mvn exec:java`.
 
 ```sh
 cd server; mvn compile; mvn exec:java
