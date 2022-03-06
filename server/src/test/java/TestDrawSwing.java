@@ -192,7 +192,7 @@ public class TestDrawSwing {
         result = expert.resolve(wrongSyntax, graphicLibrary);
         assertFalse(result);
 
-        // Will succed
+        // Will succeed
         result = expert.resolve(correct, graphicLibrary);
         assertNotNull(result);
 
