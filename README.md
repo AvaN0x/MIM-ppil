@@ -2,6 +2,12 @@
 
 Project made in third year of UFR MIM
 
+## Documentation
+
+You can find the documentation [here](https://avan0x.github.io/MIM-ppil/docs/html).
+
+---
+
 ## Executer le projet
 
 ### Client
