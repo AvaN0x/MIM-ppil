@@ -21,6 +21,7 @@ shape::Shape *LoadShapeComposedShapeTXTCOR::_getShape(const string &s) const
         int sLength = s.length();
         int subSquareBracketCount = 0;
 
+        bool first = true;
         int i = s.find('[') + 1;
         int lastStart = i + 2; // 2 for "\n\t"
         while (i < sLength)
@@ -29,7 +30,14 @@ shape::Shape *LoadShapeComposedShapeTXTCOR::_getShape(const string &s) const
             {
                 shape::Shape *shape = v->getShapeFromString(s.substr(lastStart, i - lastStart));
                 if (shape != NULL)
+                {
+                    if (first)
+                    {
+                        first = false;
+                        res->setColor(shape->getColor());
+                    }
                     res->addShape(shape);
+                }
                 lastStart = i + 3; // 3 for "/\n\t"
             }
             if (s[i] == '[')
